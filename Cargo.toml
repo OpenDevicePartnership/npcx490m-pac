@@ -1,0 +1,25 @@
+[package]
+name = "npcx490m-pac"
+version = "0.1.0"
+authors = [ "Felipe Balbi <felipe@balbi.sh>" ]
+edition = "2021"
+license = "MIT"
+description = "Peripheral Access Crate for Nuvoton NPCX490M devices"
+repository = "https://github.com/felipebalbi/npcx490m-pac"
+readme = "README.md"
+keywords = [ "npcx490m", "nuvoton", "no_std", "embedded" ]
+categories = [ "embedded", "no-std" ]
+rust-version = "1.81.0"
+exclude = [ "svd/*", ]
+
+[dependencies]
+cortex-m = "0.7.7"
+cortex-m-rt = { version = "0.7.3", optional = true }
+critical-section = { version = "1.1.2", optional = true }
+defmt = { version = "0.3.8", optional = true }
+vcell = "0.1.3"
+
+[features]
+rt = ["cortex-m-rt/device"]
+defmt = ["dep:defmt"]
+debug = []
