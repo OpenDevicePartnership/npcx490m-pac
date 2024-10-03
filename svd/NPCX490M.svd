@@ -16768,6 +16768,29 @@
           <access>read-write</access>
           <resetValue>0x00</resetValue>
           <resetMask>0xFF</resetMask>
+	  <fields>
+	    <field>
+	      <dim>8</dim>
+	      <dimIncrement>1</dimIncrement>
+	      <bitOffset>0</bitOffset>
+	      <bitWidth>1</bitWidth>
+	      <name>PIN%s</name>
+	      <description>Data Out for Pin %s</description>
+	      <access>read-write</access>
+	      <enumeratedValues>
+		<name>Level</name>
+		<usage>read-write</usage>
+		<enumeratedValue>
+		  <name>Low</name>
+		  <value>0</value>
+		</enumeratedValue>
+		<enumeratedValue>
+		  <name>High</name>
+		  <value>1</value>
+		</enumeratedValue>
+	      </enumeratedValues>
+	    </field>
+	  </fields>
         </register>
         <register>
           <name>PxDIN</name>
@@ -16777,6 +16800,29 @@
           <access>read-write</access>
           <resetValue>0x00</resetValue>
           <resetMask>0xFF</resetMask>
+	  <fields>
+	    <field>
+	      <dim>8</dim>
+	      <dimIncrement>1</dimIncrement>
+	      <bitOffset>0</bitOffset>
+	      <bitWidth>1</bitWidth>
+	      <name>PIN%s</name>
+	      <description>Data In for Pin %s</description>
+	      <access>read-write</access>
+	      <enumeratedValues>
+		<name>Level</name>
+		<usage>read-write</usage>
+		<enumeratedValue>
+		  <name>Low</name>
+		  <value>0</value>
+		</enumeratedValue>
+		<enumeratedValue>
+		  <name>High</name>
+		  <value>1</value>
+		</enumeratedValue>
+	      </enumeratedValues>
+	    </field>
+	  </fields>
         </register>
         <register>
           <name>PxDIR</name>
@@ -16786,6 +16832,29 @@
           <access>read-write</access>
           <resetValue>0x00</resetValue>
           <resetMask>0xFF</resetMask>
+	  <fields>
+	    <field>
+	      <dim>8</dim>
+	      <dimIncrement>1</dimIncrement>
+	      <bitOffset>0</bitOffset>
+	      <bitWidth>1</bitWidth>
+	      <name>PIN%s</name>
+	      <description>Direction control for Pin %s</description>
+	      <access>read-write</access>
+	      <enumeratedValues>
+		<name>Direction</name>
+		<usage>read-write</usage>
+		<enumeratedValue>
+		  <name>Input</name>
+		  <value>0</value>
+		</enumeratedValue>
+		<enumeratedValue>
+		  <name>Output</name>
+		  <value>1</value>
+		</enumeratedValue>
+	      </enumeratedValues>
+	    </field>
+	  </fields>
         </register>
         <register>
           <name>PxPULL</name>
@@ -16795,6 +16864,29 @@
           <access>read-write</access>
           <resetValue>0x00</resetValue>
           <resetMask>0xFF</resetMask>
+	  <fields>
+	    <field>
+	      <dim>8</dim>
+	      <dimIncrement>1</dimIncrement>
+	      <bitOffset>0</bitOffset>
+	      <bitWidth>1</bitWidth>
+	      <name>PIN%s</name>
+	      <description>Pull-up or pull-down control for Pin %s</description>
+	      <access>read-write</access>
+	      <enumeratedValues>
+		<name>PullState</name>
+		<usage>read-write</usage>
+		<enumeratedValue>
+		  <name>Disable</name>
+		  <value>0</value>
+		</enumeratedValue>
+		<enumeratedValue>
+		  <name>Enable</name>
+		  <value>1</value>
+		</enumeratedValue>
+	      </enumeratedValues>
+	    </field>
+	  </fields>
         </register>
         <register>
           <name>PxPUD</name>
@@ -16804,6 +16896,29 @@
           <access>read-write</access>
           <resetValue>0x00</resetValue>
           <resetMask>0xFF</resetMask>
+	  <fields>
+	    <field>
+	      <dim>8</dim>
+	      <dimIncrement>1</dimIncrement>
+	      <bitOffset>0</bitOffset>
+	      <bitWidth>1</bitWidth>
+	      <name>PIN%s</name>
+	      <description>Pull-up or pull-down selection for Pin %s</description>
+	      <access>read-write</access>
+	      <enumeratedValues>
+		<name>Pull</name>
+		<usage>read-write</usage>
+		<enumeratedValue>
+		  <name>PullUp</name>
+		  <value>0</value>
+		</enumeratedValue>
+		<enumeratedValue>
+		  <name>PullDown</name>
+		  <value>1</value>
+		</enumeratedValue>
+	      </enumeratedValues>
+	    </field>
+	  </fields>
         </register>
         <register>
           <name>PxENVDD</name>
@@ -16813,6 +16928,29 @@
           <access>read-write</access>
           <resetValue>0x00</resetValue>
           <resetMask>0xFF</resetMask>
+	  <fields>
+	    <field>
+	      <dim>8</dim>
+	      <dimIncrement>1</dimIncrement>
+	      <bitOffset>0</bitOffset>
+	      <bitWidth>1</bitWidth>
+	      <name>PIN%s</name>
+	      <description>Drive Enable by Vdd Present for Pin %s</description>
+	      <access>read-write</access>
+	      <enumeratedValues>
+		<name>Drive</name>
+		<usage>read-write</usage>
+		<enumeratedValue>
+		  <name>Enable</name>
+		  <value>0</value>
+		</enumeratedValue>
+		<enumeratedValue>
+		  <name>Disable</name>
+		  <value>1</value>
+		</enumeratedValue>
+	      </enumeratedValues>
+	    </field>
+	  </fields>
         </register>
         <register>
           <name>PxOTYPE</name>
@@ -16822,6 +16960,29 @@
           <access>read-write</access>
           <resetValue>0x00</resetValue>
           <resetMask>0xFF</resetMask>
+	  <fields>
+	    <field>
+	      <dim>8</dim>
+	      <dimIncrement>1</dimIncrement>
+	      <bitOffset>0</bitOffset>
+	      <bitWidth>1</bitWidth>
+	      <name>PIN%s</name>
+	      <description>Output Type selection for Pin %s</description>
+	      <access>read-write</access>
+	      <enumeratedValues>
+		<name>Type</name>
+		<usage>read-write</usage>
+		<enumeratedValue>
+		  <name>PushPull</name>
+		  <value>0</value>
+		</enumeratedValue>
+		<enumeratedValue>
+		  <name>OpenDrain</name>
+		  <value>1</value>
+		</enumeratedValue>
+	      </enumeratedValues>
+	    </field>
+	  </fields>
         </register>
         <register>
           <name>PxLOCK_CTL</name>
@@ -16831,1283 +16992,106 @@
           <access>read-write</access>
           <resetValue>0x00</resetValue>
           <resetMask>0xFF</resetMask>
+	  <fields>
+	    <field>
+	      <dim>8</dim>
+	      <dimIncrement>1</dimIncrement>
+	      <bitOffset>0</bitOffset>
+	      <bitWidth>1</bitWidth>
+	      <name>PIN%s</name>
+	      <description>Output Data and Configuration Lock for Pin %s</description>
+	      <access>read-write</access>
+	      <enumeratedValues>
+		<name>LockCtl</name>
+		<usage>read-write</usage>
+		<enumeratedValue>
+		  <name>Unlock</name>
+		  <value>0</value>
+		</enumeratedValue>
+		<enumeratedValue>
+		  <name>Lock</name>
+		  <value>1</value>
+		</enumeratedValue>
+	      </enumeratedValues>
+	    </field>
+	  </fields>
         </register>
       </registers>
     </peripheral>
-    <peripheral>
+    <peripheral derivedFrom="GPIO0">
       <name>GPIO1</name>
       <description>GPIO1</description>
-      <groupName>GPIO</groupName>
       <baseAddress>0x40083000</baseAddress>
-      <addressBlock>
-        <offset>0</offset>
-        <size>0x40</size>
-        <usage>registers</usage>
-      </addressBlock>
-      <registers>
-        <register>
-          <name>PxDOUT</name>
-          <description>Port GPIOx Data Out Register (PxDOUT)</description>
-          <addressOffset>0x0</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxDIN</name>
-          <description>Port GPIOx Data In Register (PxDIN)</description>
-          <addressOffset>0x1</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxDIR</name>
-          <description>Port GPIOx Direction Register (PxDIR)</description>
-          <addressOffset>0x2</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxPULL</name>
-          <description>Port GPIOx Pull-Up or Pull-Down Enable Register (PxPULL)</description>
-          <addressOffset>0x3</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxPUD</name>
-          <description>Port GPIOx Pull-Up/Down Selection Register (PxPUD)</description>
-          <addressOffset>0x4</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxENVDD</name>
-          <description>Port GPIOx Drive Enable by VDD Present Register (PxENVDD)</description>
-          <addressOffset>0x5</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxOTYPE</name>
-          <description>Port GPIOx Output Type Register (PxOTYPE)</description>
-          <addressOffset>0x6</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxLOCK_CTL</name>
-          <description>Port GPIOx Lock Control Register (PxLOCK_CTL)</description>
-          <addressOffset>0x7</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-      </registers>
     </peripheral>
-    <peripheral>
+    <peripheral derivedFrom="GPIO0">
       <name>GPIO2</name>
       <description>GPIO2</description>
-      <groupName>GPIO</groupName>
       <baseAddress>0x40085000</baseAddress>
-      <addressBlock>
-        <offset>0</offset>
-        <size>0x40</size>
-        <usage>registers</usage>
-      </addressBlock>
-      <registers>
-        <register>
-          <name>PxDOUT</name>
-          <description>Port GPIOx Data Out Register (PxDOUT)</description>
-          <addressOffset>0x0</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxDIN</name>
-          <description>Port GPIOx Data In Register (PxDIN)</description>
-          <addressOffset>0x1</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxDIR</name>
-          <description>Port GPIOx Direction Register (PxDIR)</description>
-          <addressOffset>0x2</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxPULL</name>
-          <description>Port GPIOx Pull-Up or Pull-Down Enable Register (PxPULL)</description>
-          <addressOffset>0x3</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxPUD</name>
-          <description>Port GPIOx Pull-Up/Down Selection Register (PxPUD)</description>
-          <addressOffset>0x4</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxENVDD</name>
-          <description>Port GPIOx Drive Enable by VDD Present Register (PxENVDD)</description>
-          <addressOffset>0x5</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxOTYPE</name>
-          <description>Port GPIOx Output Type Register (PxOTYPE)</description>
-          <addressOffset>0x6</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxLOCK_CTL</name>
-          <description>Port GPIOx Lock Control Register (PxLOCK_CTL)</description>
-          <addressOffset>0x7</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-      </registers>
     </peripheral>
-    <peripheral>
+    <peripheral derivedFrom="GPIO0">
       <name>GPIO3</name>
       <description>GPIO3</description>
-      <groupName>GPIO</groupName>
       <baseAddress>0x40087000</baseAddress>
-      <addressBlock>
-        <offset>0</offset>
-        <size>0x40</size>
-        <usage>registers</usage>
-      </addressBlock>
-      <registers>
-        <register>
-          <name>PxDOUT</name>
-          <description>Port GPIOx Data Out Register (PxDOUT)</description>
-          <addressOffset>0x0</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxDIN</name>
-          <description>Port GPIOx Data In Register (PxDIN)</description>
-          <addressOffset>0x1</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxDIR</name>
-          <description>Port GPIOx Direction Register (PxDIR)</description>
-          <addressOffset>0x2</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxPULL</name>
-          <description>Port GPIOx Pull-Up or Pull-Down Enable Register (PxPULL)</description>
-          <addressOffset>0x3</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxPUD</name>
-          <description>Port GPIOx Pull-Up/Down Selection Register (PxPUD)</description>
-          <addressOffset>0x4</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxENVDD</name>
-          <description>Port GPIOx Drive Enable by VDD Present Register (PxENVDD)</description>
-          <addressOffset>0x5</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxOTYPE</name>
-          <description>Port GPIOx Output Type Register (PxOTYPE)</description>
-          <addressOffset>0x6</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxLOCK_CTL</name>
-          <description>Port GPIOx Lock Control Register (PxLOCK_CTL)</description>
-          <addressOffset>0x7</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-      </registers>
     </peripheral>
-    <peripheral>
+    <peripheral derivedFrom="GPIO0">
       <name>GPIO4</name>
       <description>GPIO4</description>
-      <groupName>GPIO</groupName>
       <baseAddress>0x40089000</baseAddress>
-      <addressBlock>
-        <offset>0</offset>
-        <size>0x40</size>
-        <usage>registers</usage>
-      </addressBlock>
-      <registers>
-        <register>
-          <name>PxDOUT</name>
-          <description>Port GPIOx Data Out Register (PxDOUT)</description>
-          <addressOffset>0x0</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxDIN</name>
-          <description>Port GPIOx Data In Register (PxDIN)</description>
-          <addressOffset>0x1</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxDIR</name>
-          <description>Port GPIOx Direction Register (PxDIR)</description>
-          <addressOffset>0x2</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxPULL</name>
-          <description>Port GPIOx Pull-Up or Pull-Down Enable Register (PxPULL)</description>
-          <addressOffset>0x3</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxPUD</name>
-          <description>Port GPIOx Pull-Up/Down Selection Register (PxPUD)</description>
-          <addressOffset>0x4</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxENVDD</name>
-          <description>Port GPIOx Drive Enable by VDD Present Register (PxENVDD)</description>
-          <addressOffset>0x5</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxOTYPE</name>
-          <description>Port GPIOx Output Type Register (PxOTYPE)</description>
-          <addressOffset>0x6</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxLOCK_CTL</name>
-          <description>Port GPIOx Lock Control Register (PxLOCK_CTL)</description>
-          <addressOffset>0x7</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-      </registers>
     </peripheral>
-    <peripheral>
+    <peripheral derivedFrom="GPIO0">
       <name>GPIO5</name>
       <description>GPIO5</description>
-      <groupName>GPIO</groupName>
       <baseAddress>0x4008B000</baseAddress>
-      <addressBlock>
-        <offset>0</offset>
-        <size>0x40</size>
-        <usage>registers</usage>
-      </addressBlock>
-      <registers>
-        <register>
-          <name>PxDOUT</name>
-          <description>Port GPIOx Data Out Register (PxDOUT)</description>
-          <addressOffset>0x0</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxDIN</name>
-          <description>Port GPIOx Data In Register (PxDIN)</description>
-          <addressOffset>0x1</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxDIR</name>
-          <description>Port GPIOx Direction Register (PxDIR)</description>
-          <addressOffset>0x2</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxPULL</name>
-          <description>Port GPIOx Pull-Up or Pull-Down Enable Register (PxPULL)</description>
-          <addressOffset>0x3</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxPUD</name>
-          <description>Port GPIOx Pull-Up/Down Selection Register (PxPUD)</description>
-          <addressOffset>0x4</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxENVDD</name>
-          <description>Port GPIOx Drive Enable by VDD Present Register (PxENVDD)</description>
-          <addressOffset>0x5</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxOTYPE</name>
-          <description>Port GPIOx Output Type Register (PxOTYPE)</description>
-          <addressOffset>0x6</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxLOCK_CTL</name>
-          <description>Port GPIOx Lock Control Register (PxLOCK_CTL)</description>
-          <addressOffset>0x7</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-      </registers>
     </peripheral>
-    <peripheral>
+    <peripheral derivedFrom="GPIO0">
       <name>GPIO6</name>
       <description>GPIO6</description>
-      <groupName>GPIO</groupName>
       <baseAddress>0x4008D000</baseAddress>
-      <addressBlock>
-        <offset>0</offset>
-        <size>0x40</size>
-        <usage>registers</usage>
-      </addressBlock>
-      <registers>
-        <register>
-          <name>PxDOUT</name>
-          <description>Port GPIOx Data Out Register (PxDOUT)</description>
-          <addressOffset>0x0</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxDIN</name>
-          <description>Port GPIOx Data In Register (PxDIN)</description>
-          <addressOffset>0x1</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxDIR</name>
-          <description>Port GPIOx Direction Register (PxDIR)</description>
-          <addressOffset>0x2</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxPULL</name>
-          <description>Port GPIOx Pull-Up or Pull-Down Enable Register (PxPULL)</description>
-          <addressOffset>0x3</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxPUD</name>
-          <description>Port GPIOx Pull-Up/Down Selection Register (PxPUD)</description>
-          <addressOffset>0x4</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxENVDD</name>
-          <description>Port GPIOx Drive Enable by VDD Present Register (PxENVDD)</description>
-          <addressOffset>0x5</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxOTYPE</name>
-          <description>Port GPIOx Output Type Register (PxOTYPE)</description>
-          <addressOffset>0x6</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxLOCK_CTL</name>
-          <description>Port GPIOx Lock Control Register (PxLOCK_CTL)</description>
-          <addressOffset>0x7</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-      </registers>
     </peripheral>
-    <peripheral>
+    <peripheral derivedFrom="GPIO0">
       <name>GPIO7</name>
       <description>GPIO7</description>
-      <groupName>GPIO</groupName>
       <baseAddress>0x4008F000</baseAddress>
-      <addressBlock>
-        <offset>0</offset>
-        <size>0x40</size>
-        <usage>registers</usage>
-      </addressBlock>
-      <registers>
-        <register>
-          <name>PxDOUT</name>
-          <description>Port GPIOx Data Out Register (PxDOUT)</description>
-          <addressOffset>0x0</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxDIN</name>
-          <description>Port GPIOx Data In Register (PxDIN)</description>
-          <addressOffset>0x1</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxDIR</name>
-          <description>Port GPIOx Direction Register (PxDIR)</description>
-          <addressOffset>0x2</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxPULL</name>
-          <description>Port GPIOx Pull-Up or Pull-Down Enable Register (PxPULL)</description>
-          <addressOffset>0x3</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxPUD</name>
-          <description>Port GPIOx Pull-Up/Down Selection Register (PxPUD)</description>
-          <addressOffset>0x4</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxENVDD</name>
-          <description>Port GPIOx Drive Enable by VDD Present Register (PxENVDD)</description>
-          <addressOffset>0x5</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxOTYPE</name>
-          <description>Port GPIOx Output Type Register (PxOTYPE)</description>
-          <addressOffset>0x6</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxLOCK_CTL</name>
-          <description>Port GPIOx Lock Control Register (PxLOCK_CTL)</description>
-          <addressOffset>0x7</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-      </registers>
     </peripheral>
-    <peripheral>
+    <peripheral derivedFrom="GPIO0">
       <name>GPIO8</name>
       <description>GPIO8</description>
-      <groupName>GPIO</groupName>
       <baseAddress>0x40091000</baseAddress>
-      <addressBlock>
-        <offset>0</offset>
-        <size>0x40</size>
-        <usage>registers</usage>
-      </addressBlock>
-      <registers>
-        <register>
-          <name>PxDOUT</name>
-          <description>Port GPIOx Data Out Register (PxDOUT)</description>
-          <addressOffset>0x0</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxDIN</name>
-          <description>Port GPIOx Data In Register (PxDIN)</description>
-          <addressOffset>0x1</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxDIR</name>
-          <description>Port GPIOx Direction Register (PxDIR)</description>
-          <addressOffset>0x2</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxPULL</name>
-          <description>Port GPIOx Pull-Up or Pull-Down Enable Register (PxPULL)</description>
-          <addressOffset>0x3</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxPUD</name>
-          <description>Port GPIOx Pull-Up/Down Selection Register (PxPUD)</description>
-          <addressOffset>0x4</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxENVDD</name>
-          <description>Port GPIOx Drive Enable by VDD Present Register (PxENVDD)</description>
-          <addressOffset>0x5</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxOTYPE</name>
-          <description>Port GPIOx Output Type Register (PxOTYPE)</description>
-          <addressOffset>0x6</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxLOCK_CTL</name>
-          <description>Port GPIOx Lock Control Register (PxLOCK_CTL)</description>
-          <addressOffset>0x7</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-      </registers>
     </peripheral>
-    <peripheral>
+    <peripheral derivedFrom="GPIO0">
       <name>GPIO9</name>
       <description>GPIO9</description>
-      <groupName>GPIO</groupName>
       <baseAddress>0x40093000</baseAddress>
-      <addressBlock>
-        <offset>0</offset>
-        <size>0x40</size>
-        <usage>registers</usage>
-      </addressBlock>
-      <registers>
-        <register>
-          <name>PxDOUT</name>
-          <description>Port GPIOx Data Out Register (PxDOUT)</description>
-          <addressOffset>0x0</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxDIN</name>
-          <description>Port GPIOx Data In Register (PxDIN)</description>
-          <addressOffset>0x1</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxDIR</name>
-          <description>Port GPIOx Direction Register (PxDIR)</description>
-          <addressOffset>0x2</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxPULL</name>
-          <description>Port GPIOx Pull-Up or Pull-Down Enable Register (PxPULL)</description>
-          <addressOffset>0x3</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxPUD</name>
-          <description>Port GPIOx Pull-Up/Down Selection Register (PxPUD)</description>
-          <addressOffset>0x4</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxENVDD</name>
-          <description>Port GPIOx Drive Enable by VDD Present Register (PxENVDD)</description>
-          <addressOffset>0x5</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxOTYPE</name>
-          <description>Port GPIOx Output Type Register (PxOTYPE)</description>
-          <addressOffset>0x6</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxLOCK_CTL</name>
-          <description>Port GPIOx Lock Control Register (PxLOCK_CTL)</description>
-          <addressOffset>0x7</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-      </registers>
     </peripheral>
-    <peripheral>
+    <peripheral derivedFrom="GPIO0">
       <name>GPIOA</name>
       <description>GPIOA</description>
-      <groupName>GPIO</groupName>
       <baseAddress>0x40095000</baseAddress>
-      <addressBlock>
-        <offset>0</offset>
-        <size>0x40</size>
-        <usage>registers</usage>
-      </addressBlock>
-      <registers>
-        <register>
-          <name>PxDOUT</name>
-          <description>Port GPIOx Data Out Register (PxDOUT)</description>
-          <addressOffset>0x0</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxDIN</name>
-          <description>Port GPIOx Data In Register (PxDIN)</description>
-          <addressOffset>0x1</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxDIR</name>
-          <description>Port GPIOx Direction Register (PxDIR)</description>
-          <addressOffset>0x2</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxPULL</name>
-          <description>Port GPIOx Pull-Up or Pull-Down Enable Register (PxPULL)</description>
-          <addressOffset>0x3</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxPUD</name>
-          <description>Port GPIOx Pull-Up/Down Selection Register (PxPUD)</description>
-          <addressOffset>0x4</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxENVDD</name>
-          <description>Port GPIOx Drive Enable by VDD Present Register (PxENVDD)</description>
-          <addressOffset>0x5</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxOTYPE</name>
-          <description>Port GPIOx Output Type Register (PxOTYPE)</description>
-          <addressOffset>0x6</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxLOCK_CTL</name>
-          <description>Port GPIOx Lock Control Register (PxLOCK_CTL)</description>
-          <addressOffset>0x7</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-      </registers>
     </peripheral>
-    <peripheral>
+    <peripheral derivedFrom="GPIO0">
       <name>GPIOB</name>
       <description>GPIOB</description>
-      <groupName>GPIO</groupName>
       <baseAddress>0x40097000</baseAddress>
-      <addressBlock>
-        <offset>0</offset>
-        <size>0x40</size>
-        <usage>registers</usage>
-      </addressBlock>
-      <registers>
-        <register>
-          <name>PxDOUT</name>
-          <description>Port GPIOx Data Out Register (PxDOUT)</description>
-          <addressOffset>0x0</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxDIN</name>
-          <description>Port GPIOx Data In Register (PxDIN)</description>
-          <addressOffset>0x1</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxDIR</name>
-          <description>Port GPIOx Direction Register (PxDIR)</description>
-          <addressOffset>0x2</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxPULL</name>
-          <description>Port GPIOx Pull-Up or Pull-Down Enable Register (PxPULL)</description>
-          <addressOffset>0x3</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxPUD</name>
-          <description>Port GPIOx Pull-Up/Down Selection Register (PxPUD)</description>
-          <addressOffset>0x4</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxENVDD</name>
-          <description>Port GPIOx Drive Enable by VDD Present Register (PxENVDD)</description>
-          <addressOffset>0x5</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxOTYPE</name>
-          <description>Port GPIOx Output Type Register (PxOTYPE)</description>
-          <addressOffset>0x6</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxLOCK_CTL</name>
-          <description>Port GPIOx Lock Control Register (PxLOCK_CTL)</description>
-          <addressOffset>0x7</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-      </registers>
     </peripheral>
-    <peripheral>
+    <peripheral derivedFrom="GPIO0">
       <name>GPIOC</name>
       <description>GPIOC</description>
-      <groupName>GPIO</groupName>
       <baseAddress>0x40099000</baseAddress>
-      <addressBlock>
-        <offset>0</offset>
-        <size>0x40</size>
-        <usage>registers</usage>
-      </addressBlock>
-      <registers>
-        <register>
-          <name>PxDOUT</name>
-          <description>Port GPIOx Data Out Register (PxDOUT)</description>
-          <addressOffset>0x0</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxDIN</name>
-          <description>Port GPIOx Data In Register (PxDIN)</description>
-          <addressOffset>0x1</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxDIR</name>
-          <description>Port GPIOx Direction Register (PxDIR)</description>
-          <addressOffset>0x2</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxPULL</name>
-          <description>Port GPIOx Pull-Up or Pull-Down Enable Register (PxPULL)</description>
-          <addressOffset>0x3</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxPUD</name>
-          <description>Port GPIOx Pull-Up/Down Selection Register (PxPUD)</description>
-          <addressOffset>0x4</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxENVDD</name>
-          <description>Port GPIOx Drive Enable by VDD Present Register (PxENVDD)</description>
-          <addressOffset>0x5</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxOTYPE</name>
-          <description>Port GPIOx Output Type Register (PxOTYPE)</description>
-          <addressOffset>0x6</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxLOCK_CTL</name>
-          <description>Port GPIOx Lock Control Register (PxLOCK_CTL)</description>
-          <addressOffset>0x7</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-      </registers>
     </peripheral>
-    <peripheral>
+    <peripheral derivedFrom="GPIO0">
       <name>GPIOD</name>
       <description>GPIOD</description>
-      <groupName>GPIO</groupName>
       <baseAddress>0x4009B000</baseAddress>
-      <addressBlock>
-        <offset>0</offset>
-        <size>0x40</size>
-        <usage>registers</usage>
-      </addressBlock>
-      <registers>
-        <register>
-          <name>PxDOUT</name>
-          <description>Port GPIOx Data Out Register (PxDOUT)</description>
-          <addressOffset>0x0</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxDIN</name>
-          <description>Port GPIOx Data In Register (PxDIN)</description>
-          <addressOffset>0x1</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxDIR</name>
-          <description>Port GPIOx Direction Register (PxDIR)</description>
-          <addressOffset>0x2</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxPULL</name>
-          <description>Port GPIOx Pull-Up or Pull-Down Enable Register (PxPULL)</description>
-          <addressOffset>0x3</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxPUD</name>
-          <description>Port GPIOx Pull-Up/Down Selection Register (PxPUD)</description>
-          <addressOffset>0x4</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxENVDD</name>
-          <description>Port GPIOx Drive Enable by VDD Present Register (PxENVDD)</description>
-          <addressOffset>0x5</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxOTYPE</name>
-          <description>Port GPIOx Output Type Register (PxOTYPE)</description>
-          <addressOffset>0x6</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxLOCK_CTL</name>
-          <description>Port GPIOx Lock Control Register (PxLOCK_CTL)</description>
-          <addressOffset>0x7</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-      </registers>
     </peripheral>
-    <peripheral>
+    <peripheral derivedFrom="GPIO0">
       <name>GPIOE</name>
       <description>GPIOE</description>
-      <groupName>GPIO</groupName>
       <baseAddress>0x4009D000</baseAddress>
-      <addressBlock>
-        <offset>0</offset>
-        <size>0x40</size>
-        <usage>registers</usage>
-      </addressBlock>
-      <registers>
-        <register>
-          <name>PxDOUT</name>
-          <description>Port GPIOx Data Out Register (PxDOUT)</description>
-          <addressOffset>0x0</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxDIN</name>
-          <description>Port GPIOx Data In Register (PxDIN)</description>
-          <addressOffset>0x1</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxDIR</name>
-          <description>Port GPIOx Direction Register (PxDIR)</description>
-          <addressOffset>0x2</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxPULL</name>
-          <description>Port GPIOx Pull-Up or Pull-Down Enable Register (PxPULL)</description>
-          <addressOffset>0x3</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxPUD</name>
-          <description>Port GPIOx Pull-Up/Down Selection Register (PxPUD)</description>
-          <addressOffset>0x4</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxENVDD</name>
-          <description>Port GPIOx Drive Enable by VDD Present Register (PxENVDD)</description>
-          <addressOffset>0x5</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxOTYPE</name>
-          <description>Port GPIOx Output Type Register (PxOTYPE)</description>
-          <addressOffset>0x6</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxLOCK_CTL</name>
-          <description>Port GPIOx Lock Control Register (PxLOCK_CTL)</description>
-          <addressOffset>0x7</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-      </registers>
     </peripheral>
-    <peripheral>
+    <peripheral derivedFrom="GPIO0">
       <name>GPIOF</name>
       <description>GPIOF</description>
-      <groupName>GPIO</groupName>
       <baseAddress>0x4009F000</baseAddress>
-      <addressBlock>
-        <offset>0</offset>
-        <size>0x40</size>
-        <usage>registers</usage>
-      </addressBlock>
-      <registers>
-        <register>
-          <name>PxDOUT</name>
-          <description>Port GPIOx Data Out Register (PxDOUT)</description>
-          <addressOffset>0x0</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxDIN</name>
-          <description>Port GPIOx Data In Register (PxDIN)</description>
-          <addressOffset>0x1</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxDIR</name>
-          <description>Port GPIOx Direction Register (PxDIR)</description>
-          <addressOffset>0x2</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxPULL</name>
-          <description>Port GPIOx Pull-Up or Pull-Down Enable Register (PxPULL)</description>
-          <addressOffset>0x3</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxPUD</name>
-          <description>Port GPIOx Pull-Up/Down Selection Register (PxPUD)</description>
-          <addressOffset>0x4</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxENVDD</name>
-          <description>Port GPIOx Drive Enable by VDD Present Register (PxENVDD)</description>
-          <addressOffset>0x5</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxOTYPE</name>
-          <description>Port GPIOx Output Type Register (PxOTYPE)</description>
-          <addressOffset>0x6</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>PxLOCK_CTL</name>
-          <description>Port GPIOx Lock Control Register (PxLOCK_CTL)</description>
-          <addressOffset>0x7</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-      </registers>
     </peripheral>
     <peripheral>
       <name>HFCG</name>

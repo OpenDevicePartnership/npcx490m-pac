@@ -781,10 +781,10 @@ pub struct Gpio1 {
 unsafe impl Send for Gpio1 {}
 impl Gpio1 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const gpio1::RegisterBlock = 0x4008_3000 as *const _;
+    pub const PTR: *const gpio0::RegisterBlock = 0x4008_3000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const gpio1::RegisterBlock {
+    pub const fn ptr() -> *const gpio0::RegisterBlock {
         Self::PTR
     }
     #[doc = r" Steal an instance of this peripheral"]
@@ -807,7 +807,7 @@ impl Gpio1 {
     }
 }
 impl Deref for Gpio1 {
-    type Target = gpio1::RegisterBlock;
+    type Target = gpio0::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
@@ -819,7 +819,7 @@ impl core::fmt::Debug for Gpio1 {
     }
 }
 #[doc = "GPIO1"]
-pub mod gpio1;
+pub use self::gpio0 as gpio1;
 #[doc = "GPIO2"]
 pub struct Gpio2 {
     _marker: PhantomData<*const ()>,
@@ -827,10 +827,10 @@ pub struct Gpio2 {
 unsafe impl Send for Gpio2 {}
 impl Gpio2 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const gpio2::RegisterBlock = 0x4008_5000 as *const _;
+    pub const PTR: *const gpio0::RegisterBlock = 0x4008_5000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const gpio2::RegisterBlock {
+    pub const fn ptr() -> *const gpio0::RegisterBlock {
         Self::PTR
     }
     #[doc = r" Steal an instance of this peripheral"]
@@ -853,7 +853,7 @@ impl Gpio2 {
     }
 }
 impl Deref for Gpio2 {
-    type Target = gpio2::RegisterBlock;
+    type Target = gpio0::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
@@ -865,7 +865,7 @@ impl core::fmt::Debug for Gpio2 {
     }
 }
 #[doc = "GPIO2"]
-pub mod gpio2;
+pub use self::gpio0 as gpio2;
 #[doc = "GPIO3"]
 pub struct Gpio3 {
     _marker: PhantomData<*const ()>,
@@ -873,10 +873,10 @@ pub struct Gpio3 {
 unsafe impl Send for Gpio3 {}
 impl Gpio3 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const gpio3::RegisterBlock = 0x4008_7000 as *const _;
+    pub const PTR: *const gpio0::RegisterBlock = 0x4008_7000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const gpio3::RegisterBlock {
+    pub const fn ptr() -> *const gpio0::RegisterBlock {
         Self::PTR
     }
     #[doc = r" Steal an instance of this peripheral"]
@@ -899,7 +899,7 @@ impl Gpio3 {
     }
 }
 impl Deref for Gpio3 {
-    type Target = gpio3::RegisterBlock;
+    type Target = gpio0::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
@@ -911,7 +911,7 @@ impl core::fmt::Debug for Gpio3 {
     }
 }
 #[doc = "GPIO3"]
-pub mod gpio3;
+pub use self::gpio0 as gpio3;
 #[doc = "GPIO4"]
 pub struct Gpio4 {
     _marker: PhantomData<*const ()>,
@@ -919,10 +919,10 @@ pub struct Gpio4 {
 unsafe impl Send for Gpio4 {}
 impl Gpio4 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const gpio4::RegisterBlock = 0x4008_9000 as *const _;
+    pub const PTR: *const gpio0::RegisterBlock = 0x4008_9000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const gpio4::RegisterBlock {
+    pub const fn ptr() -> *const gpio0::RegisterBlock {
         Self::PTR
     }
     #[doc = r" Steal an instance of this peripheral"]
@@ -945,7 +945,7 @@ impl Gpio4 {
     }
 }
 impl Deref for Gpio4 {
-    type Target = gpio4::RegisterBlock;
+    type Target = gpio0::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
@@ -957,7 +957,7 @@ impl core::fmt::Debug for Gpio4 {
     }
 }
 #[doc = "GPIO4"]
-pub mod gpio4;
+pub use self::gpio0 as gpio4;
 #[doc = "GPIO5"]
 pub struct Gpio5 {
     _marker: PhantomData<*const ()>,
@@ -965,10 +965,10 @@ pub struct Gpio5 {
 unsafe impl Send for Gpio5 {}
 impl Gpio5 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const gpio5::RegisterBlock = 0x4008_b000 as *const _;
+    pub const PTR: *const gpio0::RegisterBlock = 0x4008_b000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const gpio5::RegisterBlock {
+    pub const fn ptr() -> *const gpio0::RegisterBlock {
         Self::PTR
     }
     #[doc = r" Steal an instance of this peripheral"]
@@ -991,7 +991,7 @@ impl Gpio5 {
     }
 }
 impl Deref for Gpio5 {
-    type Target = gpio5::RegisterBlock;
+    type Target = gpio0::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
@@ -1003,7 +1003,7 @@ impl core::fmt::Debug for Gpio5 {
     }
 }
 #[doc = "GPIO5"]
-pub mod gpio5;
+pub use self::gpio0 as gpio5;
 #[doc = "GPIO6"]
 pub struct Gpio6 {
     _marker: PhantomData<*const ()>,
@@ -1011,10 +1011,10 @@ pub struct Gpio6 {
 unsafe impl Send for Gpio6 {}
 impl Gpio6 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const gpio6::RegisterBlock = 0x4008_d000 as *const _;
+    pub const PTR: *const gpio0::RegisterBlock = 0x4008_d000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const gpio6::RegisterBlock {
+    pub const fn ptr() -> *const gpio0::RegisterBlock {
         Self::PTR
     }
     #[doc = r" Steal an instance of this peripheral"]
@@ -1037,7 +1037,7 @@ impl Gpio6 {
     }
 }
 impl Deref for Gpio6 {
-    type Target = gpio6::RegisterBlock;
+    type Target = gpio0::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
@@ -1049,7 +1049,7 @@ impl core::fmt::Debug for Gpio6 {
     }
 }
 #[doc = "GPIO6"]
-pub mod gpio6;
+pub use self::gpio0 as gpio6;
 #[doc = "GPIO7"]
 pub struct Gpio7 {
     _marker: PhantomData<*const ()>,
@@ -1057,10 +1057,10 @@ pub struct Gpio7 {
 unsafe impl Send for Gpio7 {}
 impl Gpio7 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const gpio7::RegisterBlock = 0x4008_f000 as *const _;
+    pub const PTR: *const gpio0::RegisterBlock = 0x4008_f000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const gpio7::RegisterBlock {
+    pub const fn ptr() -> *const gpio0::RegisterBlock {
         Self::PTR
     }
     #[doc = r" Steal an instance of this peripheral"]
@@ -1083,7 +1083,7 @@ impl Gpio7 {
     }
 }
 impl Deref for Gpio7 {
-    type Target = gpio7::RegisterBlock;
+    type Target = gpio0::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
@@ -1095,7 +1095,7 @@ impl core::fmt::Debug for Gpio7 {
     }
 }
 #[doc = "GPIO7"]
-pub mod gpio7;
+pub use self::gpio0 as gpio7;
 #[doc = "GPIO8"]
 pub struct Gpio8 {
     _marker: PhantomData<*const ()>,
@@ -1103,10 +1103,10 @@ pub struct Gpio8 {
 unsafe impl Send for Gpio8 {}
 impl Gpio8 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const gpio8::RegisterBlock = 0x4009_1000 as *const _;
+    pub const PTR: *const gpio0::RegisterBlock = 0x4009_1000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const gpio8::RegisterBlock {
+    pub const fn ptr() -> *const gpio0::RegisterBlock {
         Self::PTR
     }
     #[doc = r" Steal an instance of this peripheral"]
@@ -1129,7 +1129,7 @@ impl Gpio8 {
     }
 }
 impl Deref for Gpio8 {
-    type Target = gpio8::RegisterBlock;
+    type Target = gpio0::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
@@ -1141,7 +1141,7 @@ impl core::fmt::Debug for Gpio8 {
     }
 }
 #[doc = "GPIO8"]
-pub mod gpio8;
+pub use self::gpio0 as gpio8;
 #[doc = "GPIO9"]
 pub struct Gpio9 {
     _marker: PhantomData<*const ()>,
@@ -1149,10 +1149,10 @@ pub struct Gpio9 {
 unsafe impl Send for Gpio9 {}
 impl Gpio9 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const gpio9::RegisterBlock = 0x4009_3000 as *const _;
+    pub const PTR: *const gpio0::RegisterBlock = 0x4009_3000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const gpio9::RegisterBlock {
+    pub const fn ptr() -> *const gpio0::RegisterBlock {
         Self::PTR
     }
     #[doc = r" Steal an instance of this peripheral"]
@@ -1175,7 +1175,7 @@ impl Gpio9 {
     }
 }
 impl Deref for Gpio9 {
-    type Target = gpio9::RegisterBlock;
+    type Target = gpio0::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
@@ -1187,7 +1187,7 @@ impl core::fmt::Debug for Gpio9 {
     }
 }
 #[doc = "GPIO9"]
-pub mod gpio9;
+pub use self::gpio0 as gpio9;
 #[doc = "GPIOA"]
 pub struct Gpioa {
     _marker: PhantomData<*const ()>,
@@ -1195,10 +1195,10 @@ pub struct Gpioa {
 unsafe impl Send for Gpioa {}
 impl Gpioa {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const gpioa::RegisterBlock = 0x4009_5000 as *const _;
+    pub const PTR: *const gpio0::RegisterBlock = 0x4009_5000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const gpioa::RegisterBlock {
+    pub const fn ptr() -> *const gpio0::RegisterBlock {
         Self::PTR
     }
     #[doc = r" Steal an instance of this peripheral"]
@@ -1221,7 +1221,7 @@ impl Gpioa {
     }
 }
 impl Deref for Gpioa {
-    type Target = gpioa::RegisterBlock;
+    type Target = gpio0::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
@@ -1233,7 +1233,7 @@ impl core::fmt::Debug for Gpioa {
     }
 }
 #[doc = "GPIOA"]
-pub mod gpioa;
+pub use self::gpio0 as gpioa;
 #[doc = "GPIOB"]
 pub struct Gpiob {
     _marker: PhantomData<*const ()>,
@@ -1241,10 +1241,10 @@ pub struct Gpiob {
 unsafe impl Send for Gpiob {}
 impl Gpiob {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const gpiob::RegisterBlock = 0x4009_7000 as *const _;
+    pub const PTR: *const gpio0::RegisterBlock = 0x4009_7000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const gpiob::RegisterBlock {
+    pub const fn ptr() -> *const gpio0::RegisterBlock {
         Self::PTR
     }
     #[doc = r" Steal an instance of this peripheral"]
@@ -1267,7 +1267,7 @@ impl Gpiob {
     }
 }
 impl Deref for Gpiob {
-    type Target = gpiob::RegisterBlock;
+    type Target = gpio0::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
@@ -1279,7 +1279,7 @@ impl core::fmt::Debug for Gpiob {
     }
 }
 #[doc = "GPIOB"]
-pub mod gpiob;
+pub use self::gpio0 as gpiob;
 #[doc = "GPIOC"]
 pub struct Gpioc {
     _marker: PhantomData<*const ()>,
@@ -1287,10 +1287,10 @@ pub struct Gpioc {
 unsafe impl Send for Gpioc {}
 impl Gpioc {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const gpioc::RegisterBlock = 0x4009_9000 as *const _;
+    pub const PTR: *const gpio0::RegisterBlock = 0x4009_9000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const gpioc::RegisterBlock {
+    pub const fn ptr() -> *const gpio0::RegisterBlock {
         Self::PTR
     }
     #[doc = r" Steal an instance of this peripheral"]
@@ -1313,7 +1313,7 @@ impl Gpioc {
     }
 }
 impl Deref for Gpioc {
-    type Target = gpioc::RegisterBlock;
+    type Target = gpio0::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
@@ -1325,7 +1325,7 @@ impl core::fmt::Debug for Gpioc {
     }
 }
 #[doc = "GPIOC"]
-pub mod gpioc;
+pub use self::gpio0 as gpioc;
 #[doc = "GPIOD"]
 pub struct Gpiod {
     _marker: PhantomData<*const ()>,
@@ -1333,10 +1333,10 @@ pub struct Gpiod {
 unsafe impl Send for Gpiod {}
 impl Gpiod {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const gpiod::RegisterBlock = 0x4009_b000 as *const _;
+    pub const PTR: *const gpio0::RegisterBlock = 0x4009_b000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const gpiod::RegisterBlock {
+    pub const fn ptr() -> *const gpio0::RegisterBlock {
         Self::PTR
     }
     #[doc = r" Steal an instance of this peripheral"]
@@ -1359,7 +1359,7 @@ impl Gpiod {
     }
 }
 impl Deref for Gpiod {
-    type Target = gpiod::RegisterBlock;
+    type Target = gpio0::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
@@ -1371,7 +1371,7 @@ impl core::fmt::Debug for Gpiod {
     }
 }
 #[doc = "GPIOD"]
-pub mod gpiod;
+pub use self::gpio0 as gpiod;
 #[doc = "GPIOE"]
 pub struct Gpioe {
     _marker: PhantomData<*const ()>,
@@ -1379,10 +1379,10 @@ pub struct Gpioe {
 unsafe impl Send for Gpioe {}
 impl Gpioe {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const gpioe::RegisterBlock = 0x4009_d000 as *const _;
+    pub const PTR: *const gpio0::RegisterBlock = 0x4009_d000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const gpioe::RegisterBlock {
+    pub const fn ptr() -> *const gpio0::RegisterBlock {
         Self::PTR
     }
     #[doc = r" Steal an instance of this peripheral"]
@@ -1405,7 +1405,7 @@ impl Gpioe {
     }
 }
 impl Deref for Gpioe {
-    type Target = gpioe::RegisterBlock;
+    type Target = gpio0::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
@@ -1417,7 +1417,7 @@ impl core::fmt::Debug for Gpioe {
     }
 }
 #[doc = "GPIOE"]
-pub mod gpioe;
+pub use self::gpio0 as gpioe;
 #[doc = "GPIOF"]
 pub struct Gpiof {
     _marker: PhantomData<*const ()>,
@@ -1425,10 +1425,10 @@ pub struct Gpiof {
 unsafe impl Send for Gpiof {}
 impl Gpiof {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const gpiof::RegisterBlock = 0x4009_f000 as *const _;
+    pub const PTR: *const gpio0::RegisterBlock = 0x4009_f000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const gpiof::RegisterBlock {
+    pub const fn ptr() -> *const gpio0::RegisterBlock {
         Self::PTR
     }
     #[doc = r" Steal an instance of this peripheral"]
@@ -1451,7 +1451,7 @@ impl Gpiof {
     }
 }
 impl Deref for Gpiof {
-    type Target = gpiof::RegisterBlock;
+    type Target = gpio0::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
@@ -1463,7 +1463,7 @@ impl core::fmt::Debug for Gpiof {
     }
 }
 #[doc = "GPIOF"]
-pub mod gpiof;
+pub use self::gpio0 as gpiof;
 #[doc = "HFCG"]
 pub struct Hfcg {
     _marker: PhantomData<*const ()>,
