@@ -2,14 +2,147 @@
 pub type R = crate::R<UfrsnSpec>;
 #[doc = "Register `UFRSn` writer"]
 pub type W = crate::W<UfrsnSpec>;
+#[doc = "Stop Bits\n\nValue on reset: 0"]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum StopBits {
+    #[doc = "0: `0`"]
+    OneBit = 0,
+    #[doc = "1: `1`"]
+    TwoBits = 1,
+}
+impl From<StopBits> for bool {
+    #[inline(always)]
+    fn from(variant: StopBits) -> Self {
+        variant as u8 != 0
+    }
+}
 #[doc = "Field `STP` reader - Stop Bits"]
-pub type StpR = crate::BitReader;
+pub type StpR = crate::BitReader<StopBits>;
+impl StpR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> StopBits {
+        match self.bits {
+            false => StopBits::OneBit,
+            true => StopBits::TwoBits,
+        }
+    }
+    #[doc = "`0`"]
+    #[inline(always)]
+    pub fn is_one_bit(&self) -> bool {
+        *self == StopBits::OneBit
+    }
+    #[doc = "`1`"]
+    #[inline(always)]
+    pub fn is_two_bits(&self) -> bool {
+        *self == StopBits::TwoBits
+    }
+}
 #[doc = "Field `STP` writer - Stop Bits"]
-pub type StpW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type StpW<'a, REG> = crate::BitWriter<'a, REG, StopBits>;
+impl<'a, REG> StpW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
+    #[doc = "`0`"]
+    #[inline(always)]
+    pub fn one_bit(self) -> &'a mut crate::W<REG> {
+        self.variant(StopBits::OneBit)
+    }
+    #[doc = "`1`"]
+    #[inline(always)]
+    pub fn two_bits(self) -> &'a mut crate::W<REG> {
+        self.variant(StopBits::TwoBits)
+    }
+}
+#[doc = "Parity Select\n\nValue on reset: 0"]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u8)]
+pub enum ParitySelect {
+    #[doc = "0: `0`"]
+    Odd = 0,
+    #[doc = "1: `1`"]
+    Even = 1,
+    #[doc = "2: `10`"]
+    Mark = 2,
+    #[doc = "3: `11`"]
+    Space = 3,
+}
+impl From<ParitySelect> for u8 {
+    #[inline(always)]
+    fn from(variant: ParitySelect) -> Self {
+        variant as _
+    }
+}
+impl crate::FieldSpec for ParitySelect {
+    type Ux = u8;
+}
+impl crate::IsEnum for ParitySelect {}
 #[doc = "Field `PSEL` reader - Parity Select"]
-pub type PselR = crate::FieldReader;
+pub type PselR = crate::FieldReader<ParitySelect>;
+impl PselR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> ParitySelect {
+        match self.bits {
+            0 => ParitySelect::Odd,
+            1 => ParitySelect::Even,
+            2 => ParitySelect::Mark,
+            3 => ParitySelect::Space,
+            _ => unreachable!(),
+        }
+    }
+    #[doc = "`0`"]
+    #[inline(always)]
+    pub fn is_odd(&self) -> bool {
+        *self == ParitySelect::Odd
+    }
+    #[doc = "`1`"]
+    #[inline(always)]
+    pub fn is_even(&self) -> bool {
+        *self == ParitySelect::Even
+    }
+    #[doc = "`10`"]
+    #[inline(always)]
+    pub fn is_mark(&self) -> bool {
+        *self == ParitySelect::Mark
+    }
+    #[doc = "`11`"]
+    #[inline(always)]
+    pub fn is_space(&self) -> bool {
+        *self == ParitySelect::Space
+    }
+}
 #[doc = "Field `PSEL` writer - Parity Select"]
-pub type PselW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
+pub type PselW<'a, REG> = crate::FieldWriter<'a, REG, 2, ParitySelect, crate::Safe>;
+impl<'a, REG> PselW<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
+    #[doc = "`0`"]
+    #[inline(always)]
+    pub fn odd(self) -> &'a mut crate::W<REG> {
+        self.variant(ParitySelect::Odd)
+    }
+    #[doc = "`1`"]
+    #[inline(always)]
+    pub fn even(self) -> &'a mut crate::W<REG> {
+        self.variant(ParitySelect::Even)
+    }
+    #[doc = "`10`"]
+    #[inline(always)]
+    pub fn mark(self) -> &'a mut crate::W<REG> {
+        self.variant(ParitySelect::Mark)
+    }
+    #[doc = "`11`"]
+    #[inline(always)]
+    pub fn space(self) -> &'a mut crate::W<REG> {
+        self.variant(ParitySelect::Space)
+    }
+}
 #[doc = "Field `PEN` reader - Parity Enable"]
 pub type PenR = crate::BitReader;
 #[doc = "Field `PEN` writer - Parity Enable"]

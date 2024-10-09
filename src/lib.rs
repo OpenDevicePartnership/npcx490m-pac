@@ -275,10 +275,10 @@ pub struct CrUart2 {
 unsafe impl Send for CrUart2 {}
 impl CrUart2 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const cr_uart2::RegisterBlock = 0x400e_2000 as *const _;
+    pub const PTR: *const cr_uart1::RegisterBlock = 0x400e_2000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const cr_uart2::RegisterBlock {
+    pub const fn ptr() -> *const cr_uart1::RegisterBlock {
         Self::PTR
     }
     #[doc = r" Steal an instance of this peripheral"]
@@ -301,7 +301,7 @@ impl CrUart2 {
     }
 }
 impl Deref for CrUart2 {
-    type Target = cr_uart2::RegisterBlock;
+    type Target = cr_uart1::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
@@ -313,7 +313,7 @@ impl core::fmt::Debug for CrUart2 {
     }
 }
 #[doc = "CR_UART2"]
-pub mod cr_uart2;
+pub use self::cr_uart1 as cr_uart2;
 #[doc = "CR_UART3"]
 pub struct CrUart3 {
     _marker: PhantomData<*const ()>,
@@ -321,10 +321,10 @@ pub struct CrUart3 {
 unsafe impl Send for CrUart3 {}
 impl CrUart3 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const cr_uart3::RegisterBlock = 0x400e_4000 as *const _;
+    pub const PTR: *const cr_uart1::RegisterBlock = 0x400e_4000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const cr_uart3::RegisterBlock {
+    pub const fn ptr() -> *const cr_uart1::RegisterBlock {
         Self::PTR
     }
     #[doc = r" Steal an instance of this peripheral"]
@@ -347,7 +347,7 @@ impl CrUart3 {
     }
 }
 impl Deref for CrUart3 {
-    type Target = cr_uart3::RegisterBlock;
+    type Target = cr_uart1::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
@@ -359,7 +359,7 @@ impl core::fmt::Debug for CrUart3 {
     }
 }
 #[doc = "CR_UART3"]
-pub mod cr_uart3;
+pub use self::cr_uart1 as cr_uart3;
 #[doc = "CR_UART4"]
 pub struct CrUart4 {
     _marker: PhantomData<*const ()>,
@@ -367,10 +367,10 @@ pub struct CrUart4 {
 unsafe impl Send for CrUart4 {}
 impl CrUart4 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const cr_uart4::RegisterBlock = 0x400e_6000 as *const _;
+    pub const PTR: *const cr_uart1::RegisterBlock = 0x400e_6000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const cr_uart4::RegisterBlock {
+    pub const fn ptr() -> *const cr_uart1::RegisterBlock {
         Self::PTR
     }
     #[doc = r" Steal an instance of this peripheral"]
@@ -393,7 +393,7 @@ impl CrUart4 {
     }
 }
 impl Deref for CrUart4 {
-    type Target = cr_uart4::RegisterBlock;
+    type Target = cr_uart1::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
@@ -405,7 +405,7 @@ impl core::fmt::Debug for CrUart4 {
     }
 }
 #[doc = "CR_UART4"]
-pub mod cr_uart4;
+pub use self::cr_uart1 as cr_uart4;
 #[doc = "DEV"]
 pub struct Dev {
     _marker: PhantomData<*const ()>,

@@ -88,19 +88,19 @@ impl RegisterBlock {
         &self.ucntln
     }
 }
-#[doc = "UTBUFn (rw) register accessor: Transmit Data Buffer Register (UTBUFn)\n\nYou can [`read`](crate::Reg::read) this register and get [`utbufn::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`utbufn::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@utbufn`]
+#[doc = "UTBUFn (w) register accessor: Transmit Data Buffer Register (UTBUFn)\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`utbufn::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@utbufn`]
 module"]
 #[doc(alias = "UTBUFn")]
 pub type Utbufn = crate::Reg<utbufn::UtbufnSpec>;
 #[doc = "Transmit Data Buffer Register (UTBUFn)"]
 pub mod utbufn;
-#[doc = "URBUFn (rw) register accessor: Receive Data Buffer Register (URBUFn)\n\nYou can [`read`](crate::Reg::read) this register and get [`urbufn::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`urbufn::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@urbufn`]
+#[doc = "URBUFn (r) register accessor: Receive Data Buffer Register (URBUFn)\n\nYou can [`read`](crate::Reg::read) this register and get [`urbufn::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@urbufn`]
 module"]
 #[doc(alias = "URBUFn")]
 pub type Urbufn = crate::Reg<urbufn::UrbufnSpec>;
 #[doc = "Receive Data Buffer Register (URBUFn)"]
 pub mod urbufn;
-#[doc = "USTATn (rw) register accessor: Status Register (USTATn)\n\nYou can [`read`](crate::Reg::read) this register and get [`ustatn::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ustatn::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ustatn`]
+#[doc = "USTATn (r) register accessor: Status Register (USTATn)\n\nYou can [`read`](crate::Reg::read) this register and get [`ustatn::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ustatn`]
 module"]
 #[doc(alias = "USTATn")]
 pub type Ustatn = crate::Reg<ustatn::UstatnSpec>;
@@ -130,13 +130,13 @@ module"]
 pub type Upsrn = crate::Reg<upsrn::UpsrnSpec>;
 #[doc = "Baud Rate Prescaler Register (UPSRn)"]
 pub mod upsrn;
-#[doc = "UFTSTSn (rw) register accessor: FIFO Mode Transmit Status Register (UFTSTSn)\n\nYou can [`read`](crate::Reg::read) this register and get [`uftstsn::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`uftstsn::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@uftstsn`]
+#[doc = "UFTSTSn (r) register accessor: FIFO Mode Transmit Status Register (UFTSTSn)\n\nYou can [`read`](crate::Reg::read) this register and get [`uftstsn::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@uftstsn`]
 module"]
 #[doc(alias = "UFTSTSn")]
 pub type Uftstsn = crate::Reg<uftstsn::UftstsnSpec>;
 #[doc = "FIFO Mode Transmit Status Register (UFTSTSn)"]
 pub mod uftstsn;
-#[doc = "UFRSTSn (rw) register accessor: FIFO Mode Receive Status Register (UFRSTSn)\n\nYou can [`read`](crate::Reg::read) this register and get [`ufrstsn::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ufrstsn::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ufrstsn`]
+#[doc = "UFRSTSn (r) register accessor: FIFO Mode Receive Status Register (UFRSTSn)\n\nYou can [`read`](crate::Reg::read) this register and get [`ufrstsn::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ufrstsn`]
 module"]
 #[doc(alias = "UFRSTSn")]
 pub type Ufrstsn = crate::Reg<ufrstsn::UfrstsnSpec>;

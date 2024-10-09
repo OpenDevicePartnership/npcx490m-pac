@@ -2587,7 +2587,7 @@
           <description>Transmit Data Buffer Register (UTBUFn)</description>
           <addressOffset>0x0</addressOffset>
           <size>8</size>
-          <access>read-write</access>
+          <access>write-only</access>
           <resetValue>0x00</resetValue>
           <resetMask>0xFF</resetMask>
         </register>
@@ -2596,7 +2596,7 @@
           <description>Receive Data Buffer Register (URBUFn)</description>
           <addressOffset>0x2</addressOffset>
           <size>8</size>
-          <access>read-write</access>
+          <access>read-only</access>
           <resetValue>0x00</resetValue>
           <resetMask>0xFF</resetMask>
         </register>
@@ -2605,7 +2605,7 @@
           <description>Status Register (USTATn)</description>
           <addressOffset>0x6</addressOffset>
           <size>8</size>
-          <access>read-write</access>
+          <access>read-only</access>
           <resetValue>0x00</resetValue>
           <resetMask>0xFF</resetMask>
           <fields>
@@ -2613,25 +2613,25 @@
               <name>PE</name>
               <description>Parity Error</description>
               <bitRange>[0:0]</bitRange>
-              <access>read-write</access>
+              <access>read-only</access>
             </field>
             <field>
               <name>FE</name>
               <description>Framing Error</description>
               <bitRange>[1:1]</bitRange>
-              <access>read-write</access>
+              <access>read-only</access>
             </field>
             <field>
               <name>DOE</name>
               <description>Data Overrun Error</description>
               <bitRange>[2:2]</bitRange>
-              <access>read-write</access>
+              <access>read-only</access>
             </field>
             <field>
               <name>BKD</name>
               <description>Break Detect</description>
               <bitRange>[4:4]</bitRange>
-              <access>read-write</access>
+              <access>read-only</access>
             </field>
           </fields>
         </register>
@@ -2649,12 +2649,44 @@
               <description>Stop Bits</description>
               <bitRange>[2:2]</bitRange>
               <access>read-write</access>
+	      <enumeratedValues>
+		<name>StopBits</name>
+		<usage>read-write</usage>
+		<enumeratedValue>
+		  <name>OneBit</name>
+		  <value>0</value>
+		</enumeratedValue>
+		<enumeratedValue>
+		  <name>TwoBits</name>
+		  <value>1</value>
+		</enumeratedValue>
+	      </enumeratedValues>
             </field>
             <field>
               <name>PSEL</name>
               <description>Parity Select</description>
               <bitRange>[5:4]</bitRange>
               <access>read-write</access>
+	      <enumeratedValues>
+		<name>ParitySelect</name>
+		<usage>read-write</usage>
+		<enumeratedValue>
+		  <name>Odd</name>
+		  <value>0</value>
+		</enumeratedValue>
+		<enumeratedValue>
+		  <name>Even</name>
+		  <value>1</value>
+		</enumeratedValue>
+		<enumeratedValue>
+		  <name>Mark</name>
+		  <value>2</value>
+		</enumeratedValue>
+		<enumeratedValue>
+		  <name>Space</name>
+		  <value>3</value>
+		</enumeratedValue>
+	      </enumeratedValues>
             </field>
             <field>
               <name>PEN</name>
@@ -2670,8 +2702,8 @@
           <addressOffset>0xa</addressOffset>
           <size>8</size>
           <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
+          <resetValue>0x01</resetValue>
+          <resetMask>0xFE</resetMask>
           <fields>
             <field>
               <name>BRK</name>
@@ -2730,33 +2762,33 @@
           <description>FIFO Mode Transmit Status Register (UFTSTSn)</description>
           <addressOffset>0x20</addressOffset>
           <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
+          <access>read-only</access>
+          <resetValue>0xF0</resetValue>
           <resetMask>0xFF</resetMask>
           <fields>
             <field>
               <name>TEMPTY_LEVEL</name>
               <description>Transmit FIFO Empty Level</description>
               <bitRange>[4:0]</bitRange>
-              <access>read-write</access>
+              <access>read-only</access>
             </field>
             <field>
               <name>TEMPTY_LEVEL_STS</name>
               <description>Transmit FIFO Empty Level Status</description>
               <bitRange>[5:5]</bitRange>
-              <access>read-write</access>
+              <access>read-only</access>
             </field>
             <field>
               <name>TFIFO_EMPTY_STS</name>
               <description>Transmit FIFO Empty Status</description>
               <bitRange>[6:6]</bitRange>
-              <access>read-write</access>
+              <access>read-only</access>
             </field>
             <field>
               <name>NXMIP</name>
               <description>No Transmit in Progress</description>
               <bitRange>[7:7]</bitRange>
-              <access>read-write</access>
+              <access>read-only</access>
             </field>
           </fields>
         </register>
@@ -2765,7 +2797,7 @@
           <description>FIFO Mode Receive Status Register (UFRSTSn)</description>
           <addressOffset>0x22</addressOffset>
           <size>8</size>
-          <access>read-write</access>
+          <access>read-only</access>
           <resetValue>0x00</resetValue>
           <resetMask>0xFF</resetMask>
           <fields>
@@ -2773,25 +2805,25 @@
               <name>RFULL_LEVEL</name>
               <description>Receive FIFO Full Level</description>
               <bitRange>[4:0]</bitRange>
-              <access>read-write</access>
+              <access>read-only</access>
             </field>
             <field>
               <name>RFULL_LEVEL_STS</name>
               <description>Receive FIFO Full Level Status</description>
               <bitRange>[5:5]</bitRange>
-              <access>read-write</access>
+              <access>read-only</access>
             </field>
             <field>
               <name>RFIFO_NEMPTY_STS</name>
               <description>Receive FIFO Not Empty Status</description>
               <bitRange>[6:6]</bitRange>
-              <access>read-write</access>
+              <access>read-only</access>
             </field>
             <field>
               <name>ERR</name>
               <description>Receive Error</description>
               <bitRange>[7:7]</bitRange>
-              <access>read-write</access>
+              <access>read-only</access>
             </field>
           </fields>
         </register>
@@ -2920,1052 +2952,20 @@
         </register>
       </registers>
     </peripheral>
-    <peripheral>
+    <peripheral derivedFrom="CR_UART1">
       <name>CR_UART2</name>
       <description>CR_UART2</description>
-      <groupName>CR_UART</groupName>
       <baseAddress>0x400E2000</baseAddress>
-      <addressBlock>
-        <offset>0</offset>
-        <size>0x168</size>
-        <usage>registers</usage>
-      </addressBlock>
-      <registers>
-        <register>
-          <name>UTBUFn</name>
-          <description>Transmit Data Buffer Register (UTBUFn)</description>
-          <addressOffset>0x0</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>URBUFn</name>
-          <description>Receive Data Buffer Register (URBUFn)</description>
-          <addressOffset>0x2</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>USTATn</name>
-          <description>Status Register (USTATn)</description>
-          <addressOffset>0x6</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-          <fields>
-            <field>
-              <name>PE</name>
-              <description>Parity Error</description>
-              <bitRange>[0:0]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FE</name>
-              <description>Framing Error</description>
-              <bitRange>[1:1]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DOE</name>
-              <description>Data Overrun Error</description>
-              <bitRange>[2:2]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>BKD</name>
-              <description>Break Detect</description>
-              <bitRange>[4:4]</bitRange>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>UFRSn</name>
-          <description>Frame Select Register (UFRSn)</description>
-          <addressOffset>0x8</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-          <fields>
-            <field>
-              <name>STP</name>
-              <description>Stop Bits</description>
-              <bitRange>[2:2]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>PSEL</name>
-              <description>Parity Select</description>
-              <bitRange>[5:4]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>PEN</name>
-              <description>Parity Enable</description>
-              <bitRange>[6:6]</bitRange>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>UMDSLn</name>
-          <description>Mode Select Register (UMDSLn)</description>
-          <addressOffset>0xa</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-          <fields>
-            <field>
-              <name>BRK</name>
-              <description>Break Transmit</description>
-              <bitRange>[2:2]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>ETD</name>
-              <description>Enable Transmit DMA</description>
-              <bitRange>[4:4]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>ERD</name>
-              <description>Enable Receive DMA</description>
-              <bitRange>[5:5]</bitRange>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>UBAUDn</name>
-          <description>Baud Rate Divisor Register (UBAUDn)</description>
-          <addressOffset>0xc</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>UPSRn</name>
-          <description>Baud Rate Prescaler Register (UPSRn)</description>
-          <addressOffset>0xe</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-          <fields>
-            <field>
-              <name>UDIV10_8</name>
-              <description>Baud Rate Divisor</description>
-              <bitRange>[2:0]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>UPSC</name>
-              <description>Prescaler Select</description>
-              <bitRange>[7:3]</bitRange>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>UFTSTSn</name>
-          <description>FIFO Mode Transmit Status Register (UFTSTSn)</description>
-          <addressOffset>0x20</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-          <fields>
-            <field>
-              <name>TEMPTY_LEVEL</name>
-              <description>Transmit FIFO Empty Level</description>
-              <bitRange>[4:0]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>TEMPTY_LEVEL_STS</name>
-              <description>Transmit FIFO Empty Level Status</description>
-              <bitRange>[5:5]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>TFIFO_EMPTY_STS</name>
-              <description>Transmit FIFO Empty Status</description>
-              <bitRange>[6:6]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>NXMIP</name>
-              <description>No Transmit in Progress</description>
-              <bitRange>[7:7]</bitRange>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>UFRSTSn</name>
-          <description>FIFO Mode Receive Status Register (UFRSTSn)</description>
-          <addressOffset>0x22</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-          <fields>
-            <field>
-              <name>RFULL_LEVEL</name>
-              <description>Receive FIFO Full Level</description>
-              <bitRange>[4:0]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>RFULL_LEVEL_STS</name>
-              <description>Receive FIFO Full Level Status</description>
-              <bitRange>[5:5]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>RFIFO_NEMPTY_STS</name>
-              <description>Receive FIFO Not Empty Status</description>
-              <bitRange>[6:6]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>ERR</name>
-              <description>Receive Error</description>
-              <bitRange>[7:7]</bitRange>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>UFTCTLn</name>
-          <description>FIFO Mode Transmit Control Register (UFTCTLn)</description>
-          <addressOffset>0x24</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-          <fields>
-            <field>
-              <name>TEMPTY_LEVEL_SEL</name>
-              <description>Transmit FIFO Empty Level Select</description>
-              <bitRange>[4:0]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>TEMPTY_LEVEL_EN</name>
-              <description>Transmit FIFO Empty Level Interrupt Enable</description>
-              <bitRange>[5:5]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>TFIFO_EMPTY_EN</name>
-              <description>Transmit FIFO Empty Interrupt Enable</description>
-              <bitRange>[6:6]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>NXMIP_EN</name>
-              <description>No Transmit in Progress Interrupt Enable</description>
-              <bitRange>[7:7]</bitRange>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>UFRCTLn</name>
-          <description>FIFO Mode Receive Control Register (UFRCTLn)</description>
-          <addressOffset>0x26</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-          <fields>
-            <field>
-              <name>RFULL_LEVEL_SEL</name>
-              <description>Receive FIFO Full Level Select</description>
-              <bitRange>[4:0]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>RFULL_LEVEL_EN</name>
-              <description>Receive FIFO Full Level Interrupt Enable</description>
-              <bitRange>[5:5]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>RFIFO_NEMPTY_EN</name>
-              <description>Receive FIFO Not Empty Interrupt Enable</description>
-              <bitRange>[6:6]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>ERR_EN</name>
-              <description>Receive Error Interrupt Enable</description>
-              <bitRange>[7:7]</bitRange>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>UCNTLn</name>
-          <description>Control Register (UCNTLn)</description>
-          <addressOffset>0x2c</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-          <fields>
-            <field>
-              <name>CR_SIN_INV</name>
-              <description>CR_SIN Signal Invert</description>
-              <bitRange>[0:0]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CR_SOUT_INV</name>
-              <description>CR_SOUT Signal Invert</description>
-              <bitRange>[1:1]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CR_SIN_COM</name>
-              <description>CR_SIN Common Mode Select</description>
-              <bitRange>[2:2]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CR_SIN_PP</name>
-              <description>CR_SIN Common Push-Pull Select</description>
-              <bitRange>[3:3]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CR_SOUT_COM</name>
-              <description>CR_SOUT Common Mode Select</description>
-              <bitRange>[4:4]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CR_SOUT_PP</name>
-              <description>CR_SOUT Common Push-Pull Select</description>
-              <bitRange>[5:5]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>COM_FDBK_EN</name>
-              <description>Common Mode Feedback Enable</description>
-              <bitRange>[6:6]</bitRange>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-      </registers>
     </peripheral>
-    <peripheral>
+    <peripheral derivedFrom="CR_UART1">
       <name>CR_UART3</name>
       <description>CR_UART3</description>
-      <groupName>CR_UART</groupName>
       <baseAddress>0x400E4000</baseAddress>
-      <addressBlock>
-        <offset>0</offset>
-        <size>0x168</size>
-        <usage>registers</usage>
-      </addressBlock>
-      <registers>
-        <register>
-          <name>UTBUFn</name>
-          <description>Transmit Data Buffer Register (UTBUFn)</description>
-          <addressOffset>0x0</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>URBUFn</name>
-          <description>Receive Data Buffer Register (URBUFn)</description>
-          <addressOffset>0x2</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>USTATn</name>
-          <description>Status Register (USTATn)</description>
-          <addressOffset>0x6</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-          <fields>
-            <field>
-              <name>PE</name>
-              <description>Parity Error</description>
-              <bitRange>[0:0]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FE</name>
-              <description>Framing Error</description>
-              <bitRange>[1:1]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DOE</name>
-              <description>Data Overrun Error</description>
-              <bitRange>[2:2]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>BKD</name>
-              <description>Break Detect</description>
-              <bitRange>[4:4]</bitRange>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>UFRSn</name>
-          <description>Frame Select Register (UFRSn)</description>
-          <addressOffset>0x8</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-          <fields>
-            <field>
-              <name>STP</name>
-              <description>Stop Bits</description>
-              <bitRange>[2:2]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>PSEL</name>
-              <description>Parity Select</description>
-              <bitRange>[5:4]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>PEN</name>
-              <description>Parity Enable</description>
-              <bitRange>[6:6]</bitRange>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>UMDSLn</name>
-          <description>Mode Select Register (UMDSLn)</description>
-          <addressOffset>0xa</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-          <fields>
-            <field>
-              <name>BRK</name>
-              <description>Break Transmit</description>
-              <bitRange>[2:2]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>ETD</name>
-              <description>Enable Transmit DMA</description>
-              <bitRange>[4:4]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>ERD</name>
-              <description>Enable Receive DMA</description>
-              <bitRange>[5:5]</bitRange>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>UBAUDn</name>
-          <description>Baud Rate Divisor Register (UBAUDn)</description>
-          <addressOffset>0xc</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>UPSRn</name>
-          <description>Baud Rate Prescaler Register (UPSRn)</description>
-          <addressOffset>0xe</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-          <fields>
-            <field>
-              <name>UDIV10_8</name>
-              <description>Baud Rate Divisor</description>
-              <bitRange>[2:0]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>UPSC</name>
-              <description>Prescaler Select</description>
-              <bitRange>[7:3]</bitRange>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>UFTSTSn</name>
-          <description>FIFO Mode Transmit Status Register (UFTSTSn)</description>
-          <addressOffset>0x20</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-          <fields>
-            <field>
-              <name>TEMPTY_LEVEL</name>
-              <description>Transmit FIFO Empty Level</description>
-              <bitRange>[4:0]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>TEMPTY_LEVEL_STS</name>
-              <description>Transmit FIFO Empty Level Status</description>
-              <bitRange>[5:5]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>TFIFO_EMPTY_STS</name>
-              <description>Transmit FIFO Empty Status</description>
-              <bitRange>[6:6]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>NXMIP</name>
-              <description>No Transmit in Progress</description>
-              <bitRange>[7:7]</bitRange>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>UFRSTSn</name>
-          <description>FIFO Mode Receive Status Register (UFRSTSn)</description>
-          <addressOffset>0x22</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-          <fields>
-            <field>
-              <name>RFULL_LEVEL</name>
-              <description>Receive FIFO Full Level</description>
-              <bitRange>[4:0]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>RFULL_LEVEL_STS</name>
-              <description>Receive FIFO Full Level Status</description>
-              <bitRange>[5:5]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>RFIFO_NEMPTY_STS</name>
-              <description>Receive FIFO Not Empty Status</description>
-              <bitRange>[6:6]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>ERR</name>
-              <description>Receive Error</description>
-              <bitRange>[7:7]</bitRange>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>UFTCTLn</name>
-          <description>FIFO Mode Transmit Control Register (UFTCTLn)</description>
-          <addressOffset>0x24</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-          <fields>
-            <field>
-              <name>TEMPTY_LEVEL_SEL</name>
-              <description>Transmit FIFO Empty Level Select</description>
-              <bitRange>[4:0]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>TEMPTY_LEVEL_EN</name>
-              <description>Transmit FIFO Empty Level Interrupt Enable</description>
-              <bitRange>[5:5]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>TFIFO_EMPTY_EN</name>
-              <description>Transmit FIFO Empty Interrupt Enable</description>
-              <bitRange>[6:6]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>NXMIP_EN</name>
-              <description>No Transmit in Progress Interrupt Enable</description>
-              <bitRange>[7:7]</bitRange>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>UFRCTLn</name>
-          <description>FIFO Mode Receive Control Register (UFRCTLn)</description>
-          <addressOffset>0x26</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-          <fields>
-            <field>
-              <name>RFULL_LEVEL_SEL</name>
-              <description>Receive FIFO Full Level Select</description>
-              <bitRange>[4:0]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>RFULL_LEVEL_EN</name>
-              <description>Receive FIFO Full Level Interrupt Enable</description>
-              <bitRange>[5:5]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>RFIFO_NEMPTY_EN</name>
-              <description>Receive FIFO Not Empty Interrupt Enable</description>
-              <bitRange>[6:6]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>ERR_EN</name>
-              <description>Receive Error Interrupt Enable</description>
-              <bitRange>[7:7]</bitRange>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>UCNTLn</name>
-          <description>Control Register (UCNTLn)</description>
-          <addressOffset>0x2c</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-          <fields>
-            <field>
-              <name>CR_SIN_INV</name>
-              <description>CR_SIN Signal Invert</description>
-              <bitRange>[0:0]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CR_SOUT_INV</name>
-              <description>CR_SOUT Signal Invert</description>
-              <bitRange>[1:1]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CR_SIN_COM</name>
-              <description>CR_SIN Common Mode Select</description>
-              <bitRange>[2:2]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CR_SIN_PP</name>
-              <description>CR_SIN Common Push-Pull Select</description>
-              <bitRange>[3:3]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CR_SOUT_COM</name>
-              <description>CR_SOUT Common Mode Select</description>
-              <bitRange>[4:4]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CR_SOUT_PP</name>
-              <description>CR_SOUT Common Push-Pull Select</description>
-              <bitRange>[5:5]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>COM_FDBK_EN</name>
-              <description>Common Mode Feedback Enable</description>
-              <bitRange>[6:6]</bitRange>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-      </registers>
     </peripheral>
-    <peripheral>
+    <peripheral derivedFrom="CR_UART1">
       <name>CR_UART4</name>
       <description>CR_UART4</description>
-      <groupName>CR_UART</groupName>
       <baseAddress>0x400E6000</baseAddress>
-      <addressBlock>
-        <offset>0</offset>
-        <size>0x168</size>
-        <usage>registers</usage>
-      </addressBlock>
-      <registers>
-        <register>
-          <name>UTBUFn</name>
-          <description>Transmit Data Buffer Register (UTBUFn)</description>
-          <addressOffset>0x0</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>URBUFn</name>
-          <description>Receive Data Buffer Register (URBUFn)</description>
-          <addressOffset>0x2</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>USTATn</name>
-          <description>Status Register (USTATn)</description>
-          <addressOffset>0x6</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-          <fields>
-            <field>
-              <name>PE</name>
-              <description>Parity Error</description>
-              <bitRange>[0:0]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>FE</name>
-              <description>Framing Error</description>
-              <bitRange>[1:1]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>DOE</name>
-              <description>Data Overrun Error</description>
-              <bitRange>[2:2]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>BKD</name>
-              <description>Break Detect</description>
-              <bitRange>[4:4]</bitRange>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>UFRSn</name>
-          <description>Frame Select Register (UFRSn)</description>
-          <addressOffset>0x8</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-          <fields>
-            <field>
-              <name>STP</name>
-              <description>Stop Bits</description>
-              <bitRange>[2:2]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>PSEL</name>
-              <description>Parity Select</description>
-              <bitRange>[5:4]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>PEN</name>
-              <description>Parity Enable</description>
-              <bitRange>[6:6]</bitRange>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>UMDSLn</name>
-          <description>Mode Select Register (UMDSLn)</description>
-          <addressOffset>0xa</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-          <fields>
-            <field>
-              <name>BRK</name>
-              <description>Break Transmit</description>
-              <bitRange>[2:2]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>ETD</name>
-              <description>Enable Transmit DMA</description>
-              <bitRange>[4:4]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>ERD</name>
-              <description>Enable Receive DMA</description>
-              <bitRange>[5:5]</bitRange>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>UBAUDn</name>
-          <description>Baud Rate Divisor Register (UBAUDn)</description>
-          <addressOffset>0xc</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-        </register>
-        <register>
-          <name>UPSRn</name>
-          <description>Baud Rate Prescaler Register (UPSRn)</description>
-          <addressOffset>0xe</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-          <fields>
-            <field>
-              <name>UDIV10_8</name>
-              <description>Baud Rate Divisor</description>
-              <bitRange>[2:0]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>UPSC</name>
-              <description>Prescaler Select</description>
-              <bitRange>[7:3]</bitRange>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>UFTSTSn</name>
-          <description>FIFO Mode Transmit Status Register (UFTSTSn)</description>
-          <addressOffset>0x20</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-          <fields>
-            <field>
-              <name>TEMPTY_LEVEL</name>
-              <description>Transmit FIFO Empty Level</description>
-              <bitRange>[4:0]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>TEMPTY_LEVEL_STS</name>
-              <description>Transmit FIFO Empty Level Status</description>
-              <bitRange>[5:5]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>TFIFO_EMPTY_STS</name>
-              <description>Transmit FIFO Empty Status</description>
-              <bitRange>[6:6]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>NXMIP</name>
-              <description>No Transmit in Progress</description>
-              <bitRange>[7:7]</bitRange>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>UFRSTSn</name>
-          <description>FIFO Mode Receive Status Register (UFRSTSn)</description>
-          <addressOffset>0x22</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-          <fields>
-            <field>
-              <name>RFULL_LEVEL</name>
-              <description>Receive FIFO Full Level</description>
-              <bitRange>[4:0]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>RFULL_LEVEL_STS</name>
-              <description>Receive FIFO Full Level Status</description>
-              <bitRange>[5:5]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>RFIFO_NEMPTY_STS</name>
-              <description>Receive FIFO Not Empty Status</description>
-              <bitRange>[6:6]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>ERR</name>
-              <description>Receive Error</description>
-              <bitRange>[7:7]</bitRange>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>UFTCTLn</name>
-          <description>FIFO Mode Transmit Control Register (UFTCTLn)</description>
-          <addressOffset>0x24</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-          <fields>
-            <field>
-              <name>TEMPTY_LEVEL_SEL</name>
-              <description>Transmit FIFO Empty Level Select</description>
-              <bitRange>[4:0]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>TEMPTY_LEVEL_EN</name>
-              <description>Transmit FIFO Empty Level Interrupt Enable</description>
-              <bitRange>[5:5]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>TFIFO_EMPTY_EN</name>
-              <description>Transmit FIFO Empty Interrupt Enable</description>
-              <bitRange>[6:6]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>NXMIP_EN</name>
-              <description>No Transmit in Progress Interrupt Enable</description>
-              <bitRange>[7:7]</bitRange>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>UFRCTLn</name>
-          <description>FIFO Mode Receive Control Register (UFRCTLn)</description>
-          <addressOffset>0x26</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-          <fields>
-            <field>
-              <name>RFULL_LEVEL_SEL</name>
-              <description>Receive FIFO Full Level Select</description>
-              <bitRange>[4:0]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>RFULL_LEVEL_EN</name>
-              <description>Receive FIFO Full Level Interrupt Enable</description>
-              <bitRange>[5:5]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>RFIFO_NEMPTY_EN</name>
-              <description>Receive FIFO Not Empty Interrupt Enable</description>
-              <bitRange>[6:6]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>ERR_EN</name>
-              <description>Receive Error Interrupt Enable</description>
-              <bitRange>[7:7]</bitRange>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>UCNTLn</name>
-          <description>Control Register (UCNTLn)</description>
-          <addressOffset>0x2c</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0x00</resetValue>
-          <resetMask>0xFF</resetMask>
-          <fields>
-            <field>
-              <name>CR_SIN_INV</name>
-              <description>CR_SIN Signal Invert</description>
-              <bitRange>[0:0]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CR_SOUT_INV</name>
-              <description>CR_SOUT Signal Invert</description>
-              <bitRange>[1:1]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CR_SIN_COM</name>
-              <description>CR_SIN Common Mode Select</description>
-              <bitRange>[2:2]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CR_SIN_PP</name>
-              <description>CR_SIN Common Push-Pull Select</description>
-              <bitRange>[3:3]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CR_SOUT_COM</name>
-              <description>CR_SOUT Common Mode Select</description>
-              <bitRange>[4:4]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CR_SOUT_PP</name>
-              <description>CR_SOUT Common Push-Pull Select</description>
-              <bitRange>[5:5]</bitRange>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>COM_FDBK_EN</name>
-              <description>Common Mode Feedback Enable</description>
-              <bitRange>[6:6]</bitRange>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-      </registers>
     </peripheral>
     <peripheral>
       <name>DEV</name>

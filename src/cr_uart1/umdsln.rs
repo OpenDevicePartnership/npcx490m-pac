@@ -74,7 +74,7 @@ impl crate::Writable for UmdslnSpec {
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
 }
-#[doc = "`reset()` method sets UMDSLn to value 0"]
+#[doc = "`reset()` method sets UMDSLn to value 0x01"]
 impl crate::Resettable for UmdslnSpec {
-    const RESET_VALUE: u8 = 0;
+    const RESET_VALUE: u8 = 0x01;
 }
