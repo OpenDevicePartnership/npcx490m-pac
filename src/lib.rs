@@ -689,10 +689,10 @@ pub struct Gdma2 {
 unsafe impl Send for Gdma2 {}
 impl Gdma2 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const gdma2::RegisterBlock = 0x4001_1a00 as *const _;
+    pub const PTR: *const gdma1::RegisterBlock = 0x4001_1a00 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const gdma2::RegisterBlock {
+    pub const fn ptr() -> *const gdma1::RegisterBlock {
         Self::PTR
     }
     #[doc = r" Steal an instance of this peripheral"]
@@ -715,7 +715,7 @@ impl Gdma2 {
     }
 }
 impl Deref for Gdma2 {
-    type Target = gdma2::RegisterBlock;
+    type Target = gdma1::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
@@ -727,7 +727,7 @@ impl core::fmt::Debug for Gdma2 {
     }
 }
 #[doc = "GDMA2"]
-pub mod gdma2;
+pub use self::gdma1 as gdma2;
 #[doc = "GPIO0"]
 pub struct Gpio0 {
     _marker: PhantomData<*const ()>,
