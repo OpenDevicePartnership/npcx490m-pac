@@ -2253,10 +2253,10 @@ pub struct Mdma2 {
 unsafe impl Send for Mdma2 {}
 impl Mdma2 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const mdma2::RegisterBlock = 0x4001_1200 as *const _;
+    pub const PTR: *const mdma1::RegisterBlock = 0x4001_1200 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const mdma2::RegisterBlock {
+    pub const fn ptr() -> *const mdma1::RegisterBlock {
         Self::PTR
     }
     #[doc = r" Steal an instance of this peripheral"]
@@ -2279,7 +2279,7 @@ impl Mdma2 {
     }
 }
 impl Deref for Mdma2 {
-    type Target = mdma2::RegisterBlock;
+    type Target = mdma1::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
@@ -2291,7 +2291,7 @@ impl core::fmt::Debug for Mdma2 {
     }
 }
 #[doc = "MDMA2"]
-pub mod mdma2;
+pub use self::mdma1 as mdma2;
 #[doc = "MDMA3"]
 pub struct Mdma3 {
     _marker: PhantomData<*const ()>,
@@ -2299,10 +2299,10 @@ pub struct Mdma3 {
 unsafe impl Send for Mdma3 {}
 impl Mdma3 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const mdma3::RegisterBlock = 0x4001_1300 as *const _;
+    pub const PTR: *const mdma1::RegisterBlock = 0x4001_1300 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const mdma3::RegisterBlock {
+    pub const fn ptr() -> *const mdma1::RegisterBlock {
         Self::PTR
     }
     #[doc = r" Steal an instance of this peripheral"]
@@ -2325,7 +2325,7 @@ impl Mdma3 {
     }
 }
 impl Deref for Mdma3 {
-    type Target = mdma3::RegisterBlock;
+    type Target = mdma1::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
@@ -2337,7 +2337,7 @@ impl core::fmt::Debug for Mdma3 {
     }
 }
 #[doc = "MDMA3"]
-pub mod mdma3;
+pub use self::mdma1 as mdma3;
 #[doc = "MDMA4"]
 pub struct Mdma4 {
     _marker: PhantomData<*const ()>,
@@ -2345,10 +2345,10 @@ pub struct Mdma4 {
 unsafe impl Send for Mdma4 {}
 impl Mdma4 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const mdma4::RegisterBlock = 0x4001_1400 as *const _;
+    pub const PTR: *const mdma1::RegisterBlock = 0x4001_1400 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const mdma4::RegisterBlock {
+    pub const fn ptr() -> *const mdma1::RegisterBlock {
         Self::PTR
     }
     #[doc = r" Steal an instance of this peripheral"]
@@ -2371,7 +2371,7 @@ impl Mdma4 {
     }
 }
 impl Deref for Mdma4 {
-    type Target = mdma4::RegisterBlock;
+    type Target = mdma1::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
@@ -2383,7 +2383,7 @@ impl core::fmt::Debug for Mdma4 {
     }
 }
 #[doc = "MDMA4"]
-pub mod mdma4;
+pub use self::mdma1 as mdma4;
 #[doc = "MDMA5"]
 pub struct Mdma5 {
     _marker: PhantomData<*const ()>,
@@ -2391,10 +2391,10 @@ pub struct Mdma5 {
 unsafe impl Send for Mdma5 {}
 impl Mdma5 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const mdma5::RegisterBlock = 0x4001_1500 as *const _;
+    pub const PTR: *const mdma1::RegisterBlock = 0x4001_1500 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const mdma5::RegisterBlock {
+    pub const fn ptr() -> *const mdma1::RegisterBlock {
         Self::PTR
     }
     #[doc = r" Steal an instance of this peripheral"]
@@ -2417,7 +2417,7 @@ impl Mdma5 {
     }
 }
 impl Deref for Mdma5 {
-    type Target = mdma5::RegisterBlock;
+    type Target = mdma1::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
@@ -2429,7 +2429,7 @@ impl core::fmt::Debug for Mdma5 {
     }
 }
 #[doc = "MDMA5"]
-pub mod mdma5;
+pub use self::mdma1 as mdma5;
 #[doc = "MDMA6"]
 pub struct Mdma6 {
     _marker: PhantomData<*const ()>,
@@ -2437,10 +2437,10 @@ pub struct Mdma6 {
 unsafe impl Send for Mdma6 {}
 impl Mdma6 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const mdma6::RegisterBlock = 0x4001_1600 as *const _;
+    pub const PTR: *const mdma1::RegisterBlock = 0x4001_1600 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const mdma6::RegisterBlock {
+    pub const fn ptr() -> *const mdma1::RegisterBlock {
         Self::PTR
     }
     #[doc = r" Steal an instance of this peripheral"]
@@ -2463,7 +2463,7 @@ impl Mdma6 {
     }
 }
 impl Deref for Mdma6 {
-    type Target = mdma6::RegisterBlock;
+    type Target = mdma1::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
@@ -2475,7 +2475,7 @@ impl core::fmt::Debug for Mdma6 {
     }
 }
 #[doc = "MDMA6"]
-pub mod mdma6;
+pub use self::mdma1 as mdma6;
 #[doc = "MDMA7"]
 pub struct Mdma7 {
     _marker: PhantomData<*const ()>,
@@ -2483,10 +2483,10 @@ pub struct Mdma7 {
 unsafe impl Send for Mdma7 {}
 impl Mdma7 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const mdma7::RegisterBlock = 0x4001_1700 as *const _;
+    pub const PTR: *const mdma1::RegisterBlock = 0x4001_1700 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const mdma7::RegisterBlock {
+    pub const fn ptr() -> *const mdma1::RegisterBlock {
         Self::PTR
     }
     #[doc = r" Steal an instance of this peripheral"]
@@ -2509,7 +2509,7 @@ impl Mdma7 {
     }
 }
 impl Deref for Mdma7 {
-    type Target = mdma7::RegisterBlock;
+    type Target = mdma1::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
@@ -2521,7 +2521,7 @@ impl core::fmt::Debug for Mdma7 {
     }
 }
 #[doc = "MDMA7"]
-pub mod mdma7;
+pub use self::mdma1 as mdma7;
 #[doc = "MFT16_1"]
 pub struct Mft16_1 {
     _marker: PhantomData<*const ()>,
