@@ -3311,10 +3311,10 @@ pub struct Pwm1 {
 unsafe impl Send for Pwm1 {}
 impl Pwm1 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const pwm1::RegisterBlock = 0x4008_2000 as *const _;
+    pub const PTR: *const pwm0::RegisterBlock = 0x4008_2000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const pwm1::RegisterBlock {
+    pub const fn ptr() -> *const pwm0::RegisterBlock {
         Self::PTR
     }
     #[doc = r" Steal an instance of this peripheral"]
@@ -3337,7 +3337,7 @@ impl Pwm1 {
     }
 }
 impl Deref for Pwm1 {
-    type Target = pwm1::RegisterBlock;
+    type Target = pwm0::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
@@ -3349,7 +3349,7 @@ impl core::fmt::Debug for Pwm1 {
     }
 }
 #[doc = "PWM1"]
-pub mod pwm1;
+pub use self::pwm0 as pwm1;
 #[doc = "PWM2"]
 pub struct Pwm2 {
     _marker: PhantomData<*const ()>,
@@ -3357,10 +3357,10 @@ pub struct Pwm2 {
 unsafe impl Send for Pwm2 {}
 impl Pwm2 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const pwm2::RegisterBlock = 0x4008_4000 as *const _;
+    pub const PTR: *const pwm0::RegisterBlock = 0x4008_4000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const pwm2::RegisterBlock {
+    pub const fn ptr() -> *const pwm0::RegisterBlock {
         Self::PTR
     }
     #[doc = r" Steal an instance of this peripheral"]
@@ -3383,7 +3383,7 @@ impl Pwm2 {
     }
 }
 impl Deref for Pwm2 {
-    type Target = pwm2::RegisterBlock;
+    type Target = pwm0::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
@@ -3395,7 +3395,7 @@ impl core::fmt::Debug for Pwm2 {
     }
 }
 #[doc = "PWM2"]
-pub mod pwm2;
+pub use self::pwm0 as pwm2;
 #[doc = "PWM3"]
 pub struct Pwm3 {
     _marker: PhantomData<*const ()>,
@@ -3403,10 +3403,10 @@ pub struct Pwm3 {
 unsafe impl Send for Pwm3 {}
 impl Pwm3 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const pwm3::RegisterBlock = 0x4008_6000 as *const _;
+    pub const PTR: *const pwm0::RegisterBlock = 0x4008_6000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const pwm3::RegisterBlock {
+    pub const fn ptr() -> *const pwm0::RegisterBlock {
         Self::PTR
     }
     #[doc = r" Steal an instance of this peripheral"]
@@ -3429,7 +3429,7 @@ impl Pwm3 {
     }
 }
 impl Deref for Pwm3 {
-    type Target = pwm3::RegisterBlock;
+    type Target = pwm0::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
@@ -3441,7 +3441,7 @@ impl core::fmt::Debug for Pwm3 {
     }
 }
 #[doc = "PWM3"]
-pub mod pwm3;
+pub use self::pwm0 as pwm3;
 #[doc = "PWM4"]
 pub struct Pwm4 {
     _marker: PhantomData<*const ()>,
@@ -3449,10 +3449,10 @@ pub struct Pwm4 {
 unsafe impl Send for Pwm4 {}
 impl Pwm4 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const pwm4::RegisterBlock = 0x4008_8000 as *const _;
+    pub const PTR: *const pwm0::RegisterBlock = 0x4008_8000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const pwm4::RegisterBlock {
+    pub const fn ptr() -> *const pwm0::RegisterBlock {
         Self::PTR
     }
     #[doc = r" Steal an instance of this peripheral"]
@@ -3475,7 +3475,7 @@ impl Pwm4 {
     }
 }
 impl Deref for Pwm4 {
-    type Target = pwm4::RegisterBlock;
+    type Target = pwm0::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
@@ -3487,7 +3487,7 @@ impl core::fmt::Debug for Pwm4 {
     }
 }
 #[doc = "PWM4"]
-pub mod pwm4;
+pub use self::pwm0 as pwm4;
 #[doc = "PWM5"]
 pub struct Pwm5 {
     _marker: PhantomData<*const ()>,
@@ -3495,10 +3495,10 @@ pub struct Pwm5 {
 unsafe impl Send for Pwm5 {}
 impl Pwm5 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const pwm5::RegisterBlock = 0x4008_a000 as *const _;
+    pub const PTR: *const pwm0::RegisterBlock = 0x4008_a000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const pwm5::RegisterBlock {
+    pub const fn ptr() -> *const pwm0::RegisterBlock {
         Self::PTR
     }
     #[doc = r" Steal an instance of this peripheral"]
@@ -3521,7 +3521,7 @@ impl Pwm5 {
     }
 }
 impl Deref for Pwm5 {
-    type Target = pwm5::RegisterBlock;
+    type Target = pwm0::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
@@ -3533,7 +3533,7 @@ impl core::fmt::Debug for Pwm5 {
     }
 }
 #[doc = "PWM5"]
-pub mod pwm5;
+pub use self::pwm0 as pwm5;
 #[doc = "PWM6"]
 pub struct Pwm6 {
     _marker: PhantomData<*const ()>,
@@ -3541,10 +3541,10 @@ pub struct Pwm6 {
 unsafe impl Send for Pwm6 {}
 impl Pwm6 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const pwm6::RegisterBlock = 0x4008_c000 as *const _;
+    pub const PTR: *const pwm0::RegisterBlock = 0x4008_c000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const pwm6::RegisterBlock {
+    pub const fn ptr() -> *const pwm0::RegisterBlock {
         Self::PTR
     }
     #[doc = r" Steal an instance of this peripheral"]
@@ -3567,7 +3567,7 @@ impl Pwm6 {
     }
 }
 impl Deref for Pwm6 {
-    type Target = pwm6::RegisterBlock;
+    type Target = pwm0::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
@@ -3579,7 +3579,7 @@ impl core::fmt::Debug for Pwm6 {
     }
 }
 #[doc = "PWM6"]
-pub mod pwm6;
+pub use self::pwm0 as pwm6;
 #[doc = "PWM7"]
 pub struct Pwm7 {
     _marker: PhantomData<*const ()>,
@@ -3587,10 +3587,10 @@ pub struct Pwm7 {
 unsafe impl Send for Pwm7 {}
 impl Pwm7 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const pwm7::RegisterBlock = 0x4008_e000 as *const _;
+    pub const PTR: *const pwm0::RegisterBlock = 0x4008_e000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const pwm7::RegisterBlock {
+    pub const fn ptr() -> *const pwm0::RegisterBlock {
         Self::PTR
     }
     #[doc = r" Steal an instance of this peripheral"]
@@ -3613,7 +3613,7 @@ impl Pwm7 {
     }
 }
 impl Deref for Pwm7 {
-    type Target = pwm7::RegisterBlock;
+    type Target = pwm0::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
@@ -3625,7 +3625,7 @@ impl core::fmt::Debug for Pwm7 {
     }
 }
 #[doc = "PWM7"]
-pub mod pwm7;
+pub use self::pwm0 as pwm7;
 #[doc = "SHI"]
 pub struct Shi {
     _marker: PhantomData<*const ()>,
