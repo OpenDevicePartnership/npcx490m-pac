@@ -2713,10 +2713,10 @@ pub struct Miwu1 {
 unsafe impl Send for Miwu1 {}
 impl Miwu1 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const miwu1::RegisterBlock = 0x400b_d000 as *const _;
+    pub const PTR: *const miwu0::RegisterBlock = 0x400b_d000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const miwu1::RegisterBlock {
+    pub const fn ptr() -> *const miwu0::RegisterBlock {
         Self::PTR
     }
     #[doc = r" Steal an instance of this peripheral"]
@@ -2739,7 +2739,7 @@ impl Miwu1 {
     }
 }
 impl Deref for Miwu1 {
-    type Target = miwu1::RegisterBlock;
+    type Target = miwu0::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
@@ -2751,7 +2751,7 @@ impl core::fmt::Debug for Miwu1 {
     }
 }
 #[doc = "MIWU1"]
-pub mod miwu1;
+pub use self::miwu0 as miwu1;
 #[doc = "MIWU2"]
 pub struct Miwu2 {
     _marker: PhantomData<*const ()>,
@@ -2759,10 +2759,10 @@ pub struct Miwu2 {
 unsafe impl Send for Miwu2 {}
 impl Miwu2 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const miwu2::RegisterBlock = 0x400b_f000 as *const _;
+    pub const PTR: *const miwu0::RegisterBlock = 0x400b_f000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const miwu2::RegisterBlock {
+    pub const fn ptr() -> *const miwu0::RegisterBlock {
         Self::PTR
     }
     #[doc = r" Steal an instance of this peripheral"]
@@ -2785,7 +2785,7 @@ impl Miwu2 {
     }
 }
 impl Deref for Miwu2 {
-    type Target = miwu2::RegisterBlock;
+    type Target = miwu0::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
@@ -2797,7 +2797,7 @@ impl core::fmt::Debug for Miwu2 {
     }
 }
 #[doc = "MIWU2"]
-pub mod miwu2;
+pub use self::miwu0 as miwu2;
 #[doc = "MSWC"]
 pub struct Mswc {
     _marker: PhantomData<*const ()>,
