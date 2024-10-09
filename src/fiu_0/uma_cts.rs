@@ -21,7 +21,7 @@ pub type RdWrW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EXEC_DONE` reader - Operation Execute/Done"]
 pub type ExecDoneR = crate::BitReader;
 #[doc = "Field `EXEC_DONE` writer - Operation Execute/Done"]
-pub type ExecDoneW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type ExecDoneW<'a, REG> = crate::BitWriter1S<'a, REG>;
 impl R {
     #[doc = "Bits 0:2 - Data Field Size Select"]
     #[inline(always)]
@@ -104,7 +104,7 @@ impl crate::Readable for UmaCtsSpec {}
 impl crate::Writable for UmaCtsSpec {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u8 = 0x80;
 }
 #[doc = "`reset()` method sets UMA_CTS to value 0"]
 impl crate::Resettable for UmaCtsSpec {

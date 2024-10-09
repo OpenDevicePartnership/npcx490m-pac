@@ -13,7 +13,7 @@ pub type SecCsW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `UMA_LOCK` reader - UMA Operation Lock"]
 pub type UmaLockR = crate::BitReader;
 #[doc = "Field `UMA_LOCK` writer - UMA Operation Lock"]
-pub type UmaLockW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type UmaLockW<'a, REG> = crate::BitWriter1S<'a, REG>;
 #[doc = "Field `UMA_ADDR_SIZE` reader - Address Field Size Select"]
 pub type UmaAddrSizeR = crate::FieldReader;
 #[doc = "Field `UMA_ADDR_SIZE` writer - Address Field Size Select"]
@@ -88,7 +88,7 @@ impl crate::Readable for UmaEctsSpec {}
 impl crate::Writable for UmaEctsSpec {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u8 = 0x08;
 }
 #[doc = "`reset()` method sets UMA_ECTS to value 0"]
 impl crate::Resettable for UmaEctsSpec {

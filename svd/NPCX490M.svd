@@ -10387,6 +10387,7 @@
               <description>Operation Execute/Done</description>
               <bitRange>[7:7]</bitRange>
               <access>read-write</access>
+	      <modifiedWriteValues>oneToSet</modifiedWriteValues>
             </field>
           </fields>
         </register>
@@ -10416,6 +10417,7 @@
               <description>UMA Operation Lock</description>
               <bitRange>[3:3]</bitRange>
               <access>read-write</access>
+	      <modifiedWriteValues>oneToSet</modifiedWriteValues>
             </field>
             <field>
               <name>UMA_ADDR_SIZE</name>
