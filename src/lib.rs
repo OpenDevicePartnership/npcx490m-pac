@@ -551,10 +551,10 @@ pub struct Fiu1 {
 unsafe impl Send for Fiu1 {}
 impl Fiu1 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const fiu_1::RegisterBlock = 0x4002_1000 as *const _;
+    pub const PTR: *const fiu_0::RegisterBlock = 0x4002_1000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const fiu_1::RegisterBlock {
+    pub const fn ptr() -> *const fiu_0::RegisterBlock {
         Self::PTR
     }
     #[doc = r" Steal an instance of this peripheral"]
@@ -577,7 +577,7 @@ impl Fiu1 {
     }
 }
 impl Deref for Fiu1 {
-    type Target = fiu_1::RegisterBlock;
+    type Target = fiu_0::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
@@ -589,7 +589,7 @@ impl core::fmt::Debug for Fiu1 {
     }
 }
 #[doc = "FIU_1"]
-pub mod fiu_1;
+pub use self::fiu_0 as fiu_1;
 #[doc = "FLM"]
 pub struct Flm {
     _marker: PhantomData<*const ()>,
