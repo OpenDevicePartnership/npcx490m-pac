@@ -1701,10 +1701,10 @@ pub struct Itim32_2 {
 unsafe impl Send for Itim32_2 {}
 impl Itim32_2 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const itim32_2::RegisterBlock = 0x400b_2000 as *const _;
+    pub const PTR: *const itim32_1::RegisterBlock = 0x400b_2000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const itim32_2::RegisterBlock {
+    pub const fn ptr() -> *const itim32_1::RegisterBlock {
         Self::PTR
     }
     #[doc = r" Steal an instance of this peripheral"]
@@ -1727,7 +1727,7 @@ impl Itim32_2 {
     }
 }
 impl Deref for Itim32_2 {
-    type Target = itim32_2::RegisterBlock;
+    type Target = itim32_1::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
@@ -1739,7 +1739,7 @@ impl core::fmt::Debug for Itim32_2 {
     }
 }
 #[doc = "ITIM32_2"]
-pub mod itim32_2;
+pub use self::itim32_1 as itim32_2;
 #[doc = "ITIM32_3"]
 pub struct Itim32_3 {
     _marker: PhantomData<*const ()>,
@@ -1747,10 +1747,10 @@ pub struct Itim32_3 {
 unsafe impl Send for Itim32_3 {}
 impl Itim32_3 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const itim32_3::RegisterBlock = 0x400b_4000 as *const _;
+    pub const PTR: *const itim32_1::RegisterBlock = 0x400b_4000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const itim32_3::RegisterBlock {
+    pub const fn ptr() -> *const itim32_1::RegisterBlock {
         Self::PTR
     }
     #[doc = r" Steal an instance of this peripheral"]
@@ -1773,7 +1773,7 @@ impl Itim32_3 {
     }
 }
 impl Deref for Itim32_3 {
-    type Target = itim32_3::RegisterBlock;
+    type Target = itim32_1::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
@@ -1785,7 +1785,7 @@ impl core::fmt::Debug for Itim32_3 {
     }
 }
 #[doc = "ITIM32_3"]
-pub mod itim32_3;
+pub use self::itim32_1 as itim32_3;
 #[doc = "ITIM32_4"]
 pub struct Itim32_4 {
     _marker: PhantomData<*const ()>,
@@ -1793,10 +1793,10 @@ pub struct Itim32_4 {
 unsafe impl Send for Itim32_4 {}
 impl Itim32_4 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const itim32_4::RegisterBlock = 0x400b_6000 as *const _;
+    pub const PTR: *const itim32_1::RegisterBlock = 0x400b_6000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const itim32_4::RegisterBlock {
+    pub const fn ptr() -> *const itim32_1::RegisterBlock {
         Self::PTR
     }
     #[doc = r" Steal an instance of this peripheral"]
@@ -1819,7 +1819,7 @@ impl Itim32_4 {
     }
 }
 impl Deref for Itim32_4 {
-    type Target = itim32_4::RegisterBlock;
+    type Target = itim32_1::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
@@ -1831,7 +1831,7 @@ impl core::fmt::Debug for Itim32_4 {
     }
 }
 #[doc = "ITIM32_4"]
-pub mod itim32_4;
+pub use self::itim32_1 as itim32_4;
 #[doc = "ITIM32_5"]
 pub struct Itim32_5 {
     _marker: PhantomData<*const ()>,
@@ -1839,10 +1839,10 @@ pub struct Itim32_5 {
 unsafe impl Send for Itim32_5 {}
 impl Itim32_5 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const itim32_5::RegisterBlock = 0x400b_8000 as *const _;
+    pub const PTR: *const itim32_1::RegisterBlock = 0x400b_8000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const itim32_5::RegisterBlock {
+    pub const fn ptr() -> *const itim32_1::RegisterBlock {
         Self::PTR
     }
     #[doc = r" Steal an instance of this peripheral"]
@@ -1865,7 +1865,7 @@ impl Itim32_5 {
     }
 }
 impl Deref for Itim32_5 {
-    type Target = itim32_5::RegisterBlock;
+    type Target = itim32_1::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
@@ -1877,7 +1877,7 @@ impl core::fmt::Debug for Itim32_5 {
     }
 }
 #[doc = "ITIM32_5"]
-pub mod itim32_5;
+pub use self::itim32_1 as itim32_5;
 #[doc = "ITIM32_6"]
 pub struct Itim32_6 {
     _marker: PhantomData<*const ()>,
@@ -1885,10 +1885,10 @@ pub struct Itim32_6 {
 unsafe impl Send for Itim32_6 {}
 impl Itim32_6 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const itim32_6::RegisterBlock = 0x400b_a000 as *const _;
+    pub const PTR: *const itim32_1::RegisterBlock = 0x400b_a000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const itim32_6::RegisterBlock {
+    pub const fn ptr() -> *const itim32_1::RegisterBlock {
         Self::PTR
     }
     #[doc = r" Steal an instance of this peripheral"]
@@ -1911,7 +1911,7 @@ impl Itim32_6 {
     }
 }
 impl Deref for Itim32_6 {
-    type Target = itim32_6::RegisterBlock;
+    type Target = itim32_1::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
@@ -1923,7 +1923,7 @@ impl core::fmt::Debug for Itim32_6 {
     }
 }
 #[doc = "ITIM32_6"]
-pub mod itim32_6;
+pub use self::itim32_1 as itim32_6;
 #[doc = "ITIM64"]
 pub struct Itim64 {
     _marker: PhantomData<*const ()>,
