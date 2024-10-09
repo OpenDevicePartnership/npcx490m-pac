@@ -2575,10 +2575,10 @@ pub struct Mft16_2 {
 unsafe impl Send for Mft16_2 {}
 impl Mft16_2 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const mft16_2::RegisterBlock = 0x400e_3000 as *const _;
+    pub const PTR: *const mft16_1::RegisterBlock = 0x400e_3000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const mft16_2::RegisterBlock {
+    pub const fn ptr() -> *const mft16_1::RegisterBlock {
         Self::PTR
     }
     #[doc = r" Steal an instance of this peripheral"]
@@ -2601,7 +2601,7 @@ impl Mft16_2 {
     }
 }
 impl Deref for Mft16_2 {
-    type Target = mft16_2::RegisterBlock;
+    type Target = mft16_1::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
@@ -2613,7 +2613,7 @@ impl core::fmt::Debug for Mft16_2 {
     }
 }
 #[doc = "MFT16_2"]
-pub mod mft16_2;
+pub use self::mft16_1 as mft16_2;
 #[doc = "MFT16_3"]
 pub struct Mft16_3 {
     _marker: PhantomData<*const ()>,
@@ -2621,10 +2621,10 @@ pub struct Mft16_3 {
 unsafe impl Send for Mft16_3 {}
 impl Mft16_3 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const mft16_3::RegisterBlock = 0x400e_5000 as *const _;
+    pub const PTR: *const mft16_1::RegisterBlock = 0x400e_5000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const mft16_3::RegisterBlock {
+    pub const fn ptr() -> *const mft16_1::RegisterBlock {
         Self::PTR
     }
     #[doc = r" Steal an instance of this peripheral"]
@@ -2647,7 +2647,7 @@ impl Mft16_3 {
     }
 }
 impl Deref for Mft16_3 {
-    type Target = mft16_3::RegisterBlock;
+    type Target = mft16_1::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
@@ -2659,7 +2659,7 @@ impl core::fmt::Debug for Mft16_3 {
     }
 }
 #[doc = "MFT16_3"]
-pub mod mft16_3;
+pub use self::mft16_1 as mft16_3;
 #[doc = "MIWU0"]
 pub struct Miwu0 {
     _marker: PhantomData<*const ()>,
