@@ -1563,10 +1563,10 @@ pub struct I3c2 {
 unsafe impl Send for I3c2 {}
 impl I3c2 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const i3c2::RegisterBlock = 0x400f_2000 as *const _;
+    pub const PTR: *const i3c1::RegisterBlock = 0x400f_2000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const i3c2::RegisterBlock {
+    pub const fn ptr() -> *const i3c1::RegisterBlock {
         Self::PTR
     }
     #[doc = r" Steal an instance of this peripheral"]
@@ -1589,7 +1589,7 @@ impl I3c2 {
     }
 }
 impl Deref for I3c2 {
-    type Target = i3c2::RegisterBlock;
+    type Target = i3c1::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
@@ -1601,7 +1601,7 @@ impl core::fmt::Debug for I3c2 {
     }
 }
 #[doc = "I3C2"]
-pub mod i3c2;
+pub use self::i3c1 as i3c2;
 #[doc = "I3C3"]
 pub struct I3c3 {
     _marker: PhantomData<*const ()>,
@@ -1609,10 +1609,10 @@ pub struct I3c3 {
 unsafe impl Send for I3c3 {}
 impl I3c3 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const i3c3::RegisterBlock = 0x400f_4000 as *const _;
+    pub const PTR: *const i3c1::RegisterBlock = 0x400f_4000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const i3c3::RegisterBlock {
+    pub const fn ptr() -> *const i3c1::RegisterBlock {
         Self::PTR
     }
     #[doc = r" Steal an instance of this peripheral"]
@@ -1635,7 +1635,7 @@ impl I3c3 {
     }
 }
 impl Deref for I3c3 {
-    type Target = i3c3::RegisterBlock;
+    type Target = i3c1::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
@@ -1647,7 +1647,7 @@ impl core::fmt::Debug for I3c3 {
     }
 }
 #[doc = "I3C3"]
-pub mod i3c3;
+pub use self::i3c1 as i3c3;
 #[doc = "ITIM32_1"]
 pub struct Itim32_1 {
     _marker: PhantomData<*const ()>,
