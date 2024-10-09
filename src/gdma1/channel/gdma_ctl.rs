@@ -1,7 +1,7 @@
-#[doc = "Register `GDMA_CTL0` reader"]
-pub type R = crate::R<GdmaCtl0Spec>;
-#[doc = "Register `GDMA_CTL0` writer"]
-pub type W = crate::W<GdmaCtl0Spec>;
+#[doc = "Register `GDMA_CTL` reader"]
+pub type R = crate::R<GdmaCtlSpec>;
+#[doc = "Register `GDMA_CTL` writer"]
+pub type W = crate::W<GdmaCtlSpec>;
 #[doc = "Field `GDMAEN` reader - GDMA Enable"]
 pub type GdmaenR = crate::BitReader;
 #[doc = "Field `GDMAEN` writer - GDMA Enable"]
@@ -50,14 +50,12 @@ pub type GpsW<'a, REG> = crate::BitWriter<'a, REG>;
 pub type DmR = crate::BitReader;
 #[doc = "Field `DM` writer - Demand Mode"]
 pub type DmW<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `SOFTREQ` reader - Software Triggered GDMA Request"]
-pub type SoftreqR = crate::BitReader;
 #[doc = "Field `SOFTREQ` writer - Software Triggered GDMA Request"]
 pub type SoftreqW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TC` reader - Terminal Count"]
 pub type TcR = crate::BitReader;
 #[doc = "Field `TC` writer - Terminal Count"]
-pub type TcW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type TcW<'a, REG> = crate::BitWriter0C<'a, REG>;
 #[doc = "Field `BMDAFIX` reader - Burst Mode Destination Address Fixed"]
 pub type BmdafixR = crate::BitReader;
 #[doc = "Field `BMDAFIX` writer - Burst Mode Destination Address Fixed"]
@@ -127,11 +125,6 @@ impl R {
     pub fn dm(&self) -> DmR {
         DmR::new(((self.bits >> 15) & 1) != 0)
     }
-    #[doc = "Bit 16 - Software Triggered GDMA Request"]
-    #[inline(always)]
-    pub fn softreq(&self) -> SoftreqR {
-        SoftreqR::new(((self.bits >> 16) & 1) != 0)
-    }
     #[doc = "Bit 18 - Terminal Count"]
     #[inline(always)]
     pub fn tc(&self) -> TcR {
@@ -151,7 +144,7 @@ impl R {
 #[cfg(feature = "debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("GDMA_CTL0")
+        f.debug_struct("GDMA_CTL")
             .field("gdmaen", &self.gdmaen())
             .field("gpd", &self.gpd())
             .field("gdmams", &self.gdmams())
@@ -164,7 +157,6 @@ impl core::fmt::Debug for R {
             .field("tws", &self.tws())
             .field("gps", &self.gps())
             .field("dm", &self.dm())
-            .field("softreq", &self.softreq())
             .field("tc", &self.tc())
             .field("bmdafix", &self.bmdafix())
             .field("bmsafix", &self.bmsafix())
@@ -175,114 +167,114 @@ impl W {
     #[doc = "Bit 0 - GDMA Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn gdmaen(&mut self) -> GdmaenW<GdmaCtl0Spec> {
+    pub fn gdmaen(&mut self) -> GdmaenW<GdmaCtlSpec> {
         GdmaenW::new(self, 0)
     }
     #[doc = "Bit 1 - GDMA Power-Down"]
     #[inline(always)]
     #[must_use]
-    pub fn gpd(&mut self) -> GpdW<GdmaCtl0Spec> {
+    pub fn gpd(&mut self) -> GpdW<GdmaCtlSpec> {
         GpdW::new(self, 1)
     }
     #[doc = "Bits 2:3 - GDMA Mode Select"]
     #[inline(always)]
     #[must_use]
-    pub fn gdmams(&mut self) -> GdmamsW<GdmaCtl0Spec> {
+    pub fn gdmams(&mut self) -> GdmamsW<GdmaCtlSpec> {
         GdmamsW::new(self, 2)
     }
     #[doc = "Bit 4 - Destination Address Direction"]
     #[inline(always)]
     #[must_use]
-    pub fn dadir(&mut self) -> DadirW<GdmaCtl0Spec> {
+    pub fn dadir(&mut self) -> DadirW<GdmaCtlSpec> {
         DadirW::new(self, 4)
     }
     #[doc = "Bit 5 - Source Address Direction"]
     #[inline(always)]
     #[must_use]
-    pub fn sadir(&mut self) -> SadirW<GdmaCtl0Spec> {
+    pub fn sadir(&mut self) -> SadirW<GdmaCtlSpec> {
         SadirW::new(self, 5)
     }
     #[doc = "Bit 6 - Destination Address Fixed"]
     #[inline(always)]
     #[must_use]
-    pub fn dafix(&mut self) -> DafixW<GdmaCtl0Spec> {
+    pub fn dafix(&mut self) -> DafixW<GdmaCtlSpec> {
         DafixW::new(self, 6)
     }
     #[doc = "Bit 7 - Source Address Fixed"]
     #[inline(always)]
     #[must_use]
-    pub fn safix(&mut self) -> SafixW<GdmaCtl0Spec> {
+    pub fn safix(&mut self) -> SafixW<GdmaCtlSpec> {
         SafixW::new(self, 7)
     }
     #[doc = "Bit 8 - Stop Interrupt Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn sien(&mut self) -> SienW<GdmaCtl0Spec> {
+    pub fn sien(&mut self) -> SienW<GdmaCtlSpec> {
         SienW::new(self, 8)
     }
     #[doc = "Bit 9 - Burst Mode Enable"]
     #[inline(always)]
     #[must_use]
-    pub fn bme(&mut self) -> BmeW<GdmaCtl0Spec> {
+    pub fn bme(&mut self) -> BmeW<GdmaCtlSpec> {
         BmeW::new(self, 9)
     }
     #[doc = "Bits 12:13 - Transfer Width Select"]
     #[inline(always)]
     #[must_use]
-    pub fn tws(&mut self) -> TwsW<GdmaCtl0Spec> {
+    pub fn tws(&mut self) -> TwsW<GdmaCtlSpec> {
         TwsW::new(self, 12)
     }
     #[doc = "Bit 14 - GDMA Power Save"]
     #[inline(always)]
     #[must_use]
-    pub fn gps(&mut self) -> GpsW<GdmaCtl0Spec> {
+    pub fn gps(&mut self) -> GpsW<GdmaCtlSpec> {
         GpsW::new(self, 14)
     }
     #[doc = "Bit 15 - Demand Mode"]
     #[inline(always)]
     #[must_use]
-    pub fn dm(&mut self) -> DmW<GdmaCtl0Spec> {
+    pub fn dm(&mut self) -> DmW<GdmaCtlSpec> {
         DmW::new(self, 15)
     }
     #[doc = "Bit 16 - Software Triggered GDMA Request"]
     #[inline(always)]
     #[must_use]
-    pub fn softreq(&mut self) -> SoftreqW<GdmaCtl0Spec> {
+    pub fn softreq(&mut self) -> SoftreqW<GdmaCtlSpec> {
         SoftreqW::new(self, 16)
     }
     #[doc = "Bit 18 - Terminal Count"]
     #[inline(always)]
     #[must_use]
-    pub fn tc(&mut self) -> TcW<GdmaCtl0Spec> {
+    pub fn tc(&mut self) -> TcW<GdmaCtlSpec> {
         TcW::new(self, 18)
     }
     #[doc = "Bit 30 - Burst Mode Destination Address Fixed"]
     #[inline(always)]
     #[must_use]
-    pub fn bmdafix(&mut self) -> BmdafixW<GdmaCtl0Spec> {
+    pub fn bmdafix(&mut self) -> BmdafixW<GdmaCtlSpec> {
         BmdafixW::new(self, 30)
     }
     #[doc = "Bit 31 - Burst Mode Source Address Fixed"]
     #[inline(always)]
     #[must_use]
-    pub fn bmsafix(&mut self) -> BmsafixW<GdmaCtl0Spec> {
+    pub fn bmsafix(&mut self) -> BmsafixW<GdmaCtlSpec> {
         BmsafixW::new(self, 31)
     }
 }
-#[doc = "Channel 0/1 Control Register (GDMAn_CTL0, GDMAn_CTL1)\n\nYou can [`read`](crate::Reg::read) this register and get [`gdma_ctl0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gdma_ctl0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct GdmaCtl0Spec;
-impl crate::RegisterSpec for GdmaCtl0Spec {
+#[doc = "Channel 0/1 Control Register\n\nYou can [`read`](crate::Reg::read) this register and get [`gdma_ctl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gdma_ctl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct GdmaCtlSpec;
+impl crate::RegisterSpec for GdmaCtlSpec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`gdma_ctl0::R`](R) reader structure"]
-impl crate::Readable for GdmaCtl0Spec {}
-#[doc = "`write(|w| ..)` method takes [`gdma_ctl0::W`](W) writer structure"]
-impl crate::Writable for GdmaCtl0Spec {
+#[doc = "`read()` method returns [`gdma_ctl::R`](R) reader structure"]
+impl crate::Readable for GdmaCtlSpec {}
+#[doc = "`write(|w| ..)` method takes [`gdma_ctl::W`](W) writer structure"]
+impl crate::Writable for GdmaCtlSpec {
     type Safety = crate::Unsafe;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0x0004_0000;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets GDMA_CTL0 to value 0"]
-impl crate::Resettable for GdmaCtl0Spec {
+#[doc = "`reset()` method sets GDMA_CTL to value 0"]
+impl crate::Resettable for GdmaCtlSpec {
     const RESET_VALUE: u32 = 0;
 }
