@@ -3035,10 +3035,10 @@ pub struct Pm2 {
 unsafe impl Send for Pm2 {}
 impl Pm2 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const pm2::RegisterBlock = 0x400c_b000 as *const _;
+    pub const PTR: *const pm1::RegisterBlock = 0x400c_b000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const pm2::RegisterBlock {
+    pub const fn ptr() -> *const pm1::RegisterBlock {
         Self::PTR
     }
     #[doc = r" Steal an instance of this peripheral"]
@@ -3061,7 +3061,7 @@ impl Pm2 {
     }
 }
 impl Deref for Pm2 {
-    type Target = pm2::RegisterBlock;
+    type Target = pm1::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
@@ -3073,7 +3073,7 @@ impl core::fmt::Debug for Pm2 {
     }
 }
 #[doc = "PM2"]
-pub mod pm2;
+pub use self::pm1 as pm2;
 #[doc = "PM3"]
 pub struct Pm3 {
     _marker: PhantomData<*const ()>,
@@ -3081,10 +3081,10 @@ pub struct Pm3 {
 unsafe impl Send for Pm3 {}
 impl Pm3 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const pm3::RegisterBlock = 0x400c_d000 as *const _;
+    pub const PTR: *const pm1::RegisterBlock = 0x400c_d000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const pm3::RegisterBlock {
+    pub const fn ptr() -> *const pm1::RegisterBlock {
         Self::PTR
     }
     #[doc = r" Steal an instance of this peripheral"]
@@ -3107,7 +3107,7 @@ impl Pm3 {
     }
 }
 impl Deref for Pm3 {
-    type Target = pm3::RegisterBlock;
+    type Target = pm1::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
@@ -3119,7 +3119,7 @@ impl core::fmt::Debug for Pm3 {
     }
 }
 #[doc = "PM3"]
-pub mod pm3;
+pub use self::pm1 as pm3;
 #[doc = "PM4"]
 pub struct Pm4 {
     _marker: PhantomData<*const ()>,
@@ -3127,10 +3127,10 @@ pub struct Pm4 {
 unsafe impl Send for Pm4 {}
 impl Pm4 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const pm4::RegisterBlock = 0x400c_f000 as *const _;
+    pub const PTR: *const pm1::RegisterBlock = 0x400c_f000 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const pm4::RegisterBlock {
+    pub const fn ptr() -> *const pm1::RegisterBlock {
         Self::PTR
     }
     #[doc = r" Steal an instance of this peripheral"]
@@ -3153,7 +3153,7 @@ impl Pm4 {
     }
 }
 impl Deref for Pm4 {
-    type Target = pm4::RegisterBlock;
+    type Target = pm1::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
@@ -3165,7 +3165,7 @@ impl core::fmt::Debug for Pm4 {
     }
 }
 #[doc = "PM4"]
-pub mod pm4;
+pub use self::pm1 as pm4;
 #[doc = "PMC"]
 pub struct Pmc {
     _marker: PhantomData<*const ()>,
