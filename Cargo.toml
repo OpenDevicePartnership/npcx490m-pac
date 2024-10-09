@@ -9,7 +9,7 @@ repository = "https://github.com/felipebalbi/npcx490m-pac"
 readme = "README.md"
 keywords = [ "npcx490m", "nuvoton", "no_std", "embedded" ]
 categories = [ "embedded", "no-std" ]
-rust-version = "1.81.0"
+rust-version = "1.71.0"
 exclude = [ "svd/*", ]
 
 [dependencies]
