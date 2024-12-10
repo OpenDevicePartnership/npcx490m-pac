@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 4:5 - Device 'n' Write Mode Select"]
     #[inline(always)]
-    #[must_use]
     pub fn dn_wr_mode(&mut self) -> DnWrModeW<SpiFlCfgSpec> {
         DnWrModeW::new(self, 4)
     }
     #[doc = "Bits 6:7 - Device 'n' Read Mode Select"]
     #[inline(always)]
-    #[must_use]
     pub fn dn_rd_mode(&mut self) -> DnRdModeW<SpiFlCfgSpec> {
         DnRdModeW::new(self, 6)
     }

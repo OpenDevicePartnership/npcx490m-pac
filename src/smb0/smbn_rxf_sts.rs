@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - Rx-FIFO Number of Bytes"]
     #[inline(always)]
-    #[must_use]
     pub fn rx_bytes(&mut self) -> RxBytesW<SmbnRxfStsSpec> {
         RxBytesW::new(self, 0)
     }
     #[doc = "Bit 6 - Rx-FIFO Threshold Status"]
     #[inline(always)]
-    #[must_use]
     pub fn rx_thst(&mut self) -> RxThstW<SmbnRxfStsSpec> {
         RxThstW::new(self, 6)
     }

@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:24 - Predefined Time"]
     #[inline(always)]
-    #[must_use]
     pub fn pt(&mut self) -> PtW<WtcSpec> {
         PtW::new(self, 0)
     }
     #[doc = "Bit 30 - Predefined Time Occurred"]
     #[inline(always)]
-    #[must_use]
     pub fn pto(&mut self) -> PtoW<WtcSpec> {
         PtoW::new(self, 30)
     }
     #[doc = "Bit 31 - Wake-Up/Interrupt Enabled"]
     #[inline(always)]
-    #[must_use]
     pub fn wie(&mut self) -> WieW<WtcSpec> {
         WieW::new(self, 31)
     }

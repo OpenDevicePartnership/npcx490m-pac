@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 3:4 - Bus Master Write DMA Request Threshold"]
     #[inline(always)]
-    #[must_use]
     pub fn bmwdmathresh(&mut self) -> BmwdmathreshW<PerctlbwSpec> {
         BmwdmathreshW::new(self, 3)
     }
     #[doc = "Bits 5:12 - Bus Master Burst Mode Write Transfer Size"]
     #[inline(always)]
-    #[must_use]
     pub fn bmwburstsize(&mut self) -> BmwburstsizeW<PerctlbwSpec> {
         BmwburstsizeW::new(self, 5)
     }
     #[doc = "Bit 16 - Bus Master Burst Mode Write Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn bmwbrsten(&mut self) -> BmwbrstenW<PerctlbwSpec> {
         BmwbrstenW::new(self, 16)
     }
     #[doc = "Bit 17 - Bus Master Burst Mode Write Transmit Buffer Empty"]
     #[inline(always)]
-    #[must_use]
     pub fn bmwburst_bempty(&mut self) -> BmwburstBemptyW<PerctlbwSpec> {
         BmwburstBemptyW::new(self, 17)
     }

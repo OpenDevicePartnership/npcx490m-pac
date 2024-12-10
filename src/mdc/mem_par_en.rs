@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - RAM Parity Check Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn ram_par_en(&mut self) -> RamParEnW<MemParEnSpec> {
         RamParEnW::new(self, 0)
     }
     #[doc = "Bits 4:7 - ROM Parity Check Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn rom_par_en(&mut self) -> RomParEnW<MemParEnSpec> {
         RomParEnW::new(self, 4)
     }

@@ -84,43 +84,36 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - CR_SIN Signal Invert"]
     #[inline(always)]
-    #[must_use]
     pub fn cr_sin_inv(&mut self) -> CrSinInvW<UcntlnSpec> {
         CrSinInvW::new(self, 0)
     }
     #[doc = "Bit 1 - CR_SOUT Signal Invert"]
     #[inline(always)]
-    #[must_use]
     pub fn cr_sout_inv(&mut self) -> CrSoutInvW<UcntlnSpec> {
         CrSoutInvW::new(self, 1)
     }
     #[doc = "Bit 2 - CR_SIN Common Mode Select"]
     #[inline(always)]
-    #[must_use]
     pub fn cr_sin_com(&mut self) -> CrSinComW<UcntlnSpec> {
         CrSinComW::new(self, 2)
     }
     #[doc = "Bit 3 - CR_SIN Common Push-Pull Select"]
     #[inline(always)]
-    #[must_use]
     pub fn cr_sin_pp(&mut self) -> CrSinPpW<UcntlnSpec> {
         CrSinPpW::new(self, 3)
     }
     #[doc = "Bit 4 - CR_SOUT Common Mode Select"]
     #[inline(always)]
-    #[must_use]
     pub fn cr_sout_com(&mut self) -> CrSoutComW<UcntlnSpec> {
         CrSoutComW::new(self, 4)
     }
     #[doc = "Bit 5 - CR_SOUT Common Push-Pull Select"]
     #[inline(always)]
-    #[must_use]
     pub fn cr_sout_pp(&mut self) -> CrSoutPpW<UcntlnSpec> {
         CrSoutPpW::new(self, 5)
     }
     #[doc = "Bit 6 - Common Mode Feedback Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn com_fdbk_en(&mut self) -> ComFdbkEnW<UcntlnSpec> {
         ComFdbkEnW::new(self, 6)
     }

@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - AHB6 Clock Divider"]
     #[inline(always)]
-    #[must_use]
     pub fn ahb6div(&mut self) -> Ahb6divW<HfcgpSpec> {
         Ahb6divW::new(self, 0)
     }
     #[doc = "Bits 4:7 - Core Clock Prescaler Divider Value"]
     #[inline(always)]
-    #[must_use]
     pub fn fpred(&mut self) -> FpredW<HfcgpSpec> {
         FpredW::new(self, 4)
     }

@@ -6,10 +6,10 @@ pub type W = crate::W<PxOtypeSpec>;
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum Type {
-    #[doc = "0: `0`"]
-    PushPull = 0,
-    #[doc = "1: `1`"]
-    OpenDrain = 1,
+    #[doc = "0: Push-pull"]
+    Pushpull = 0,
+    #[doc = "1: Open-drain"]
+    Opendrain = 1,
 }
 impl From<Type> for bool {
     #[inline(always)]
@@ -24,19 +24,19 @@ impl PinR {
     #[inline(always)]
     pub const fn variant(&self) -> Type {
         match self.bits {
-            false => Type::PushPull,
-            true => Type::OpenDrain,
+            false => Type::Pushpull,
+            true => Type::Opendrain,
         }
     }
-    #[doc = "`0`"]
+    #[doc = "Push-pull"]
     #[inline(always)]
-    pub fn is_push_pull(&self) -> bool {
-        *self == Type::PushPull
+    pub fn is_pushpull(&self) -> bool {
+        *self == Type::Pushpull
     }
-    #[doc = "`1`"]
+    #[doc = "Open-drain"]
     #[inline(always)]
-    pub fn is_open_drain(&self) -> bool {
-        *self == Type::OpenDrain
+    pub fn is_opendrain(&self) -> bool {
+        *self == Type::Opendrain
     }
 }
 #[doc = "Field `PIN(0-7)` writer - Output Type selection for Pin %s"]
@@ -45,15 +45,15 @@ impl<'a, REG> PinW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
-    #[doc = "`0`"]
+    #[doc = "Push-pull"]
     #[inline(always)]
-    pub fn push_pull(self) -> &'a mut crate::W<REG> {
-        self.variant(Type::PushPull)
+    pub fn pushpull(self) -> &'a mut crate::W<REG> {
+        self.variant(Type::Pushpull)
     }
-    #[doc = "`1`"]
+    #[doc = "Open-drain"]
     #[inline(always)]
-    pub fn open_drain(self) -> &'a mut crate::W<REG> {
-        self.variant(Type::OpenDrain)
+    pub fn opendrain(self) -> &'a mut crate::W<REG> {
+        self.variant(Type::Opendrain)
     }
 }
 impl R {
@@ -133,7 +133,6 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `PIN0` field.</div>"]
     #[inline(always)]
-    #[must_use]
     pub fn pin(&mut self, n: u8) -> PinW<PxOtypeSpec> {
         #[allow(clippy::no_effect)]
         [(); 8][n as usize];
@@ -141,49 +140,41 @@ impl W {
     }
     #[doc = "Bit 0 - Output Type selection for Pin 0"]
     #[inline(always)]
-    #[must_use]
     pub fn pin0(&mut self) -> PinW<PxOtypeSpec> {
         PinW::new(self, 0)
     }
     #[doc = "Bit 1 - Output Type selection for Pin 1"]
     #[inline(always)]
-    #[must_use]
     pub fn pin1(&mut self) -> PinW<PxOtypeSpec> {
         PinW::new(self, 1)
     }
     #[doc = "Bit 2 - Output Type selection for Pin 2"]
     #[inline(always)]
-    #[must_use]
     pub fn pin2(&mut self) -> PinW<PxOtypeSpec> {
         PinW::new(self, 2)
     }
     #[doc = "Bit 3 - Output Type selection for Pin 3"]
     #[inline(always)]
-    #[must_use]
     pub fn pin3(&mut self) -> PinW<PxOtypeSpec> {
         PinW::new(self, 3)
     }
     #[doc = "Bit 4 - Output Type selection for Pin 4"]
     #[inline(always)]
-    #[must_use]
     pub fn pin4(&mut self) -> PinW<PxOtypeSpec> {
         PinW::new(self, 4)
     }
     #[doc = "Bit 5 - Output Type selection for Pin 5"]
     #[inline(always)]
-    #[must_use]
     pub fn pin5(&mut self) -> PinW<PxOtypeSpec> {
         PinW::new(self, 5)
     }
     #[doc = "Bit 6 - Output Type selection for Pin 6"]
     #[inline(always)]
-    #[must_use]
     pub fn pin6(&mut self) -> PinW<PxOtypeSpec> {
         PinW::new(self, 6)
     }
     #[doc = "Bit 7 - Output Type selection for Pin 7"]
     #[inline(always)]
-    #[must_use]
     pub fn pin7(&mut self) -> PinW<PxOtypeSpec> {
         PinW::new(self, 7)
     }

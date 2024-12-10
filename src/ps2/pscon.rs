@@ -64,31 +64,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Shift Mechanism Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn en(&mut self) -> EnW<PsconSpec> {
         EnW::new(self, 0)
     }
     #[doc = "Bit 1 - Transmit Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn xmt(&mut self) -> XmtW<PsconSpec> {
         XmtW::new(self, 1)
     }
     #[doc = "Bits 2:3 - High Drive"]
     #[inline(always)]
-    #[must_use]
     pub fn hdrv(&mut self) -> HdrvW<PsconSpec> {
         HdrvW::new(self, 2)
     }
     #[doc = "Bits 4:6 - Input Debounce"]
     #[inline(always)]
-    #[must_use]
     pub fn idb(&mut self) -> IdbW<PsconSpec> {
         IdbW::new(self, 4)
     }
     #[doc = "Bit 7 - Weak Pull-Up Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn wpuen(&mut self) -> WpuenW<PsconSpec> {
         WpuenW::new(self, 7)
     }

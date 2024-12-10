@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Snooze Timer Function Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn snt_en(&mut self) -> SntEnW<SntCfgSpec> {
         SntEnW::new(self, 0)
     }
     #[doc = "Bit 1 - Snooze Timer Event Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn snt_wfe(&mut self) -> SntWfeW<SntCfgSpec> {
         SntWfeW::new(self, 1)
     }
     #[doc = "Bits 2:7 - Snooze Timer Prescaler"]
     #[inline(always)]
-    #[must_use]
     pub fn snt_prsc(&mut self) -> SntPrscW<SntCfgSpec> {
         SntPrscW::new(self, 2)
     }

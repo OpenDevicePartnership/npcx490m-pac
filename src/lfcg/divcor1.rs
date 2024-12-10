@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:8 - Divisor Correction Value 1"]
     #[inline(always)]
-    #[must_use]
     pub fn divcor1(&mut self) -> Divcor1W<Divcor1Spec> {
         Divcor1W::new(self, 0)
     }

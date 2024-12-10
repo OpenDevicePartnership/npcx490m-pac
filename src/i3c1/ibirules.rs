@@ -84,43 +84,36 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - Target 0 Dynamic Address"]
     #[inline(always)]
-    #[must_use]
     pub fn addr0(&mut self) -> Addr0W<IbirulesSpec> {
         Addr0W::new(self, 0)
     }
     #[doc = "Bits 6:11 - Target 1 Dynamic Address"]
     #[inline(always)]
-    #[must_use]
     pub fn addr1(&mut self) -> Addr1W<IbirulesSpec> {
         Addr1W::new(self, 6)
     }
     #[doc = "Bits 12:17 - Target 2 Dynamic Address"]
     #[inline(always)]
-    #[must_use]
     pub fn addr2(&mut self) -> Addr2W<IbirulesSpec> {
         Addr2W::new(self, 12)
     }
     #[doc = "Bits 18:23 - Target 3 Dynamic Address"]
     #[inline(always)]
-    #[must_use]
     pub fn addr3(&mut self) -> Addr3W<IbirulesSpec> {
         Addr3W::new(self, 18)
     }
     #[doc = "Bits 24:29 - Target 4 Dynamic Address"]
     #[inline(always)]
-    #[must_use]
     pub fn addr4(&mut self) -> Addr4W<IbirulesSpec> {
         Addr4W::new(self, 24)
     }
     #[doc = "Bit 30 - MSb is 0"]
     #[inline(always)]
-    #[must_use]
     pub fn msb0(&mut self) -> Msb0W<IbirulesSpec> {
         Msb0W::new(self, 30)
     }
     #[doc = "Bit 31 - No Mandatory Byte"]
     #[inline(always)]
-    #[must_use]
     pub fn nobyte(&mut self) -> NobyteW<IbirulesSpec> {
         NobyteW::new(self, 31)
     }

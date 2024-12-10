@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - Device 'n' Dummy Cycles Number"]
     #[inline(always)]
-    #[must_use]
     pub fn dn_dmm_cyc_num(&mut self) -> DnDmmCycNumW<DnFiuDmmCycSpec> {
         DnDmmCycNumW::new(self, 0)
     }

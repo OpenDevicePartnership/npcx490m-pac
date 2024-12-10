@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - LCT Event Status"]
     #[inline(always)]
-    #[must_use]
     pub fn lctevst(&mut self) -> LctevstW<LctstatSpec> {
         LctevstW::new(self, 0)
     }

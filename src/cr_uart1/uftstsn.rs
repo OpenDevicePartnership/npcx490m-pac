@@ -48,7 +48,7 @@ impl crate::RegisterSpec for UftstsnSpec {
 }
 #[doc = "`read()` method returns [`uftstsn::R`](R) reader structure"]
 impl crate::Readable for UftstsnSpec {}
-#[doc = "`reset()` method sets UFTSTSn to value 0xf0"]
+#[doc = "`reset()` method sets UFTSTSn to value 0"]
 impl crate::Resettable for UftstsnSpec {
-    const RESET_VALUE: u8 = 0xf0;
+    const RESET_VALUE: u8 = 0;
 }

@@ -99,12 +99,12 @@ impl RegisterBlock {
     #[doc = "0xc8 - Controller Dynamic Address Register"]
     #[inline(always)]
     pub const fn mdynaddr(&self) -> &Mdynaddr {
-        unsafe { &*(self as *const Self).cast::<u8>().add(200).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(200).cast() }
     }
     #[doc = "0xc8 - Controller Read Half-Word Data Register"]
     #[inline(always)]
     pub const fn mrdatah(&self) -> &Mrdatah {
-        unsafe { &*(self as *const Self).cast::<u8>().add(200).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(200).cast() }
     }
     #[doc = "0xd8 - Start or Continue DDR Message Register"]
     #[inline(always)]

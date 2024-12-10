@@ -94,49 +94,41 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Transmit Mode"]
     #[inline(always)]
-    #[must_use]
     pub fn xmit(&mut self) -> XmitW<SmbnStSpec> {
         XmitW::new(self, 0)
     }
     #[doc = "Bit 1 - Master Mode"]
     #[inline(always)]
-    #[must_use]
     pub fn master(&mut self) -> MasterW<SmbnStSpec> {
         MasterW::new(self, 1)
     }
     #[doc = "Bit 2 - New Match"]
     #[inline(always)]
-    #[must_use]
     pub fn nmatch(&mut self) -> NmatchW<SmbnStSpec> {
         NmatchW::new(self, 2)
     }
     #[doc = "Bit 3 - Stall After Start"]
     #[inline(always)]
-    #[must_use]
     pub fn stastr(&mut self) -> StastrW<SmbnStSpec> {
         StastrW::new(self, 3)
     }
     #[doc = "Bit 4 - Negative Acknowledge"]
     #[inline(always)]
-    #[must_use]
     pub fn negack(&mut self) -> NegackW<SmbnStSpec> {
         NegackW::new(self, 4)
     }
     #[doc = "Bit 5 - Bus Error"]
     #[inline(always)]
-    #[must_use]
     pub fn ber(&mut self) -> BerW<SmbnStSpec> {
         BerW::new(self, 5)
     }
     #[doc = "Bit 6 - SDA Status"]
     #[inline(always)]
-    #[must_use]
     pub fn sdast(&mut self) -> SdastW<SmbnStSpec> {
         SdastW::new(self, 6)
     }
     #[doc = "Bit 7 - Slave Stop"]
     #[inline(always)]
-    #[must_use]
     pub fn slvstp(&mut self) -> SlvstpW<SmbnStSpec> {
         SlvstpW::new(self, 7)
     }

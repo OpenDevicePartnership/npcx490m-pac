@@ -64,31 +64,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Output Buffer Full Keyboard Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn obfkie(&mut self) -> ObfkieW<HictrlSpec> {
         ObfkieW::new(self, 0)
     }
     #[doc = "Bit 1 - Output Buffer Full Mouse Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn obfmie(&mut self) -> ObfmieW<HictrlSpec> {
         ObfmieW::new(self, 1)
     }
     #[doc = "Bit 2 - Output Buffer Empty Core Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn obecie(&mut self) -> ObecieW<HictrlSpec> {
         ObecieW::new(self, 2)
     }
     #[doc = "Bit 3 - Input Buffer Full Core Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn ibfcie(&mut self) -> IbfcieW<HictrlSpec> {
         IbfcieW::new(self, 3)
     }
     #[doc = "Bit 7 - Firmware Control Over OBF"]
     #[inline(always)]
-    #[must_use]
     pub fn fw_obf(&mut self) -> FwObfW<HictrlSpec> {
         FwObfW::new(self, 7)
     }

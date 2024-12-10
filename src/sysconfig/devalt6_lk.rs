@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - AD0 Select Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn ad0_sl_lk(&mut self) -> Ad0SlLkW<Devalt6LkSpec> {
         Ad0SlLkW::new(self, 0)
     }
     #[doc = "Bit 5 - SMBus/I2C Module 6, Bus 1 Select Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn i2c6_1_sl_lk(&mut self) -> I2c6_1SlLkW<Devalt6LkSpec> {
         I2c6_1SlLkW::new(self, 5)
     }
     #[doc = "Bit 6 - SMBus/I2C Module 5, Bus 1 Select Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn i2c5_1_sl_lk(&mut self) -> I2c5_1SlLkW<Devalt6LkSpec> {
         I2c5_1SlLkW::new(self, 6)
     }
     #[doc = "Bit 7 - SMBus/I2C Module 4, Bus 1 Select Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn i2c4_1_sl_lk(&mut self) -> I2c4_1SlLkW<Devalt6LkSpec> {
         I2c4_1SlLkW::new(self, 7)
     }

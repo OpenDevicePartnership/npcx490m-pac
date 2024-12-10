@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Shift Register Busy"]
     #[inline(always)]
-    #[must_use]
     pub fn bsy(&mut self) -> BsyW<SpipStatSpec> {
         BsyW::new(self, 0)
     }
     #[doc = "Bit 1 - Read Buffer Full"]
     #[inline(always)]
-    #[must_use]
     pub fn rbf(&mut self) -> RbfW<SpipStatSpec> {
         RbfW::new(self, 1)
     }

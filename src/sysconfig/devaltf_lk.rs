@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - AD5 Select Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn ad5_sl_lk(&mut self) -> Ad5SlLkW<DevaltfLkSpec> {
         Ad5SlLkW::new(self, 0)
     }

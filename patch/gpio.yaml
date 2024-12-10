@@ -1,0 +1,481 @@
+_derive:
+  GPIO1: GPIO0
+  GPIO2: GPIO0
+  GPIO3: GPIO0
+  GPIO4: GPIO0
+  GPIO5: GPIO0
+  GPIO6: GPIO0
+  GPIO7: GPIO0
+  GPIO8: GPIO0
+  GPIO9: GPIO0
+  GPIOA: GPIO0
+  GPIOB: GPIO0
+  GPIOC: GPIO0
+  GPIOD: GPIO0
+  GPIOE: GPIO0
+  GPIOF: GPIO0
+
+GPIO0:
+  PxDOUT:
+    _add:
+      PIN0:
+        bitOffset: 0
+        bitWidth: 1
+        description: Data Out for Pin %s
+        access: read-write
+          
+      PIN1:
+        bitOffset: 1
+        bitWidth: 1
+        description: Data Out for Pin %s
+        access: read-write
+          
+      PIN2:
+        bitOffset: 2
+        bitWidth: 1
+        description: Data Out for Pin %s
+        access: read-write
+          
+      PIN3:
+        bitOffset: 3
+        bitWidth: 1
+        description: Data Out for Pin %s
+        access: read-write
+          
+      PIN4:
+        bitOffset: 4
+        bitWidth: 1
+        description: Data Out for Pin %s
+        access: read-write
+          
+      PIN5:
+        bitOffset: 5
+        bitWidth: 1
+        description: Data Out for Pin %s
+        access: read-write
+          
+      PIN6:
+        bitOffset: 6
+        bitWidth: 1
+        description: Data Out for Pin %s
+        access: read-write
+          
+      PIN7:
+        bitOffset: 7
+        bitWidth: 1
+        description: Data Out for Pin %s
+        access: read-write
+
+    PIN*:
+      _name: LEVEL
+      LOW: [0, Level low]
+      HIGH: [1, Level high]
+      
+    _array:
+      PIN*: {}
+
+  PxDIN:
+    _add:
+      PIN0:
+        bitOffset: 0
+        bitWidth: 1
+        description: Data In for Pin %s
+        access: read-write
+          
+      PIN1:
+        bitOffset: 1
+        bitWidth: 1
+        description: Data In for Pin %s
+        access: read-write
+          
+      PIN2:
+        bitOffset: 2
+        bitWidth: 1
+        description: Data In for Pin %s
+        access: read-write
+          
+      PIN3:
+        bitOffset: 3
+        bitWidth: 1
+        description: Data In for Pin %s
+        access: read-write
+          
+      PIN4:
+        bitOffset: 4
+        bitWidth: 1
+        description: Data In for Pin %s
+        access: read-write
+          
+      PIN5:
+        bitOffset: 5
+        bitWidth: 1
+        description: Data In for Pin %s
+        access: read-write
+          
+      PIN6:
+        bitOffset: 6
+        bitWidth: 1
+        description: Data In for Pin %s
+        access: read-write
+          
+      PIN7:
+        bitOffset: 7
+        bitWidth: 1
+        description: Data In for Pin %s
+        access: read-write
+
+    PIN*:
+      _name: LEVEL
+      LOW: [0, Level low]
+      HIGH: [1, Level high]
+      
+    _array:
+      PIN*: {}
+
+  PxDIR:
+    _add:
+      PIN0:
+        bitOffset: 0
+        bitWidth: 1
+        description: Direction for Pin %s
+        access: read-write
+          
+      PIN1:
+        bitOffset: 1
+        bitWidth: 1
+        description: Direction for Pin %s
+        access: read-write
+          
+      PIN2:
+        bitOffset: 2
+        bitWidth: 1
+        description: Direction for Pin %s
+        access: read-write
+          
+      PIN3:
+        bitOffset: 3
+        bitWidth: 1
+        description: Direction for Pin %s
+        access: read-write
+          
+      PIN4:
+        bitOffset: 4
+        bitWidth: 1
+        description: Direction for Pin %s
+        access: read-write
+          
+      PIN5:
+        bitOffset: 5
+        bitWidth: 1
+        description: Direction for Pin %s
+        access: read-write
+          
+      PIN6:
+        bitOffset: 6
+        bitWidth: 1
+        description: Direction for Pin %s
+        access: read-write
+          
+      PIN7:
+        bitOffset: 7
+        bitWidth: 1
+        description: Direction for Pin %s
+        access: read-write
+
+    PIN*:
+      _name: DIRECTION
+      INPUT: [0, Direction Input]
+      OUTPUT: [1, Direction Output]
+      
+    _array:
+      PIN*: {}
+
+  PxPULL:
+    _add:
+      PIN0:
+        bitOffset: 0
+        bitWidth: 1
+        description: Pull State for Pin %s
+        access: read-write
+          
+      PIN1:
+        bitOffset: 1
+        bitWidth: 1
+        description: Pull State for Pin %s
+        access: read-write
+          
+      PIN2:
+        bitOffset: 2
+        bitWidth: 1
+        description: Pull State for Pin %s
+        access: read-write
+          
+      PIN3:
+        bitOffset: 3
+        bitWidth: 1
+        description: Pull State for Pin %s
+        access: read-write
+          
+      PIN4:
+        bitOffset: 4
+        bitWidth: 1
+        description: Pull State for Pin %s
+        access: read-write
+          
+      PIN5:
+        bitOffset: 5
+        bitWidth: 1
+        description: Pull State for Pin %s
+        access: read-write
+          
+      PIN6:
+        bitOffset: 6
+        bitWidth: 1
+        description: Pull State for Pin %s
+        access: read-write
+          
+      PIN7:
+        bitOffset: 7
+        bitWidth: 1
+        description: Pull State for Pin %s
+        access: read-write
+
+    PIN*:
+      _name: STATE
+      Disabled: [0, Disabled]
+      Enabled: [1, Enabled]
+      
+    _array:
+      PIN*: {}
+
+  PxPUD:
+    _add:
+      PIN0:
+        bitOffset: 0
+        bitWidth: 1
+        description: Pull for Pin %s
+        access: read-write
+          
+      PIN1:
+        bitOffset: 1
+        bitWidth: 1
+        description: Pull for Pin %s
+        access: read-write
+          
+      PIN2:
+        bitOffset: 2
+        bitWidth: 1
+        description: Pull for Pin %s
+        access: read-write
+          
+      PIN3:
+        bitOffset: 3
+        bitWidth: 1
+        description: Pull for Pin %s
+        access: read-write
+          
+      PIN4:
+        bitOffset: 4
+        bitWidth: 1
+        description: Pull for Pin %s
+        access: read-write
+          
+      PIN5:
+        bitOffset: 5
+        bitWidth: 1
+        description: Pull for Pin %s
+        access: read-write
+
+      PIN6:
+        bitOffset: 6
+        bitWidth: 1
+        description: Pull for Pin %s
+        access: read-write
+          
+      PIN7:
+        bitOffset: 7
+        bitWidth: 1
+        description: Pull for Pin %s
+        access: read-write
+
+    PIN*:
+      _name: PULL
+      PULL_UP: [0, Pull-up]
+      PULL_DOWN: [1, Pull-down]
+      
+    _array:
+      PIN*: {}
+
+  PxENVDD:
+    _add:
+      PIN0:
+        bitOffset: 0
+        bitWidth: 1
+        description: Drive Enable by Vdd Present for Pin %s
+        access: read-write
+          
+      PIN1:
+        bitOffset: 1
+        bitWidth: 1
+        description: Drive Enable by Vdd Present for Pin %s
+        access: read-write
+          
+      PIN2:
+        bitOffset: 2
+        bitWidth: 1
+        description: Drive Enable by Vdd Present for Pin %s
+        access: read-write
+          
+      PIN3:
+        bitOffset: 3
+        bitWidth: 1
+        description: Drive Enable by Vdd Present for Pin %s
+        access: read-write
+          
+      PIN4:
+        bitOffset: 4
+        bitWidth: 1
+        description: Drive Enable by Vdd Present for Pin %s
+        access: read-write
+          
+      PIN5:
+        bitOffset: 5
+        bitWidth: 1
+        description: Drive Enable by Vdd Present for Pin %s
+        access: read-write
+          
+      PIN6:
+        bitOffset: 6
+        bitWidth: 1
+        description: Drive Enable by Vdd Present for Pin %s
+        access: read-write
+          
+      PIN7:
+        bitOffset: 7
+        bitWidth: 1
+        description: Drive Enable by Vdd Present for Pin %s
+        access: read-write
+
+    PIN*:
+      _name: DRIVE
+      Enabled: [0, Enabled]
+      Disabled: [1, Disabled]
+      
+    _array:
+      PIN*: {}
+
+  PxOTYPE:
+    _add:
+      PIN0:
+        bitOffset: 0
+        bitWidth: 1
+        description: Output Type selection for Pin %s
+        access: read-write
+          
+      PIN1:
+        bitOffset: 1
+        bitWidth: 1
+        description: Output Type selection for Pin %s
+        access: read-write
+          
+      PIN2:
+        bitOffset: 2
+        bitWidth: 1
+        description: Output Type selection for Pin %s
+        access: read-write
+          
+      PIN3:
+        bitOffset: 3
+        bitWidth: 1
+        description: Output Type selection for Pin %s
+        access: read-write
+          
+      PIN4:
+        bitOffset: 4
+        bitWidth: 1
+        description: Output Type selection for Pin %s
+        access: read-write
+          
+      PIN5:
+        bitOffset: 5
+        bitWidth: 1
+        description: Output Type selection for Pin %s
+        access: read-write
+          
+      PIN6:
+        bitOffset: 6
+        bitWidth: 1
+        description: Output Type selection for Pin %s
+        access: read-write
+          
+      PIN7:
+        bitOffset: 7
+        bitWidth: 1
+        description: Output Type selection for Pin %s
+        access: read-write
+
+    PIN*:
+      _name: TYPE
+      Push-pull: [0, Push-pull]
+      Open-drain: [1, Open-drain]
+
+    _array:
+      PIN*: {}
+
+  PxLOCK_CTL:
+    _add:
+      PIN0:
+        bitOffset: 0
+        bitWidth: 1
+        description: Output Data and Configuration Lock for Pin %s
+        access: read-write
+          
+      PIN1:
+        bitOffset: 1
+        bitWidth: 1
+        description: Output Data and Configuration Lock for Pin %s
+        access: read-write
+          
+      PIN2:
+        bitOffset: 2
+        bitWidth: 1
+        description: Output Data and Configuration Lock for Pin %s
+        access: read-write
+          
+      PIN3:
+        bitOffset: 3
+        bitWidth: 1
+        description: Output Data and Configuration Lock for Pin %s
+        access: read-write
+          
+      PIN4:
+        bitOffset: 4
+        bitWidth: 1
+        description: Output Data and Configuration Lock for Pin %s
+        access: read-write
+          
+      PIN5:
+        bitOffset: 5
+        bitWidth: 1
+        description: Output Data and Configuration Lock for Pin %s
+        access: read-write
+          
+      PIN6:
+        bitOffset: 6
+        bitWidth: 1
+        description: Output Data and Configuration Lock for Pin %s
+        access: read-write
+          
+      PIN7:
+        bitOffset: 7
+        bitWidth: 1
+        description: Output Data and Configuration Lock for Pin %s
+        access: read-write
+
+    PIN*:
+      _name: LOCK
+      Unlocked: [0, Unlocked]
+      Locked: [1, Locked]
+
+    _array:
+      PIN*: {}

@@ -64,31 +64,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 2 - PECI Disable in Idle"]
     #[inline(always)]
-    #[must_use]
     pub fn peci_did(&mut self) -> PeciDidW<DisidlCtlSpec> {
         PeciDidW::new(self, 2)
     }
     #[doc = "Bit 4 - SPI Peripheral Disable in Idle"]
     #[inline(always)]
-    #[must_use]
     pub fn spip_dw(&mut self) -> SpipDwW<DisidlCtlSpec> {
         SpipDwW::new(self, 4)
     }
     #[doc = "Bit 5 - RAM Disable in Idle"]
     #[inline(always)]
-    #[must_use]
     pub fn ram_did(&mut self) -> RamDidW<DisidlCtlSpec> {
         RamDidW::new(self, 5)
     }
     #[doc = "Bit 6 - ROM Disable in Idle"]
     #[inline(always)]
-    #[must_use]
     pub fn rom_did(&mut self) -> RomDidW<DisidlCtlSpec> {
         RomDidW::new(self, 6)
     }
     #[doc = "Bit 7 - Access Disable in Idle"]
     #[inline(always)]
-    #[must_use]
     pub fn acc_did(&mut self) -> AccDidW<DisidlCtlSpec> {
         AccDidW::new(self, 7)
     }

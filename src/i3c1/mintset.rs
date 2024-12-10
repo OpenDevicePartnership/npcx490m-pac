@@ -94,49 +94,41 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 8 - Target START Detected"]
     #[inline(always)]
-    #[must_use]
     pub fn tgtstart(&mut self) -> TgtstartW<MintsetSpec> {
         TgtstartW::new(self, 8)
     }
     #[doc = "Bit 9 - MCTRL Done"]
     #[inline(always)]
-    #[must_use]
     pub fn mctrldone(&mut self) -> MctrldoneW<MintsetSpec> {
         MctrldoneW::new(self, 9)
     }
     #[doc = "Bit 10 - Message Completed"]
     #[inline(always)]
-    #[must_use]
     pub fn complete(&mut self) -> CompleteW<MintsetSpec> {
         CompleteW::new(self, 10)
     }
     #[doc = "Bit 11 - Receive Buffer Pending"]
     #[inline(always)]
-    #[must_use]
     pub fn rxpend(&mut self) -> RxpendW<MintsetSpec> {
         RxpendW::new(self, 11)
     }
     #[doc = "Bit 12 - Transmit Buffer Not Full"]
     #[inline(always)]
-    #[must_use]
     pub fn txnotfull(&mut self) -> TxnotfullW<MintsetSpec> {
         TxnotfullW::new(self, 12)
     }
     #[doc = "Bit 13 - IBI Arbitration Won"]
     #[inline(always)]
-    #[must_use]
     pub fn ibiwon(&mut self) -> IbiwonW<MintsetSpec> {
         IbiwonW::new(self, 13)
     }
     #[doc = "Bit 15 - Error/Warning"]
     #[inline(always)]
-    #[must_use]
     pub fn errwarn(&mut self) -> ErrwarnW<MintsetSpec> {
         ErrwarnW::new(self, 15)
     }
     #[doc = "Bit 19 - I3CI Now Bus Controller"]
     #[inline(always)]
-    #[must_use]
     pub fn nowcntlr(&mut self) -> NowcntlrW<MintsetSpec> {
         NowcntlrW::new(self, 19)
     }

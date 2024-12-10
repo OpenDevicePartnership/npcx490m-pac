@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:11 - Minimum Duty Cycle Rise/Fall Value"]
     #[inline(always)]
-    #[must_use]
     pub fn min_dc_rsfl11_0(&mut self) -> MinDcRsfl11_0W<MinDcRsflnSpec> {
         MinDcRsfl11_0W::new(self, 0)
     }

@@ -64,31 +64,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn rst(&mut self) -> RstW<T0csrSpec> {
         RstW::new(self, 0)
     }
     #[doc = "Bit 1 - Terminal Count"]
     #[inline(always)]
-    #[must_use]
     pub fn tc(&mut self) -> TcW<T0csrSpec> {
         TcW::new(self, 1)
     }
     #[doc = "Bit 3 - Watchdog Last Touch Delay"]
     #[inline(always)]
-    #[must_use]
     pub fn wdltd(&mut self) -> WdltdW<T0csrSpec> {
         WdltdW::new(self, 3)
     }
     #[doc = "Bit 5 - Watchdog Run Status"]
     #[inline(always)]
-    #[must_use]
     pub fn wd_run(&mut self) -> WdRunW<T0csrSpec> {
         WdRunW::new(self, 5)
     }
     #[doc = "Bit 7 - Too Early Service Disable"]
     #[inline(always)]
-    #[must_use]
     pub fn tesdis(&mut self) -> TesdisW<T0csrSpec> {
         TesdisW::new(self, 7)
     }

@@ -4,6 +4,10 @@ pub type R = crate::R<FlmCtlSpec>;
 pub type W = crate::W<FlmCtlSpec>;
 #[doc = "Field `RDY` reader - Ready"]
 pub type RdyR = crate::BitReader;
+#[doc = "Field `RDY` writer - Ready"]
+pub type RdyW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CHANGE` reader - Change and Update Configuration Parameters"]
+pub type ChangeR = crate::BitReader;
 #[doc = "Field `CHANGE` writer - Change and Update Configuration Parameters"]
 pub type ChangeW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RLCK` reader - Reversible Lock"]
@@ -17,12 +21,17 @@ pub type MenW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LCK` reader - Lock"]
 pub type LckR = crate::BitReader;
 #[doc = "Field `LCK` writer - Lock"]
-pub type LckW<'a, REG> = crate::BitWriter1S<'a, REG>;
+pub type LckW<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Ready"]
     #[inline(always)]
     pub fn rdy(&self) -> RdyR {
         RdyR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - Change and Update Configuration Parameters"]
+    #[inline(always)]
+    pub fn change(&self) -> ChangeR {
+        ChangeR::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bits 8:15 - Reversible Lock"]
     #[inline(always)]
@@ -45,6 +54,7 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("FLM_CTL")
             .field("rdy", &self.rdy())
+            .field("change", &self.change())
             .field("rlck", &self.rlck())
             .field("men", &self.men())
             .field("lck", &self.lck())
@@ -52,27 +62,28 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
+    #[doc = "Bit 0 - Ready"]
+    #[inline(always)]
+    pub fn rdy(&mut self) -> RdyW<FlmCtlSpec> {
+        RdyW::new(self, 0)
+    }
     #[doc = "Bit 1 - Change and Update Configuration Parameters"]
     #[inline(always)]
-    #[must_use]
     pub fn change(&mut self) -> ChangeW<FlmCtlSpec> {
         ChangeW::new(self, 1)
     }
     #[doc = "Bits 8:15 - Reversible Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn rlck(&mut self) -> RlckW<FlmCtlSpec> {
         RlckW::new(self, 8)
     }
     #[doc = "Bit 30 - Module Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn men(&mut self) -> MenW<FlmCtlSpec> {
         MenW::new(self, 30)
     }
     #[doc = "Bit 31 - Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn lck(&mut self) -> LckW<FlmCtlSpec> {
         LckW::new(self, 31)
     }
@@ -88,7 +99,7 @@ impl crate::Readable for FlmCtlSpec {}
 impl crate::Writable for FlmCtlSpec {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0x8000_0000;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets FLM_CTL to value 0"]
 impl crate::Resettable for FlmCtlSpec {

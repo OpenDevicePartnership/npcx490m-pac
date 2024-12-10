@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Data Byte 0"]
     #[inline(always)]
-    #[must_use]
     pub fn dat_b0(&mut self) -> DatB0W<UmaDb0_3Spec> {
         DatB0W::new(self, 0)
     }
     #[doc = "Bits 8:15 - Data Byte 1"]
     #[inline(always)]
-    #[must_use]
     pub fn dat_b1(&mut self) -> DatB1W<UmaDb0_3Spec> {
         DatB1W::new(self, 8)
     }
     #[doc = "Bits 16:23 - Data Byte 2"]
     #[inline(always)]
-    #[must_use]
     pub fn dat_b2(&mut self) -> DatB2W<UmaDb0_3Spec> {
         DatB2W::new(self, 16)
     }
     #[doc = "Bits 24:31 - Data Byte 3"]
     #[inline(always)]
-    #[must_use]
     pub fn dat_b3(&mut self) -> DatB3W<UmaDb0_3Spec> {
         DatB3W::new(self, 24)
     }

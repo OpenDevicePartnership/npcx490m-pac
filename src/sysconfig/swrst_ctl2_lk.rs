@@ -314,181 +314,151 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - PMC Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn pmc_rst_lk(&mut self) -> PmcRstLkW<SwrstCtl2LkSpec> {
         PmcRstLkW::new(self, 0)
     }
     #[doc = "Bit 3 - SPI Peripheral Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn spip_rst_lk(&mut self) -> SpipRstLkW<SwrstCtl2LkSpec> {
         SpipRstLkW::new(self, 3)
     }
     #[doc = "Bit 4 - ADC_EREF Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn adce_rst_lk(&mut self) -> AdceRstLkW<SwrstCtl2LkSpec> {
         AdceRstLkW::new(self, 4)
     }
     #[doc = "Bit 5 - PECI Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn peci_rst_lk(&mut self) -> PeciRstLkW<SwrstCtl2LkSpec> {
         PeciRstLkW::new(self, 5)
     }
     #[doc = "Bit 6 - CR_UART 2 Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn crurt2_rst_lk(&mut self) -> Crurt2RstLkW<SwrstCtl2LkSpec> {
         Crurt2RstLkW::new(self, 6)
     }
     #[doc = "Bit 7 - ADC_IREF Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn adci_rst_lk(&mut self) -> AdciRstLkW<SwrstCtl2LkSpec> {
         AdciRstLkW::new(self, 7)
     }
     #[doc = "Bit 8 - SMB0 Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn smb0_rst_lk(&mut self) -> Smb0RstLkW<SwrstCtl2LkSpec> {
         Smb0RstLkW::new(self, 8)
     }
     #[doc = "Bit 9 - SMB1 Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn smb1_rst_lk(&mut self) -> Smb1RstLkW<SwrstCtl2LkSpec> {
         Smb1RstLkW::new(self, 9)
     }
     #[doc = "Bit 10 - SMB2 Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn smb2_rst_lk(&mut self) -> Smb2RstLkW<SwrstCtl2LkSpec> {
         Smb2RstLkW::new(self, 10)
     }
     #[doc = "Bit 11 - SMB3 Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn smb3_rst_lk(&mut self) -> Smb3RstLkW<SwrstCtl2LkSpec> {
         Smb3RstLkW::new(self, 11)
     }
     #[doc = "Bit 12 - SMB4 Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn smb4_rst_lk(&mut self) -> Smb4RstLkW<SwrstCtl2LkSpec> {
         Smb4RstLkW::new(self, 12)
     }
     #[doc = "Bit 13 - SMB5 Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn smb5_rst_lk(&mut self) -> Smb5RstLkW<SwrstCtl2LkSpec> {
         Smb5RstLkW::new(self, 13)
     }
     #[doc = "Bit 14 - SMB6 Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn smb6_rst_lk(&mut self) -> Smb6RstLkW<SwrstCtl2LkSpec> {
         Smb6RstLkW::new(self, 14)
     }
     #[doc = "Bit 15 - TWD Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn twd_rst_lk(&mut self) -> TwdRstLkW<SwrstCtl2LkSpec> {
         TwdRstLkW::new(self, 15)
     }
     #[doc = "Bit 16 - PWM0 Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn pwm0_rst_lk(&mut self) -> Pwm0RstLkW<SwrstCtl2LkSpec> {
         Pwm0RstLkW::new(self, 16)
     }
     #[doc = "Bit 17 - PWM1 Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn pwm1_rst_lk(&mut self) -> Pwm1RstLkW<SwrstCtl2LkSpec> {
         Pwm1RstLkW::new(self, 17)
     }
     #[doc = "Bit 18 - PWM2 Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn pwm2_rst_lk(&mut self) -> Pwm2RstLkW<SwrstCtl2LkSpec> {
         Pwm2RstLkW::new(self, 18)
     }
     #[doc = "Bit 19 - PWM3 Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn pwm3_rst_lk(&mut self) -> Pwm3RstLkW<SwrstCtl2LkSpec> {
         Pwm3RstLkW::new(self, 19)
     }
     #[doc = "Bit 20 - PWM4 Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn pwm4_rst_lk(&mut self) -> Pwm4RstLkW<SwrstCtl2LkSpec> {
         Pwm4RstLkW::new(self, 20)
     }
     #[doc = "Bit 21 - PWM5 Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn pwm5_rst_lk(&mut self) -> Pwm5RstLkW<SwrstCtl2LkSpec> {
         Pwm5RstLkW::new(self, 21)
     }
     #[doc = "Bit 22 - PWM6 Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn pwm6_rst_lk(&mut self) -> Pwm6RstLkW<SwrstCtl2LkSpec> {
         Pwm6RstLkW::new(self, 22)
     }
     #[doc = "Bit 23 - PWM7 Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn pwm7_rst_lk(&mut self) -> Pwm7RstLkW<SwrstCtl2LkSpec> {
         Pwm7RstLkW::new(self, 23)
     }
     #[doc = "Bit 24 - MFT16-1 Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn mft16_1_rst_lk(&mut self) -> Mft16_1RstLkW<SwrstCtl2LkSpec> {
         Mft16_1RstLkW::new(self, 24)
     }
     #[doc = "Bit 25 - MFT16-2 Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn mft16_2_rst_lk(&mut self) -> Mft16_2RstLkW<SwrstCtl2LkSpec> {
         Mft16_2RstLkW::new(self, 25)
     }
     #[doc = "Bit 26 - MFT16-3 Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn mft16_3_rst_lk(&mut self) -> Mft16_3RstLkW<SwrstCtl2LkSpec> {
         Mft16_3RstLkW::new(self, 26)
     }
     #[doc = "Bit 27 - SMB7 Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn smb7_rst_lk(&mut self) -> Smb7RstLkW<SwrstCtl2LkSpec> {
         Smb7RstLkW::new(self, 27)
     }
     #[doc = "Bit 28 - CR_UART 1 Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn crurt1_rst_lk(&mut self) -> Crurt1RstLkW<SwrstCtl2LkSpec> {
         Crurt1RstLkW::new(self, 28)
     }
     #[doc = "Bit 29 - PS/2 Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn ps2_rst_lk(&mut self) -> Ps2RstLkW<SwrstCtl2LkSpec> {
         Ps2RstLkW::new(self, 29)
     }
     #[doc = "Bit 30 - SDP Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn sdp_rst_lk(&mut self) -> SdpRstLkW<SwrstCtl2LkSpec> {
         SdpRstLkW::new(self, 30)
     }
     #[doc = "Bit 31 - Keyboard Scan Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn kbs_rst_lk(&mut self) -> KbsRstLkW<SwrstCtl2LkSpec> {
         KbsRstLkW::new(self, 31)
     }

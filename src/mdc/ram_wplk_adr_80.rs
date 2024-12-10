@@ -94,49 +94,41 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Write Protect Lock Sector 0"]
     #[inline(always)]
-    #[must_use]
     pub fn wplk_sk0(&mut self) -> WplkSk0W<RamWplkAdr80Spec> {
         WplkSk0W::new(self, 0)
     }
     #[doc = "Bit 1 - Write Protect Lock Sector 1"]
     #[inline(always)]
-    #[must_use]
     pub fn wplk_sk1(&mut self) -> WplkSk1W<RamWplkAdr80Spec> {
         WplkSk1W::new(self, 1)
     }
     #[doc = "Bit 2 - Write Protect Lock Sector 2"]
     #[inline(always)]
-    #[must_use]
     pub fn wplk_sk2(&mut self) -> WplkSk2W<RamWplkAdr80Spec> {
         WplkSk2W::new(self, 2)
     }
     #[doc = "Bit 3 - Write Protect Lock Sector 3"]
     #[inline(always)]
-    #[must_use]
     pub fn wplk_sk3(&mut self) -> WplkSk3W<RamWplkAdr80Spec> {
         WplkSk3W::new(self, 3)
     }
     #[doc = "Bit 4 - Write Protect Lock Sector 4"]
     #[inline(always)]
-    #[must_use]
     pub fn wplk_sk4(&mut self) -> WplkSk4W<RamWplkAdr80Spec> {
         WplkSk4W::new(self, 4)
     }
     #[doc = "Bit 5 - Write Protect Lock Sector 5"]
     #[inline(always)]
-    #[must_use]
     pub fn wplk_sk5(&mut self) -> WplkSk5W<RamWplkAdr80Spec> {
         WplkSk5W::new(self, 5)
     }
     #[doc = "Bit 6 - Write Protect Lock Sector 6"]
     #[inline(always)]
-    #[must_use]
     pub fn wplk_sk6(&mut self) -> WplkSk6W<RamWplkAdr80Spec> {
         WplkSk6W::new(self, 6)
     }
     #[doc = "Bit 7 - Write Protect Lock Sector 7"]
     #[inline(always)]
-    #[must_use]
     pub fn wplk_sk7(&mut self) -> WplkSk7W<RamWplkAdr80Spec> {
         WplkSk7W::new(self, 7)
     }

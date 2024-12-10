@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - RJ_EV Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn rj_ie(&mut self) -> RjIeW<FlmIeSpec> {
         RjIeW::new(self, 0)
     }
     #[doc = "Bit 1 - CSI_EV Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn csi_ie(&mut self) -> CsiIeW<FlmIeSpec> {
         CsiIeW::new(self, 1)
     }
     #[doc = "Bit 3 - TCR_EV Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn tcr_ie(&mut self) -> TcrIeW<FlmIeSpec> {
         TcrIeW::new(self, 3)
     }

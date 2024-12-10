@@ -94,49 +94,41 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - No KSI0 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn no_ksi0_sl(&mut self) -> NoKsi0SlW<Devalt7Spec> {
         NoKsi0SlW::new(self, 0)
     }
     #[doc = "Bit 1 - No KSI1 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn no_ksi1_sl(&mut self) -> NoKsi1SlW<Devalt7Spec> {
         NoKsi1SlW::new(self, 1)
     }
     #[doc = "Bit 2 - No KSI2 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn no_ksi2_sl(&mut self) -> NoKsi2SlW<Devalt7Spec> {
         NoKsi2SlW::new(self, 2)
     }
     #[doc = "Bit 3 - No KSI3 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn no_ksi3_sl(&mut self) -> NoKsi3SlW<Devalt7Spec> {
         NoKsi3SlW::new(self, 3)
     }
     #[doc = "Bit 4 - No KSI4 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn no_ksi4_sl(&mut self) -> NoKsi4SlW<Devalt7Spec> {
         NoKsi4SlW::new(self, 4)
     }
     #[doc = "Bit 5 - No KSI5 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn no_ksi5_sl(&mut self) -> NoKsi5SlW<Devalt7Spec> {
         NoKsi5SlW::new(self, 5)
     }
     #[doc = "Bit 6 - No KSI6 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn no_ksi6_sl(&mut self) -> NoKsi6SlW<Devalt7Spec> {
         NoKsi6SlW::new(self, 6)
     }
     #[doc = "Bit 7 - No KSI7 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn no_ksi7_sl(&mut self) -> NoKsi7SlW<Devalt7Spec> {
         NoKsi7SlW::new(self, 7)
     }

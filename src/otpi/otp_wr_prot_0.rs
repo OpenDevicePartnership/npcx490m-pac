@@ -94,49 +94,41 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Write Protect Block 8*n+0"]
     #[inline(always)]
-    #[must_use]
     pub fn wrp8n_0(&mut self) -> Wrp8n0W<OtpWrProt0Spec> {
         Wrp8n0W::new(self, 0)
     }
     #[doc = "Bit 1 - Write Protect Block 8*n+1"]
     #[inline(always)]
-    #[must_use]
     pub fn wrp8n_1(&mut self) -> Wrp8n1W<OtpWrProt0Spec> {
         Wrp8n1W::new(self, 1)
     }
     #[doc = "Bit 2 - Write Protect Block 8*n+2"]
     #[inline(always)]
-    #[must_use]
     pub fn wrp8n_2(&mut self) -> Wrp8n2W<OtpWrProt0Spec> {
         Wrp8n2W::new(self, 2)
     }
     #[doc = "Bit 3 - Write Protect Block 8*n+3"]
     #[inline(always)]
-    #[must_use]
     pub fn wrp8n_3(&mut self) -> Wrp8n3W<OtpWrProt0Spec> {
         Wrp8n3W::new(self, 3)
     }
     #[doc = "Bit 4 - Write Protect Block 8*n+4"]
     #[inline(always)]
-    #[must_use]
     pub fn wrp8n_4(&mut self) -> Wrp8n4W<OtpWrProt0Spec> {
         Wrp8n4W::new(self, 4)
     }
     #[doc = "Bit 5 - Write Protect Block 8*n+5"]
     #[inline(always)]
-    #[must_use]
     pub fn wrp8n_5(&mut self) -> Wrp8n5W<OtpWrProt0Spec> {
         Wrp8n5W::new(self, 5)
     }
     #[doc = "Bit 6 - Write Protect Block 8*n+6"]
     #[inline(always)]
-    #[must_use]
     pub fn wrp8n_6(&mut self) -> Wrp8n6W<OtpWrProt0Spec> {
         Wrp8n6W::new(self, 6)
     }
     #[doc = "Bit 7 - Write Protect Block 8*n+7"]
     #[inline(always)]
-    #[must_use]
     pub fn wrp8n_7(&mut self) -> Wrp8n7W<OtpWrProt0Spec> {
         Wrp8n7W::new(self, 7)
     }

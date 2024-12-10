@@ -64,31 +64,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 7:9 - Flash Access Channel Block Erase Size"]
     #[inline(always)]
-    #[must_use]
     pub fn flashblerssize(&mut self) -> FlashblerssizeW<FlashcfgSpec> {
         FlashblerssizeW::new(self, 7)
     }
     #[doc = "Bits 10:12 - Flash Access Channel Maximum Payload Size"]
     #[inline(always)]
-    #[must_use]
     pub fn flashplsize(&mut self) -> FlashplsizeW<FlashcfgSpec> {
         FlashplsizeW::new(self, 10)
     }
     #[doc = "Bits 13:15 - Flash Access Channel Maximum Read Request Size"]
     #[inline(always)]
-    #[must_use]
     pub fn flashreqsize(&mut self) -> FlashreqsizeW<FlashcfgSpec> {
         FlashreqsizeW::new(self, 13)
     }
     #[doc = "Bits 16:23 - Target Flash Erase Block Size"]
     #[inline(always)]
-    #[must_use]
     pub fn trgfleblksize(&mut self) -> TrgfleblksizeW<FlashcfgSpec> {
         TrgfleblksizeW::new(self, 16)
     }
     #[doc = "Bits 24:25 - Flash Sharing Capability Support"]
     #[inline(always)]
-    #[must_use]
     pub fn flcapa(&mut self) -> FlcapaW<FlashcfgSpec> {
         FlcapaW::new(self, 24)
     }

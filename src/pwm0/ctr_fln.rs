@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:11 - Cycle Time Value for Fall Duty Cycle"]
     #[inline(always)]
-    #[must_use]
     pub fn ctr_fl11_0(&mut self) -> CtrFl11_0W<CtrFlnSpec> {
         CtrFl11_0W::new(self, 0)
     }

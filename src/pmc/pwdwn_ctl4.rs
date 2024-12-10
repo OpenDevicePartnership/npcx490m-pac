@@ -84,43 +84,36 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - ITIM32-1 Power-Down"]
     #[inline(always)]
-    #[must_use]
     pub fn itim1_pd(&mut self) -> Itim1PdW<PwdwnCtl4Spec> {
         Itim1PdW::new(self, 0)
     }
     #[doc = "Bit 1 - ITIM32-2 Power-Down"]
     #[inline(always)]
-    #[must_use]
     pub fn itim2_pd(&mut self) -> Itim2PdW<PwdwnCtl4Spec> {
         Itim2PdW::new(self, 1)
     }
     #[doc = "Bit 2 - ITIM32-3 Power-Down"]
     #[inline(always)]
-    #[must_use]
     pub fn itim3_pd(&mut self) -> Itim3PdW<PwdwnCtl4Spec> {
         Itim3PdW::new(self, 2)
     }
     #[doc = "Bit 3 - ADC_EREF Power-Down"]
     #[inline(always)]
-    #[must_use]
     pub fn adc_eref_pd(&mut self) -> AdcErefPdW<PwdwnCtl4Spec> {
         AdcErefPdW::new(self, 3)
     }
     #[doc = "Bit 4 - ADC_IREF Power-Down"]
     #[inline(always)]
-    #[must_use]
     pub fn adc_iref_pd(&mut self) -> AdcIrefPdW<PwdwnCtl4Spec> {
         AdcIrefPdW::new(self, 4)
     }
     #[doc = "Bit 5 - PECI Power-Down"]
     #[inline(always)]
-    #[must_use]
     pub fn peci_pd(&mut self) -> PeciPdW<PwdwnCtl4Spec> {
         PeciPdW::new(self, 5)
     }
     #[doc = "Bit 7 - SPI Peripheral Power-Down"]
     #[inline(always)]
-    #[must_use]
     pub fn spip_pd(&mut self) -> SpipPdW<PwdwnCtl4Spec> {
         SpipPdW::new(self, 7)
     }

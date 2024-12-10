@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - Interrupt Window Select"]
     #[inline(always)]
-    #[must_use]
     pub fn intwin(&mut self) -> IntwinW<VwctlSpec> {
         IntwinW::new(self, 0)
     }
     #[doc = "Bits 2:3 - GPIO Virtual Wire Indices Mapping"]
     #[inline(always)]
-    #[must_use]
     pub fn gpvwmap(&mut self) -> GpvwmapW<VwctlSpec> {
         GpvwmapW::new(self, 2)
     }
     #[doc = "Bit 4 - IRQ Deassert"]
     #[inline(always)]
-    #[must_use]
     pub fn irq_dis(&mut self) -> IrqDisW<VwctlSpec> {
         IrqDisW::new(self, 4)
     }
     #[doc = "Bit 5 - No Valid Bits"]
     #[inline(always)]
-    #[must_use]
     pub fn no_valid(&mut self) -> NoValidW<VwctlSpec> {
         NoValidW::new(self, 5)
     }

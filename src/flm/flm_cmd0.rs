@@ -1,7 +1,7 @@
-#[doc = "Register `FLM_CMD%s` reader"]
-pub type R = crate::R<FlmCmdSpec>;
-#[doc = "Register `FLM_CMD%s` writer"]
-pub type W = crate::W<FlmCmdSpec>;
+#[doc = "Register `FLM_CMD0` reader"]
+pub type R = crate::R<FlmCmd0Spec>;
+#[doc = "Register `FLM_CMD0` writer"]
+pub type W = crate::W<FlmCmd0Spec>;
 #[doc = "Field `CMD` reader - Command Byte"]
 pub type CmdR = crate::FieldReader;
 #[doc = "Field `CMD` writer - Command Byte"]
@@ -70,7 +70,7 @@ impl R {
 #[cfg(feature = "debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("FLM_CMD")
+        f.debug_struct("FLM_CMD0")
             .field("cmd", &self.cmd())
             .field("addsz", &self.addsz())
             .field("datbpck", &self.datbpck())
@@ -84,61 +84,54 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Command Byte"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmd(&mut self) -> CmdW<FlmCmdSpec> {
+    pub fn cmd(&mut self) -> CmdW<FlmCmd0Spec> {
         CmdW::new(self, 0)
     }
     #[doc = "Bit 11 - Address Size for Limiting Command"]
     #[inline(always)]
-    #[must_use]
-    pub fn addsz(&mut self) -> AddszW<FlmCmdSpec> {
+    pub fn addsz(&mut self) -> AddszW<FlmCmd0Spec> {
         AddszW::new(self, 11)
     }
     #[doc = "Bits 12:13 - Data Bits Per Clock"]
     #[inline(always)]
-    #[must_use]
-    pub fn datbpck(&mut self) -> DatbpckW<FlmCmdSpec> {
+    pub fn datbpck(&mut self) -> DatbpckW<FlmCmd0Spec> {
         DatbpckW::new(self, 12)
     }
     #[doc = "Bits 14:15 - Address Bits Per Clock"]
     #[inline(always)]
-    #[must_use]
-    pub fn adbpck(&mut self) -> AdbpckW<FlmCmdSpec> {
+    pub fn adbpck(&mut self) -> AdbpckW<FlmCmd0Spec> {
         AdbpckW::new(self, 14)
     }
     #[doc = "Bits 16:17 - Dummy Bits Per Clock"]
     #[inline(always)]
-    #[must_use]
-    pub fn dumbpck(&mut self) -> DumbpckW<FlmCmdSpec> {
+    pub fn dumbpck(&mut self) -> DumbpckW<FlmCmd0Spec> {
         DumbpckW::new(self, 16)
     }
     #[doc = "Bits 18:19 - Dummy Bytes"]
     #[inline(always)]
-    #[must_use]
-    pub fn dumb(&mut self) -> DumbW<FlmCmdSpec> {
+    pub fn dumb(&mut self) -> DumbW<FlmCmd0Spec> {
         DumbW::new(self, 18)
     }
     #[doc = "Bit 20 - Command Limited Address Range"]
     #[inline(always)]
-    #[must_use]
-    pub fn clar(&mut self) -> ClarW<FlmCmdSpec> {
+    pub fn clar(&mut self) -> ClarW<FlmCmd0Spec> {
         ClarW::new(self, 20)
     }
 }
-#[doc = "FLM Command Register %s\n\nYou can [`read`](crate::Reg::read) this register and get [`flm_cmd::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`flm_cmd::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct FlmCmdSpec;
-impl crate::RegisterSpec for FlmCmdSpec {
+#[doc = "FLM Command Register 0-31 (FLM_CMD0-31)\n\nYou can [`read`](crate::Reg::read) this register and get [`flm_cmd0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`flm_cmd0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct FlmCmd0Spec;
+impl crate::RegisterSpec for FlmCmd0Spec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`flm_cmd::R`](R) reader structure"]
-impl crate::Readable for FlmCmdSpec {}
-#[doc = "`write(|w| ..)` method takes [`flm_cmd::W`](W) writer structure"]
-impl crate::Writable for FlmCmdSpec {
+#[doc = "`read()` method returns [`flm_cmd0::R`](R) reader structure"]
+impl crate::Readable for FlmCmd0Spec {}
+#[doc = "`write(|w| ..)` method takes [`flm_cmd0::W`](W) writer structure"]
+impl crate::Writable for FlmCmd0Spec {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets FLM_CMD%s to value 0"]
-impl crate::Resettable for FlmCmdSpec {
+#[doc = "`reset()` method sets FLM_CMD0 to value 0"]
+impl crate::Resettable for FlmCmd0Spec {
     const RESET_VALUE: u32 = 0;
 }

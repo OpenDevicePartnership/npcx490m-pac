@@ -94,49 +94,41 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - PS/2 #0 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn ps2_0_sl(&mut self) -> Ps2_0SlW<Devalt3Spec> {
         Ps2_0SlW::new(self, 0)
     }
     #[doc = "Bit 1 - PS/2 #1 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn ps2_1_sl(&mut self) -> Ps2_1SlW<Devalt3Spec> {
         Ps2_1SlW::new(self, 1)
     }
     #[doc = "Bit 2 - PS/2 #2 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn ps2_2_sl(&mut self) -> Ps2_2SlW<Devalt3Spec> {
         Ps2_2SlW::new(self, 2)
     }
     #[doc = "Bit 3 - PS/2 #3 Select-1"]
     #[inline(always)]
-    #[must_use]
     pub fn ps2_3_sl1(&mut self) -> Ps2_3Sl1W<Devalt3Spec> {
         Ps2_3Sl1W::new(self, 3)
     }
     #[doc = "Bit 4 - TA1_TACH1 Select-1"]
     #[inline(always)]
-    #[must_use]
     pub fn ta1_tach1_sl1(&mut self) -> Ta1Tach1Sl1W<Devalt3Spec> {
         Ta1Tach1Sl1W::new(self, 4)
     }
     #[doc = "Bit 5 - TB1_TACH2PWM_IN Select-1"]
     #[inline(always)]
-    #[must_use]
     pub fn tb1_tach2_sl1(&mut self) -> Tb1Tach2Sl1W<Devalt3Spec> {
         Tb1Tach2Sl1W::new(self, 5)
     }
     #[doc = "Bit 6 - TA2 Select-1"]
     #[inline(always)]
-    #[must_use]
     pub fn ta2_sl1(&mut self) -> Ta2Sl1W<Devalt3Spec> {
         Ta2Sl1W::new(self, 6)
     }
     #[doc = "Bit 7 - TB2 Select-1"]
     #[inline(always)]
-    #[must_use]
     pub fn tb2_sl1(&mut self) -> Tb2Sl1W<Devalt3Spec> {
         Tb2Sl1W::new(self, 7)
     }

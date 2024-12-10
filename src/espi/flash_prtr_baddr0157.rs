@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 12:26 - Flash Protection Base Address"]
     #[inline(always)]
-    #[must_use]
     pub fn flash_prtr_baddr(&mut self) -> FlashPrtrBaddrW<FlashPrtrBaddr0157Spec> {
         FlashPrtrBaddrW::new(self, 12)
     }
     #[doc = "Bit 29 - Flash Range Write Protect"]
     #[inline(always)]
-    #[must_use]
     pub fn frng_wpr(&mut self) -> FrngWprW<FlashPrtrBaddr0157Spec> {
         FrngWprW::new(self, 29)
     }
     #[doc = "Bit 30 - Flash Range Read Protect"]
     #[inline(always)]
-    #[must_use]
     pub fn frng_rpr(&mut self) -> FrngRprW<FlashPrtrBaddr0157Spec> {
         FrngRprW::new(self, 30)
     }
     #[doc = "Bit 31 - Target-Attached Flash Protection Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn saf_prot_lck(&mut self) -> SafProtLckW<FlashPrtrBaddr0157Spec> {
         SafProtLckW::new(self, 31)
     }

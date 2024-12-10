@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 4 - SMBus/I2C 4 Interface-Select"]
     #[inline(always)]
-    #[must_use]
     pub fn smb4_sl(&mut self) -> Smb4SlW<SmbSelSpec> {
         Smb4SlW::new(self, 4)
     }
     #[doc = "Bit 5 - SMBus/I2C 5 Interface-Select"]
     #[inline(always)]
-    #[must_use]
     pub fn smb5_sl(&mut self) -> Smb5SlW<SmbSelSpec> {
         Smb5SlW::new(self, 5)
     }
     #[doc = "Bit 6 - SMBus/I2C 6 Interface-Select"]
     #[inline(always)]
-    #[must_use]
     pub fn smb6_sl(&mut self) -> Smb6SlW<SmbSelSpec> {
         Smb6SlW::new(self, 6)
     }
     #[doc = "Bit 7 - SMBus/I2C 7 Interface-Select"]
     #[inline(always)]
-    #[must_use]
     pub fn smb7_sl(&mut self) -> Smb7SlW<SmbSelSpec> {
         Smb7SlW::new(self, 7)
     }

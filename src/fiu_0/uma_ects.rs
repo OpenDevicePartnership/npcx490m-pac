@@ -13,7 +13,7 @@ pub type SecCsW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `UMA_LOCK` reader - UMA Operation Lock"]
 pub type UmaLockR = crate::BitReader;
 #[doc = "Field `UMA_LOCK` writer - UMA Operation Lock"]
-pub type UmaLockW<'a, REG> = crate::BitWriter1S<'a, REG>;
+pub type UmaLockW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `UMA_ADDR_SIZE` reader - Address Field Size Select"]
 pub type UmaAddrSizeR = crate::FieldReader;
 #[doc = "Field `UMA_ADDR_SIZE` writer - Address Field Size Select"]
@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Software-Controlled Chip-Select"]
     #[inline(always)]
-    #[must_use]
     pub fn sw_cs(&mut self) -> SwCsW<UmaEctsSpec> {
         SwCsW::new(self, 0)
     }
     #[doc = "Bit 2 - Secondary Chip-Select"]
     #[inline(always)]
-    #[must_use]
     pub fn sec_cs(&mut self) -> SecCsW<UmaEctsSpec> {
         SecCsW::new(self, 2)
     }
     #[doc = "Bit 3 - UMA Operation Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn uma_lock(&mut self) -> UmaLockW<UmaEctsSpec> {
         UmaLockW::new(self, 3)
     }
     #[doc = "Bits 4:6 - Address Field Size Select"]
     #[inline(always)]
-    #[must_use]
     pub fn uma_addr_size(&mut self) -> UmaAddrSizeW<UmaEctsSpec> {
         UmaAddrSizeW::new(self, 4)
     }
@@ -88,7 +84,7 @@ impl crate::Readable for UmaEctsSpec {}
 impl crate::Writable for UmaEctsSpec {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u8 = 0x08;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
 }
 #[doc = "`reset()` method sets UMA_ECTS to value 0"]
 impl crate::Resettable for UmaEctsSpec {

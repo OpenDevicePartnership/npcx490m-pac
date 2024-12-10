@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - OOB Receive Queue Free"]
     #[inline(always)]
-    #[must_use]
     pub fn oob_free(&mut self) -> OobFreeW<OobctlSpec> {
         OobFreeW::new(self, 0)
     }
     #[doc = "Bit 1 - OOB Transmit Queue Available"]
     #[inline(always)]
-    #[must_use]
     pub fn oob_avail(&mut self) -> OobAvailW<OobctlSpec> {
         OobAvailW::new(self, 1)
     }
     #[doc = "Bit 2 - Reset Buffer Heads"]
     #[inline(always)]
-    #[must_use]
     pub fn rstbufheads(&mut self) -> RstbufheadsW<OobctlSpec> {
         RstbufheadsW::new(self, 2)
     }
     #[doc = "Bits 10:12 - OOB Channel Maximum Payload Size"]
     #[inline(always)]
-    #[must_use]
     pub fn oobplsize(&mut self) -> OobplsizeW<OobctlSpec> {
         OobplsizeW::new(self, 10)
     }

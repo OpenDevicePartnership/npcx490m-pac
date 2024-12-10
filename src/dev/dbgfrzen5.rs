@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - I3CI1 Freeze Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn i3c1fen(&mut self) -> I3c1fenW<Dbgfrzen5Spec> {
         I3c1fenW::new(self, 0)
     }
     #[doc = "Bit 1 - I3CI2 Freeze Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn i3c2fen(&mut self) -> I3c2fenW<Dbgfrzen5Spec> {
         I3c2fenW::new(self, 1)
     }
     #[doc = "Bit 2 - I3CI3 Freeze Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn i3c3fen(&mut self) -> I3c3fenW<Dbgfrzen5Spec> {
         I3c3fenW::new(self, 2)
     }

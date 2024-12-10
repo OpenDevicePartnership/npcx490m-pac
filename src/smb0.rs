@@ -83,12 +83,12 @@ impl RegisterBlock {
     #[doc = "0x10 - SMB FIFO Control and Status Register (SMBnFIF_CTS)"]
     #[inline(always)]
     pub const fn smbn_fif_cts(&self) -> &SmbnFifCts {
-        unsafe { &*(self as *const Self).cast::<u8>().add(16).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(16).cast() }
     }
     #[doc = "0x10 - SMB Own Address 1 - 8 Register (SMBnADDR1-8)"]
     #[inline(always)]
     pub const fn smbn_addr3(&self) -> &SmbnAddr3 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(16).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(16).cast() }
     }
     #[doc = "0x11 - SMB Own Address 1 - 8 Register (SMBnADDR1-8)"]
     #[inline(always)]
@@ -98,22 +98,22 @@ impl RegisterBlock {
     #[doc = "0x12 - SMB Tx-FIFO Control Register (SMBnTXF_CTL)"]
     #[inline(always)]
     pub const fn smbn_txf_ctl(&self) -> &SmbnTxfCtl {
-        unsafe { &*(self as *const Self).cast::<u8>().add(18).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(18).cast() }
     }
     #[doc = "0x12 - SMB Own Address 1 - 8 Register (SMBnADDR1-8)"]
     #[inline(always)]
     pub const fn smbn_addr4(&self) -> &SmbnAddr4 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(18).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(18).cast() }
     }
     #[doc = "0x13 - SMB Frame Timeout Register (SMBn_FRTO)"]
     #[inline(always)]
     pub const fn smbn_frto(&self) -> &SmbnFrto {
-        unsafe { &*(self as *const Self).cast::<u8>().add(19).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(19).cast() }
     }
     #[doc = "0x13 - SMB Own Address 1 - 8 Register (SMBnADDR1-8)"]
     #[inline(always)]
     pub const fn smbn_addr8(&self) -> &SmbnAddr8 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(19).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(19).cast() }
     }
     #[doc = "0x14 - SMB Own Address 1 - 8 Register (SMBnADDR1-8)"]
     #[inline(always)]
@@ -123,12 +123,12 @@ impl RegisterBlock {
     #[doc = "0x16 - SMB PEC Register (SMBnPEC)"]
     #[inline(always)]
     pub const fn smbn_pec(&self) -> &SmbnPec {
-        unsafe { &*(self as *const Self).cast::<u8>().add(22).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(22).cast() }
     }
     #[doc = "0x16 - SMB Own Address 1 - 8 Register (SMBnADDR1-8)"]
     #[inline(always)]
     pub const fn smbn_addr6(&self) -> &SmbnAddr6 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(22).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(22).cast() }
     }
     #[doc = "0x18 - SMB Control Status 2 Register (SMBnCST2)"]
     #[inline(always)]
@@ -143,22 +143,22 @@ impl RegisterBlock {
     #[doc = "0x1a - SMB Control 4 Register (SMBnCTL4)"]
     #[inline(always)]
     pub const fn smbn_ctl4(&self) -> &SmbnCtl4 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(26).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(26).cast() }
     }
     #[doc = "0x1a - SMB Tx-FIFO Status Register (SMBnTXF_STS)"]
     #[inline(always)]
     pub const fn smbn_txf_sts(&self) -> &SmbnTxfSts {
-        unsafe { &*(self as *const Self).cast::<u8>().add(26).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(26).cast() }
     }
     #[doc = "0x1c - SMB Rx-FIFO Status Register (SMBnRXF_STS)"]
     #[inline(always)]
     pub const fn smbn_rxf_sts(&self) -> &SmbnRxfSts {
-        unsafe { &*(self as *const Self).cast::<u8>().add(28).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(28).cast() }
     }
     #[doc = "0x1c - SMB SCL Low Time Register (SMBnSCLLT)"]
     #[inline(always)]
     pub const fn smbn_scllt(&self) -> &SmbnScllt {
-        unsafe { &*(self as *const Self).cast::<u8>().add(28).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(28).cast() }
     }
     #[doc = "0x1d - SMB FIFO Control Register (SMBnFIF_CTL)"]
     #[inline(always)]
@@ -168,12 +168,12 @@ impl RegisterBlock {
     #[doc = "0x1e - SMB SCL High Time Register (SMBnSCLHT)"]
     #[inline(always)]
     pub const fn smbn_sclht(&self) -> &SmbnSclht {
-        unsafe { &*(self as *const Self).cast::<u8>().add(30).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(30).cast() }
     }
     #[doc = "0x1e - SMB Rx-FIFO Control Register (SMBnRXF_CTL)"]
     #[inline(always)]
     pub const fn smbn_rxf_ctl(&self) -> &SmbnRxfCtl {
-        unsafe { &*(self as *const Self).cast::<u8>().add(30).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(30).cast() }
     }
 }
 #[doc = "SMBnSDA (rw) register accessor: SMB Serial Data Register (SMBnSDA)\n\nYou can [`read`](crate::Reg::read) this register and get [`smbn_sda::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`smbn_sda::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@smbn_sda`]

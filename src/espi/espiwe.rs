@@ -134,73 +134,61 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - IBRST Wake-Up Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn ibrstwe(&mut self) -> IbrstweW<EspiweSpec> {
         IbrstweW::new(self, 0)
     }
     #[doc = "Bit 1 - CFGUPD Wake-Up Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn cfgupdwe(&mut self) -> CfgupdweW<EspiweSpec> {
         CfgupdweW::new(self, 1)
     }
     #[doc = "Bit 2 - BERR Wake-Up Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn berrwe(&mut self) -> BerrweW<EspiweSpec> {
         BerrweW::new(self, 2)
     }
     #[doc = "Bit 3 - OOBRX Wake-Up Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn oobrxwe(&mut self) -> OobrxweW<EspiweSpec> {
         OobrxweW::new(self, 3)
     }
     #[doc = "Bit 4 - FLASHRX Wake-Up Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn flashrxwe(&mut self) -> FlashrxweW<EspiweSpec> {
         FlashrxweW::new(self, 4)
     }
     #[doc = "Bit 6 - PERACC Wake-Up Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn peraccwe(&mut self) -> PeraccweW<EspiweSpec> {
         PeraccweW::new(self, 6)
     }
     #[doc = "Bit 7 - DFRD Wake-Up Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn dfrdwe(&mut self) -> DfrdweW<EspiweSpec> {
         DfrdweW::new(self, 7)
     }
     #[doc = "Bit 8 - VWUPD Wake-Up Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn vwupdwe(&mut self) -> VwupdweW<EspiweSpec> {
         VwupdweW::new(self, 8)
     }
     #[doc = "Bit 9 - eSPI_RST Wake-Up Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn espirstwe(&mut self) -> EspirstweW<EspiweSpec> {
         EspirstweW::new(self, 9)
     }
     #[doc = "Bit 20 - PBMRX Wake-Up Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn pbmrxwe(&mut self) -> PbmrxweW<EspiweSpec> {
         PbmrxweW::new(self, 20)
     }
     #[doc = "Bit 21 - PMSGRX Wake-Up Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn pmsgrxwe(&mut self) -> PmsgrxweW<EspiweSpec> {
         PmsgrxweW::new(self, 21)
     }
     #[doc = "Bit 26 - FLAUTORDSTR Wake-Up Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn flautordstrwe(&mut self) -> FlautordstrweW<EspiweSpec> {
         FlautordstrweW::new(self, 26)
     }

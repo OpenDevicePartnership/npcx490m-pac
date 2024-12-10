@@ -74,37 +74,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Timer Pending A Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn taclr(&mut self) -> TaclrW<TnEclrSpec> {
         TaclrW::new(self, 0)
     }
     #[doc = "Bit 1 - Timer Pending B Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn tbclr(&mut self) -> TbclrW<TnEclrSpec> {
         TbclrW::new(self, 1)
     }
     #[doc = "Bit 2 - Timer Pending C Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn tcclr(&mut self) -> TcclrW<TnEclrSpec> {
         TcclrW::new(self, 2)
     }
     #[doc = "Bit 3 - Timer Pending D Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn tdclr(&mut self) -> TdclrW<TnEclrSpec> {
         TdclrW::new(self, 3)
     }
     #[doc = "Bit 4 - Timer Pending E Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn teclr(&mut self) -> TeclrW<TnEclrSpec> {
         TeclrW::new(self, 4)
     }
     #[doc = "Bit 5 - Timer Pending F Clear"]
     #[inline(always)]
-    #[must_use]
     pub fn tfclr(&mut self) -> TfclrW<TnEclrSpec> {
         TfclrW::new(self, 5)
     }

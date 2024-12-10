@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 7 - LRESET or PLTRST Disable"]
     #[inline(always)]
-    #[must_use]
     pub fn lreset_pltrst_dis(&mut self) -> LresetPltrstDisW<RstCfgSpec> {
         LresetPltrstDisW::new(self, 7)
     }

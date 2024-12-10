@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:6 - Read Length"]
     #[inline(always)]
-    #[must_use]
     pub fn read_length(&mut self) -> ReadLengthW<PeciRdLengthSpec> {
         ReadLengthW::new(self, 0)
     }

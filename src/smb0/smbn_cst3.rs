@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Match Address 8 Field"]
     #[inline(always)]
-    #[must_use]
     pub fn matcha8f(&mut self) -> Matcha8fW<SmbnCst3Spec> {
         Matcha8fW::new(self, 0)
     }
     #[doc = "Bit 7 - End of Busy"]
     #[inline(always)]
-    #[must_use]
     pub fn eo_busy(&mut self) -> EoBusyW<SmbnCst3Spec> {
         EoBusyW::new(self, 7)
     }

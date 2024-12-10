@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - RAM Access Window 1, Size Select"]
     #[inline(always)]
-    #[must_use]
     pub fn rwin1_size(&mut self) -> Rwin1SizeW<WinSizeSpec> {
         Rwin1SizeW::new(self, 0)
     }
     #[doc = "Bits 4:7 - RAM Access Window 2, Size Select"]
     #[inline(always)]
-    #[must_use]
     pub fn rwin2_size(&mut self) -> Rwin2SizeW<WinSizeSpec> {
         Rwin2SizeW::new(self, 4)
     }

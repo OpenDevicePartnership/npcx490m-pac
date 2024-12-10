@@ -74,37 +74,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - SHI Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn en(&mut self) -> EnW<Shicfg1Spec> {
         EnW::new(self, 0)
     }
     #[doc = "Bit 2 - Host Write Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn wen(&mut self) -> WenW<Shicfg1Spec> {
         WenW::new(self, 2)
     }
     #[doc = "Bit 3 - Automatic Input Buffer Full Indication"]
     #[inline(always)]
-    #[must_use]
     pub fn autibf(&mut self) -> AutibfW<Shicfg1Spec> {
         AutibfW::new(self, 3)
     }
     #[doc = "Bit 5 - Data after Status"]
     #[inline(always)]
-    #[must_use]
     pub fn das(&mut self) -> DasW<Shicfg1Spec> {
         DasW::new(self, 5)
     }
     #[doc = "Bit 6 - Clock Polarity"]
     #[inline(always)]
-    #[must_use]
     pub fn cpol(&mut self) -> CpolW<Shicfg1Spec> {
         CpolW::new(self, 6)
     }
     #[doc = "Bit 7 - Input Buffer Wraparound Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn iwrap(&mut self) -> IwrapW<Shicfg1Spec> {
         IwrapW::new(self, 7)
     }

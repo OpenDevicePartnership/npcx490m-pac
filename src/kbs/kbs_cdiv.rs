@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - Keyboard Scan Clock Divisor"]
     #[inline(always)]
-    #[must_use]
     pub fn kbs_clk_div(&mut self) -> KbsClkDivW<KbsCdivSpec> {
         KbsClkDivW::new(self, 0)
     }

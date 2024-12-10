@@ -84,43 +84,36 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - ITIM32-4 Power-Down"]
     #[inline(always)]
-    #[must_use]
     pub fn itim4_pd(&mut self) -> Itim4PdW<PwdwnCtl6Spec> {
         Itim4PdW::new(self, 0)
     }
     #[doc = "Bit 1 - ITIM32-5 Power-Down"]
     #[inline(always)]
-    #[must_use]
     pub fn itim5_pd(&mut self) -> Itim5PdW<PwdwnCtl6Spec> {
         Itim5PdW::new(self, 1)
     }
     #[doc = "Bit 2 - ITIM32-6 Power-Down"]
     #[inline(always)]
-    #[must_use]
     pub fn itim6_pd(&mut self) -> Itim6PdW<PwdwnCtl6Spec> {
         Itim6PdW::new(self, 2)
     }
     #[doc = "Bit 4 - AES Power-Down"]
     #[inline(always)]
-    #[must_use]
     pub fn aes_pd(&mut self) -> AesPdW<PwdwnCtl6Spec> {
         AesPdW::new(self, 4)
     }
     #[doc = "Bit 5 - SHA Power-Down"]
     #[inline(always)]
-    #[must_use]
     pub fn sha_pd(&mut self) -> ShaPdW<PwdwnCtl6Spec> {
         ShaPdW::new(self, 5)
     }
     #[doc = "Bit 6 - PKA Power-Down"]
     #[inline(always)]
-    #[must_use]
     pub fn pka_pd(&mut self) -> PkaPdW<PwdwnCtl6Spec> {
         PkaPdW::new(self, 6)
     }
     #[doc = "Bit 7 - eSPI_SIF Power-Down"]
     #[inline(always)]
-    #[must_use]
     pub fn espi_pd(&mut self) -> EspiPdW<PwdwnCtl6Spec> {
         EspiPdW::new(self, 7)
     }

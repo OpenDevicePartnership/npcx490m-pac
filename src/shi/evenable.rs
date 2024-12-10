@@ -84,43 +84,36 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - 128-Byte Payload Buffer Empty Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn obeen(&mut self) -> ObeenW<EvenableSpec> {
         ObeenW::new(self, 0)
     }
     #[doc = "Bit 1 - 128-Byte Payload Buffer Half Empty Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn obheen(&mut self) -> ObheenW<EvenableSpec> {
         ObheenW::new(self, 1)
     }
     #[doc = "Bit 2 - Input Buffer Full Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn ibfen(&mut self) -> IbfenW<EvenableSpec> {
         IbfenW::new(self, 2)
     }
     #[doc = "Bit 3 - Input Buffer Half Full Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn ibhfen(&mut self) -> IbhfenW<EvenableSpec> {
         IbhfenW::new(self, 3)
     }
     #[doc = "Bit 4 - End-of-Data for Read Transaction Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn eoren(&mut self) -> EorenW<EvenableSpec> {
         EorenW::new(self, 4)
     }
     #[doc = "Bit 5 - End-of-Data for Write Transaction Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn eowen(&mut self) -> EowenW<EvenableSpec> {
         EowenW::new(self, 5)
     }
     #[doc = "Bit 6 - Status Read Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn stsren(&mut self) -> StsrenW<EvenableSpec> {
         StsrenW::new(self, 6)
     }

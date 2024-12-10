@@ -145,642 +145,642 @@ impl RegisterBlock {
     #[doc = "0x10 - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out0(&self) -> &PeciDataOut0 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(16).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(16).cast() }
     }
     #[doc = "0x10 - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in0(&self) -> &PeciDataIn0 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(16).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(16).cast() }
     }
     #[doc = "0x11 - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out1(&self) -> &PeciDataOut1 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(17).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(17).cast() }
     }
     #[doc = "0x11 - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in1(&self) -> &PeciDataIn1 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(17).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(17).cast() }
     }
     #[doc = "0x12 - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out2(&self) -> &PeciDataOut2 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(18).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(18).cast() }
     }
     #[doc = "0x12 - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in2(&self) -> &PeciDataIn2 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(18).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(18).cast() }
     }
     #[doc = "0x13 - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out3(&self) -> &PeciDataOut3 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(19).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(19).cast() }
     }
     #[doc = "0x13 - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in3(&self) -> &PeciDataIn3 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(19).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(19).cast() }
     }
     #[doc = "0x14 - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out4(&self) -> &PeciDataOut4 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(20).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(20).cast() }
     }
     #[doc = "0x14 - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in4(&self) -> &PeciDataIn4 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(20).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(20).cast() }
     }
     #[doc = "0x15 - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out5(&self) -> &PeciDataOut5 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(21).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(21).cast() }
     }
     #[doc = "0x15 - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in5(&self) -> &PeciDataIn5 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(21).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(21).cast() }
     }
     #[doc = "0x16 - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out6(&self) -> &PeciDataOut6 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(22).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(22).cast() }
     }
     #[doc = "0x16 - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in6(&self) -> &PeciDataIn6 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(22).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(22).cast() }
     }
     #[doc = "0x17 - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out7(&self) -> &PeciDataOut7 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(23).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(23).cast() }
     }
     #[doc = "0x17 - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in7(&self) -> &PeciDataIn7 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(23).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(23).cast() }
     }
     #[doc = "0x18 - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out8(&self) -> &PeciDataOut8 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(24).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(24).cast() }
     }
     #[doc = "0x18 - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in8(&self) -> &PeciDataIn8 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(24).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(24).cast() }
     }
     #[doc = "0x19 - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out9(&self) -> &PeciDataOut9 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(25).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(25).cast() }
     }
     #[doc = "0x19 - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in9(&self) -> &PeciDataIn9 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(25).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(25).cast() }
     }
     #[doc = "0x1a - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out10(&self) -> &PeciDataOut10 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(26).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(26).cast() }
     }
     #[doc = "0x1a - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in10(&self) -> &PeciDataIn10 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(26).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(26).cast() }
     }
     #[doc = "0x1b - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out11(&self) -> &PeciDataOut11 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(27).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(27).cast() }
     }
     #[doc = "0x1b - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in11(&self) -> &PeciDataIn11 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(27).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(27).cast() }
     }
     #[doc = "0x1c - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out12(&self) -> &PeciDataOut12 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(28).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(28).cast() }
     }
     #[doc = "0x1c - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in12(&self) -> &PeciDataIn12 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(28).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(28).cast() }
     }
     #[doc = "0x1d - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out13(&self) -> &PeciDataOut13 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(29).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(29).cast() }
     }
     #[doc = "0x1d - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in13(&self) -> &PeciDataIn13 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(29).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(29).cast() }
     }
     #[doc = "0x1e - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out14(&self) -> &PeciDataOut14 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(30).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(30).cast() }
     }
     #[doc = "0x1e - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in14(&self) -> &PeciDataIn14 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(30).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(30).cast() }
     }
     #[doc = "0x1f - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out15(&self) -> &PeciDataOut15 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(31).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(31).cast() }
     }
     #[doc = "0x1f - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in15(&self) -> &PeciDataIn15 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(31).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(31).cast() }
     }
     #[doc = "0x20 - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out16(&self) -> &PeciDataOut16 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(32).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(32).cast() }
     }
     #[doc = "0x20 - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in16(&self) -> &PeciDataIn16 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(32).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(32).cast() }
     }
     #[doc = "0x21 - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out17(&self) -> &PeciDataOut17 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(33).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(33).cast() }
     }
     #[doc = "0x21 - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in17(&self) -> &PeciDataIn17 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(33).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(33).cast() }
     }
     #[doc = "0x22 - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out18(&self) -> &PeciDataOut18 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(34).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(34).cast() }
     }
     #[doc = "0x22 - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in18(&self) -> &PeciDataIn18 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(34).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(34).cast() }
     }
     #[doc = "0x23 - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out19(&self) -> &PeciDataOut19 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(35).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(35).cast() }
     }
     #[doc = "0x23 - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in19(&self) -> &PeciDataIn19 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(35).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(35).cast() }
     }
     #[doc = "0x24 - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out20(&self) -> &PeciDataOut20 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(36).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(36).cast() }
     }
     #[doc = "0x24 - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in20(&self) -> &PeciDataIn20 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(36).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(36).cast() }
     }
     #[doc = "0x25 - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out21(&self) -> &PeciDataOut21 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(37).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(37).cast() }
     }
     #[doc = "0x25 - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in21(&self) -> &PeciDataIn21 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(37).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(37).cast() }
     }
     #[doc = "0x26 - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out22(&self) -> &PeciDataOut22 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(38).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(38).cast() }
     }
     #[doc = "0x26 - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in22(&self) -> &PeciDataIn22 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(38).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(38).cast() }
     }
     #[doc = "0x27 - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out23(&self) -> &PeciDataOut23 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(39).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(39).cast() }
     }
     #[doc = "0x27 - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in23(&self) -> &PeciDataIn23 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(39).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(39).cast() }
     }
     #[doc = "0x28 - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out24(&self) -> &PeciDataOut24 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(40).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(40).cast() }
     }
     #[doc = "0x28 - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in24(&self) -> &PeciDataIn24 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(40).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(40).cast() }
     }
     #[doc = "0x29 - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out25(&self) -> &PeciDataOut25 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(41).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(41).cast() }
     }
     #[doc = "0x29 - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in25(&self) -> &PeciDataIn25 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(41).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(41).cast() }
     }
     #[doc = "0x2a - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out26(&self) -> &PeciDataOut26 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(42).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(42).cast() }
     }
     #[doc = "0x2a - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in26(&self) -> &PeciDataIn26 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(42).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(42).cast() }
     }
     #[doc = "0x2b - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out27(&self) -> &PeciDataOut27 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(43).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(43).cast() }
     }
     #[doc = "0x2b - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in27(&self) -> &PeciDataIn27 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(43).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(43).cast() }
     }
     #[doc = "0x2c - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out28(&self) -> &PeciDataOut28 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(44).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(44).cast() }
     }
     #[doc = "0x2c - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in28(&self) -> &PeciDataIn28 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(44).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(44).cast() }
     }
     #[doc = "0x2d - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out29(&self) -> &PeciDataOut29 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(45).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(45).cast() }
     }
     #[doc = "0x2d - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in29(&self) -> &PeciDataIn29 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(45).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(45).cast() }
     }
     #[doc = "0x2e - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out30(&self) -> &PeciDataOut30 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(46).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(46).cast() }
     }
     #[doc = "0x2e - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in30(&self) -> &PeciDataIn30 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(46).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(46).cast() }
     }
     #[doc = "0x2f - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out31(&self) -> &PeciDataOut31 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(47).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(47).cast() }
     }
     #[doc = "0x2f - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in31(&self) -> &PeciDataIn31 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(47).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(47).cast() }
     }
     #[doc = "0x30 - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out32(&self) -> &PeciDataOut32 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(48).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(48).cast() }
     }
     #[doc = "0x30 - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in32(&self) -> &PeciDataIn32 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(48).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(48).cast() }
     }
     #[doc = "0x31 - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out33(&self) -> &PeciDataOut33 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(49).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(49).cast() }
     }
     #[doc = "0x31 - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in33(&self) -> &PeciDataIn33 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(49).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(49).cast() }
     }
     #[doc = "0x32 - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out34(&self) -> &PeciDataOut34 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(50).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(50).cast() }
     }
     #[doc = "0x32 - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in34(&self) -> &PeciDataIn34 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(50).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(50).cast() }
     }
     #[doc = "0x33 - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out35(&self) -> &PeciDataOut35 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(51).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(51).cast() }
     }
     #[doc = "0x33 - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in35(&self) -> &PeciDataIn35 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(51).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(51).cast() }
     }
     #[doc = "0x34 - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out36(&self) -> &PeciDataOut36 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(52).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(52).cast() }
     }
     #[doc = "0x34 - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in36(&self) -> &PeciDataIn36 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(52).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(52).cast() }
     }
     #[doc = "0x35 - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out37(&self) -> &PeciDataOut37 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(53).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(53).cast() }
     }
     #[doc = "0x35 - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in37(&self) -> &PeciDataIn37 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(53).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(53).cast() }
     }
     #[doc = "0x36 - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out38(&self) -> &PeciDataOut38 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(54).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(54).cast() }
     }
     #[doc = "0x36 - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in38(&self) -> &PeciDataIn38 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(54).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(54).cast() }
     }
     #[doc = "0x37 - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out39(&self) -> &PeciDataOut39 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(55).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(55).cast() }
     }
     #[doc = "0x37 - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in39(&self) -> &PeciDataIn39 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(55).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(55).cast() }
     }
     #[doc = "0x38 - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out40(&self) -> &PeciDataOut40 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(56).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(56).cast() }
     }
     #[doc = "0x38 - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in40(&self) -> &PeciDataIn40 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(56).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(56).cast() }
     }
     #[doc = "0x39 - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out41(&self) -> &PeciDataOut41 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(57).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(57).cast() }
     }
     #[doc = "0x39 - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in41(&self) -> &PeciDataIn41 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(57).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(57).cast() }
     }
     #[doc = "0x3a - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out42(&self) -> &PeciDataOut42 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(58).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(58).cast() }
     }
     #[doc = "0x3a - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in42(&self) -> &PeciDataIn42 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(58).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(58).cast() }
     }
     #[doc = "0x3b - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out43(&self) -> &PeciDataOut43 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(59).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(59).cast() }
     }
     #[doc = "0x3b - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in43(&self) -> &PeciDataIn43 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(59).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(59).cast() }
     }
     #[doc = "0x3c - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out44(&self) -> &PeciDataOut44 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(60).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(60).cast() }
     }
     #[doc = "0x3c - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in44(&self) -> &PeciDataIn44 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(60).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(60).cast() }
     }
     #[doc = "0x3d - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out45(&self) -> &PeciDataOut45 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(61).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(61).cast() }
     }
     #[doc = "0x3d - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in45(&self) -> &PeciDataIn45 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(61).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(61).cast() }
     }
     #[doc = "0x3e - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out46(&self) -> &PeciDataOut46 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(62).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(62).cast() }
     }
     #[doc = "0x3e - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in46(&self) -> &PeciDataIn46 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(62).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(62).cast() }
     }
     #[doc = "0x3f - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out47(&self) -> &PeciDataOut47 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(63).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(63).cast() }
     }
     #[doc = "0x3f - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in47(&self) -> &PeciDataIn47 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(63).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(63).cast() }
     }
     #[doc = "0x40 - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out48(&self) -> &PeciDataOut48 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(64).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(64).cast() }
     }
     #[doc = "0x40 - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in48(&self) -> &PeciDataIn48 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(64).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(64).cast() }
     }
     #[doc = "0x41 - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out49(&self) -> &PeciDataOut49 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(65).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(65).cast() }
     }
     #[doc = "0x41 - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in49(&self) -> &PeciDataIn49 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(65).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(65).cast() }
     }
     #[doc = "0x42 - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out50(&self) -> &PeciDataOut50 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(66).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(66).cast() }
     }
     #[doc = "0x42 - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in50(&self) -> &PeciDataIn50 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(66).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(66).cast() }
     }
     #[doc = "0x43 - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out51(&self) -> &PeciDataOut51 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(67).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(67).cast() }
     }
     #[doc = "0x43 - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in51(&self) -> &PeciDataIn51 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(67).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(67).cast() }
     }
     #[doc = "0x44 - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out52(&self) -> &PeciDataOut52 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(68).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(68).cast() }
     }
     #[doc = "0x44 - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in52(&self) -> &PeciDataIn52 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(68).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(68).cast() }
     }
     #[doc = "0x45 - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out53(&self) -> &PeciDataOut53 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(69).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(69).cast() }
     }
     #[doc = "0x45 - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in53(&self) -> &PeciDataIn53 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(69).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(69).cast() }
     }
     #[doc = "0x46 - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out54(&self) -> &PeciDataOut54 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(70).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(70).cast() }
     }
     #[doc = "0x46 - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in54(&self) -> &PeciDataIn54 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(70).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(70).cast() }
     }
     #[doc = "0x47 - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out55(&self) -> &PeciDataOut55 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(71).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(71).cast() }
     }
     #[doc = "0x47 - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in55(&self) -> &PeciDataIn55 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(71).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(71).cast() }
     }
     #[doc = "0x48 - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out56(&self) -> &PeciDataOut56 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(72).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(72).cast() }
     }
     #[doc = "0x48 - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in56(&self) -> &PeciDataIn56 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(72).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(72).cast() }
     }
     #[doc = "0x49 - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out57(&self) -> &PeciDataOut57 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(73).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(73).cast() }
     }
     #[doc = "0x49 - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in57(&self) -> &PeciDataIn57 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(73).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(73).cast() }
     }
     #[doc = "0x4a - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out58(&self) -> &PeciDataOut58 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(74).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(74).cast() }
     }
     #[doc = "0x4a - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in58(&self) -> &PeciDataIn58 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(74).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(74).cast() }
     }
     #[doc = "0x4b - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out59(&self) -> &PeciDataOut59 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(75).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(75).cast() }
     }
     #[doc = "0x4b - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in59(&self) -> &PeciDataIn59 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(75).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(75).cast() }
     }
     #[doc = "0x4c - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out60(&self) -> &PeciDataOut60 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(76).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(76).cast() }
     }
     #[doc = "0x4c - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in60(&self) -> &PeciDataIn60 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(76).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(76).cast() }
     }
     #[doc = "0x4d - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out61(&self) -> &PeciDataOut61 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(77).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(77).cast() }
     }
     #[doc = "0x4d - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in61(&self) -> &PeciDataIn61 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(77).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(77).cast() }
     }
     #[doc = "0x4e - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out62(&self) -> &PeciDataOut62 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(78).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(78).cast() }
     }
     #[doc = "0x4e - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in62(&self) -> &PeciDataIn62 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(78).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(78).cast() }
     }
     #[doc = "0x4f - PECI Data Out Register (PECI_DATA_OUT00-3F)"]
     #[inline(always)]
     pub const fn peci_data_out63(&self) -> &PeciDataOut63 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(79).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(79).cast() }
     }
     #[doc = "0x4f - PECI Data In Register (PECI_DATA_IN00-3F)"]
     #[inline(always)]
     pub const fn peci_data_in63(&self) -> &PeciDataIn63 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(79).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(79).cast() }
     }
 }
 #[doc = "PECI_CTL_STS (rw) register accessor: PECI Control Status Register (PECI_CTL_STS)\n\nYou can [`read`](crate::Reg::read) this register and get [`peci_ctl_sts::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`peci_ctl_sts::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@peci_ctl_sts`]

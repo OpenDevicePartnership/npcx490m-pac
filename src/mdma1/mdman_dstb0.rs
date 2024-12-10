@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:19 - 20-bit Destination Base Address"]
     #[inline(always)]
-    #[must_use]
     pub fn dst_base_addr19_0(&mut self) -> DstBaseAddr19_0W<MdmanDstb0Spec> {
         DstBaseAddr19_0W::new(self, 0)
     }
     #[doc = "Bits 20:31 - 32-bit Destination Base Address"]
     #[inline(always)]
-    #[must_use]
     pub fn dst_base_addr31_20(&mut self) -> DstBaseAddr31_20W<MdmanDstb0Spec> {
         DstBaseAddr31_20W::new(self, 20)
     }

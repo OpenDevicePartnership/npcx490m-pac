@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - VCC1 Power-Fail Status"]
     #[inline(always)]
-    #[must_use]
     pub fn vcc1_sts(&mut self) -> Vcc1StsW<BkupStsSpec> {
         Vcc1StsW::new(self, 0)
     }
     #[doc = "Bit 5 - Intruder1 Alarm"]
     #[inline(always)]
-    #[must_use]
     pub fn intrud1_alarm(&mut self) -> Intrud1AlarmW<BkupStsSpec> {
         Intrud1AlarmW::new(self, 5)
     }
     #[doc = "Bit 6 - Intruder2 Alarm"]
     #[inline(always)]
-    #[must_use]
     pub fn intrud2_alarm(&mut self) -> Intrud2AlarmW<BkupStsSpec> {
         Intrud2AlarmW::new(self, 6)
     }
     #[doc = "Bit 7 - Invalid Battery-Backed RAM"]
     #[inline(always)]
-    #[must_use]
     pub fn ibbr(&mut self) -> IbbrW<BkupStsSpec> {
         IbbrW::new(self, 7)
     }

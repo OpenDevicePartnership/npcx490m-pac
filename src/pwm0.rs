@@ -24,12 +24,12 @@ impl RegisterBlock {
     #[doc = "0x02 - Cycle Time Register (CTRn)"]
     #[inline(always)]
     pub const fn ctrn(&self) -> &Ctrn {
-        unsafe { &*(self as *const Self).cast::<u8>().add(2).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(2).cast() }
     }
     #[doc = "0x02 - Cycle Time for Rise Duty Cycle Register (CTR_RSn)"]
     #[inline(always)]
     pub const fn ctr_rsn(&self) -> &CtrRsn {
-        unsafe { &*(self as *const Self).cast::<u8>().add(2).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(2).cast() }
     }
     #[doc = "0x04 - PWM Control Register (PWMCTLn)"]
     #[inline(always)]
@@ -44,12 +44,12 @@ impl RegisterBlock {
     #[doc = "0x06 - Duty Cycle Register (DCRn)"]
     #[inline(always)]
     pub const fn dcrn(&self) -> &Dcrn {
-        unsafe { &*(self as *const Self).cast::<u8>().add(6).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(6).cast() }
     }
     #[doc = "0x06 - Maximum Duty Cycle Rise Register (MAX_DC_RSn)"]
     #[inline(always)]
     pub const fn max_dc_rsn(&self) -> &MaxDcRsn {
-        unsafe { &*(self as *const Self).cast::<u8>().add(6).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(6).cast() }
     }
     #[doc = "0x08 - Cycle Time for Fall Duty Cycle Register (CTR_FLn)"]
     #[inline(always)]

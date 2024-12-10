@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1 - Rx-FIFO Full, Tx-FIFO Empty Status"]
     #[inline(always)]
-    #[must_use]
     pub fn rxf_txe(&mut self) -> RxfTxeW<SmbnFifCtsSpec> {
         RxfTxeW::new(self, 1)
     }
     #[doc = "Bit 3 - Rx-FIFO Full, Tx-FIFO Empty Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn rfte_ie(&mut self) -> RfteIeW<SmbnFifCtsSpec> {
         RfteIeW::new(self, 3)
     }
     #[doc = "Bit 6 - Clear FIFOs"]
     #[inline(always)]
-    #[must_use]
     pub fn clr_fifo(&mut self) -> ClrFifoW<SmbnFifCtsSpec> {
         ClrFifoW::new(self, 6)
     }
     #[doc = "Bit 7 - Slave Start or Restart"]
     #[inline(always)]
-    #[must_use]
     pub fn slvrstr(&mut self) -> SlvrstrW<SmbnFifCtsSpec> {
         SlvrstrW::new(self, 7)
     }

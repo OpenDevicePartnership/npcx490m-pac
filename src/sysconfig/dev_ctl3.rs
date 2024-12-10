@@ -74,37 +74,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1 - RNG Modules Interrupt Mode"]
     #[inline(always)]
-    #[must_use]
     pub fn rngint_md(&mut self) -> RngintMdW<DevCtl3Spec> {
         RngintMdW::new(self, 1)
     }
     #[doc = "Bit 2 - Force VCC1 Power-Up Reset Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn fvcc1_purst_en(&mut self) -> Fvcc1PurstEnW<DevCtl3Spec> {
         Fvcc1PurstEnW::new(self, 2)
     }
     #[doc = "Bit 3 - I3CI1 Module Controller/Target Select"]
     #[inline(always)]
-    #[must_use]
     pub fn i3c1_ms(&mut self) -> I3c1MsW<DevCtl3Spec> {
         I3c1MsW::new(self, 3)
     }
     #[doc = "Bit 4 - I3CI2 Module Controller/Target Select"]
     #[inline(always)]
-    #[must_use]
     pub fn i3c2_ms(&mut self) -> I3c2MsW<DevCtl3Spec> {
         I3c2MsW::new(self, 4)
     }
     #[doc = "Bit 5 - I3CI3 Module Controller/Target Select"]
     #[inline(always)]
-    #[must_use]
     pub fn i3c3_ms(&mut self) -> I3c3MsW<DevCtl3Spec> {
         I3c3MsW::new(self, 5)
     }
     #[doc = "Bits 6:7 - SIO Modules Clock Select"]
     #[inline(always)]
-    #[must_use]
     pub fn sio_clk_sel(&mut self) -> SioClkSelW<DevCtl3Spec> {
         SioClkSelW::new(self, 6)
     }

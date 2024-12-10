@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:12 - 13-bit Current Transfer Count"]
     #[inline(always)]
-    #[must_use]
     pub fn curent_tfr_cnt(&mut self) -> CurentTfrCntW<Mdma0CtcntSpec> {
         CurentTfrCntW::new(self, 0)
     }

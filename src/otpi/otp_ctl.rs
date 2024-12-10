@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Start OTP Operation"]
     #[inline(always)]
-    #[must_use]
     pub fn start(&mut self) -> StartW<OtpCtlSpec> {
         StartW::new(self, 0)
     }
     #[doc = "Bit 1 - Write Select"]
     #[inline(always)]
-    #[must_use]
     pub fn write(&mut self) -> WriteW<OtpCtlSpec> {
         WriteW::new(self, 1)
     }
     #[doc = "Bit 6 - OTP Operation Completed"]
     #[inline(always)]
-    #[must_use]
     pub fn done(&mut self) -> DoneW<OtpCtlSpec> {
         DoneW::new(self, 6)
     }
     #[doc = "Bit 7 - OTPI Module Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn otp_en(&mut self) -> OtpEnW<OtpCtlSpec> {
         OtpEnW::new(self, 7)
     }

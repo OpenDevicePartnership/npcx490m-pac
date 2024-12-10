@@ -64,31 +64,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 2 - DMA Request Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn dma_req_en(&mut self) -> DmaReqEnW<BurstCfgSpec> {
         DmaReqEnW::new(self, 2)
     }
     #[doc = "Bit 3 - Unlimited Burst"]
     #[inline(always)]
-    #[must_use]
     pub fn unlim_burst(&mut self) -> UnlimBurstW<BurstCfgSpec> {
         UnlimBurstW::new(self, 3)
     }
     #[doc = "Bits 4:5 - SPI Device Select"]
     #[inline(always)]
-    #[must_use]
     pub fn spi_dev_sel(&mut self) -> SpiDevSelW<BurstCfgSpec> {
         SpiDevSelW::new(self, 4)
     }
     #[doc = "Bit 6 - F_CS0 Auto-Assertion Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn cs0_auto_en(&mut self) -> Cs0AutoEnW<BurstCfgSpec> {
         Cs0AutoEnW::new(self, 6)
     }
     #[doc = "Bit 7 - F_CS1 Auto-Assertion Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn cs1_auto_en(&mut self) -> Cs1AutoEnW<BurstCfgSpec> {
         Cs1AutoEnW::new(self, 7)
     }

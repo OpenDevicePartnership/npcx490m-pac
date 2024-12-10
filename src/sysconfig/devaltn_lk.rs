@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - I3C1 Signals Select Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn i3c1_sl_lk(&mut self) -> I3c1SlLkW<DevaltnLkSpec> {
         I3c1SlLkW::new(self, 0)
     }
     #[doc = "Bit 1 - I3C2 Signals Select Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn i3c2_sl_lk(&mut self) -> I3c2SlLkW<DevaltnLkSpec> {
         I3c2SlLkW::new(self, 1)
     }
     #[doc = "Bit 2 - I3C3 Signals Select Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn i3c3_sl_lk(&mut self) -> I3c3SlLkW<DevaltnLkSpec> {
         I3c3SlLkW::new(self, 2)
     }

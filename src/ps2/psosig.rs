@@ -94,49 +94,41 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Write Data Signal Channel 0"]
     #[inline(always)]
-    #[must_use]
     pub fn wdat0(&mut self) -> Wdat0W<PsosigSpec> {
         Wdat0W::new(self, 0)
     }
     #[doc = "Bit 1 - Write Data Signal Channel 1"]
     #[inline(always)]
-    #[must_use]
     pub fn wdat1(&mut self) -> Wdat1W<PsosigSpec> {
         Wdat1W::new(self, 1)
     }
     #[doc = "Bit 2 - Write Data Signal Channel 2"]
     #[inline(always)]
-    #[must_use]
     pub fn wdat2(&mut self) -> Wdat2W<PsosigSpec> {
         Wdat2W::new(self, 2)
     }
     #[doc = "Bit 3 - Enable Channel 0"]
     #[inline(always)]
-    #[must_use]
     pub fn clk0(&mut self) -> Clk0W<PsosigSpec> {
         Clk0W::new(self, 3)
     }
     #[doc = "Bit 4 - Enable Channel 1"]
     #[inline(always)]
-    #[must_use]
     pub fn clk1(&mut self) -> Clk1W<PsosigSpec> {
         Clk1W::new(self, 4)
     }
     #[doc = "Bit 5 - Enable Channel 2"]
     #[inline(always)]
-    #[must_use]
     pub fn clk2(&mut self) -> Clk2W<PsosigSpec> {
         Clk2W::new(self, 5)
     }
     #[doc = "Bit 6 - Write Data Signal Channel 3"]
     #[inline(always)]
-    #[must_use]
     pub fn wdat3(&mut self) -> Wdat3W<PsosigSpec> {
         Wdat3W::new(self, 6)
     }
     #[doc = "Bit 7 - Enable Channel 3"]
     #[inline(always)]
-    #[must_use]
     pub fn clk3(&mut self) -> Clk3W<PsosigSpec> {
         Clk3W::new(self, 7)
     }

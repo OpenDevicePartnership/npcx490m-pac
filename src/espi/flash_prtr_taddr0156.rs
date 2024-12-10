@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 12:26 - Flash Protection Top Address"]
     #[inline(always)]
-    #[must_use]
     pub fn flash_prt_taddr(&mut self) -> FlashPrtTaddrW<FlashPrtrTaddr0156Spec> {
         FlashPrtTaddrW::new(self, 12)
     }

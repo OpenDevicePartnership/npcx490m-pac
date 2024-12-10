@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 7 - SMBus/I2C Module 7, Bus 1 Select Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn i2c7_1_sl_lk(&mut self) -> I2c7_1SlLkW<DevaltkLkSpec> {
         I2c7_1SlLkW::new(self, 7)
     }

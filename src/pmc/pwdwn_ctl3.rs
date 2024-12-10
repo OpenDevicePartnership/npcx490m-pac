@@ -84,43 +84,36 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - SMB0 Power-Down"]
     #[inline(always)]
-    #[must_use]
     pub fn smb0_pd(&mut self) -> Smb0PdW<PwdwnCtl3Spec> {
         Smb0PdW::new(self, 0)
     }
     #[doc = "Bit 1 - SMB1 Power-Down"]
     #[inline(always)]
-    #[must_use]
     pub fn smb1_pd(&mut self) -> Smb1PdW<PwdwnCtl3Spec> {
         Smb1PdW::new(self, 1)
     }
     #[doc = "Bit 2 - SMB2 Power-Down"]
     #[inline(always)]
-    #[must_use]
     pub fn smb2_pd(&mut self) -> Smb2PdW<PwdwnCtl3Spec> {
         Smb2PdW::new(self, 2)
     }
     #[doc = "Bit 3 - SMB3 Power-Down"]
     #[inline(always)]
-    #[must_use]
     pub fn smb3_pd(&mut self) -> Smb3PdW<PwdwnCtl3Spec> {
         Smb3PdW::new(self, 3)
     }
     #[doc = "Bit 4 - SMB4 Power-Down"]
     #[inline(always)]
-    #[must_use]
     pub fn smb4_pd(&mut self) -> Smb4PdW<PwdwnCtl3Spec> {
         Smb4PdW::new(self, 4)
     }
     #[doc = "Bit 5 - GDMA2 Power-Down"]
     #[inline(always)]
-    #[must_use]
     pub fn gdma2_pd(&mut self) -> Gdma2PdW<PwdwnCtl3Spec> {
         Gdma2PdW::new(self, 5)
     }
     #[doc = "Bit 7 - GDMA1 Power-Down"]
     #[inline(always)]
-    #[must_use]
     pub fn gdma1_pd(&mut self) -> Gdma1PdW<PwdwnCtl3Spec> {
         Gdma1PdW::new(self, 7)
     }

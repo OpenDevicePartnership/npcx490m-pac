@@ -84,43 +84,36 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - KBRST Select"]
     #[inline(always)]
-    #[must_use]
     pub fn kbrst_sl(&mut self) -> KbrstSlW<Devalt1Spec> {
         KbrstSlW::new(self, 0)
     }
     #[doc = "Bit 2 - SMI Select"]
     #[inline(always)]
-    #[must_use]
     pub fn smi_sl(&mut self) -> SmiSlW<Devalt1Spec> {
         SmiSlW::new(self, 2)
     }
     #[doc = "Bit 3 - EC_SCI Select"]
     #[inline(always)]
-    #[must_use]
     pub fn ec_sci_sl(&mut self) -> EcSciSlW<Devalt1Spec> {
         EcSciSlW::new(self, 3)
     }
     #[doc = "Bit 4 - No PWRGD Select"]
     #[inline(always)]
-    #[must_use]
     pub fn no_pwrgd(&mut self) -> NoPwrgdW<Devalt1Spec> {
         NoPwrgdW::new(self, 4)
     }
     #[doc = "Bit 5 - RESET_OUT Select"]
     #[inline(always)]
-    #[must_use]
     pub fn rst_out_sl(&mut self) -> RstOutSlW<Devalt1Spec> {
         RstOutSlW::new(self, 5)
     }
     #[doc = "Bit 6 - CLKRUN Select"]
     #[inline(always)]
-    #[must_use]
     pub fn clkrn_sl(&mut self) -> ClkrnSlW<Devalt1Spec> {
         ClkrnSlW::new(self, 6)
     }
     #[doc = "Bit 7 - No LPC or eSPI Interface-Select"]
     #[inline(always)]
-    #[must_use]
     pub fn no_lpc_espi(&mut self) -> NoLpcEspiW<Devalt1Spec> {
         NoLpcEspiW::new(self, 7)
     }

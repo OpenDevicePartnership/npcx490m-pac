@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - Snooze Timer Count Ended"]
     #[inline(always)]
-    #[must_use]
     pub fn snt_end(&mut self) -> SntEndW<SntStsSpec> {
         SntEndW::new(self, 0)
     }

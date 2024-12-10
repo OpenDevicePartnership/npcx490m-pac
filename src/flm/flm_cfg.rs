@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - Device Size"]
     #[inline(always)]
-    #[must_use]
     pub fn devsiz(&mut self) -> DevsizW<FlmCfgSpec> {
         DevsizW::new(self, 0)
     }
     #[doc = "Bit 3 - Extra Bits Check Disable"]
     #[inline(always)]
-    #[must_use]
     pub fn ebchkdis(&mut self) -> EbchkdisW<FlmCfgSpec> {
         EbchkdisW::new(self, 3)
     }
     #[doc = "Bit 14 - FLM_CSIO Cut-Off Bypass"]
     #[inline(always)]
-    #[must_use]
     pub fn csobyp(&mut self) -> CsobypW<FlmCfgSpec> {
         CsobypW::new(self, 14)
     }
     #[doc = "Bit 29 - Alias Flash Access Above Range"]
     #[inline(always)]
-    #[must_use]
     pub fn alias(&mut self) -> AliasW<FlmCfgSpec> {
         AliasW::new(self, 29)
     }

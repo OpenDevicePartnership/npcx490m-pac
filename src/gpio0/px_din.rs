@@ -6,9 +6,9 @@ pub type W = crate::W<PxDinSpec>;
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum Level {
-    #[doc = "0: `0`"]
+    #[doc = "0: Level low"]
     Low = 0,
-    #[doc = "1: `1`"]
+    #[doc = "1: Level high"]
     High = 1,
 }
 impl From<Level> for bool {
@@ -28,12 +28,12 @@ impl PinR {
             true => Level::High,
         }
     }
-    #[doc = "`0`"]
+    #[doc = "Level low"]
     #[inline(always)]
     pub fn is_low(&self) -> bool {
         *self == Level::Low
     }
-    #[doc = "`1`"]
+    #[doc = "Level high"]
     #[inline(always)]
     pub fn is_high(&self) -> bool {
         *self == Level::High
@@ -45,12 +45,12 @@ impl<'a, REG> PinW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
-    #[doc = "`0`"]
+    #[doc = "Level low"]
     #[inline(always)]
     pub fn low(self) -> &'a mut crate::W<REG> {
         self.variant(Level::Low)
     }
-    #[doc = "`1`"]
+    #[doc = "Level high"]
     #[inline(always)]
     pub fn high(self) -> &'a mut crate::W<REG> {
         self.variant(Level::High)
@@ -133,7 +133,6 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `PIN0` field.</div>"]
     #[inline(always)]
-    #[must_use]
     pub fn pin(&mut self, n: u8) -> PinW<PxDinSpec> {
         #[allow(clippy::no_effect)]
         [(); 8][n as usize];
@@ -141,49 +140,41 @@ impl W {
     }
     #[doc = "Bit 0 - Data In for Pin 0"]
     #[inline(always)]
-    #[must_use]
     pub fn pin0(&mut self) -> PinW<PxDinSpec> {
         PinW::new(self, 0)
     }
     #[doc = "Bit 1 - Data In for Pin 1"]
     #[inline(always)]
-    #[must_use]
     pub fn pin1(&mut self) -> PinW<PxDinSpec> {
         PinW::new(self, 1)
     }
     #[doc = "Bit 2 - Data In for Pin 2"]
     #[inline(always)]
-    #[must_use]
     pub fn pin2(&mut self) -> PinW<PxDinSpec> {
         PinW::new(self, 2)
     }
     #[doc = "Bit 3 - Data In for Pin 3"]
     #[inline(always)]
-    #[must_use]
     pub fn pin3(&mut self) -> PinW<PxDinSpec> {
         PinW::new(self, 3)
     }
     #[doc = "Bit 4 - Data In for Pin 4"]
     #[inline(always)]
-    #[must_use]
     pub fn pin4(&mut self) -> PinW<PxDinSpec> {
         PinW::new(self, 4)
     }
     #[doc = "Bit 5 - Data In for Pin 5"]
     #[inline(always)]
-    #[must_use]
     pub fn pin5(&mut self) -> PinW<PxDinSpec> {
         PinW::new(self, 5)
     }
     #[doc = "Bit 6 - Data In for Pin 6"]
     #[inline(always)]
-    #[must_use]
     pub fn pin6(&mut self) -> PinW<PxDinSpec> {
         PinW::new(self, 6)
     }
     #[doc = "Bit 7 - Data In for Pin 7"]
     #[inline(always)]
-    #[must_use]
     pub fn pin7(&mut self) -> PinW<PxDinSpec> {
         PinW::new(self, 7)
     }

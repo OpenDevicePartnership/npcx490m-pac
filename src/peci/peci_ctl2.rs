@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1 - Index"]
     #[inline(always)]
-    #[must_use]
     pub fn index(&mut self) -> IndexW<PeciCtl2Spec> {
         IndexW::new(self, 1)
     }
     #[doc = "Bit 2 - Automatic Increment on Read"]
     #[inline(always)]
-    #[must_use]
     pub fn auto_inc_rd(&mut self) -> AutoIncRdW<PeciCtl2Spec> {
         AutoIncRdW::new(self, 2)
     }
     #[doc = "Bit 3 - Automatic Increment on Write"]
     #[inline(always)]
-    #[must_use]
     pub fn auto_inc_wr(&mut self) -> AutoIncWrW<PeciCtl2Spec> {
         AutoIncWrW::new(self, 3)
     }

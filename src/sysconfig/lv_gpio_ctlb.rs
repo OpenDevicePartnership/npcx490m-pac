@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - GPIOD4/CR_SIN3 Low-Voltage Select"]
     #[inline(always)]
-    #[must_use]
     pub fn gd4_lv(&mut self) -> Gd4LvW<LvGpioCtlbSpec> {
         Gd4LvW::new(self, 0)
     }
     #[doc = "Bit 1 - GPIOD5 Low-Voltage Select"]
     #[inline(always)]
-    #[must_use]
     pub fn gd5_lv(&mut self) -> Gd5LvW<LvGpioCtlbSpec> {
         Gd5LvW::new(self, 1)
     }
     #[doc = "Bit 2 - GPIOE5 Low-Voltage Select"]
     #[inline(always)]
-    #[must_use]
     pub fn ge5_lv(&mut self) -> Ge5LvW<LvGpioCtlbSpec> {
         Ge5LvW::new(self, 2)
     }
     #[doc = "Bit 7 - GPIO60 Low-Voltage Select"]
     #[inline(always)]
-    #[must_use]
     pub fn g60_lv(&mut self) -> G60LvW<LvGpioCtlbSpec> {
         G60LvW::new(self, 7)
     }

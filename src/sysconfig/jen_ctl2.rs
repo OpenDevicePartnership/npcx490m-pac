@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - CCDEV Select Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn ccdev_sel_en(&mut self) -> CcdevSelEnW<JenCtl2Spec> {
         CcdevSelEnW::new(self, 0)
     }
     #[doc = "Bit 4 - JTAG 1 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn jen1_sel(&mut self) -> Jen1SelW<JenCtl2Spec> {
         Jen1SelW::new(self, 4)
     }
     #[doc = "Bit 5 - JTAG Full Set Select"]
     #[inline(always)]
-    #[must_use]
     pub fn jenfull_sel(&mut self) -> JenfullSelW<JenCtl2Spec> {
         JenfullSelW::new(self, 5)
     }
     #[doc = "Bit 7 - SBU Signals Connection Select"]
     #[inline(always)]
-    #[must_use]
     pub fn sbu_sel(&mut self) -> SbuSelW<JenCtl2Spec> {
         SbuSelW::new(self, 7)
     }

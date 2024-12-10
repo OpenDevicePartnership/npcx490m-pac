@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 5 - Intruder1 Polarity"]
     #[inline(always)]
-    #[must_use]
     pub fn intrud1_pol(&mut self) -> Intrud1PolW<BkupCtlSpec> {
         Intrud1PolW::new(self, 5)
     }
     #[doc = "Bit 6 - Intruder2 Polarity"]
     #[inline(always)]
-    #[must_use]
     pub fn intrud2_pol(&mut self) -> Intrud2PolW<BkupCtlSpec> {
         Intrud2PolW::new(self, 6)
     }

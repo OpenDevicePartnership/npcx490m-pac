@@ -1,0 +1,43 @@
+_derive:
+  CR_UART2: CR_UART1
+  CR_UART3: CR_UART1
+  CR_UART4: CR_UART1
+
+CR_UART1:
+  _modify:
+    UTBUFn:
+      access: write-only
+    URBUFn:
+      access: read-only
+    USTATn:
+      access: read-only
+    UFRSn:
+      STP:
+        OneBit: [0, One stop bit]
+        TwoBits: [1, Two stop bits]
+      PSEL:
+        Odd: [0, Odd Parity]
+        Even: [1, Even Parity]
+        Mark: [2, Mark Parity]
+        Space: [3, Space Parity]
+      PEN:
+        Disabled: [0, Parity Disabled]
+        Enabled: [1, Parity Enabled]
+    UFTSTSn:
+      access: read-only
+      TEMPTY_LEVEL_STS:
+        access: read-only
+      TFIFO_EMPTY_STS:
+        access: read-only
+      NXMIP:
+        access: read-only
+    UFRSTSn:
+      access: read-only
+      RFULL_LEVEL:
+        access: read-only
+      RFULL_LEVEL_STS:
+        access: read-only
+      RFIFO_NEMPTY_STS:
+        access: read-only
+      ERR:
+        access: read-only

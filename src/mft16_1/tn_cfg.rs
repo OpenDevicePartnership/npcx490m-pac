@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 6 - TAn Debounce Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn tadben(&mut self) -> TadbenW<TnCfgSpec> {
         TadbenW::new(self, 6)
     }
     #[doc = "Bit 7 - TBn Debounce Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn tbdben(&mut self) -> TbdbenW<TnCfgSpec> {
         TbdbenW::new(self, 7)
     }

@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - Baud Rate Divisor"]
     #[inline(always)]
-    #[must_use]
     pub fn udiv10_8(&mut self) -> Udiv10_8W<UpsrnSpec> {
         Udiv10_8W::new(self, 0)
     }
     #[doc = "Bits 3:7 - Prescaler Select"]
     #[inline(always)]
-    #[must_use]
     pub fn upsc(&mut self) -> UpscW<UpsrnSpec> {
         UpscW::new(self, 3)
     }

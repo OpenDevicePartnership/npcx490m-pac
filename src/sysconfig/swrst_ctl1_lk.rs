@@ -314,181 +314,151 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - GPIO Port 0 Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn gpio0_rst_lk(&mut self) -> Gpio0RstLkW<SwrstCtl1LkSpec> {
         Gpio0RstLkW::new(self, 0)
     }
     #[doc = "Bit 1 - GPIO Port 1 Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn gpio1_rst_lk(&mut self) -> Gpio1RstLkW<SwrstCtl1LkSpec> {
         Gpio1RstLkW::new(self, 1)
     }
     #[doc = "Bit 2 - GPIO Port 2 Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn gpio2_rst_lk(&mut self) -> Gpio2RstLkW<SwrstCtl1LkSpec> {
         Gpio2RstLkW::new(self, 2)
     }
     #[doc = "Bit 3 - GPIO Port 3 Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn gpio3_rst_lk(&mut self) -> Gpio3RstLkW<SwrstCtl1LkSpec> {
         Gpio3RstLkW::new(self, 3)
     }
     #[doc = "Bit 4 - GPIO Port 4 Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn gpio4_rst_lk(&mut self) -> Gpio4RstLkW<SwrstCtl1LkSpec> {
         Gpio4RstLkW::new(self, 4)
     }
     #[doc = "Bit 5 - GPIO Port 5 Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn gpio5_rst_lk(&mut self) -> Gpio5RstLkW<SwrstCtl1LkSpec> {
         Gpio5RstLkW::new(self, 5)
     }
     #[doc = "Bit 6 - GPIO Port 6 Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn gpio6_rst_lk(&mut self) -> Gpio6RstLkW<SwrstCtl1LkSpec> {
         Gpio6RstLkW::new(self, 6)
     }
     #[doc = "Bit 7 - GPIO Port 7 Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn gpio7_rst_lk(&mut self) -> Gpio7RstLkW<SwrstCtl1LkSpec> {
         Gpio7RstLkW::new(self, 7)
     }
     #[doc = "Bit 8 - GPIO Port 8 Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn gpio8_rst_lk(&mut self) -> Gpio8RstLkW<SwrstCtl1LkSpec> {
         Gpio8RstLkW::new(self, 8)
     }
     #[doc = "Bit 9 - GPIO Port 9 Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn gpio9_rst_lk(&mut self) -> Gpio9RstLkW<SwrstCtl1LkSpec> {
         Gpio9RstLkW::new(self, 9)
     }
     #[doc = "Bit 10 - GPIO Port A Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn gpioa_rst_lk(&mut self) -> GpioaRstLkW<SwrstCtl1LkSpec> {
         GpioaRstLkW::new(self, 10)
     }
     #[doc = "Bit 11 - GPIO Port B Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn gpiob_rst_lk(&mut self) -> GpiobRstLkW<SwrstCtl1LkSpec> {
         GpiobRstLkW::new(self, 11)
     }
     #[doc = "Bit 12 - GPIO Port C Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn gpioc_rst_lk(&mut self) -> GpiocRstLkW<SwrstCtl1LkSpec> {
         GpiocRstLkW::new(self, 12)
     }
     #[doc = "Bit 13 - GPIO Port D Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn gpiod_rst_lk(&mut self) -> GpiodRstLkW<SwrstCtl1LkSpec> {
         GpiodRstLkW::new(self, 13)
     }
     #[doc = "Bit 14 - GPIO Port E Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn gpioe_rst_lk(&mut self) -> GpioeRstLkW<SwrstCtl1LkSpec> {
         GpioeRstLkW::new(self, 14)
     }
     #[doc = "Bit 15 - GPIO Port F Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn gpiof_rst_lk(&mut self) -> GpiofRstLkW<SwrstCtl1LkSpec> {
         GpiofRstLkW::new(self, 15)
     }
     #[doc = "Bit 16 - ITIM64 Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn itim64_rst_lk(&mut self) -> Itim64RstLkW<SwrstCtl1LkSpec> {
         Itim64RstLkW::new(self, 16)
     }
     #[doc = "Bit 18 - ITIM32-1 Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn itim32_1_rst_lk(&mut self) -> Itim32_1RstLkW<SwrstCtl1LkSpec> {
         Itim32_1RstLkW::new(self, 18)
     }
     #[doc = "Bit 19 - ITIM32-2 Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn itim32_2_rst_lk(&mut self) -> Itim32_2RstLkW<SwrstCtl1LkSpec> {
         Itim32_2RstLkW::new(self, 19)
     }
     #[doc = "Bit 20 - ITIM32-3 Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn itim32_3_rst_lk(&mut self) -> Itim32_3RstLkW<SwrstCtl1LkSpec> {
         Itim32_3RstLkW::new(self, 20)
     }
     #[doc = "Bit 21 - ITIM32-4 Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn itim32_4_rst_lk(&mut self) -> Itim32_4RstLkW<SwrstCtl1LkSpec> {
         Itim32_4RstLkW::new(self, 21)
     }
     #[doc = "Bit 22 - ITIM32-5 Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn itim32_5_rst_lk(&mut self) -> Itim32_5RstLkW<SwrstCtl1LkSpec> {
         Itim32_5RstLkW::new(self, 22)
     }
     #[doc = "Bit 23 - ITIM32-6 Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn itim32_6_rst_lk(&mut self) -> Itim32_6RstLkW<SwrstCtl1LkSpec> {
         Itim32_6RstLkW::new(self, 23)
     }
     #[doc = "Bit 24 - MIWU3 Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn miwu3_rst_lk(&mut self) -> Miwu3RstLkW<SwrstCtl1LkSpec> {
         Miwu3RstLkW::new(self, 24)
     }
     #[doc = "Bit 25 - MTC Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn mtc_rst_lk(&mut self) -> MtcRstLkW<SwrstCtl1LkSpec> {
         MtcRstLkW::new(self, 25)
     }
     #[doc = "Bit 26 - MIWU0 Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn miwu0_rst_lk(&mut self) -> Miwu0RstLkW<SwrstCtl1LkSpec> {
         Miwu0RstLkW::new(self, 26)
     }
     #[doc = "Bit 27 - MIWU1 Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn miwu1_rst_lk(&mut self) -> Miwu1RstLkW<SwrstCtl1LkSpec> {
         Miwu1RstLkW::new(self, 27)
     }
     #[doc = "Bit 28 - MIWU2 Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn miwu2_rst_lk(&mut self) -> Miwu2RstLkW<SwrstCtl1LkSpec> {
         Miwu2RstLkW::new(self, 28)
     }
     #[doc = "Bit 29 - GDMA1 Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn gdma1_rst_lk(&mut self) -> Gdma1RstLkW<SwrstCtl1LkSpec> {
         Gdma1RstLkW::new(self, 29)
     }
     #[doc = "Bit 30 - GDMA2 Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn gdma2_rst_lk(&mut self) -> Gdma2RstLkW<SwrstCtl1LkSpec> {
         Gdma2RstLkW::new(self, 30)
     }

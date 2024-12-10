@@ -74,37 +74,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - RPMC Counter on the 1st RPMC Flash Device"]
     #[inline(always)]
-    #[must_use]
     pub fn rpmc_cntr_1(&mut self) -> RpmcCntr1W<FlashRpmcCfg1Spec> {
         RpmcCntr1W::new(self, 0)
     }
     #[doc = "Bits 4:11 - RPMC OP1 Opcode on the 1st RPMC Flash Device"]
     #[inline(always)]
-    #[must_use]
     pub fn rpmc_op1_1(&mut self) -> RpmcOp1_1W<FlashRpmcCfg1Spec> {
         RpmcOp1_1W::new(self, 4)
     }
     #[doc = "Bits 12:15 - RPMC Counter on the 2nd RPMC Flash Device"]
     #[inline(always)]
-    #[must_use]
     pub fn rpmc_cntr_2(&mut self) -> RpmcCntr2W<FlashRpmcCfg1Spec> {
         RpmcCntr2W::new(self, 12)
     }
     #[doc = "Bits 16:23 - RPMC OP1 Opcode on the 2nd RPMC Flash Device"]
     #[inline(always)]
-    #[must_use]
     pub fn rpmc_op1_2(&mut self) -> RpmcOp1_2W<FlashRpmcCfg1Spec> {
         RpmcOp1_2W::new(self, 16)
     }
     #[doc = "Bits 24:25 - Number of TAF RPMC Flash Devices Supported"]
     #[inline(always)]
-    #[must_use]
     pub fn rpmc_dev_supp(&mut self) -> RpmcDevSuppW<FlashRpmcCfg1Spec> {
         RpmcDevSuppW::new(self, 24)
     }
     #[doc = "Bits 26:31 - Target RPMC Supported"]
     #[inline(always)]
-    #[must_use]
     pub fn trgrpmcsupp(&mut self) -> TrgrpmcsuppW<FlashRpmcCfg1Spec> {
         TrgrpmcsuppW::new(self, 26)
     }

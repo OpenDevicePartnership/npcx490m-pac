@@ -94,49 +94,41 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - MFT16-1 Freeze Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn mft1fen(&mut self) -> Mft1fenW<Dbgfrzen1Spec> {
         Mft1fenW::new(self, 0)
     }
     #[doc = "Bit 1 - MFT16-2 Freeze Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn mft2fen(&mut self) -> Mft2fenW<Dbgfrzen1Spec> {
         Mft2fenW::new(self, 1)
     }
     #[doc = "Bit 2 - SMB2 Freeze Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn smb2fen(&mut self) -> Smb2fenW<Dbgfrzen1Spec> {
         Smb2fenW::new(self, 2)
     }
     #[doc = "Bit 3 - SMB3 Freeze Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn smb3fen(&mut self) -> Smb3fenW<Dbgfrzen1Spec> {
         Smb3fenW::new(self, 3)
     }
     #[doc = "Bit 4 - CR_UART1 Freeze Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn uart1fen(&mut self) -> Uart1fenW<Dbgfrzen1Spec> {
         Uart1fenW::new(self, 4)
     }
     #[doc = "Bit 5 - eSPI Target Interface Freeze Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn espisen(&mut self) -> EspisenW<Dbgfrzen1Spec> {
         EspisenW::new(self, 5)
     }
     #[doc = "Bit 6 - Host Interface Freeze Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn hifen(&mut self) -> HifenW<Dbgfrzen1Spec> {
         HifenW::new(self, 6)
     }
     #[doc = "Bit 7 - SPI Peripheral Freeze Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn spifen(&mut self) -> SpifenW<Dbgfrzen1Spec> {
         SpifenW::new(self, 7)
     }

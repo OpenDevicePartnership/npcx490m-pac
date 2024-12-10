@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 4 - Enable FIFO Mode"]
     #[inline(always)]
-    #[must_use]
     pub fn fifo_en(&mut self) -> FifoEnW<SmbnFifCtlSpec> {
         FifoEnW::new(self, 4)
     }

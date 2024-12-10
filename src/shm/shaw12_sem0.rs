@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - Host Semaphore Bits 3-0"]
     #[inline(always)]
-    #[must_use]
     pub fn hsem3_0(&mut self) -> Hsem3_0W<Shaw12Sem0Spec> {
         Hsem3_0W::new(self, 0)
     }
     #[doc = "Bits 4:7 - Core Semaphore Bits 3-0"]
     #[inline(always)]
-    #[must_use]
     pub fn csem3_0(&mut self) -> Csem3_0W<Shaw12Sem0Spec> {
         Csem3_0W::new(self, 4)
     }

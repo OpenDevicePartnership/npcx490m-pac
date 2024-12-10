@@ -84,43 +84,36 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Keyboard Scan Power-Down"]
     #[inline(always)]
-    #[must_use]
     pub fn kbs_pd(&mut self) -> KbsPdW<PwdwnCtl1Spec> {
         KbsPdW::new(self, 0)
     }
     #[doc = "Bit 1 - SDP Power-Down"]
     #[inline(always)]
-    #[must_use]
     pub fn sdp_pd(&mut self) -> SdpPdW<PwdwnCtl1Spec> {
         SdpPdW::new(self, 1)
     }
     #[doc = "Bit 3 - PS/2 Power-Down"]
     #[inline(always)]
-    #[must_use]
     pub fn ps2_pd(&mut self) -> Ps2PdW<PwdwnCtl1Spec> {
         Ps2PdW::new(self, 3)
     }
     #[doc = "Bit 4 - CR_UART1 Power-Down"]
     #[inline(always)]
-    #[must_use]
     pub fn uart1_pd(&mut self) -> Uart1PdW<PwdwnCtl1Spec> {
         Uart1PdW::new(self, 4)
     }
     #[doc = "Bit 5 - MFT16-1 Power-Down"]
     #[inline(always)]
-    #[must_use]
     pub fn mft1_pd(&mut self) -> Mft1PdW<PwdwnCtl1Spec> {
         Mft1PdW::new(self, 5)
     }
     #[doc = "Bit 6 - MFT16-2 Power-Down"]
     #[inline(always)]
-    #[must_use]
     pub fn mft2_pd(&mut self) -> Mft2PdW<PwdwnCtl1Spec> {
         Mft2PdW::new(self, 6)
     }
     #[doc = "Bit 7 - MFT16-3 Power-Down"]
     #[inline(always)]
-    #[must_use]
     pub fn mft3_pd(&mut self) -> Mft3PdW<PwdwnCtl1Spec> {
         Mft3PdW::new(self, 7)
     }

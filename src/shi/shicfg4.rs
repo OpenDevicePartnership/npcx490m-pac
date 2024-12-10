@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:6 - Input Buffer Level"]
     #[inline(always)]
-    #[must_use]
     pub fn ibuflvl(&mut self) -> IbuflvlW<Shicfg4Spec> {
         IbuflvlW::new(self, 0)
     }
     #[doc = "Bit 7 - Input Buffer Level Disabled"]
     #[inline(always)]
-    #[must_use]
     pub fn ibuflvldis(&mut self) -> IbuflvldisW<Shicfg4Spec> {
         IbuflvldisW::new(self, 7)
     }

@@ -94,49 +94,41 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - GPIO14 Low-Voltage Select"]
     #[inline(always)]
-    #[must_use]
     pub fn g14_lv(&mut self) -> G14LvW<LvGpioCtl7Spec> {
         G14LvW::new(self, 0)
     }
     #[doc = "Bit 1 - GPIO15 Low-Voltage Select"]
     #[inline(always)]
-    #[must_use]
     pub fn g15_lv(&mut self) -> G15LvW<LvGpioCtl7Spec> {
         G15LvW::new(self, 1)
     }
     #[doc = "Bit 2 - GPIO16 Low-Voltage Select"]
     #[inline(always)]
-    #[must_use]
     pub fn g16_lv(&mut self) -> G16LvW<LvGpioCtl7Spec> {
         G16LvW::new(self, 2)
     }
     #[doc = "Bit 3 - GPIO17 Low-Voltage Select"]
     #[inline(always)]
-    #[must_use]
     pub fn g17_lv(&mut self) -> G17LvW<LvGpioCtl7Spec> {
         G17LvW::new(self, 3)
     }
     #[doc = "Bit 4 - GPIO20 Low-Voltage Select"]
     #[inline(always)]
-    #[must_use]
     pub fn g20_lv(&mut self) -> G20LvW<LvGpioCtl7Spec> {
         G20LvW::new(self, 4)
     }
     #[doc = "Bit 5 - GPIO21 Low-Voltage Select"]
     #[inline(always)]
-    #[must_use]
     pub fn g21_lv(&mut self) -> G21LvW<LvGpioCtl7Spec> {
         G21LvW::new(self, 5)
     }
     #[doc = "Bit 6 - GPIO22 Low-Voltage Select"]
     #[inline(always)]
-    #[must_use]
     pub fn g22_lv(&mut self) -> G22LvW<LvGpioCtl7Spec> {
         G22LvW::new(self, 6)
     }
     #[doc = "Bit 7 - GPIO23 Low-Voltage Select"]
     #[inline(always)]
-    #[must_use]
     pub fn g23_lv(&mut self) -> G23LvW<LvGpioCtl7Spec> {
         G23LvW::new(self, 7)
     }

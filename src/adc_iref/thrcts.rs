@@ -154,85 +154,71 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Threshold 1 Status"]
     #[inline(always)]
-    #[must_use]
     pub fn thr1_sts(&mut self) -> Thr1StsW<ThrctsSpec> {
         Thr1StsW::new(self, 0)
     }
     #[doc = "Bit 1 - Threshold 2 Status"]
     #[inline(always)]
-    #[must_use]
     pub fn thr2_sts(&mut self) -> Thr2StsW<ThrctsSpec> {
         Thr2StsW::new(self, 1)
     }
     #[doc = "Bit 2 - Threshold 3 Status"]
     #[inline(always)]
-    #[must_use]
     pub fn thr3_sts(&mut self) -> Thr3StsW<ThrctsSpec> {
         Thr3StsW::new(self, 2)
     }
     #[doc = "Bit 3 - Threshold 4 Status"]
     #[inline(always)]
-    #[must_use]
     pub fn thr4_sts(&mut self) -> Thr4StsW<ThrctsSpec> {
         Thr4StsW::new(self, 3)
     }
     #[doc = "Bit 4 - Threshold 5 Status"]
     #[inline(always)]
-    #[must_use]
     pub fn thr5_sts(&mut self) -> Thr5StsW<ThrctsSpec> {
         Thr5StsW::new(self, 4)
     }
     #[doc = "Bit 5 - Threshold 6 Status"]
     #[inline(always)]
-    #[must_use]
     pub fn thr6_sts(&mut self) -> Thr6StsW<ThrctsSpec> {
         Thr6StsW::new(self, 5)
     }
     #[doc = "Bit 7 - ADC Event Status"]
     #[inline(always)]
-    #[must_use]
     pub fn adc_event(&mut self) -> AdcEventW<ThrctsSpec> {
         AdcEventW::new(self, 7)
     }
     #[doc = "Bit 8 - Threshold 1 Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn thr1_ien(&mut self) -> Thr1IenW<ThrctsSpec> {
         Thr1IenW::new(self, 8)
     }
     #[doc = "Bit 9 - Threshold 2 Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn thr2_ien(&mut self) -> Thr2IenW<ThrctsSpec> {
         Thr2IenW::new(self, 9)
     }
     #[doc = "Bit 10 - Threshold 3 Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn thr3_ien(&mut self) -> Thr3IenW<ThrctsSpec> {
         Thr3IenW::new(self, 10)
     }
     #[doc = "Bit 11 - Threshold 4 Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn thr4_ien(&mut self) -> Thr4IenW<ThrctsSpec> {
         Thr4IenW::new(self, 11)
     }
     #[doc = "Bit 12 - Threshold 5 Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn thr5_ien(&mut self) -> Thr5IenW<ThrctsSpec> {
         Thr5IenW::new(self, 12)
     }
     #[doc = "Bit 13 - Threshold 6 Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn thr6_ien(&mut self) -> Thr6IenW<ThrctsSpec> {
         Thr6IenW::new(self, 13)
     }
     #[doc = "Bit 15 - ADC Wake-Up Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn adc_wken(&mut self) -> AdcWkenW<ThrctsSpec> {
         AdcWkenW::new(self, 15)
     }

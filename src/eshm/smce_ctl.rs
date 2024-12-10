@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Host Event Registers Window 3 Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn hevreg3_en(&mut self) -> Hevreg3EnW<SmceCtlSpec> {
         Hevreg3EnW::new(self, 0)
     }
     #[doc = "Bit 1 - Host Event Registers Window 4 Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn hevreg4_en(&mut self) -> Hevreg4EnW<SmceCtlSpec> {
         Hevreg4EnW::new(self, 1)
     }
     #[doc = "Bit 3 - Enable Interrupt by Host Semaphore 3 Written"]
     #[inline(always)]
-    #[must_use]
     pub fn hsem3_ie(&mut self) -> Hsem3IeW<SmceCtlSpec> {
         Hsem3IeW::new(self, 3)
     }
     #[doc = "Bit 4 - Enable Interrupt by Host Semaphore 4 Written"]
     #[inline(always)]
-    #[must_use]
     pub fn hsem4_ie(&mut self) -> Hsem4IeW<SmceCtlSpec> {
         Hsem4IeW::new(self, 4)
     }

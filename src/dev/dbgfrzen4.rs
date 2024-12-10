@@ -84,43 +84,36 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - SMB5 Freeze Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn smb5fen(&mut self) -> Smb5fenW<Dbgfrzen4Spec> {
         Smb5fenW::new(self, 0)
     }
     #[doc = "Bit 1 - SMB6 Freeze Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn smb6fen(&mut self) -> Smb6fenW<Dbgfrzen4Spec> {
         Smb6fenW::new(self, 1)
     }
     #[doc = "Bit 2 - SMB7 Freeze Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn smb7fen(&mut self) -> Smb7fenW<Dbgfrzen4Spec> {
         Smb7fenW::new(self, 2)
     }
     #[doc = "Bit 3 - LCT Freeze Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn lctfen(&mut self) -> LctfenW<Dbgfrzen4Spec> {
         LctfenW::new(self, 3)
     }
     #[doc = "Bit 4 - CR_UART4 Freeze Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn uart4fen(&mut self) -> Uart4fenW<Dbgfrzen4Spec> {
         Uart4fenW::new(self, 4)
     }
     #[doc = "Bit 5 - CR_UART3 Freeze Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn uart3fen(&mut self) -> Uart3fenW<Dbgfrzen4Spec> {
         Uart3fenW::new(self, 5)
     }
     #[doc = "Bit 6 - CR_UART2 Freeze Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn uart2fen(&mut self) -> Uart2fenW<Dbgfrzen4Spec> {
         Uart2fenW::new(self, 6)
     }

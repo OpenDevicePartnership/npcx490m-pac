@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - Keyboard Scan Out Bits 17-16"]
     #[inline(always)]
-    #[must_use]
     pub fn kbsout17_kbsout16(&mut self) -> Kbsout17Kbsout16W<Kbsout1Spec> {
         Kbsout17Kbsout16W::new(self, 0)
     }

@@ -94,49 +94,41 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - SMBus/I2C Module 0, Bus 0 Select Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn i2c0_0_sl_lk(&mut self) -> I2c0_0SlLkW<Devalt2LkSpec> {
         I2c0_0SlLkW::new(self, 0)
     }
     #[doc = "Bit 1 - SMBus/I2C Module 7, Bus 0 Select Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn i2c7_0_sl_lk(&mut self) -> I2c7_0SlLkW<Devalt2LkSpec> {
         I2c7_0SlLkW::new(self, 1)
     }
     #[doc = "Bit 2 - SMBus/I2C Module 1, Bus 0 Select Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn i2c1_0_sl_lk(&mut self) -> I2c1_0SlLkW<Devalt2LkSpec> {
         I2c1_0SlLkW::new(self, 2)
     }
     #[doc = "Bit 3 - SMBus/I2C Module 6, Bus 0 Select Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn i2c6_0_sl_lk(&mut self) -> I2c6_0SlLkW<Devalt2LkSpec> {
         I2c6_0SlLkW::new(self, 3)
     }
     #[doc = "Bit 4 - SMBus/I2C Module 2, Bus 0 Select Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn i2c2_0_sl_lk(&mut self) -> I2c2_0SlLkW<Devalt2LkSpec> {
         I2c2_0SlLkW::new(self, 4)
     }
     #[doc = "Bit 5 - SMBus/I2C Module 5, Bus 0 Select Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn i2c5_0_sl_lk(&mut self) -> I2c5_0SlLkW<Devalt2LkSpec> {
         I2c5_0SlLkW::new(self, 5)
     }
     #[doc = "Bit 6 - SMBus/I2C Module 3, Bus 0 Select Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn i2c3_0_sl_lk(&mut self) -> I2c3_0SlLkW<Devalt2LkSpec> {
         I2c3_0SlLkW::new(self, 6)
     }
     #[doc = "Bit 7 - SMBus/I2C Module 4, Bus 0 Select Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn i2c4_0_sl_lk(&mut self) -> I2c4_0SlLkW<Devalt2LkSpec> {
         I2c4_0SlLkW::new(self, 7)
     }

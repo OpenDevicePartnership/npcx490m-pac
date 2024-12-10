@@ -84,43 +84,36 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - MDMA1 Power-Down"]
     #[inline(always)]
-    #[must_use]
     pub fn mdma1_pd(&mut self) -> Mdma1PdW<PwdwnCtl9Spec> {
         Mdma1PdW::new(self, 0)
     }
     #[doc = "Bit 1 - MDMA2 Power-Down"]
     #[inline(always)]
-    #[must_use]
     pub fn mdma2_pd(&mut self) -> Mdma2PdW<PwdwnCtl9Spec> {
         Mdma2PdW::new(self, 1)
     }
     #[doc = "Bit 2 - MDMA3 Power-Down"]
     #[inline(always)]
-    #[must_use]
     pub fn mdma3_pd(&mut self) -> Mdma3PdW<PwdwnCtl9Spec> {
         Mdma3PdW::new(self, 2)
     }
     #[doc = "Bit 3 - MDMA4 Power-Down"]
     #[inline(always)]
-    #[must_use]
     pub fn mdma4_pd(&mut self) -> Mdma4PdW<PwdwnCtl9Spec> {
         Mdma4PdW::new(self, 3)
     }
     #[doc = "Bit 4 - MDMA5 Power-Down"]
     #[inline(always)]
-    #[must_use]
     pub fn mdma5_pd(&mut self) -> Mdma5PdW<PwdwnCtl9Spec> {
         Mdma5PdW::new(self, 4)
     }
     #[doc = "Bit 5 - MDMA6 Power-Down"]
     #[inline(always)]
-    #[must_use]
     pub fn mdma6_pd(&mut self) -> Mdma6PdW<PwdwnCtl9Spec> {
         Mdma6PdW::new(self, 5)
     }
     #[doc = "Bit 6 - MDMA7 Power-Down"]
     #[inline(always)]
-    #[must_use]
     pub fn mdma7_pd(&mut self) -> Mdma7PdW<PwdwnCtl9Spec> {
         Mdma7PdW::new(self, 6)
     }

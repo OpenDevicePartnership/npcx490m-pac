@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - Frame Length Timeout"]
     #[inline(always)]
-    #[must_use]
     pub fn fr_len_to(&mut self) -> FrLenToW<SmbnFrtoSpec> {
         FrLenToW::new(self, 0)
     }
     #[doc = "Bit 6 - Frame Timeout Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn frtoie(&mut self) -> FrtoieW<SmbnFrtoSpec> {
         FrtoieW::new(self, 6)
     }
     #[doc = "Bit 7 - Frame Timeout Status"]
     #[inline(always)]
-    #[must_use]
     pub fn frtost(&mut self) -> FrtostW<SmbnFrtoSpec> {
         FrtostW::new(self, 7)
     }

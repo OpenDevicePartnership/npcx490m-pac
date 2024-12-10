@@ -94,49 +94,41 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - PWM0 Power-Down"]
     #[inline(always)]
-    #[must_use]
     pub fn pwm0_pd(&mut self) -> Pwm0PdW<PwdwnCtl2Spec> {
         Pwm0PdW::new(self, 0)
     }
     #[doc = "Bit 1 - PWM1 Power-Down"]
     #[inline(always)]
-    #[must_use]
     pub fn pwm1_pd(&mut self) -> Pwm1PdW<PwdwnCtl2Spec> {
         Pwm1PdW::new(self, 1)
     }
     #[doc = "Bit 2 - PWM2 Power-Down"]
     #[inline(always)]
-    #[must_use]
     pub fn pwm2_pd(&mut self) -> Pwm2PdW<PwdwnCtl2Spec> {
         Pwm2PdW::new(self, 2)
     }
     #[doc = "Bit 3 - PWM3 Power-Down"]
     #[inline(always)]
-    #[must_use]
     pub fn pwm3_pd(&mut self) -> Pwm3PdW<PwdwnCtl2Spec> {
         Pwm3PdW::new(self, 3)
     }
     #[doc = "Bit 4 - PWM4 Power-Down"]
     #[inline(always)]
-    #[must_use]
     pub fn pwm4_pd(&mut self) -> Pwm4PdW<PwdwnCtl2Spec> {
         Pwm4PdW::new(self, 4)
     }
     #[doc = "Bit 5 - PWM5 Power-Down"]
     #[inline(always)]
-    #[must_use]
     pub fn pwm5_pd(&mut self) -> Pwm5PdW<PwdwnCtl2Spec> {
         Pwm5PdW::new(self, 5)
     }
     #[doc = "Bit 6 - PWM6 Power-Down"]
     #[inline(always)]
-    #[must_use]
     pub fn pwm6_pd(&mut self) -> Pwm6PdW<PwdwnCtl2Spec> {
         Pwm6PdW::new(self, 6)
     }
     #[doc = "Bit 7 - PWM7 Power-Down"]
     #[inline(always)]
-    #[must_use]
     pub fn pwm7_pd(&mut self) -> Pwm7PdW<PwdwnCtl2Spec> {
         Pwm7PdW::new(self, 7)
     }

@@ -84,43 +84,36 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - SPI Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn spien(&mut self) -> SpienW<SpipCtl1Spec> {
         SpienW::new(self, 0)
     }
     #[doc = "Bit 2 - Data Interface Mode"]
     #[inline(always)]
-    #[must_use]
     pub fn mod_(&mut self) -> ModW<SpipCtl1Spec> {
         ModW::new(self, 2)
     }
     #[doc = "Bit 5 - Enable Interrupt for Read"]
     #[inline(always)]
-    #[must_use]
     pub fn eir(&mut self) -> EirW<SpipCtl1Spec> {
         EirW::new(self, 5)
     }
     #[doc = "Bit 6 - Enable Interrupt for Write"]
     #[inline(always)]
-    #[must_use]
     pub fn eiw(&mut self) -> EiwW<SpipCtl1Spec> {
         EiwW::new(self, 6)
     }
     #[doc = "Bit 7 - Clocking Mode"]
     #[inline(always)]
-    #[must_use]
     pub fn scm(&mut self) -> ScmW<SpipCtl1Spec> {
         ScmW::new(self, 7)
     }
     #[doc = "Bit 8 - Value of SPI_SCLK when Bus is Idle"]
     #[inline(always)]
-    #[must_use]
     pub fn scidl(&mut self) -> ScidlW<SpipCtl1Spec> {
         ScidlW::new(self, 8)
     }
     #[doc = "Bits 9:15 - Shift Clock Divider Value"]
     #[inline(always)]
-    #[must_use]
     pub fn scdv6_0(&mut self) -> Scdv6_0W<SpipCtl1Spec> {
         Scdv6_0W::new(self, 9)
     }

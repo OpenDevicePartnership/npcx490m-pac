@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Address Byte 0"]
     #[inline(always)]
-    #[must_use]
     pub fn addr_b0(&mut self) -> AddrB0W<UmaAb0_3Spec> {
         AddrB0W::new(self, 0)
     }
     #[doc = "Bits 8:15 - Address Byte 1"]
     #[inline(always)]
-    #[must_use]
     pub fn addr_b1(&mut self) -> AddrB1W<UmaAb0_3Spec> {
         AddrB1W::new(self, 8)
     }
     #[doc = "Bits 16:23 - Address Byte 2"]
     #[inline(always)]
-    #[must_use]
     pub fn addr_b2(&mut self) -> AddrB2W<UmaAb0_3Spec> {
         AddrB2W::new(self, 16)
     }
     #[doc = "Bits 24:31 - Address Byte 3"]
     #[inline(always)]
-    #[must_use]
     pub fn addr_b3(&mut self) -> AddrB3W<UmaAb0_3Spec> {
         AddrB3W::new(self, 24)
     }

@@ -74,37 +74,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - No KSO16 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn no_kso16_sl(&mut self) -> NoKso16SlW<DevaltaSpec> {
         NoKso16SlW::new(self, 0)
     }
     #[doc = "Bit 1 - No KSO17 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn no_kso17_sl(&mut self) -> NoKso17SlW<DevaltaSpec> {
         NoKso17SlW::new(self, 1)
     }
     #[doc = "Bit 2 - 32KHZ_OUT Select"]
     #[inline(always)]
-    #[must_use]
     pub fn _32k_out_sl(&mut self) -> _32kOutSlW<DevaltaSpec> {
         _32kOutSlW::new(self, 2)
     }
     #[doc = "Bit 3 - 32KCLKIN Select"]
     #[inline(always)]
-    #[must_use]
     pub fn _32kclkin_sl(&mut self) -> _32kclkinSlW<DevaltaSpec> {
         _32kclkinSlW::new(self, 3)
     }
     #[doc = "Bit 4 - No VCC1_RST Select"]
     #[inline(always)]
-    #[must_use]
     pub fn no_vcc1_rst(&mut self) -> NoVcc1RstW<DevaltaSpec> {
         NoVcc1RstW::new(self, 4)
     }
     #[doc = "Bit 6 - No PECI Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn no_peci_en(&mut self) -> NoPeciEnW<DevaltaSpec> {
         NoPeciEnW::new(self, 6)
     }

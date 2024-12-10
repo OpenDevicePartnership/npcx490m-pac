@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 2 - Break Transmit"]
     #[inline(always)]
-    #[must_use]
     pub fn brk(&mut self) -> BrkW<UmdslnSpec> {
         BrkW::new(self, 2)
     }
     #[doc = "Bit 4 - Enable Transmit DMA"]
     #[inline(always)]
-    #[must_use]
     pub fn etd(&mut self) -> EtdW<UmdslnSpec> {
         EtdW::new(self, 4)
     }
     #[doc = "Bit 5 - Enable Receive DMA"]
     #[inline(always)]
-    #[must_use]
     pub fn erd(&mut self) -> ErdW<UmdslnSpec> {
         ErdW::new(self, 5)
     }
@@ -74,7 +71,7 @@ impl crate::Writable for UmdslnSpec {
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
 }
-#[doc = "`reset()` method sets UMDSLn to value 0x01"]
+#[doc = "`reset()` method sets UMDSLn to value 0"]
 impl crate::Resettable for UmdslnSpec {
-    const RESET_VALUE: u8 = 0x01;
+    const RESET_VALUE: u8 = 0;
 }

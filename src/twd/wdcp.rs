@@ -22,7 +22,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - default"]
     #[inline(always)]
-    #[must_use]
     pub fn wdiv(&mut self) -> WdivW<WdcpSpec> {
         WdivW::new(self, 0)
     }

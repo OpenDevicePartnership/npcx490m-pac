@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:19 - 20-bit Source Base Address"]
     #[inline(always)]
-    #[must_use]
     pub fn src_base_addr19_0(&mut self) -> SrcBaseAddr19_0W<MdmanSrcb1Spec> {
         SrcBaseAddr19_0W::new(self, 0)
     }
     #[doc = "Bits 20:31 - 12-bit Source Base Address"]
     #[inline(always)]
-    #[must_use]
     pub fn src_base_addr31_20(&mut self) -> SrcBaseAddr31_20W<MdmanSrcb1Spec> {
         SrcBaseAddr31_20W::new(self, 20)
     }

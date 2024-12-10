@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - N Value Bits 5-0"]
     #[inline(always)]
-    #[must_use]
     pub fn hfcgn5_0(&mut self) -> Hfcgn5_0W<HfcgnSpec> {
         Hfcgn5_0W::new(self, 0)
     }
     #[doc = "Bit 6 - 40 MHz Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn _40m_en(&mut self) -> _40mEnW<HfcgnSpec> {
         _40mEnW::new(self, 6)
     }
     #[doc = "Bit 7 - Extended Frequency Range"]
     #[inline(always)]
-    #[must_use]
     pub fn xf_range(&mut self) -> XfRangeW<HfcgnSpec> {
         XfRangeW::new(self, 7)
     }

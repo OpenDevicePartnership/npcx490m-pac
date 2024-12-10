@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - OTP Bit Address"]
     #[inline(always)]
-    #[must_use]
     pub fn bit_addr(&mut self) -> BitAddrW<OtpAddrLSpec> {
         BitAddrW::new(self, 0)
     }
     #[doc = "Bits 3:7 - OTP Byte Address Low"]
     #[inline(always)]
-    #[must_use]
     pub fn addr_l(&mut self) -> AddrLW<OtpAddrLSpec> {
         AddrLW::new(self, 3)
     }

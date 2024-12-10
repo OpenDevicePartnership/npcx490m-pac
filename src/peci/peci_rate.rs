@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - Maximum Bit Rate"]
     #[inline(always)]
-    #[must_use]
     pub fn max_bit_rate(&mut self) -> MaxBitRateW<PeciRateSpec> {
         MaxBitRateW::new(self, 0)
     }
     #[doc = "Bit 6 - Enhanced High-Speed Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn ehsp_en(&mut self) -> EhspEnW<PeciRateSpec> {
         EhspEnW::new(self, 6)
     }
     #[doc = "Bit 7 - PECI High Load Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn hload_en(&mut self) -> HloadEnW<PeciRateSpec> {
         HloadEnW::new(self, 7)
     }

@@ -94,49 +94,41 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Write Protect Sector 0"]
     #[inline(always)]
-    #[must_use]
     pub fn wpr_sk0(&mut self) -> WprSk0W<RamWprAdr70Spec> {
         WprSk0W::new(self, 0)
     }
     #[doc = "Bit 1 - Write Protect Sector 1"]
     #[inline(always)]
-    #[must_use]
     pub fn wpr_sk1(&mut self) -> WprSk1W<RamWprAdr70Spec> {
         WprSk1W::new(self, 1)
     }
     #[doc = "Bit 2 - Write Protect Sector 2"]
     #[inline(always)]
-    #[must_use]
     pub fn wpr_sk2(&mut self) -> WprSk2W<RamWprAdr70Spec> {
         WprSk2W::new(self, 2)
     }
     #[doc = "Bit 3 - Write Protect Sector 3"]
     #[inline(always)]
-    #[must_use]
     pub fn wpr_sk3(&mut self) -> WprSk3W<RamWprAdr70Spec> {
         WprSk3W::new(self, 3)
     }
     #[doc = "Bit 4 - Write Protect Sector 4"]
     #[inline(always)]
-    #[must_use]
     pub fn wpr_sk4(&mut self) -> WprSk4W<RamWprAdr70Spec> {
         WprSk4W::new(self, 4)
     }
     #[doc = "Bit 5 - Write Protect Sector 5"]
     #[inline(always)]
-    #[must_use]
     pub fn wpr_sk5(&mut self) -> WprSk5W<RamWprAdr70Spec> {
         WprSk5W::new(self, 5)
     }
     #[doc = "Bit 6 - Write Protect Sector 6"]
     #[inline(always)]
-    #[must_use]
     pub fn wpr_sk6(&mut self) -> WprSk6W<RamWprAdr70Spec> {
         WprSk6W::new(self, 6)
     }
     #[doc = "Bit 7 - Write Protect Sector 7"]
     #[inline(always)]
-    #[must_use]
     pub fn wpr_sk7(&mut self) -> WprSk7W<RamWprAdr70Spec> {
         WprSk7W::new(self, 7)
     }

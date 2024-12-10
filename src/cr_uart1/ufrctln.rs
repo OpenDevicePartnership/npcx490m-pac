@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - Receive FIFO Full Level Select"]
     #[inline(always)]
-    #[must_use]
     pub fn rfull_level_sel(&mut self) -> RfullLevelSelW<UfrctlnSpec> {
         RfullLevelSelW::new(self, 0)
     }
     #[doc = "Bit 5 - Receive FIFO Full Level Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn rfull_level_en(&mut self) -> RfullLevelEnW<UfrctlnSpec> {
         RfullLevelEnW::new(self, 5)
     }
     #[doc = "Bit 6 - Receive FIFO Not Empty Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn rfifo_nempty_en(&mut self) -> RfifoNemptyEnW<UfrctlnSpec> {
         RfifoNemptyEnW::new(self, 6)
     }
     #[doc = "Bit 7 - Receive Error Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn err_en(&mut self) -> ErrEnW<UfrctlnSpec> {
         ErrEnW::new(self, 7)
     }

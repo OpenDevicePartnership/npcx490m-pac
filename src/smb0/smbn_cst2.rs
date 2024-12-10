@@ -94,49 +94,41 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Match Address 1 Field"]
     #[inline(always)]
-    #[must_use]
     pub fn matcha1f(&mut self) -> Matcha1fW<SmbnCst2Spec> {
         Matcha1fW::new(self, 0)
     }
     #[doc = "Bit 1 - Match Address 2 Field"]
     #[inline(always)]
-    #[must_use]
     pub fn matcha2f(&mut self) -> Matcha2fW<SmbnCst2Spec> {
         Matcha2fW::new(self, 1)
     }
     #[doc = "Bit 2 - Match Address 3 Field"]
     #[inline(always)]
-    #[must_use]
     pub fn matcha3f(&mut self) -> Matcha3fW<SmbnCst2Spec> {
         Matcha3fW::new(self, 2)
     }
     #[doc = "Bit 3 - Match Address 4 Field"]
     #[inline(always)]
-    #[must_use]
     pub fn matcha4f(&mut self) -> Matcha4fW<SmbnCst2Spec> {
         Matcha4fW::new(self, 3)
     }
     #[doc = "Bit 4 - Match Address 5 Field"]
     #[inline(always)]
-    #[must_use]
     pub fn matcha5f(&mut self) -> Matcha5fW<SmbnCst2Spec> {
         Matcha5fW::new(self, 4)
     }
     #[doc = "Bit 5 - Match Address 6 Field"]
     #[inline(always)]
-    #[must_use]
     pub fn matcha6f(&mut self) -> Matcha6fW<SmbnCst2Spec> {
         Matcha6fW::new(self, 5)
     }
     #[doc = "Bit 6 - Match Address 7 Field"]
     #[inline(always)]
-    #[must_use]
     pub fn matcha7f(&mut self) -> Matcha7fW<SmbnCst2Spec> {
         Matcha7fW::new(self, 6)
     }
     #[doc = "Bit 7 - Interrupt Status"]
     #[inline(always)]
-    #[must_use]
     pub fn intsts(&mut self) -> IntstsW<SmbnCst2Spec> {
         IntstsW::new(self, 7)
     }

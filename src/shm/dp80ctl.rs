@@ -84,43 +84,36 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Debug Port 80 Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn dp80en(&mut self) -> Dp80enW<Dp80ctlSpec> {
         Dp80enW::new(self, 0)
     }
     #[doc = "Bit 1 - Enable LPC SYNC"]
     #[inline(always)]
-    #[must_use]
     pub fn syncen(&mut self) -> SyncenW<Dp80ctlSpec> {
         SyncenW::new(self, 1)
     }
     #[doc = "Bit 2 - Read Advance"]
     #[inline(always)]
-    #[must_use]
     pub fn adv(&mut self) -> AdvW<Dp80ctlSpec> {
         AdvW::new(self, 2)
     }
     #[doc = "Bit 3 - Read Auto Advance"]
     #[inline(always)]
-    #[must_use]
     pub fn raa(&mut self) -> RaaW<Dp80ctlSpec> {
         RaaW::new(self, 3)
     }
     #[doc = "Bit 4 - Reset FIFO"]
     #[inline(always)]
-    #[must_use]
     pub fn rfifo(&mut self) -> RfifoW<Dp80ctlSpec> {
         RfifoW::new(self, 4)
     }
     #[doc = "Bit 5 - Core Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn cien(&mut self) -> CienW<Dp80ctlSpec> {
         CienW::new(self, 5)
     }
     #[doc = "Bit 7 - Debug Port 80 Configure for High-Frequency Clock"]
     #[inline(always)]
-    #[must_use]
     pub fn dp80_hf_cfg(&mut self) -> Dp80HfCfgW<Dp80ctlSpec> {
         Dp80HfCfgW::new(self, 7)
     }

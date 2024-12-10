@@ -204,115 +204,96 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Core Peripheral Channel Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn pchanen(&mut self) -> PchanenW<EspicfgSpec> {
         PchanenW::new(self, 0)
     }
     #[doc = "Bit 1 - Core Virtual Wire Channel Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn vwchanen(&mut self) -> VwchanenW<EspicfgSpec> {
         VwchanenW::new(self, 1)
     }
     #[doc = "Bit 2 - Core OOB Channel Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn oobchanen(&mut self) -> OobchanenW<EspicfgSpec> {
         OobchanenW::new(self, 2)
     }
     #[doc = "Bit 3 - Core Flash Access Channel Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn flashchanen(&mut self) -> FlashchanenW<EspicfgSpec> {
         FlashchanenW::new(self, 3)
     }
     #[doc = "Bit 4 - Host Peripheral Channel Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn hpchanen(&mut self) -> HpchanenW<EspicfgSpec> {
         HpchanenW::new(self, 4)
     }
     #[doc = "Bit 5 - Host Virtual Wire Channel Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn hvwchanen(&mut self) -> HvwchanenW<EspicfgSpec> {
         HvwchanenW::new(self, 5)
     }
     #[doc = "Bit 6 - Host OOB Channel Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn hoobchanen(&mut self) -> HoobchanenW<EspicfgSpec> {
         HoobchanenW::new(self, 6)
     }
     #[doc = "Bit 7 - Host Flash Access Channel Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn hflashchanen(&mut self) -> HflashchanenW<EspicfgSpec> {
         HflashchanenW::new(self, 7)
     }
     #[doc = "Bits 8:9 - I/O mode support"]
     #[inline(always)]
-    #[must_use]
     pub fn iomode(&mut self) -> IomodeW<EspicfgSpec> {
         IomodeW::new(self, 8)
     }
     #[doc = "Bits 10:12 - Maximum Frequency Supported"]
     #[inline(always)]
-    #[must_use]
     pub fn maxfreq(&mut self) -> MaxfreqW<EspicfgSpec> {
         MaxfreqW::new(self, 10)
     }
     #[doc = "Bit 16 - Flash Access Channel Mode"]
     #[inline(always)]
-    #[must_use]
     pub fn flchanmode(&mut self) -> FlchanmodeW<EspicfgSpec> {
         FlchanmodeW::new(self, 16)
     }
     #[doc = "Bits 17:19 - Operating Frequency"]
     #[inline(always)]
-    #[must_use]
     pub fn opfreq(&mut self) -> OpfreqW<EspicfgSpec> {
         OpfreqW::new(self, 17)
     }
     #[doc = "Bits 20:21 - I/O Mode Select"]
     #[inline(always)]
-    #[must_use]
     pub fn iomodesel(&mut self) -> IomodeselW<EspicfgSpec> {
         IomodeselW::new(self, 20)
     }
     #[doc = "Bit 22 - ALERT Mode"]
     #[inline(always)]
-    #[must_use]
     pub fn alertmode(&mut self) -> AlertmodeW<EspicfgSpec> {
         AlertmodeW::new(self, 22)
     }
     #[doc = "Bit 23 - CRC Checking Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn crc_chk_en(&mut self) -> CrcChkEnW<EspicfgSpec> {
         CrcChkEnW::new(self, 23)
     }
     #[doc = "Bit 24 - Peripheral Channel Supported"]
     #[inline(always)]
-    #[must_use]
     pub fn pcchn_supp(&mut self) -> PcchnSuppW<EspicfgSpec> {
         PcchnSuppW::new(self, 24)
     }
     #[doc = "Bit 25 - Virtual Wire Channel Supported"]
     #[inline(always)]
-    #[must_use]
     pub fn vwchn_supp(&mut self) -> VwchnSuppW<EspicfgSpec> {
         VwchnSuppW::new(self, 25)
     }
     #[doc = "Bit 26 - OOB Channel Supported"]
     #[inline(always)]
-    #[must_use]
     pub fn oobchn_supp(&mut self) -> OobchnSuppW<EspicfgSpec> {
         OobchnSuppW::new(self, 26)
     }
     #[doc = "Bit 27 - Flash Access Channel Supported"]
     #[inline(always)]
-    #[must_use]
     pub fn flashchn_supp(&mut self) -> FlashchnSuppW<EspicfgSpec> {
         FlashchnSuppW::new(self, 27)
     }

@@ -134,73 +134,61 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Peripheral Channel Posted Receive Free"]
     #[inline(always)]
-    #[must_use]
     pub fn pc_free(&mut self) -> PcFreeW<StatusImgSpec> {
         PcFreeW::new(self, 0)
     }
     #[doc = "Bit 1 - Peripheral Channel Non-Posted Receive. Free"]
     #[inline(always)]
-    #[must_use]
     pub fn np_free(&mut self) -> NpFreeW<StatusImgSpec> {
         NpFreeW::new(self, 1)
     }
     #[doc = "Bit 2 - Virtual Wire Channel Receive Free"]
     #[inline(always)]
-    #[must_use]
     pub fn vwire_free(&mut self) -> VwireFreeW<StatusImgSpec> {
         VwireFreeW::new(self, 2)
     }
     #[doc = "Bit 3 - OOB Channel Posted Receive Free"]
     #[inline(always)]
-    #[must_use]
     pub fn oob_free(&mut self) -> OobFreeW<StatusImgSpec> {
         OobFreeW::new(self, 3)
     }
     #[doc = "Bit 4 - Peripheral Channel Posted/Completion Transmit. Available"]
     #[inline(always)]
-    #[must_use]
     pub fn pc_avail(&mut self) -> PcAvailW<StatusImgSpec> {
         PcAvailW::new(self, 4)
     }
     #[doc = "Bit 5 - Peripheral Channel Non-Posted Transmit Available"]
     #[inline(always)]
-    #[must_use]
     pub fn np_avail(&mut self) -> NpAvailW<StatusImgSpec> {
         NpAvailW::new(self, 5)
     }
     #[doc = "Bit 6 - Virtual Wire Channel Transmit Available"]
     #[inline(always)]
-    #[must_use]
     pub fn vwire_avail(&mut self) -> VwireAvailW<StatusImgSpec> {
         VwireAvailW::new(self, 6)
     }
     #[doc = "Bit 7 - OOB Channel Posted Transmit. Available"]
     #[inline(always)]
-    #[must_use]
     pub fn oob_avail(&mut self) -> OobAvailW<StatusImgSpec> {
         OobAvailW::new(self, 7)
     }
     #[doc = "Bit 8 - Flash Channel Completion Receive Available"]
     #[inline(always)]
-    #[must_use]
     pub fn flash_c_free(&mut self) -> FlashCFreeW<StatusImgSpec> {
         FlashCFreeW::new(self, 8)
     }
     #[doc = "Bit 9 - Flash Channel Non-Posted Receive Free"]
     #[inline(always)]
-    #[must_use]
     pub fn flash_np_free(&mut self) -> FlashNpFreeW<StatusImgSpec> {
         FlashNpFreeW::new(self, 9)
     }
     #[doc = "Bit 12 - Flash Channel Completion Transmit Available"]
     #[inline(always)]
-    #[must_use]
     pub fn flash_c_avail(&mut self) -> FlashCAvailW<StatusImgSpec> {
         FlashCAvailW::new(self, 12)
     }
     #[doc = "Bit 13 - Flash Channel Non-Posted Transmit Available"]
     #[inline(always)]
-    #[must_use]
     pub fn flash_np_avail(&mut self) -> FlashNpAvailW<StatusImgSpec> {
         FlashNpAvailW::new(self, 13)
     }

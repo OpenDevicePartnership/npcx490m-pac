@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:11 - Maximum Duty Cycle Fall Value"]
     #[inline(always)]
-    #[must_use]
     pub fn max_dc_fl11_0(&mut self) -> MaxDcFl11_0W<MaxDcFlnSpec> {
         MaxDcFl11_0W::new(self, 0)
     }

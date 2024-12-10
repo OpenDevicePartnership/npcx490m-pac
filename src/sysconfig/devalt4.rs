@@ -94,49 +94,41 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - PWM0 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn pwm0_sl(&mut self) -> Pwm0SlW<Devalt4Spec> {
         Pwm0SlW::new(self, 0)
     }
     #[doc = "Bit 1 - PWM1 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn pwm1_sl(&mut self) -> Pwm1SlW<Devalt4Spec> {
         Pwm1SlW::new(self, 1)
     }
     #[doc = "Bit 2 - PWM2_TACH2PWM_OUT Select"]
     #[inline(always)]
-    #[must_use]
     pub fn pwm2_pwm_out_sl(&mut self) -> Pwm2PwmOutSlW<Devalt4Spec> {
         Pwm2PwmOutSlW::new(self, 2)
     }
     #[doc = "Bit 3 - PWM3_LED3 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn pwm3_led3_sl(&mut self) -> Pwm3Led3SlW<Devalt4Spec> {
         Pwm3Led3SlW::new(self, 3)
     }
     #[doc = "Bit 4 - PWM4_LED0 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn pwm4_led0_sl(&mut self) -> Pwm4Led0SlW<Devalt4Spec> {
         Pwm4Led0SlW::new(self, 4)
     }
     #[doc = "Bit 5 - PWM5_LED1 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn pwm5_led1_sl(&mut self) -> Pwm5Led1SlW<Devalt4Spec> {
         Pwm5Led1SlW::new(self, 5)
     }
     #[doc = "Bit 6 - PWM6_LED2 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn pwm6_led2_sl(&mut self) -> Pwm6Led2SlW<Devalt4Spec> {
         Pwm6Led2SlW::new(self, 6)
     }
     #[doc = "Bit 7 - PWM7 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn pwm7_sl(&mut self) -> Pwm7SlW<Devalt4Spec> {
         Pwm7SlW::new(self, 7)
     }

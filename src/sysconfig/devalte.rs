@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 6 - CR_SIN4 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn cr_sin4_sl(&mut self) -> CrSin4SlW<DevalteSpec> {
         CrSin4SlW::new(self, 6)
     }
     #[doc = "Bit 7 - CR_SOUT4 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn cr_sout4_sl(&mut self) -> CrSout4SlW<DevalteSpec> {
         CrSout4SlW::new(self, 7)
     }

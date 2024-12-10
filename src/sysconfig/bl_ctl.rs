@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1 - Watchdog Reset Indication"]
     #[inline(always)]
-    #[must_use]
     pub fn wdg_rst_ind(&mut self) -> WdgRstIndW<BlCtlSpec> {
         WdgRstIndW::new(self, 1)
     }
     #[doc = "Bit 2 - Debugger Reset Indication"]
     #[inline(always)]
-    #[must_use]
     pub fn dbg_rst_ind(&mut self) -> DbgRstIndW<BlCtlSpec> {
         DbgRstIndW::new(self, 2)
     }
     #[doc = "Bits 3:4 - BootLoader Search Order"]
     #[inline(always)]
-    #[must_use]
     pub fn bl_srord(&mut self) -> BlSrordW<BlCtlSpec> {
         BlSrordW::new(self, 3)
     }

@@ -94,49 +94,41 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - GPIO03 Low-Voltage Select"]
     #[inline(always)]
-    #[must_use]
     pub fn g03_lv(&mut self) -> G03LvW<LvGpioCtl6Spec> {
         G03LvW::new(self, 0)
     }
     #[doc = "Bit 1 - GPIO05 Low-Voltage Select"]
     #[inline(always)]
-    #[must_use]
     pub fn g05_lv(&mut self) -> G05LvW<LvGpioCtl6Spec> {
         G05LvW::new(self, 1)
     }
     #[doc = "Bit 2 - GPIO04 Low-Voltage Select"]
     #[inline(always)]
-    #[must_use]
     pub fn g04_lv(&mut self) -> G04LvW<LvGpioCtl6Spec> {
         G04LvW::new(self, 2)
     }
     #[doc = "Bit 3 - GPIO06 Low-Voltage Select"]
     #[inline(always)]
-    #[must_use]
     pub fn g06_lv(&mut self) -> G06LvW<LvGpioCtl6Spec> {
         G06LvW::new(self, 3)
     }
     #[doc = "Bit 4 - GPIO07 Low-Voltage Select"]
     #[inline(always)]
-    #[must_use]
     pub fn g07_lv(&mut self) -> G07LvW<LvGpioCtl6Spec> {
         G07LvW::new(self, 4)
     }
     #[doc = "Bit 5 - GPIO10/CR_SIN1 Low-Voltage Select"]
     #[inline(always)]
-    #[must_use]
     pub fn g10_lv(&mut self) -> G10LvW<LvGpioCtl6Spec> {
         G10LvW::new(self, 5)
     }
     #[doc = "Bit 6 - GPIO11/CR_SOUT1 Low-Voltage Select"]
     #[inline(always)]
-    #[must_use]
     pub fn g11_lv(&mut self) -> G11LvW<LvGpioCtl6Spec> {
         G11LvW::new(self, 6)
     }
     #[doc = "Bit 7 - GPIO13 Low-Voltage Select"]
     #[inline(always)]
-    #[must_use]
     pub fn g13_lv(&mut self) -> G13LvW<LvGpioCtl6Spec> {
         G13LvW::new(self, 7)
     }

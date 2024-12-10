@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Simultaneous Read/Write"]
     #[inline(always)]
-    #[must_use]
     pub fn simul(&mut self) -> SimulW<Shicfg2Spec> {
         SimulW::new(self, 0)
     }
     #[doc = "Bit 1 - SHI Busy"]
     #[inline(always)]
-    #[must_use]
     pub fn busy(&mut self) -> BusyW<Shicfg2Spec> {
         BusyW::new(self, 1)
     }
     #[doc = "Bit 2 - Write One Shot"]
     #[inline(always)]
-    #[must_use]
     pub fn oneshot(&mut self) -> OneshotW<Shicfg2Spec> {
         OneshotW::new(self, 2)
     }

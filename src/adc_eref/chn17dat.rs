@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:9 - Channel Data"]
     #[inline(always)]
-    #[must_use]
     pub fn chdat(&mut self) -> ChdatW<Chn17datSpec> {
         ChdatW::new(self, 0)
     }
     #[doc = "Bit 15 - New Conversion Result"]
     #[inline(always)]
-    #[must_use]
     pub fn new(&mut self) -> NewW<Chn17datSpec> {
         NewW::new(self, 15)
     }

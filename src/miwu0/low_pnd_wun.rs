@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - Pending Input"]
     #[inline(always)]
-    #[must_use]
     pub fn pnd_in(&mut self) -> PndInW<LowPndWunSpec> {
         PndInW::new(self, 0)
     }
     #[doc = "Bits 4:7 - Pending Group"]
     #[inline(always)]
-    #[must_use]
     pub fn pnd_grp(&mut self) -> PndGrpW<LowPndWunSpec> {
         PndGrpW::new(self, 4)
     }

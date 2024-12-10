@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Enable Interrupt by Host Read to Offset in Window 1"]
     #[inline(always)]
-    #[must_use]
     pub fn hofs1r_ie(&mut self) -> Hofs1rIeW<HofsCtlSpec> {
         Hofs1rIeW::new(self, 0)
     }
     #[doc = "Bit 1 - Enable Interrupt by Host Write to Offset in Window 1"]
     #[inline(always)]
-    #[must_use]
     pub fn hofs1w_ie(&mut self) -> Hofs1wIeW<HofsCtlSpec> {
         Hofs1wIeW::new(self, 1)
     }
     #[doc = "Bit 2 - Enable Interrupt by Host Read to Offset in Window 2"]
     #[inline(always)]
-    #[must_use]
     pub fn hofs2r_ie(&mut self) -> Hofs2rIeW<HofsCtlSpec> {
         Hofs2rIeW::new(self, 2)
     }
     #[doc = "Bit 3 - Enable Interrupt by Host Write to Offset in Window 2"]
     #[inline(always)]
-    #[must_use]
     pub fn hofs2w_ie(&mut self) -> Hofs2wIeW<HofsCtlSpec> {
         Hofs2wIeW::new(self, 3)
     }

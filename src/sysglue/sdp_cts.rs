@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - SDP Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn sdp_en(&mut self) -> SdpEnW<SdpCtsSpec> {
         SdpEnW::new(self, 0)
     }
     #[doc = "Bit 1 - SDP Mode Select"]
     #[inline(always)]
-    #[must_use]
     pub fn sdp_mod(&mut self) -> SdpModW<SdpCtsSpec> {
         SdpModW::new(self, 1)
     }
     #[doc = "Bit 3 - Dual Port 80 Display"]
     #[inline(always)]
-    #[must_use]
     pub fn dual_p80(&mut self) -> DualP80W<SdpCtsSpec> {
         DualP80W::new(self, 3)
     }

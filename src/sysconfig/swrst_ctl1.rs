@@ -314,181 +314,151 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - GPIO Port 0 Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn gpio0_rst(&mut self) -> Gpio0RstW<SwrstCtl1Spec> {
         Gpio0RstW::new(self, 0)
     }
     #[doc = "Bit 1 - GPIO Port 1 Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn gpio1_rst(&mut self) -> Gpio1RstW<SwrstCtl1Spec> {
         Gpio1RstW::new(self, 1)
     }
     #[doc = "Bit 2 - GPIO Port 2 Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn gpio2_rst(&mut self) -> Gpio2RstW<SwrstCtl1Spec> {
         Gpio2RstW::new(self, 2)
     }
     #[doc = "Bit 3 - GPIO Port 3 Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn gpio3_rst(&mut self) -> Gpio3RstW<SwrstCtl1Spec> {
         Gpio3RstW::new(self, 3)
     }
     #[doc = "Bit 4 - GPIO Port 4 Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn gpio4_rst(&mut self) -> Gpio4RstW<SwrstCtl1Spec> {
         Gpio4RstW::new(self, 4)
     }
     #[doc = "Bit 5 - GPIO Port 5 Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn gpio5_rst(&mut self) -> Gpio5RstW<SwrstCtl1Spec> {
         Gpio5RstW::new(self, 5)
     }
     #[doc = "Bit 6 - GPIO Port 6 Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn gpio6_rst(&mut self) -> Gpio6RstW<SwrstCtl1Spec> {
         Gpio6RstW::new(self, 6)
     }
     #[doc = "Bit 7 - GPIO Port 7 Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn gpio7_rst(&mut self) -> Gpio7RstW<SwrstCtl1Spec> {
         Gpio7RstW::new(self, 7)
     }
     #[doc = "Bit 8 - GPIO Port 8 Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn gpio8_rst(&mut self) -> Gpio8RstW<SwrstCtl1Spec> {
         Gpio8RstW::new(self, 8)
     }
     #[doc = "Bit 9 - GPIO Port 9 Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn gpio9_rst(&mut self) -> Gpio9RstW<SwrstCtl1Spec> {
         Gpio9RstW::new(self, 9)
     }
     #[doc = "Bit 10 - GPIO Port A Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn gpioa_rst(&mut self) -> GpioaRstW<SwrstCtl1Spec> {
         GpioaRstW::new(self, 10)
     }
     #[doc = "Bit 11 - GPIO Port B Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn gpiob_rst(&mut self) -> GpiobRstW<SwrstCtl1Spec> {
         GpiobRstW::new(self, 11)
     }
     #[doc = "Bit 12 - GPIO Port C Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn gpioc_rst(&mut self) -> GpiocRstW<SwrstCtl1Spec> {
         GpiocRstW::new(self, 12)
     }
     #[doc = "Bit 13 - GPIO Port D Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn gpiod_rst(&mut self) -> GpiodRstW<SwrstCtl1Spec> {
         GpiodRstW::new(self, 13)
     }
     #[doc = "Bit 14 - GPIO Port E Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn gpioe_rst(&mut self) -> GpioeRstW<SwrstCtl1Spec> {
         GpioeRstW::new(self, 14)
     }
     #[doc = "Bit 15 - GPIO Port F Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn gpiof_rst(&mut self) -> GpiofRstW<SwrstCtl1Spec> {
         GpiofRstW::new(self, 15)
     }
     #[doc = "Bit 16 - ITIM64 Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn itim64_rst(&mut self) -> Itim64RstW<SwrstCtl1Spec> {
         Itim64RstW::new(self, 16)
     }
     #[doc = "Bit 18 - ITIM32-1 Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn itim32_1_rst(&mut self) -> Itim32_1RstW<SwrstCtl1Spec> {
         Itim32_1RstW::new(self, 18)
     }
     #[doc = "Bit 19 - ITIM32-2 Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn itim32_2_rst(&mut self) -> Itim32_2RstW<SwrstCtl1Spec> {
         Itim32_2RstW::new(self, 19)
     }
     #[doc = "Bit 20 - ITIM32-3 Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn itim32_3_rst(&mut self) -> Itim32_3RstW<SwrstCtl1Spec> {
         Itim32_3RstW::new(self, 20)
     }
     #[doc = "Bit 21 - ITIM32-4 Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn itim32_4_rst(&mut self) -> Itim32_4RstW<SwrstCtl1Spec> {
         Itim32_4RstW::new(self, 21)
     }
     #[doc = "Bit 22 - ITIM32-5 Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn itim32_5_rst(&mut self) -> Itim32_5RstW<SwrstCtl1Spec> {
         Itim32_5RstW::new(self, 22)
     }
     #[doc = "Bit 23 - ITIM32-6 Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn itim32_6_rst(&mut self) -> Itim32_6RstW<SwrstCtl1Spec> {
         Itim32_6RstW::new(self, 23)
     }
     #[doc = "Bit 24 - MIWU2 Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn miwu3_rst(&mut self) -> Miwu3RstW<SwrstCtl1Spec> {
         Miwu3RstW::new(self, 24)
     }
     #[doc = "Bit 25 - MTC Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn mtc_rst(&mut self) -> MtcRstW<SwrstCtl1Spec> {
         MtcRstW::new(self, 25)
     }
     #[doc = "Bit 26 - MIWU0 Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn miwu0_rst(&mut self) -> Miwu0RstW<SwrstCtl1Spec> {
         Miwu0RstW::new(self, 26)
     }
     #[doc = "Bit 27 - MIWU1 Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn miwu1_rst(&mut self) -> Miwu1RstW<SwrstCtl1Spec> {
         Miwu1RstW::new(self, 27)
     }
     #[doc = "Bit 28 - MIWU2 Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn miwu2_rst(&mut self) -> Miwu2RstW<SwrstCtl1Spec> {
         Miwu2RstW::new(self, 28)
     }
     #[doc = "Bit 29 - GDMA1 Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn gdma1_rst(&mut self) -> Gdma1RstW<SwrstCtl1Spec> {
         Gdma1RstW::new(self, 29)
     }
     #[doc = "Bit 30 - GDMA2 Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn gdma2_rst(&mut self) -> Gdma2RstW<SwrstCtl1Spec> {
         Gdma2RstW::new(self, 30)
     }

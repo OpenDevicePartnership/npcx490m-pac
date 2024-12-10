@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 4 - CR_SIN2 Select Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn cr_sin2_sl_lk(&mut self) -> CrSin2SlLkW<DevaltjLkSpec> {
         CrSin2SlLkW::new(self, 4)
     }
     #[doc = "Bit 5 - CR_SOUT2 Select Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn cr_sout2_sl_lk(&mut self) -> CrSout2SlLkW<DevaltjLkSpec> {
         CrSout2SlLkW::new(self, 5)
     }

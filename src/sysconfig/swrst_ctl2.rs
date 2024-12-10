@@ -314,181 +314,151 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - PMC Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn pmc_rst(&mut self) -> PmcRstW<SwrstCtl2Spec> {
         PmcRstW::new(self, 0)
     }
     #[doc = "Bit 3 - SPI Peripheral Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn spip_rst(&mut self) -> SpipRstW<SwrstCtl2Spec> {
         SpipRstW::new(self, 3)
     }
     #[doc = "Bit 4 - ADC_EREF Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn adce_rst(&mut self) -> AdceRstW<SwrstCtl2Spec> {
         AdceRstW::new(self, 4)
     }
     #[doc = "Bit 5 - PECI Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn peci_rst(&mut self) -> PeciRstW<SwrstCtl2Spec> {
         PeciRstW::new(self, 5)
     }
     #[doc = "Bit 6 - CR_UART 2 Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn crurt2_rst(&mut self) -> Crurt2RstW<SwrstCtl2Spec> {
         Crurt2RstW::new(self, 6)
     }
     #[doc = "Bit 7 - ADC_IREF Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn adci_rst(&mut self) -> AdciRstW<SwrstCtl2Spec> {
         AdciRstW::new(self, 7)
     }
     #[doc = "Bit 8 - SMB0 Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn smb0_rst(&mut self) -> Smb0RstW<SwrstCtl2Spec> {
         Smb0RstW::new(self, 8)
     }
     #[doc = "Bit 9 - SMB1 Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn smb1_rst(&mut self) -> Smb1RstW<SwrstCtl2Spec> {
         Smb1RstW::new(self, 9)
     }
     #[doc = "Bit 10 - SMB2 Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn smb2_rst(&mut self) -> Smb2RstW<SwrstCtl2Spec> {
         Smb2RstW::new(self, 10)
     }
     #[doc = "Bit 11 - SMB3 Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn smb3_rst(&mut self) -> Smb3RstW<SwrstCtl2Spec> {
         Smb3RstW::new(self, 11)
     }
     #[doc = "Bit 12 - SMB4 Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn smb4_rst(&mut self) -> Smb4RstW<SwrstCtl2Spec> {
         Smb4RstW::new(self, 12)
     }
     #[doc = "Bit 13 - SMB5 Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn smb5_rst(&mut self) -> Smb5RstW<SwrstCtl2Spec> {
         Smb5RstW::new(self, 13)
     }
     #[doc = "Bit 14 - SMB6 Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn smb6_rst(&mut self) -> Smb6RstW<SwrstCtl2Spec> {
         Smb6RstW::new(self, 14)
     }
     #[doc = "Bit 15 - TWD Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn twd_rst(&mut self) -> TwdRstW<SwrstCtl2Spec> {
         TwdRstW::new(self, 15)
     }
     #[doc = "Bit 16 - PWM0 Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn pwm0_rst(&mut self) -> Pwm0RstW<SwrstCtl2Spec> {
         Pwm0RstW::new(self, 16)
     }
     #[doc = "Bit 17 - PWM1 Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn pwm1_rst(&mut self) -> Pwm1RstW<SwrstCtl2Spec> {
         Pwm1RstW::new(self, 17)
     }
     #[doc = "Bit 18 - PWM2 Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn pwm2_rst(&mut self) -> Pwm2RstW<SwrstCtl2Spec> {
         Pwm2RstW::new(self, 18)
     }
     #[doc = "Bit 19 - PWM3 Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn pwm3_rst(&mut self) -> Pwm3RstW<SwrstCtl2Spec> {
         Pwm3RstW::new(self, 19)
     }
     #[doc = "Bit 20 - PWM4 Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn pwm4_rst(&mut self) -> Pwm4RstW<SwrstCtl2Spec> {
         Pwm4RstW::new(self, 20)
     }
     #[doc = "Bit 21 - PWM5 Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn pwm5_rst(&mut self) -> Pwm5RstW<SwrstCtl2Spec> {
         Pwm5RstW::new(self, 21)
     }
     #[doc = "Bit 22 - PWM6 Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn pwm6_rst(&mut self) -> Pwm6RstW<SwrstCtl2Spec> {
         Pwm6RstW::new(self, 22)
     }
     #[doc = "Bit 23 - PWM7 Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn pwm7_rst(&mut self) -> Pwm7RstW<SwrstCtl2Spec> {
         Pwm7RstW::new(self, 23)
     }
     #[doc = "Bit 24 - MFT16-1 Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn mft16_1_rst(&mut self) -> Mft16_1RstW<SwrstCtl2Spec> {
         Mft16_1RstW::new(self, 24)
     }
     #[doc = "Bit 25 - MFT16-2 Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn mft16_2_rst(&mut self) -> Mft16_2RstW<SwrstCtl2Spec> {
         Mft16_2RstW::new(self, 25)
     }
     #[doc = "Bit 26 - MFT16-3 Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn mft16_3_rst(&mut self) -> Mft16_3RstW<SwrstCtl2Spec> {
         Mft16_3RstW::new(self, 26)
     }
     #[doc = "Bit 27 - SMB7 Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn smb7_rst(&mut self) -> Smb7RstW<SwrstCtl2Spec> {
         Smb7RstW::new(self, 27)
     }
     #[doc = "Bit 28 - CR_UART 1 Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn crurt1_rst(&mut self) -> Crurt1RstW<SwrstCtl2Spec> {
         Crurt1RstW::new(self, 28)
     }
     #[doc = "Bit 29 - PS/2 Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn ps2_rst(&mut self) -> Ps2RstW<SwrstCtl2Spec> {
         Ps2RstW::new(self, 29)
     }
     #[doc = "Bit 30 - SDP Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn sdp_rst(&mut self) -> SdpRstW<SwrstCtl2Spec> {
         SdpRstW::new(self, 30)
     }
     #[doc = "Bit 31 - Keyboard Scan Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn kbs_rst(&mut self) -> KbsRstW<SwrstCtl2Spec> {
         KbsRstW::new(self, 31)
     }

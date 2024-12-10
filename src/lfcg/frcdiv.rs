@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:8 - FRCLK Clock Divisor"]
     #[inline(always)]
-    #[must_use]
     pub fn frcdiv(&mut self) -> FrcdivW<FrcdivSpec> {
         FrcdivW::new(self, 0)
     }

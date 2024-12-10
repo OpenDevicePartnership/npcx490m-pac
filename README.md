@@ -6,26 +6,21 @@ peripherals. The API is generated using
 
 ## Regenerating the PAC
 
-On a unix-style OS, all you need are these commands:
-
 ```console
-$ svd2rust -i svd/NPCX490M.svd --reexport-interrupt \
-	--reexport-core-peripherals --impl-defmt defmt  \
-	--impl-debug --impl-debug-feature debug
+$ svdtools patch patch/NPCX490M.yaml
+$ svd2rust -i svd/NPCX490M.svd.patched --reexport-interrupt --reexport-core-peripherals --ignore-groups --impl-defmt defmt --impl-debug --impl-debug-feature debug
 $ rm -r src/*
 $ form -i lib.rs -o src
 $ rm lib.rs
 $ cargo fmt
-$ cd src
 ```
 
 On windows you need to replace the `/` with `\` and additionally run
 `dos2unix` to convert the line endings, like so:
 
 ```console
-$ svd2rust -i svd/NPCX490M.svd --reexport-interrupt \
-	--reexport-core-peripherals --impl-defmt defmt  \
-	--impl-debug --impl-debug-feature debug
+$ svdtools.exe patch patch\NPCX490M.yaml
+$ svd2rust.exe -i svd\NPCX490M.svd.patched --reexport-interrupt --reexport-core-peripherals --ignore-groups --impl-defmt defmt --impl-debug --impl-debug-feature debug
 $ rm -r src\*
 $ form -i lib.rs -o src
 $ rm lib.rs

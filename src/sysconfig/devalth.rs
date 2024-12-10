@@ -84,43 +84,36 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1 - FLM_CSI Type"]
     #[inline(always)]
-    #[must_use]
     pub fn fcsi_typ(&mut self) -> FcsiTypW<DevalthSpec> {
         FcsiTypW::new(self, 1)
     }
     #[doc = "Bit 2 - DCY_IN Select"]
     #[inline(always)]
-    #[must_use]
     pub fn dcy_in_sl(&mut self) -> DcyInSlW<DevalthSpec> {
         DcyInSlW::new(self, 2)
     }
     #[doc = "Bit 3 - DCY_ECHO Open-Drain Select"]
     #[inline(always)]
-    #[must_use]
     pub fn dcy_echo_od(&mut self) -> DcyEchoOdW<DevalthSpec> {
         DcyEchoOdW::new(self, 3)
     }
     #[doc = "Bit 4 - DCY_ECHO Select"]
     #[inline(always)]
-    #[must_use]
     pub fn dcy_echo_sl(&mut self) -> DcyEchoSlW<DevalthSpec> {
         DcyEchoSlW::new(self, 4)
     }
     #[doc = "Bit 5 - FLM Quad Interface-Select"]
     #[inline(always)]
-    #[must_use]
     pub fn flm_quad(&mut self) -> FlmQuadW<DevalthSpec> {
         FlmQuadW::new(self, 5)
     }
     #[doc = "Bit 6 - FLM in Monitoring Mode"]
     #[inline(always)]
-    #[must_use]
     pub fn flm_mon_md(&mut self) -> FlmMonMdW<DevalthSpec> {
         FlmMonMdW::new(self, 6)
     }
     #[doc = "Bit 7 - FLM Interface-Select"]
     #[inline(always)]
-    #[must_use]
     pub fn flm_sl(&mut self) -> FlmSlW<DevalthSpec> {
         FlmSlW::new(self, 7)
     }

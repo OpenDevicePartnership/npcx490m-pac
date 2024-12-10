@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:6 - WRITE Length"]
     #[inline(always)]
-    #[must_use]
     pub fn write_length(&mut self) -> WriteLengthW<PeciWrLengthSpec> {
         WriteLengthW::new(self, 0)
     }

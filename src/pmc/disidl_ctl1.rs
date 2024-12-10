@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 4 - FIU0 Disable in Idle"]
     #[inline(always)]
-    #[must_use]
     pub fn fiu0_did(&mut self) -> Fiu0DidW<DisidlCtl1Spec> {
         Fiu0DidW::new(self, 4)
     }
     #[doc = "Bit 5 - FIU1 Disable in Idle"]
     #[inline(always)]
-    #[must_use]
     pub fn fiu1_did(&mut self) -> Fiu1DidW<DisidlCtl1Spec> {
         Fiu1DidW::new(self, 5)
     }
     #[doc = "Bit 7 - SHM Access Disable in Idle"]
     #[inline(always)]
-    #[must_use]
     pub fn shm_acc_did(&mut self) -> ShmAccDidW<DisidlCtl1Spec> {
         ShmAccDidW::new(self, 7)
     }

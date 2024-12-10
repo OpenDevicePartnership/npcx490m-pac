@@ -64,31 +64,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Automatic Keyboard Scan Start"]
     #[inline(always)]
-    #[must_use]
     pub fn start(&mut self) -> StartW<KbsctlSpec> {
         StartW::new(self, 0)
     }
     #[doc = "Bit 1 - Keyboard Scan Mode"]
     #[inline(always)]
-    #[must_use]
     pub fn kbsmode(&mut self) -> KbsmodeW<KbsctlSpec> {
         KbsmodeW::new(self, 1)
     }
     #[doc = "Bit 2 - Keyboard Scan Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn kbsien(&mut self) -> KbsienW<KbsctlSpec> {
         KbsienW::new(self, 2)
     }
     #[doc = "Bit 3 - Keyboard Scan Index Increment"]
     #[inline(always)]
-    #[must_use]
     pub fn kbsinc(&mut self) -> KbsincW<KbsctlSpec> {
         KbsincW::new(self, 3)
     }
     #[doc = "Bits 6:7 - Keyboard Outputs High Drive"]
     #[inline(always)]
-    #[must_use]
     pub fn kbhdrv(&mut self) -> KbhdrvW<KbsctlSpec> {
         KbhdrvW::new(self, 6)
     }

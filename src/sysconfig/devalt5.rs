@@ -64,31 +64,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Parallel Trace Signals Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn trace_en(&mut self) -> TraceEnW<Devalt5Spec> {
         TraceEnW::new(self, 0)
     }
     #[doc = "Bit 1 - JTAG Enable Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn jen_lk(&mut self) -> JenLkW<Devalt5Spec> {
         JenLkW::new(self, 1)
     }
     #[doc = "Bit 2 - Intruder Detect 1 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn intrud1_sl(&mut self) -> Intrud1SlW<Devalt5Spec> {
         Intrud1SlW::new(self, 2)
     }
     #[doc = "Bit 3 - Intruder Detect 2 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn intrud2_sl(&mut self) -> Intrud2SlW<Devalt5Spec> {
         Intrud2SlW::new(self, 3)
     }
     #[doc = "Bit 4 - Serial Trace Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn strace_en(&mut self) -> StraceEnW<Devalt5Spec> {
         StraceEnW::new(self, 4)
     }

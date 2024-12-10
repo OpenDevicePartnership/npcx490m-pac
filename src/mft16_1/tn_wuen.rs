@@ -74,37 +74,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Timer Wake-Up A Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn tawen(&mut self) -> TawenW<TnWuenSpec> {
         TawenW::new(self, 0)
     }
     #[doc = "Bit 1 - Timer Wake-Up B Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn tbwen(&mut self) -> TbwenW<TnWuenSpec> {
         TbwenW::new(self, 1)
     }
     #[doc = "Bit 2 - Timer Wake-Up C Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn tcwen(&mut self) -> TcwenW<TnWuenSpec> {
         TcwenW::new(self, 2)
     }
     #[doc = "Bit 3 - Timer Wake-Up D Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn tdwen(&mut self) -> TdwenW<TnWuenSpec> {
         TdwenW::new(self, 3)
     }
     #[doc = "Bit 4 - Timer Wake-Up E Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn tewen(&mut self) -> TewenW<TnWuenSpec> {
         TewenW::new(self, 4)
     }
     #[doc = "Bit 5 - Timer Wake-Up F Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn tfwen(&mut self) -> TfwenW<TnWuenSpec> {
         TfwenW::new(self, 5)
     }

@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - Transmit FIFO Empty Level Select"]
     #[inline(always)]
-    #[must_use]
     pub fn tempty_level_sel(&mut self) -> TemptyLevelSelW<UftctlnSpec> {
         TemptyLevelSelW::new(self, 0)
     }
     #[doc = "Bit 5 - Transmit FIFO Empty Level Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn tempty_level_en(&mut self) -> TemptyLevelEnW<UftctlnSpec> {
         TemptyLevelEnW::new(self, 5)
     }
     #[doc = "Bit 6 - Transmit FIFO Empty Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn tfifo_empty_en(&mut self) -> TfifoEmptyEnW<UftctlnSpec> {
         TfifoEmptyEnW::new(self, 6)
     }
     #[doc = "Bit 7 - No Transmit in Progress Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn nxmip_en(&mut self) -> NxmipEnW<UftctlnSpec> {
         NxmipEnW::new(self, 7)
     }

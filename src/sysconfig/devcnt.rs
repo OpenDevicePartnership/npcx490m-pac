@@ -64,31 +64,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Shared Flash SPI TRI-STATE Mode"]
     #[inline(always)]
-    #[must_use]
     pub fn shd_tris_mode(&mut self) -> ShdTrisModeW<DevcntSpec> {
         ShdTrisModeW::new(self, 0)
     }
     #[doc = "Bits 2:3 - Host Interface Type Select"]
     #[inline(always)]
-    #[must_use]
     pub fn hif_typ_sel(&mut self) -> HifTypSelW<DevcntSpec> {
         HifTypSelW::new(self, 2)
     }
     #[doc = "Bits 4:5 - SPI Interface Type Select"]
     #[inline(always)]
-    #[must_use]
     pub fn spi_typ_sel(&mut self) -> SpiTypSelW<DevcntSpec> {
         SpiTypSelW::new(self, 4)
     }
     #[doc = "Bit 6 - Shared Flash SPI Interface TRI-STATE"]
     #[inline(always)]
-    #[must_use]
     pub fn shd_spi_tris(&mut self) -> ShdSpiTrisW<DevcntSpec> {
         ShdSpiTrisW::new(self, 6)
     }
     #[doc = "Bit 7 - Private Flash SPI Interface TRI-STATE"]
     #[inline(always)]
-    #[must_use]
     pub fn pvt_spi_tris(&mut self) -> PvtSpiTrisW<DevcntSpec> {
         PvtSpiTrisW::new(self, 7)
     }

@@ -64,31 +64,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - Wire 3-0"]
     #[inline(always)]
-    #[must_use]
     pub fn wire3_0(&mut self) -> Wire3_0W<Vwgpsm0157Spec> {
         Wire3_0W::new(self, 0)
     }
     #[doc = "Bits 4:7 - Wire 3-0 Valid"]
     #[inline(always)]
-    #[must_use]
     pub fn wire3_0valid(&mut self) -> Wire3_0validW<Vwgpsm0157Spec> {
         Wire3_0validW::new(self, 4)
     }
     #[doc = "Bit 15 - Index Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn index_en(&mut self) -> IndexEnW<Vwgpsm0157Spec> {
         IndexEnW::new(self, 15)
     }
     #[doc = "Bit 16 - Dirty"]
     #[inline(always)]
-    #[must_use]
     pub fn dirty(&mut self) -> DirtyW<Vwgpsm0157Spec> {
         DirtyW::new(self, 16)
     }
     #[doc = "Bit 17 - Enable PLTRST"]
     #[inline(always)]
-    #[must_use]
     pub fn enpltrst(&mut self) -> EnpltrstW<Vwgpsm0157Spec> {
         EnpltrstW::new(self, 17)
     }

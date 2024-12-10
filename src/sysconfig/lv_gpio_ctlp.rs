@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 6 - INTRUDER1 Low-Voltage Select"]
     #[inline(always)]
-    #[must_use]
     pub fn intrud1_lv(&mut self) -> Intrud1LvW<LvGpioCtlpSpec> {
         Intrud1LvW::new(self, 6)
     }
     #[doc = "Bit 7 - INTRUDER2 Low-Voltage Select"]
     #[inline(always)]
-    #[must_use]
     pub fn intrud2_lv(&mut self) -> Intrud2LvW<LvGpioCtlpSpec> {
         Intrud2LvW::new(self, 7)
     }

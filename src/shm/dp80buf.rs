@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Debug Port 80 Buffered Data"]
     #[inline(always)]
-    #[must_use]
     pub fn dp80buf(&mut self) -> Dp80bufW<Dp80bufSpec> {
         Dp80bufW::new(self, 0)
     }
     #[doc = "Bits 8:10 - Offset Address"]
     #[inline(always)]
-    #[must_use]
     pub fn offs(&mut self) -> OffsW<Dp80bufSpec> {
         OffsW::new(self, 8)
     }
     #[doc = "Bit 11 - Address Range"]
     #[inline(always)]
-    #[must_use]
     pub fn rng(&mut self) -> RngW<Dp80bufSpec> {
         RngW::new(self, 11)
     }

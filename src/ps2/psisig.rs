@@ -94,49 +94,41 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Read Data Signal Channel 0"]
     #[inline(always)]
-    #[must_use]
     pub fn rdat0(&mut self) -> Rdat0W<PsisigSpec> {
         Rdat0W::new(self, 0)
     }
     #[doc = "Bit 1 - Read Data Signal Channel 1"]
     #[inline(always)]
-    #[must_use]
     pub fn rdat1(&mut self) -> Rdat1W<PsisigSpec> {
         Rdat1W::new(self, 1)
     }
     #[doc = "Bit 2 - Read Data Signal Channel 2"]
     #[inline(always)]
-    #[must_use]
     pub fn rdat2(&mut self) -> Rdat2W<PsisigSpec> {
         Rdat2W::new(self, 2)
     }
     #[doc = "Bit 3 - Read Clock Signal Channel 0"]
     #[inline(always)]
-    #[must_use]
     pub fn rclk0(&mut self) -> Rclk0W<PsisigSpec> {
         Rclk0W::new(self, 3)
     }
     #[doc = "Bit 4 - Read Clock Signal Channel 1"]
     #[inline(always)]
-    #[must_use]
     pub fn rclk1(&mut self) -> Rclk1W<PsisigSpec> {
         Rclk1W::new(self, 4)
     }
     #[doc = "Bit 5 - Read Clock Signal Channel 2"]
     #[inline(always)]
-    #[must_use]
     pub fn rclk2(&mut self) -> Rclk2W<PsisigSpec> {
         Rclk2W::new(self, 5)
     }
     #[doc = "Bit 6 - Read Data Signal Channel 3"]
     #[inline(always)]
-    #[must_use]
     pub fn rdat3(&mut self) -> Rdat3W<PsisigSpec> {
         Rdat3W::new(self, 6)
     }
     #[doc = "Bit 7 - Read Clock Signal Channel 3"]
     #[inline(always)]
-    #[must_use]
     pub fn rclk3(&mut self) -> Rclk3W<PsisigSpec> {
         Rclk3W::new(self, 7)
     }

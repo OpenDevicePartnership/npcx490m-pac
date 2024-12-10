@@ -124,67 +124,56 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 15 - MDC Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn mdc_rst_lk(&mut self) -> MdcRstLkW<SwrstCtl4LkSpec> {
         MdcRstLkW::new(self, 15)
     }
     #[doc = "Bit 16 - FIU0 Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn fiu0_rst_lk(&mut self) -> Fiu0RstLkW<SwrstCtl4LkSpec> {
         Fiu0RstLkW::new(self, 16)
     }
     #[doc = "Bit 17 - FIU1 Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn fiu1_rst_lk(&mut self) -> Fiu1RstLkW<SwrstCtl4LkSpec> {
         Fiu1RstLkW::new(self, 17)
     }
     #[doc = "Bit 24 - MDMA1 Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn mdma1_rst_lk(&mut self) -> Mdma1RstLkW<SwrstCtl4LkSpec> {
         Mdma1RstLkW::new(self, 24)
     }
     #[doc = "Bit 25 - MDMA2 Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn mdma2_rst_lk(&mut self) -> Mdma2RstLkW<SwrstCtl4LkSpec> {
         Mdma2RstLkW::new(self, 25)
     }
     #[doc = "Bit 26 - MDMA3 Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn mdma3_rst_lk(&mut self) -> Mdma3RstLkW<SwrstCtl4LkSpec> {
         Mdma3RstLkW::new(self, 26)
     }
     #[doc = "Bit 27 - MDMA4 Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn mdma4_rst_lk(&mut self) -> Mdma4RstLkW<SwrstCtl4LkSpec> {
         Mdma4RstLkW::new(self, 27)
     }
     #[doc = "Bit 28 - MDMA5 Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn mdma5_rst_lk(&mut self) -> Mdma5RstLkW<SwrstCtl4LkSpec> {
         Mdma5RstLkW::new(self, 28)
     }
     #[doc = "Bit 29 - MDMA6 Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn mdma6_rst_lk(&mut self) -> Mdma6RstLkW<SwrstCtl4LkSpec> {
         Mdma6RstLkW::new(self, 29)
     }
     #[doc = "Bit 30 - MDMA7 Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn mdma7_rst_lk(&mut self) -> Mdma7RstLkW<SwrstCtl4LkSpec> {
         Mdma7RstLkW::new(self, 30)
     }
     #[doc = "Bit 31 - FLM Reset Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn flm_rst_lk(&mut self) -> FlmRstLkW<SwrstCtl4LkSpec> {
         FlmRstLkW::new(self, 31)
     }

@@ -1,7 +1,7 @@
-#[doc = "Register `FLM_TCCA%s` reader"]
-pub type R = crate::R<FlmTccaSpec>;
-#[doc = "Register `FLM_TCCA%s` writer"]
-pub type W = crate::W<FlmTccaSpec>;
+#[doc = "Register `FLM_TCCA0` reader"]
+pub type R = crate::R<FlmTcca0Spec>;
+#[doc = "Register `FLM_TCCA0` writer"]
+pub type W = crate::W<FlmTcca0Spec>;
 #[doc = "Field `CMDCE` reader - CMD Count Enable"]
 pub type CmdceR = crate::FieldReader;
 #[doc = "Field `CMDCE` writer - CMD Count Enable"]
@@ -25,7 +25,7 @@ impl R {
 #[cfg(feature = "debug")]
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("FLM_TCCA")
+        f.debug_struct("FLM_TCCA0")
             .field("cmdce", &self.cmdce())
             .field("cmbce", &self.cmbce())
             .finish()
@@ -34,31 +34,29 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - CMD Count Enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmdce(&mut self) -> CmdceW<FlmTccaSpec> {
+    pub fn cmdce(&mut self) -> CmdceW<FlmTcca0Spec> {
         CmdceW::new(self, 0)
     }
     #[doc = "Bits 8:15 - CMB Count Enable"]
     #[inline(always)]
-    #[must_use]
-    pub fn cmbce(&mut self) -> CmbceW<FlmTccaSpec> {
+    pub fn cmbce(&mut self) -> CmbceW<FlmTcca0Spec> {
         CmbceW::new(self, 8)
     }
 }
-#[doc = "FLM Transaction Counter Control Register A%s\n\nYou can [`read`](crate::Reg::read) this register and get [`flm_tcca::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`flm_tcca::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct FlmTccaSpec;
-impl crate::RegisterSpec for FlmTccaSpec {
+#[doc = "FLM Transaction Counter Control Register A0-A3 (FLM_TCCA)\n\nYou can [`read`](crate::Reg::read) this register and get [`flm_tcca0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`flm_tcca0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct FlmTcca0Spec;
+impl crate::RegisterSpec for FlmTcca0Spec {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [`flm_tcca::R`](R) reader structure"]
-impl crate::Readable for FlmTccaSpec {}
-#[doc = "`write(|w| ..)` method takes [`flm_tcca::W`](W) writer structure"]
-impl crate::Writable for FlmTccaSpec {
+#[doc = "`read()` method returns [`flm_tcca0::R`](R) reader structure"]
+impl crate::Readable for FlmTcca0Spec {}
+#[doc = "`write(|w| ..)` method takes [`flm_tcca0::W`](W) writer structure"]
+impl crate::Writable for FlmTcca0Spec {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets FLM_TCCA%s to value 0"]
-impl crate::Resettable for FlmTccaSpec {
+#[doc = "`reset()` method sets FLM_TCCA0 to value 0"]
+impl crate::Resettable for FlmTcca0Spec {
     const RESET_VALUE: u32 = 0;
 }

@@ -114,61 +114,51 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - ADC Module Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn adcen(&mut self) -> AdcenW<AdccnfSpec> {
         AdcenW::new(self, 0)
     }
     #[doc = "Bits 1:2 - ADC Conversion Mode"]
     #[inline(always)]
-    #[must_use]
     pub fn adcmd(&mut self) -> AdcmdW<AdccnfSpec> {
         AdcmdW::new(self, 1)
     }
     #[doc = "Bit 3 - ADC Repetitive Mode"]
     #[inline(always)]
-    #[must_use]
     pub fn adcrptc(&mut self) -> AdcrptcW<AdccnfSpec> {
         AdcrptcW::new(self, 3)
     }
     #[doc = "Bit 4 - ADC Start Conversion"]
     #[inline(always)]
-    #[must_use]
     pub fn start(&mut self) -> StartW<AdccnfSpec> {
         StartW::new(self, 4)
     }
     #[doc = "Bit 5 - ADC Timer-Triggered Conversion Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn adctte(&mut self) -> AdctteW<AdccnfSpec> {
         AdctteW::new(self, 5)
     }
     #[doc = "Bit 6 - Interrupt from End Of Conversion Event Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn intecen(&mut self) -> IntecenW<AdccnfSpec> {
         IntecenW::new(self, 6)
     }
     #[doc = "Bit 7 - Interrupt from End Of Cyclic-Conversion Event Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn inteccen(&mut self) -> InteccenW<AdccnfSpec> {
         InteccenW::new(self, 7)
     }
     #[doc = "Bit 8 - Interrupt from End Of Timer-Triggered Conversion Event Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn intetcen(&mut self) -> IntetcenW<AdccnfSpec> {
         IntetcenW::new(self, 8)
     }
     #[doc = "Bit 9 - Interrupt from Data Overflow Event Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn intovfen(&mut self) -> IntovfenW<AdccnfSpec> {
         IntovfenW::new(self, 9)
     }
     #[doc = "Bit 11 - ADC Stop Conversion"]
     #[inline(always)]
-    #[must_use]
     pub fn stop(&mut self) -> StopW<AdccnfSpec> {
         StopW::new(self, 11)
     }

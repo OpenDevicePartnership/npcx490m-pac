@@ -94,49 +94,41 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Module Busy"]
     #[inline(always)]
-    #[must_use]
     pub fn busy(&mut self) -> BusyW<SmbnCstSpec> {
         BusyW::new(self, 0)
     }
     #[doc = "Bit 1 - Bus Busy"]
     #[inline(always)]
-    #[must_use]
     pub fn bb(&mut self) -> BbW<SmbnCstSpec> {
         BbW::new(self, 1)
     }
     #[doc = "Bit 2 - Address Match"]
     #[inline(always)]
-    #[must_use]
     pub fn match_(&mut self) -> MatchW<SmbnCstSpec> {
         MatchW::new(self, 2)
     }
     #[doc = "Bit 3 - Global Call Match"]
     #[inline(always)]
-    #[must_use]
     pub fn gcmatch(&mut self) -> GcmatchW<SmbnCstSpec> {
         GcmatchW::new(self, 3)
     }
     #[doc = "Bit 4 - Test SDA Line"]
     #[inline(always)]
-    #[must_use]
     pub fn tsda(&mut self) -> TsdaW<SmbnCstSpec> {
         TsdaW::new(self, 4)
     }
     #[doc = "Bit 5 - Toggle SCL Line"]
     #[inline(always)]
-    #[must_use]
     pub fn tgscl(&mut self) -> TgsclW<SmbnCstSpec> {
         TgsclW::new(self, 5)
     }
     #[doc = "Bit 6 - Match Address Field"]
     #[inline(always)]
-    #[must_use]
     pub fn matchaf(&mut self) -> MatchafW<SmbnCstSpec> {
         MatchafW::new(self, 6)
     }
     #[doc = "Bit 7 - ARP Address Match"]
     #[inline(always)]
-    #[must_use]
     pub fn arpmatch(&mut self) -> ArpmatchW<SmbnCstSpec> {
         ArpmatchW::new(self, 7)
     }

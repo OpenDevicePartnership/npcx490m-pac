@@ -64,31 +64,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Start Of Transaction"]
     #[inline(always)]
-    #[must_use]
     pub fn sot(&mut self) -> SotW<PstatSpec> {
         SotW::new(self, 0)
     }
     #[doc = "Bit 1 - End Of Transaction"]
     #[inline(always)]
-    #[must_use]
     pub fn eot(&mut self) -> EotW<PstatSpec> {
         EotW::new(self, 1)
     }
     #[doc = "Bit 2 - Parity Error"]
     #[inline(always)]
-    #[must_use]
     pub fn perr(&mut self) -> PerrW<PstatSpec> {
         PerrW::new(self, 2)
     }
     #[doc = "Bits 3:5 - Active Channel"]
     #[inline(always)]
-    #[must_use]
     pub fn ach(&mut self) -> AchW<PstatSpec> {
         AchW::new(self, 3)
     }
     #[doc = "Bit 6 - Receive Frame Error"]
     #[inline(always)]
-    #[must_use]
     pub fn rferr(&mut self) -> RferrW<PstatSpec> {
         RferrW::new(self, 6)
     }

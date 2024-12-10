@@ -94,49 +94,41 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - No KSO00 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn no_kso00_sl(&mut self) -> NoKso00SlW<Devalt8Spec> {
         NoKso00SlW::new(self, 0)
     }
     #[doc = "Bit 1 - No KSO01 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn no_kso01_sl(&mut self) -> NoKso01SlW<Devalt8Spec> {
         NoKso01SlW::new(self, 1)
     }
     #[doc = "Bit 2 - No KSO02 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn no_kso02_sl(&mut self) -> NoKso02SlW<Devalt8Spec> {
         NoKso02SlW::new(self, 2)
     }
     #[doc = "Bit 3 - No KSO03 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn no_kso03_sl(&mut self) -> NoKso03SlW<Devalt8Spec> {
         NoKso03SlW::new(self, 3)
     }
     #[doc = "Bit 4 - No KSO04 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn no_kso04_sl(&mut self) -> NoKso04SlW<Devalt8Spec> {
         NoKso04SlW::new(self, 4)
     }
     #[doc = "Bit 5 - No KSO05 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn no_kso05_sl(&mut self) -> NoKso05SlW<Devalt8Spec> {
         NoKso05SlW::new(self, 5)
     }
     #[doc = "Bit 6 - No KSO06 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn no_kso06_sl(&mut self) -> NoKso06SlW<Devalt8Spec> {
         NoKso06SlW::new(self, 6)
     }
     #[doc = "Bit 7 - No KSO07 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn no_kso07_sl(&mut self) -> NoKso07SlW<Devalt8Spec> {
         NoKso07SlW::new(self, 7)
     }
