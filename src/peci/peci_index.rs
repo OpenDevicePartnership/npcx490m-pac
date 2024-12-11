@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - Data Index"]
     #[inline(always)]
-    #[must_use]
     pub fn data_index(&mut self) -> DataIndexW<PeciIndexSpec> {
         DataIndexW::new(self, 0)
     }

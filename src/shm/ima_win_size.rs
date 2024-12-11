@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - Indirect Memory Access Size Select"]
     #[inline(always)]
-    #[must_use]
     pub fn ima_size(&mut self) -> ImaSizeW<ImaWinSizeSpec> {
         ImaSizeW::new(self, 0)
     }

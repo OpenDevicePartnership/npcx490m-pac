@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - SDA Hold Time"]
     #[inline(always)]
-    #[must_use]
     pub fn hldt(&mut self) -> HldtW<SmbnCtl4Spec> {
         HldtW::new(self, 0)
     }
     #[doc = "Bit 7 - Level Control Write Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn lvl_we(&mut self) -> LvlWeW<SmbnCtl4Spec> {
         LvlWeW::new(self, 7)
     }

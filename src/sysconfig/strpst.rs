@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1 - TRI-STATE Test Mode"]
     #[inline(always)]
-    #[must_use]
     pub fn ntris(&mut self) -> NtrisW<StrpstSpec> {
         NtrisW::new(self, 1)
     }
     #[doc = "Bit 2 - XOR-Tree Test Mode"]
     #[inline(always)]
-    #[must_use]
     pub fn ntest(&mut self) -> NtestW<StrpstSpec> {
         NtestW::new(self, 2)
     }
     #[doc = "Bit 5 - JTAG Strap"]
     #[inline(always)]
-    #[must_use]
     pub fn njen(&mut self) -> NjenW<StrpstSpec> {
         NjenW::new(self, 5)
     }

@@ -22,7 +22,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Host Version ID"]
     #[inline(always)]
-    #[must_use]
     pub fn id(&mut self) -> IdW<EspiidSpec> {
         IdW::new(self, 0)
     }

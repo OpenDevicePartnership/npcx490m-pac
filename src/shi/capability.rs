@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - Input Buffer Size"]
     #[inline(always)]
-    #[must_use]
     pub fn ibsz(&mut self) -> IbszW<CapabilitySpec> {
         IbszW::new(self, 0)
     }
     #[doc = "Bits 4:7 - 128-Byte Payload Buffer Size"]
     #[inline(always)]
-    #[must_use]
     pub fn obsz(&mut self) -> ObszW<CapabilitySpec> {
         ObszW::new(self, 4)
     }

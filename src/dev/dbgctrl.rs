@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 4 - Wake-Up by Detection Sequence, Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn seq_wk_en(&mut self) -> SeqWkEnW<DbgctrlSpec> {
         SeqWkEnW::new(self, 4)
     }

@@ -274,157 +274,131 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - IBRST Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn ibrstie(&mut self) -> IbrstieW<EspiieSpec> {
         IbrstieW::new(self, 0)
     }
     #[doc = "Bit 1 - CFGUPD Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn cfgupdie(&mut self) -> CfgupdieW<EspiieSpec> {
         CfgupdieW::new(self, 1)
     }
     #[doc = "Bit 2 - BERR Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn berrie(&mut self) -> BerrieW<EspiieSpec> {
         BerrieW::new(self, 2)
     }
     #[doc = "Bit 3 - OOBRX Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn oobrxie(&mut self) -> OobrxieW<EspiieSpec> {
         OobrxieW::new(self, 3)
     }
     #[doc = "Bit 4 - FLASHRX Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn flashrxie(&mut self) -> FlashrxieW<EspiieSpec> {
         FlashrxieW::new(self, 4)
     }
     #[doc = "Bit 5 - FLNACS Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn flnacsie(&mut self) -> FlnacsieW<EspiieSpec> {
         FlnacsieW::new(self, 5)
     }
     #[doc = "Bit 6 - PERACC Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn peraccie(&mut self) -> PeraccieW<EspiieSpec> {
         PeraccieW::new(self, 6)
     }
     #[doc = "Bit 7 - DFRD Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn dfrdie(&mut self) -> DfrdieW<EspiieSpec> {
         DfrdieW::new(self, 7)
     }
     #[doc = "Bit 8 - VWUPD Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn vwupdie(&mut self) -> VwupdieW<EspiieSpec> {
         VwupdieW::new(self, 8)
     }
     #[doc = "Bit 9 - eSPI_RST Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn espirstie(&mut self) -> EspirstieW<EspiieSpec> {
         EspirstieW::new(self, 9)
     }
     #[doc = "Bit 10 - PLTRST Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn pltrstie(&mut self) -> PltrstieW<EspiieSpec> {
         PltrstieW::new(self, 10)
     }
     #[doc = "Bit 15 - AMERR Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn amerrie(&mut self) -> AmerrieW<EspiieSpec> {
         AmerrieW::new(self, 15)
     }
     #[doc = "Bit 16 - AMDONE Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn amdoneie(&mut self) -> AmdoneieW<EspiieSpec> {
         AmdoneieW::new(self, 16)
     }
     #[doc = "Bit 18 - FLNPRQS Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn flnprqsie(&mut self) -> FlnprqsieW<EspiieSpec> {
         FlnprqsieW::new(self, 18)
     }
     #[doc = "Bit 19 - BMTXDONE Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn bmtxdoneie(&mut self) -> BmtxdoneieW<EspiieSpec> {
         BmtxdoneieW::new(self, 19)
     }
     #[doc = "Bit 20 - PBMRX Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn pbmrxie(&mut self) -> PbmrxieW<EspiieSpec> {
         PbmrxieW::new(self, 20)
     }
     #[doc = "Bit 21 - PMSGRX Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn pmsgrxie(&mut self) -> PmsgrxieW<EspiieSpec> {
         PmsgrxieW::new(self, 21)
     }
     #[doc = "Bit 22 - BMBURSTERR Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn bmbursterrie(&mut self) -> BmbursterrieW<EspiieSpec> {
         BmbursterrieW::new(self, 22)
     }
     #[doc = "Bit 23 - BMBURSTDONE Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn bmburstdoneie(&mut self) -> BmburstdoneieW<EspiieSpec> {
         BmburstdoneieW::new(self, 23)
     }
     #[doc = "Bit 25 - FLPRTERR Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn flprterrie(&mut self) -> FlprterrieW<EspiieSpec> {
         FlprterrieW::new(self, 25)
     }
     #[doc = "Bit 26 - FLAUTORDSTR Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn flautordstrie(&mut self) -> FlautordstrieW<EspiieSpec> {
         FlautordstrieW::new(self, 26)
     }
     #[doc = "Bit 27 - FLAUTORDPND Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn flautordpndie(&mut self) -> FlautordpndieW<EspiieSpec> {
         FlautordpndieW::new(self, 27)
     }
     #[doc = "Bit 28 - FLAUTORDQEMP Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn flautordqempie(&mut self) -> FlautordqempieW<EspiieSpec> {
         FlautordqempieW::new(self, 28)
     }
     #[doc = "Bit 29 - AUTO_RD_DIS_STS Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn flautorddisie(&mut self) -> FlautorddisieW<EspiieSpec> {
         FlautorddisieW::new(self, 29)
     }
     #[doc = "Bit 30 - BMWRBURSTERR Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn bmwbursterrie(&mut self) -> BmwbursterrieW<EspiieSpec> {
         BmwbursterrieW::new(self, 30)
     }
     #[doc = "Bit 31 - BMWBURSTDONE Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn bmwburstdoneie(&mut self) -> BmwburstdoneieW<EspiieSpec> {
         BmwburstdoneieW::new(self, 31)
     }

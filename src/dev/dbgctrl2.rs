@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - Closed Case Development Select"]
     #[inline(always)]
-    #[must_use]
     pub fn ccdev_sel(&mut self) -> CcdevSelW<Dbgctrl2Spec> {
         CcdevSelW::new(self, 0)
     }
     #[doc = "Bit 6 - Port80 Spew Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn p80_spew_en(&mut self) -> P80SpewEnW<Dbgctrl2Spec> {
         P80SpewEnW::new(self, 6)
     }
     #[doc = "Bit 7 - Closed Case Development Connector Direction"]
     #[inline(always)]
-    #[must_use]
     pub fn ccdev_dir(&mut self) -> CcdevDirW<Dbgctrl2Spec> {
         CcdevDirW::new(self, 7)
     }

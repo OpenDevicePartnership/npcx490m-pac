@@ -74,37 +74,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - 1.8V Host Interface Supply Level"]
     #[inline(always)]
-    #[must_use]
     pub fn vhif18_exist(&mut self) -> Vhif18ExistW<SpstsSpec> {
         Vhif18ExistW::new(self, 0)
     }
     #[doc = "Bit 1 - 3.3V Host Interface Supply Level"]
     #[inline(always)]
-    #[must_use]
     pub fn vhif33_exist(&mut self) -> Vhif33ExistW<SpstsSpec> {
         Vhif33ExistW::new(self, 1)
     }
     #[doc = "Bit 2 - 1.8V SPI Flash Supply Level"]
     #[inline(always)]
-    #[must_use]
     pub fn vspi18_exist(&mut self) -> Vspi18ExistW<SpstsSpec> {
         Vspi18ExistW::new(self, 2)
     }
     #[doc = "Bit 3 - 3.3V SPI Flash Supply Level"]
     #[inline(always)]
-    #[must_use]
     pub fn vspi33_exist(&mut self) -> Vspi33ExistW<SpstsSpec> {
         Vspi33ExistW::new(self, 3)
     }
     #[doc = "Bit 4 - 1.8V VCIO Supply Level"]
     #[inline(always)]
-    #[must_use]
     pub fn vcio18_exist(&mut self) -> Vcio18ExistW<SpstsSpec> {
         Vcio18ExistW::new(self, 4)
     }
     #[doc = "Bit 5 - 3.3V VCIO Supply Level"]
     #[inline(always)]
-    #[must_use]
     pub fn vcio33_exist(&mut self) -> Vcio33ExistW<SpstsSpec> {
         Vcio33ExistW::new(self, 5)
     }

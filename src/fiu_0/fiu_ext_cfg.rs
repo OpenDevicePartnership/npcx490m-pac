@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1 - Device 'n' Set Read Command Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn dn_set_rd_cmd_en(&mut self) -> DnSetRdCmdEnW<FiuExtCfgSpec> {
         DnSetRdCmdEnW::new(self, 1)
     }
     #[doc = "Bit 2 - Device 'n' Set Dummy Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn dn_set_dmm_en(&mut self) -> DnSetDmmEnW<FiuExtCfgSpec> {
         DnSetDmmEnW::new(self, 2)
     }
     #[doc = "Bit 6 - SPI Bus, Two Devices Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn spi_2dev(&mut self) -> Spi2devW<FiuExtCfgSpec> {
         Spi2devW::new(self, 6)
     }
     #[doc = "Bit 7 - SPI0 Low Device Number"]
     #[inline(always)]
-    #[must_use]
     pub fn spi_lo_dev_num(&mut self) -> SpiLoDevNumW<FiuExtCfgSpec> {
         SpiLoDevNumW::new(self, 7)
     }

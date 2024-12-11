@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - RAM Power-Down Data Block 0"]
     #[inline(always)]
-    #[must_use]
     pub fn ram_pd_bkd0(&mut self) -> RamPdBkd0W<RamPd3Spec> {
         RamPdBkd0W::new(self, 0)
     }
     #[doc = "Bit 1 - RAM Power-Down Data Block 1"]
     #[inline(always)]
-    #[must_use]
     pub fn ram_pd_bkd1(&mut self) -> RamPdBkd1W<RamPd3Spec> {
         RamPdBkd1W::new(self, 1)
     }
     #[doc = "Bit 2 - RAM Power-Down Data Block 2"]
     #[inline(always)]
-    #[must_use]
     pub fn ram_pd_bkd2(&mut self) -> RamPdBkd2W<RamPd3Spec> {
         RamPdBkd2W::new(self, 2)
     }

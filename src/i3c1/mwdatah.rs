@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - First Data Byte"]
     #[inline(always)]
-    #[must_use]
     pub fn data0(&mut self) -> Data0W<MwdatahSpec> {
         Data0W::new(self, 0)
     }
     #[doc = "Bits 8:15 - Second Data Byte"]
     #[inline(always)]
-    #[must_use]
     pub fn data1(&mut self) -> Data1W<MwdatahSpec> {
         Data1W::new(self, 8)
     }
     #[doc = "Bit 16 - End of Data"]
     #[inline(always)]
-    #[must_use]
     pub fn end(&mut self) -> EndW<MwdatahSpec> {
         EndW::new(self, 16)
     }

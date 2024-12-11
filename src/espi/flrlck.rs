@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Target-Attached Flash Protection Reversible Global Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn saf_prot_rglk(&mut self) -> SafProtRglkW<FlrlckSpec> {
         SafProtRglkW::new(self, 0)
     }
     #[doc = "Bits 8:15 - Target-Attached Flash Remap Reversible Global Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn saf_rmap_rglk(&mut self) -> SafRmapRglkW<FlrlckSpec> {
         SafRmapRglkW::new(self, 8)
     }

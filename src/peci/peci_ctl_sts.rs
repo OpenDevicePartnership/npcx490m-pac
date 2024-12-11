@@ -74,37 +74,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Start/Busy"]
     #[inline(always)]
-    #[must_use]
     pub fn start_busy(&mut self) -> StartBusyW<PeciCtlStsSpec> {
         StartBusyW::new(self, 0)
     }
     #[doc = "Bit 1 - Done"]
     #[inline(always)]
-    #[must_use]
     pub fn done(&mut self) -> DoneW<PeciCtlStsSpec> {
         DoneW::new(self, 1)
     }
     #[doc = "Bit 3 - CRC Error"]
     #[inline(always)]
-    #[must_use]
     pub fn crc_err(&mut self) -> CrcErrW<PeciCtlStsSpec> {
         CrcErrW::new(self, 3)
     }
     #[doc = "Bit 4 - Abort Error"]
     #[inline(always)]
-    #[must_use]
     pub fn abrt_err(&mut self) -> AbrtErrW<PeciCtlStsSpec> {
         AbrtErrW::new(self, 4)
     }
     #[doc = "Bit 5 - Assured Write FCS Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn awfcs_en(&mut self) -> AwfcsEnW<PeciCtlStsSpec> {
         AwfcsEnW::new(self, 5)
     }
     #[doc = "Bit 6 - DONE Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn done_en(&mut self) -> DoneEnW<PeciCtlStsSpec> {
         DoneEnW::new(self, 6)
     }

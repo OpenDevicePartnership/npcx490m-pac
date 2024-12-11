@@ -94,49 +94,41 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - AD0 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn ad0_sl(&mut self) -> Ad0SlW<Devalt6Spec> {
         Ad0SlW::new(self, 0)
     }
     #[doc = "Bit 1 - AD1 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn ad1_sl(&mut self) -> Ad1SlW<Devalt6Spec> {
         Ad1SlW::new(self, 1)
     }
     #[doc = "Bit 2 - AD2 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn ad2_sl(&mut self) -> Ad2SlW<Devalt6Spec> {
         Ad2SlW::new(self, 2)
     }
     #[doc = "Bit 3 - AD3 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn ad3_sl(&mut self) -> Ad3SlW<Devalt6Spec> {
         Ad3SlW::new(self, 3)
     }
     #[doc = "Bit 4 - AD4 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn ad4_sl(&mut self) -> Ad4SlW<Devalt6Spec> {
         Ad4SlW::new(self, 4)
     }
     #[doc = "Bit 5 - SMBus/I2C Module 6, Bus 1 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn i2c6_1_sl(&mut self) -> I2c6_1SlW<Devalt6Spec> {
         I2c6_1SlW::new(self, 5)
     }
     #[doc = "Bit 6 - SMBus/I2C Module 5, Bus 1 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn i2c5_1_sl(&mut self) -> I2c5_1SlW<Devalt6Spec> {
         I2c5_1SlW::new(self, 6)
     }
     #[doc = "Bit 7 - SMBus/I2C Module 4, Bus 1 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn i2c4_1_sl(&mut self) -> I2c4_1SlW<Devalt6Spec> {
         I2c4_1SlW::new(self, 7)
     }

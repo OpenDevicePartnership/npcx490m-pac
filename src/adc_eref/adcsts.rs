@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - End Of Conversion Event"]
     #[inline(always)]
-    #[must_use]
     pub fn eocev(&mut self) -> EocevW<AdcstsSpec> {
         EocevW::new(self, 0)
     }
     #[doc = "Bit 1 - End Of Conversion Cycle Event"]
     #[inline(always)]
-    #[must_use]
     pub fn eoccev(&mut self) -> EoccevW<AdcstsSpec> {
         EoccevW::new(self, 1)
     }
     #[doc = "Bit 2 - End Of Timer-Triggered Conversion Event"]
     #[inline(always)]
-    #[must_use]
     pub fn eotcev(&mut self) -> EotcevW<AdcstsSpec> {
         EotcevW::new(self, 2)
     }
     #[doc = "Bit 3 - Data Overflow Event"]
     #[inline(always)]
-    #[must_use]
     pub fn ovfev(&mut self) -> OvfevW<AdcstsSpec> {
         OvfevW::new(self, 3)
     }

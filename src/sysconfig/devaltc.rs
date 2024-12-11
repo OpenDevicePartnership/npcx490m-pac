@@ -74,37 +74,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 2 - No Private SPI Flash Chip-Select 0 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn no_pvt_cs0(&mut self) -> NoPvtCs0W<DevaltcSpec> {
         NoPvtCs0W::new(self, 2)
     }
     #[doc = "Bit 3 - PS/2 #3 Select-2"]
     #[inline(always)]
-    #[must_use]
     pub fn ps2_3_sl2(&mut self) -> Ps2_3Sl2W<DevaltcSpec> {
         Ps2_3Sl2W::new(self, 3)
     }
     #[doc = "Bit 4 - TA1_TACH1 Select-2"]
     #[inline(always)]
-    #[must_use]
     pub fn ta1_tach1_sl2(&mut self) -> Ta1Tach1Sl2W<DevaltcSpec> {
         Ta1Tach1Sl2W::new(self, 4)
     }
     #[doc = "Bit 5 - TB1_TACH2PWM_IN Select-2"]
     #[inline(always)]
-    #[must_use]
     pub fn tb1_tach2_sl2(&mut self) -> Tb1Tach2Sl2W<DevaltcSpec> {
         Tb1Tach2Sl2W::new(self, 5)
     }
     #[doc = "Bit 6 - TA2 Select-2"]
     #[inline(always)]
-    #[must_use]
     pub fn ta2_sl2(&mut self) -> Ta2Sl2W<DevaltcSpec> {
         Ta2Sl2W::new(self, 6)
     }
     #[doc = "Bit 7 - TB2 Select-2"]
     #[inline(always)]
-    #[must_use]
     pub fn tb2_sl2(&mut self) -> Tb2Sl2W<DevaltcSpec> {
         Tb2Sl2W::new(self, 7)
     }

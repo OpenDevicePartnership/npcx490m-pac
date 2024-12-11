@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1 - PS/2 #1 Select Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn ps2_1_sl_lk(&mut self) -> Ps2_1SlLkW<Devalt3LkSpec> {
         Ps2_1SlLkW::new(self, 1)
     }
     #[doc = "Bit 2 - PS/2 #2 Select Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn ps2_2_sl_lk(&mut self) -> Ps2_2SlLkW<Devalt3LkSpec> {
         Ps2_2SlLkW::new(self, 2)
     }
     #[doc = "Bit 4 - TA1_TACH1 Select-1 Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn ta1_tach1_sl1_lk(&mut self) -> Ta1Tach1Sl1LkW<Devalt3LkSpec> {
         Ta1Tach1Sl1LkW::new(self, 4)
     }

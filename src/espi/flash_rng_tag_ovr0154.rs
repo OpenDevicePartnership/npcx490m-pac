@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - Flash Write Protect Tag Override"]
     #[inline(always)]
-    #[must_use]
     pub fn frng_wpr_tovr(&mut self) -> FrngWprTovrW<FlashRngTagOvr0154Spec> {
         FrngWprTovrW::new(self, 0)
     }
     #[doc = "Bits 16:31 - Flash Range Read Protect Tag Override"]
     #[inline(always)]
-    #[must_use]
     pub fn frng_rpr_tovr(&mut self) -> FrngRprTovrW<FlashRngTagOvr0154Spec> {
         FrngRprTovrW::new(self, 16)
     }

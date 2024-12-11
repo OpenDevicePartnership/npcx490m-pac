@@ -64,31 +64,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 3 - Core-to-Host Module Power-Down"]
     #[inline(always)]
-    #[must_use]
     pub fn c2hacc_pd(&mut self) -> C2haccPdW<PwdwnCtl5Spec> {
         C2haccPdW::new(self, 3)
     }
     #[doc = "Bit 4 - SHM Registers Power-Down"]
     #[inline(always)]
-    #[must_use]
     pub fn shm_reg_pd(&mut self) -> ShmRegPdW<PwdwnCtl5Spec> {
         ShmRegPdW::new(self, 4)
     }
     #[doc = "Bit 5 - SHM Power-Down"]
     #[inline(always)]
-    #[must_use]
     pub fn shm_pd(&mut self) -> ShmPdW<PwdwnCtl5Spec> {
         ShmPdW::new(self, 5)
     }
     #[doc = "Bit 6 - Debug Port 80 Power-Down"]
     #[inline(always)]
-    #[must_use]
     pub fn dp80_pd(&mut self) -> Dp80PdW<PwdwnCtl5Spec> {
         Dp80PdW::new(self, 6)
     }
     #[doc = "Bit 7 - MSWC Power-Down"]
     #[inline(always)]
-    #[must_use]
     pub fn mswc_pd(&mut self) -> MswcPdW<PwdwnCtl5Spec> {
         MswcPdW::new(self, 7)
     }

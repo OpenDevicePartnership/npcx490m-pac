@@ -74,37 +74,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - RXD Select Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn rxd_sl_lk(&mut self) -> RxdSlLkW<DevaltbLkSpec> {
         RxdSlLkW::new(self, 0)
     }
     #[doc = "Bit 1 - TXD Select Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn txd_sl_lk(&mut self) -> TxdSlLkW<DevaltbLkSpec> {
         TxdSlLkW::new(self, 1)
     }
     #[doc = "Bit 2 - RTS Select Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn rts_sl_lk(&mut self) -> RtsSlLkW<DevaltbLkSpec> {
         RtsSlLkW::new(self, 2)
     }
     #[doc = "Bit 3 - CTS Select Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn cts_sl_lk(&mut self) -> CtsSlLkW<DevaltbLkSpec> {
         CtsSlLkW::new(self, 3)
     }
     #[doc = "Bit 6 - DCD Select Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn dcd_sl_lk(&mut self) -> DcdSlLkW<DevaltbLkSpec> {
         DcdSlLkW::new(self, 6)
     }
     #[doc = "Bit 7 - DSR Select Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn dsr_sl_lk(&mut self) -> DsrSlLkW<DevaltbLkSpec> {
         DsrSlLkW::new(self, 7)
     }

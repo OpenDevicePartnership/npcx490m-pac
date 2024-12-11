@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - Weeks Value"]
     #[inline(always)]
-    #[must_use]
     pub fn weeks(&mut self) -> WeeksW<LctweekmSpec> {
         WeeksW::new(self, 0)
     }

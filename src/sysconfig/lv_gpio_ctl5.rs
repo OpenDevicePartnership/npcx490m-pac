@@ -74,37 +74,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - GPIO72 Low-Voltage Select"]
     #[inline(always)]
-    #[must_use]
     pub fn g72_lv(&mut self) -> G72LvW<LvGpioCtl5Spec> {
         G72LvW::new(self, 0)
     }
     #[doc = "Bit 3 - GPIO50 Low-Voltage Select"]
     #[inline(always)]
-    #[must_use]
     pub fn g50_lv(&mut self) -> G50LvW<LvGpioCtl5Spec> {
         G50LvW::new(self, 3)
     }
     #[doc = "Bit 4 - GPIO02 Low-Voltage Select"]
     #[inline(always)]
-    #[must_use]
     pub fn g02_lv(&mut self) -> G02LvW<LvGpioCtl5Spec> {
         G02LvW::new(self, 4)
     }
     #[doc = "Bit 5 - GPIO01 Low-Voltage Select"]
     #[inline(always)]
-    #[must_use]
     pub fn g01_lv(&mut self) -> G01LvW<LvGpioCtl5Spec> {
         G01LvW::new(self, 5)
     }
     #[doc = "Bit 6 - GPIOE2/FLM_CSI Low-Voltage Select"]
     #[inline(always)]
-    #[must_use]
     pub fn ge2_lv(&mut self) -> Ge2LvW<LvGpioCtl5Spec> {
         Ge2LvW::new(self, 6)
     }
     #[doc = "Bit 7 - GPIOD6/CR_SOUT3 Low-Voltage Select"]
     #[inline(always)]
-    #[must_use]
     pub fn gd6_lv(&mut self) -> Gd6LvW<LvGpioCtl5Spec> {
         Gd6LvW::new(self, 7)
     }

@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:9 - Convert Channel n"]
     #[inline(always)]
-    #[must_use]
     pub fn cc25_16(&mut self) -> Cc25_16W<Adccs2Spec> {
         Cc25_16W::new(self, 0)
     }
     #[doc = "Bit 13 - Convert Channel 29"]
     #[inline(always)]
-    #[must_use]
     pub fn cc29(&mut self) -> Cc29W<Adccs2Spec> {
         Cc29W::new(self, 13)
     }
     #[doc = "Bit 14 - Convert Channel 30"]
     #[inline(always)]
-    #[must_use]
     pub fn cc30(&mut self) -> Cc30W<Adccs2Spec> {
         Cc30W::new(self, 14)
     }
     #[doc = "Bit 15 - Convert Channel 31"]
     #[inline(always)]
-    #[must_use]
     pub fn cc31(&mut self) -> Cc31W<Adccs2Spec> {
         Cc31W::new(self, 15)
     }

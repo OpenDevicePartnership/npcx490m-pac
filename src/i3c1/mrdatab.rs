@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Data Byte"]
     #[inline(always)]
-    #[must_use]
     pub fn data(&mut self) -> DataW<MrdatabSpec> {
         DataW::new(self, 0)
     }

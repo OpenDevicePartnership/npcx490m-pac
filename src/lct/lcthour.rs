@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - Hours Value"]
     #[inline(always)]
-    #[must_use]
     pub fn hours(&mut self) -> HoursW<LcthourSpec> {
         HoursW::new(self, 0)
     }

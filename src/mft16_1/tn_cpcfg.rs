@@ -94,49 +94,41 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Compare Function A Select"]
     #[inline(always)]
-    #[must_use]
     pub fn cpasel(&mut self) -> CpaselW<TnCpcfgSpec> {
         CpaselW::new(self, 0)
     }
     #[doc = "Bit 1 - Low Indication Enable for Comparator A"]
     #[inline(always)]
-    #[must_use]
     pub fn loaen(&mut self) -> LoaenW<TnCpcfgSpec> {
         LoaenW::new(self, 1)
     }
     #[doc = "Bit 2 - Equal Indication Enable for Comparator A"]
     #[inline(always)]
-    #[must_use]
     pub fn eqaen(&mut self) -> EqaenW<TnCpcfgSpec> {
         EqaenW::new(self, 2)
     }
     #[doc = "Bit 3 - High Indication Enable for Comparator A"]
     #[inline(always)]
-    #[must_use]
     pub fn hiaen(&mut self) -> HiaenW<TnCpcfgSpec> {
         HiaenW::new(self, 3)
     }
     #[doc = "Bit 4 - Compare Function B Select"]
     #[inline(always)]
-    #[must_use]
     pub fn cpbsel(&mut self) -> CpbselW<TnCpcfgSpec> {
         CpbselW::new(self, 4)
     }
     #[doc = "Bit 5 - Low Indication Enable for Comparator B"]
     #[inline(always)]
-    #[must_use]
     pub fn loben(&mut self) -> LobenW<TnCpcfgSpec> {
         LobenW::new(self, 5)
     }
     #[doc = "Bit 6 - Equal Indication Enable for Comparator B"]
     #[inline(always)]
-    #[must_use]
     pub fn eqben(&mut self) -> EqbenW<TnCpcfgSpec> {
         EqbenW::new(self, 6)
     }
     #[doc = "Bit 7 - High Indication Enable for Comparator B"]
     #[inline(always)]
-    #[must_use]
     pub fn hiben(&mut self) -> HibenW<TnCpcfgSpec> {
         HibenW::new(self, 7)
     }

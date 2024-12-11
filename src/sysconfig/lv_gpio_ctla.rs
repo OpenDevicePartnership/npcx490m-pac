@@ -94,49 +94,41 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - GPIOB1/CR_SIN4 Low-Voltage Select"]
     #[inline(always)]
-    #[must_use]
     pub fn gb1_lv(&mut self) -> Gb1LvW<LvGpioCtlaSpec> {
         Gb1LvW::new(self, 0)
     }
     #[doc = "Bit 1 - GPIOB6 Low-Voltage Select"]
     #[inline(always)]
-    #[must_use]
     pub fn gb6_lv(&mut self) -> Gb6LvW<LvGpioCtlaSpec> {
         Gb6LvW::new(self, 1)
     }
     #[doc = "Bit 2 - GPIOB7/I2C7_SDA1 Low-Voltage Select"]
     #[inline(always)]
-    #[must_use]
     pub fn gb7_lv(&mut self) -> Gb7LvW<LvGpioCtlaSpec> {
         Gb7LvW::new(self, 2)
     }
     #[doc = "Bit 3 - GPIOC0/I2C7_SCL1 Low-Voltage Select"]
     #[inline(always)]
-    #[must_use]
     pub fn gc0_lv(&mut self) -> Gc0LvW<LvGpioCtlaSpec> {
         Gc0LvW::new(self, 3)
     }
     #[doc = "Bit 4 - GPIOC3 Low-Voltage Select"]
     #[inline(always)]
-    #[must_use]
     pub fn gc3_lv(&mut self) -> Gc3LvW<LvGpioCtlaSpec> {
         Gc3LvW::new(self, 4)
     }
     #[doc = "Bit 5 - GPIOC4 Low-Voltage Select"]
     #[inline(always)]
-    #[must_use]
     pub fn gc4_lv(&mut self) -> Gc4LvW<LvGpioCtlaSpec> {
         Gc4LvW::new(self, 5)
     }
     #[doc = "Bit 6 - GPIOD2 Low-Voltage Select"]
     #[inline(always)]
-    #[must_use]
     pub fn gd2_lv(&mut self) -> Gd2LvW<LvGpioCtlaSpec> {
         Gd2LvW::new(self, 6)
     }
     #[doc = "Bit 7 - GPIOD3/TB1_TACH2PWM_IN Low-Voltage Select"]
     #[inline(always)]
-    #[must_use]
     pub fn gd3_lv(&mut self) -> Gd3LvW<LvGpioCtlaSpec> {
         Gd3LvW::new(self, 7)
     }

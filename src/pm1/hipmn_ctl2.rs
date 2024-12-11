@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1 - Firmware Control Over OBF"]
     #[inline(always)]
-    #[must_use]
     pub fn fw_obf(&mut self) -> FwObfW<HipmnCtl2Spec> {
         FwObfW::new(self, 1)
     }

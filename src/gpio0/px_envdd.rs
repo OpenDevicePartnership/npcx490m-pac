@@ -6,10 +6,10 @@ pub type W = crate::W<PxEnvddSpec>;
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum Drive {
-    #[doc = "0: `0`"]
-    Enable = 0,
-    #[doc = "1: `1`"]
-    Disable = 1,
+    #[doc = "0: Enabled"]
+    Enabled = 0,
+    #[doc = "1: Disabled"]
+    Disabled = 1,
 }
 impl From<Drive> for bool {
     #[inline(always)]
@@ -24,19 +24,19 @@ impl PinR {
     #[inline(always)]
     pub const fn variant(&self) -> Drive {
         match self.bits {
-            false => Drive::Enable,
-            true => Drive::Disable,
+            false => Drive::Enabled,
+            true => Drive::Disabled,
         }
     }
-    #[doc = "`0`"]
+    #[doc = "Enabled"]
     #[inline(always)]
-    pub fn is_enable(&self) -> bool {
-        *self == Drive::Enable
+    pub fn is_enabled(&self) -> bool {
+        *self == Drive::Enabled
     }
-    #[doc = "`1`"]
+    #[doc = "Disabled"]
     #[inline(always)]
-    pub fn is_disable(&self) -> bool {
-        *self == Drive::Disable
+    pub fn is_disabled(&self) -> bool {
+        *self == Drive::Disabled
     }
 }
 #[doc = "Field `PIN(0-7)` writer - Drive Enable by Vdd Present for Pin %s"]
@@ -45,15 +45,15 @@ impl<'a, REG> PinW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
-    #[doc = "`0`"]
+    #[doc = "Enabled"]
     #[inline(always)]
-    pub fn enable(self) -> &'a mut crate::W<REG> {
-        self.variant(Drive::Enable)
+    pub fn enabled(self) -> &'a mut crate::W<REG> {
+        self.variant(Drive::Enabled)
     }
-    #[doc = "`1`"]
+    #[doc = "Disabled"]
     #[inline(always)]
-    pub fn disable(self) -> &'a mut crate::W<REG> {
-        self.variant(Drive::Disable)
+    pub fn disabled(self) -> &'a mut crate::W<REG> {
+        self.variant(Drive::Disabled)
     }
 }
 impl R {
@@ -133,7 +133,6 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `PIN0` field.</div>"]
     #[inline(always)]
-    #[must_use]
     pub fn pin(&mut self, n: u8) -> PinW<PxEnvddSpec> {
         #[allow(clippy::no_effect)]
         [(); 8][n as usize];
@@ -141,49 +140,41 @@ impl W {
     }
     #[doc = "Bit 0 - Drive Enable by Vdd Present for Pin 0"]
     #[inline(always)]
-    #[must_use]
     pub fn pin0(&mut self) -> PinW<PxEnvddSpec> {
         PinW::new(self, 0)
     }
     #[doc = "Bit 1 - Drive Enable by Vdd Present for Pin 1"]
     #[inline(always)]
-    #[must_use]
     pub fn pin1(&mut self) -> PinW<PxEnvddSpec> {
         PinW::new(self, 1)
     }
     #[doc = "Bit 2 - Drive Enable by Vdd Present for Pin 2"]
     #[inline(always)]
-    #[must_use]
     pub fn pin2(&mut self) -> PinW<PxEnvddSpec> {
         PinW::new(self, 2)
     }
     #[doc = "Bit 3 - Drive Enable by Vdd Present for Pin 3"]
     #[inline(always)]
-    #[must_use]
     pub fn pin3(&mut self) -> PinW<PxEnvddSpec> {
         PinW::new(self, 3)
     }
     #[doc = "Bit 4 - Drive Enable by Vdd Present for Pin 4"]
     #[inline(always)]
-    #[must_use]
     pub fn pin4(&mut self) -> PinW<PxEnvddSpec> {
         PinW::new(self, 4)
     }
     #[doc = "Bit 5 - Drive Enable by Vdd Present for Pin 5"]
     #[inline(always)]
-    #[must_use]
     pub fn pin5(&mut self) -> PinW<PxEnvddSpec> {
         PinW::new(self, 5)
     }
     #[doc = "Bit 6 - Drive Enable by Vdd Present for Pin 6"]
     #[inline(always)]
-    #[must_use]
     pub fn pin6(&mut self) -> PinW<PxEnvddSpec> {
         PinW::new(self, 6)
     }
     #[doc = "Bit 7 - Drive Enable by Vdd Present for Pin 7"]
     #[inline(always)]
-    #[must_use]
     pub fn pin7(&mut self) -> PinW<PxEnvddSpec> {
         PinW::new(self, 7)
     }

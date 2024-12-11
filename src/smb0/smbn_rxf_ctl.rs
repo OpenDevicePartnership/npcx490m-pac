@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - Rx-FIFO Threshold"]
     #[inline(always)]
-    #[must_use]
     pub fn rx_thr(&mut self) -> RxThrW<SmbnRxfCtlSpec> {
         RxThrW::new(self, 0)
     }
     #[doc = "Bit 6 - Threshold Rx-FIFO Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn thr_rxie(&mut self) -> ThrRxieW<SmbnRxfCtlSpec> {
         ThrRxieW::new(self, 6)
     }
     #[doc = "Bit 7 - Last Byte or PEC Byte"]
     #[inline(always)]
-    #[must_use]
     pub fn last_pec(&mut self) -> LastPecW<SmbnRxfCtlSpec> {
         LastPecW::new(self, 7)
     }

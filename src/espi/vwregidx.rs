@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 2:11 - Virtual Wire Register Index"]
     #[inline(always)]
-    #[must_use]
     pub fn vwregidx(&mut self) -> VwregidxW<VwregidxSpec> {
         VwregidxW::new(self, 2)
     }

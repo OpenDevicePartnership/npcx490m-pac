@@ -64,31 +64,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - MDMA Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn mdmaen(&mut self) -> MdmaenW<Mdma0CtlSpec> {
         MdmaenW::new(self, 0)
     }
     #[doc = "Bit 1 - MDMA Power-Down"]
     #[inline(always)]
-    #[must_use]
     pub fn mpd(&mut self) -> MpdW<Mdma0CtlSpec> {
         MpdW::new(self, 1)
     }
     #[doc = "Bit 8 - Stop Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn sien(&mut self) -> SienW<Mdma0CtlSpec> {
         SienW::new(self, 8)
     }
     #[doc = "Bit 14 - MDMA Power Save"]
     #[inline(always)]
-    #[must_use]
     pub fn mps(&mut self) -> MpsW<Mdma0CtlSpec> {
         MpsW::new(self, 14)
     }
     #[doc = "Bit 18 - Terminal Count"]
     #[inline(always)]
-    #[must_use]
     pub fn tc(&mut self) -> TcW<Mdma0CtlSpec> {
         TcW::new(self, 18)
     }

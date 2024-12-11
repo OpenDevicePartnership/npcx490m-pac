@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Core-to-Host Modules Access Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn csae(&mut self) -> CsaeW<SibctrlSpec> {
         CsaeW::new(self, 0)
     }
     #[doc = "Bit 1 - Core Read from Host Modules"]
     #[inline(always)]
-    #[must_use]
     pub fn csrd(&mut self) -> CsrdW<SibctrlSpec> {
         CsrdW::new(self, 1)
     }
     #[doc = "Bit 2 - Core Write to Host Modules"]
     #[inline(always)]
-    #[must_use]
     pub fn cswr(&mut self) -> CswrW<SibctrlSpec> {
         CswrW::new(self, 2)
     }

@@ -94,49 +94,41 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - AD13 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn ad13_sl(&mut self) -> Ad13SlW<DevaltlSpec> {
         Ad13SlW::new(self, 0)
     }
     #[doc = "Bit 1 - AD14 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn ad14_sl(&mut self) -> Ad14SlW<DevaltlSpec> {
         Ad14SlW::new(self, 1)
     }
     #[doc = "Bit 2 - AD15 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn ad15_sl(&mut self) -> Ad15SlW<DevaltlSpec> {
         Ad15SlW::new(self, 2)
     }
     #[doc = "Bit 3 - AD16 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn ad16_sl(&mut self) -> Ad16SlW<DevaltlSpec> {
         Ad16SlW::new(self, 3)
     }
     #[doc = "Bit 4 - AD17 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn ad17_sl(&mut self) -> Ad17SlW<DevaltlSpec> {
         Ad17SlW::new(self, 4)
     }
     #[doc = "Bit 5 - AD18 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn ad18_sl(&mut self) -> Ad18SlW<DevaltlSpec> {
         Ad18SlW::new(self, 5)
     }
     #[doc = "Bit 6 - AD19 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn ad19_sl(&mut self) -> Ad19SlW<DevaltlSpec> {
         Ad19SlW::new(self, 6)
     }
     #[doc = "Bit 7 - AD20 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn ad20_sl(&mut self) -> Ad20SlW<DevaltlSpec> {
         Ad20SlW::new(self, 7)
     }

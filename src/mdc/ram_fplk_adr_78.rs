@@ -94,49 +94,41 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Fetch Protect Lock Sector 0"]
     #[inline(always)]
-    #[must_use]
     pub fn fplk_sk0(&mut self) -> FplkSk0W<RamFplkAdr78Spec> {
         FplkSk0W::new(self, 0)
     }
     #[doc = "Bit 1 - Fetch Protect Lock Sector 1"]
     #[inline(always)]
-    #[must_use]
     pub fn fplk_sk1(&mut self) -> FplkSk1W<RamFplkAdr78Spec> {
         FplkSk1W::new(self, 1)
     }
     #[doc = "Bit 2 - Fetch Protect Lock Sector 2"]
     #[inline(always)]
-    #[must_use]
     pub fn fplk_sk2(&mut self) -> FplkSk2W<RamFplkAdr78Spec> {
         FplkSk2W::new(self, 2)
     }
     #[doc = "Bit 3 - Fetch Protect Lock Sector 3"]
     #[inline(always)]
-    #[must_use]
     pub fn fplk_sk3(&mut self) -> FplkSk3W<RamFplkAdr78Spec> {
         FplkSk3W::new(self, 3)
     }
     #[doc = "Bit 4 - Fetch Protect Lock Sector 4"]
     #[inline(always)]
-    #[must_use]
     pub fn fplk_sk4(&mut self) -> FplkSk4W<RamFplkAdr78Spec> {
         FplkSk4W::new(self, 4)
     }
     #[doc = "Bit 5 - Fetch Protect Lock Sector 5"]
     #[inline(always)]
-    #[must_use]
     pub fn fplk_sk5(&mut self) -> FplkSk5W<RamFplkAdr78Spec> {
         FplkSk5W::new(self, 5)
     }
     #[doc = "Bit 6 - Fetch Protect Lock Sector 6"]
     #[inline(always)]
-    #[must_use]
     pub fn fplk_sk6(&mut self) -> FplkSk6W<RamFplkAdr78Spec> {
         FplkSk6W::new(self, 6)
     }
     #[doc = "Bit 7 - Fetch Protect Lock Sector 7"]
     #[inline(always)]
-    #[must_use]
     pub fn fplk_sk7(&mut self) -> FplkSk7W<RamFplkAdr78Spec> {
         FplkSk7W::new(self, 7)
     }

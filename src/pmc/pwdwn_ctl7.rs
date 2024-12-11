@@ -84,43 +84,36 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - SMB5 Power-Down"]
     #[inline(always)]
-    #[must_use]
     pub fn smb5_pd(&mut self) -> Smb5PdW<PwdwnCtl7Spec> {
         Smb5PdW::new(self, 0)
     }
     #[doc = "Bit 1 - SMB6 Power-Down"]
     #[inline(always)]
-    #[must_use]
     pub fn smb6_pd(&mut self) -> Smb6PdW<PwdwnCtl7Spec> {
         Smb6PdW::new(self, 1)
     }
     #[doc = "Bit 2 - SMB7 Power-Down"]
     #[inline(always)]
-    #[must_use]
     pub fn smb7_pd(&mut self) -> Smb7PdW<PwdwnCtl7Spec> {
         Smb7PdW::new(self, 2)
     }
     #[doc = "Bit 3 - CR_UART4 Power-Down"]
     #[inline(always)]
-    #[must_use]
     pub fn uart4_pd(&mut self) -> Uart4PdW<PwdwnCtl7Spec> {
         Uart4PdW::new(self, 3)
     }
     #[doc = "Bit 4 - CR_UART3 Power-Down"]
     #[inline(always)]
-    #[must_use]
     pub fn uart3_pd(&mut self) -> Uart3PdW<PwdwnCtl7Spec> {
         Uart3PdW::new(self, 4)
     }
     #[doc = "Bit 5 - ITIM64 Power-Down"]
     #[inline(always)]
-    #[must_use]
     pub fn itim64_pd(&mut self) -> Itim64PdW<PwdwnCtl7Spec> {
         Itim64PdW::new(self, 5)
     }
     #[doc = "Bit 6 - CR_UART2 Power-Down"]
     #[inline(always)]
-    #[must_use]
     pub fn uart2_pd(&mut self) -> Uart2PdW<PwdwnCtl7Spec> {
         Uart2PdW::new(self, 6)
     }

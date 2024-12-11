@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - Keyboard Scan Columns Number"]
     #[inline(always)]
-    #[must_use]
     pub fn kbs_col_num(&mut self) -> KbsColNumW<KbsCnumSpec> {
         KbsColNumW::new(self, 0)
     }

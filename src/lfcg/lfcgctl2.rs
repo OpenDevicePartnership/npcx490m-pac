@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 3 - Automatic Update Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn audp_en(&mut self) -> AudpEnW<Lfcgctl2Spec> {
         AudpEnW::new(self, 3)
     }
     #[doc = "Bit 4 - Stop Calibration to External Reference"]
     #[inline(always)]
-    #[must_use]
     pub fn stopcal(&mut self) -> StopcalW<Lfcgctl2Spec> {
         StopcalW::new(self, 4)
     }
     #[doc = "Bit 5 - Force PCI_CLK Running"]
     #[inline(always)]
-    #[must_use]
     pub fn fclkrun(&mut self) -> FclkrunW<Lfcgctl2Spec> {
         FclkrunW::new(self, 5)
     }

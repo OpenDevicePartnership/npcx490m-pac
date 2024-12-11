@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:11 - Core Offset in Window 3, Data"]
     #[inline(always)]
-    #[must_use]
     pub fn cofs3_dat(&mut self) -> Cofs3DatW<Cofs3Spec> {
         Cofs3DatW::new(self, 0)
     }

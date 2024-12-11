@@ -94,49 +94,41 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - RAM Access Window 2 Write Protect 0"]
     #[inline(always)]
-    #[must_use]
     pub fn ima_wp0(&mut self) -> ImaWp0W<ImaWrProtSpec> {
         ImaWp0W::new(self, 0)
     }
     #[doc = "Bit 1 - RAM Access Window 2 Write Protect 1"]
     #[inline(always)]
-    #[must_use]
     pub fn ima_wp1(&mut self) -> ImaWp1W<ImaWrProtSpec> {
         ImaWp1W::new(self, 1)
     }
     #[doc = "Bit 2 - RAM Access Window 2 Write Protect 2"]
     #[inline(always)]
-    #[must_use]
     pub fn ima_wp2(&mut self) -> ImaWp2W<ImaWrProtSpec> {
         ImaWp2W::new(self, 2)
     }
     #[doc = "Bit 3 - RAM Access Window 2 Write Protect 3"]
     #[inline(always)]
-    #[must_use]
     pub fn ima_wp3(&mut self) -> ImaWp3W<ImaWrProtSpec> {
         ImaWp3W::new(self, 3)
     }
     #[doc = "Bit 4 - RAM Access Window 2 Write Protect 4"]
     #[inline(always)]
-    #[must_use]
     pub fn ima_wp4(&mut self) -> ImaWp4W<ImaWrProtSpec> {
         ImaWp4W::new(self, 4)
     }
     #[doc = "Bit 5 - RAM Access Window 2 Write Protect 5"]
     #[inline(always)]
-    #[must_use]
     pub fn ima_wp5(&mut self) -> ImaWp5W<ImaWrProtSpec> {
         ImaWp5W::new(self, 5)
     }
     #[doc = "Bit 6 - RAM Access Window 2 Write Protect 6"]
     #[inline(always)]
-    #[must_use]
     pub fn ima_wp6(&mut self) -> ImaWp6W<ImaWrProtSpec> {
         ImaWp6W::new(self, 6)
     }
     #[doc = "Bit 7 - RAM Access Window 2 Write Protect 7"]
     #[inline(always)]
-    #[must_use]
     pub fn ima_wp7(&mut self) -> ImaWp7W<ImaWrProtSpec> {
         ImaWp7W::new(self, 7)
     }

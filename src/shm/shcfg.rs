@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Indirect Memory Access Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn imaen(&mut self) -> ImaenW<ShcfgSpec> {
         ImaenW::new(self, 0)
     }

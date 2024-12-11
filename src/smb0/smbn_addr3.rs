@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:6 - Address"]
     #[inline(always)]
-    #[must_use]
     pub fn addr(&mut self) -> AddrW<SmbnAddr3Spec> {
         AddrW::new(self, 0)
     }
     #[doc = "Bit 7 - Slave Address Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn saen(&mut self) -> SaenW<SmbnAddr3Spec> {
         SaenW::new(self, 7)
     }

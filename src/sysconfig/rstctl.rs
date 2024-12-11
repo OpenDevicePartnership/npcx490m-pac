@@ -64,31 +64,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - VCC1_RST Status"]
     #[inline(always)]
-    #[must_use]
     pub fn vcc1_rst_sts(&mut self) -> Vcc1RstStsW<RstctlSpec> {
         Vcc1RstStsW::new(self, 0)
     }
     #[doc = "Bit 2 - Force VCC1 Power-Up Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn force_vcc1_purst(&mut self) -> ForceVcc1PurstW<RstctlSpec> {
         ForceVcc1PurstW::new(self, 2)
     }
     #[doc = "Bit 3 - Scratch"]
     #[inline(always)]
-    #[must_use]
     pub fn scratch(&mut self) -> ScratchW<RstctlSpec> {
         ScratchW::new(self, 3)
     }
     #[doc = "Bit 5 - LRESET or PLTRST Mode Select"]
     #[inline(always)]
-    #[must_use]
     pub fn lreset_pltrst_mode(&mut self) -> LresetPltrstModeW<RstctlSpec> {
         LresetPltrstModeW::new(self, 5)
     }
     #[doc = "Bit 6 - Host Interface Modules Reset Mode Select"]
     #[inline(always)]
-    #[must_use]
     pub fn hiprst_mode(&mut self) -> HiprstModeW<RstctlSpec> {
         HiprstModeW::new(self, 6)
     }

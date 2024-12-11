@@ -94,49 +94,41 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - Controller Device Enable."]
     #[inline(always)]
-    #[must_use]
     pub fn ctrena(&mut self) -> CtrenaW<MconfigSpec> {
         CtrenaW::new(self, 0)
     }
     #[doc = "Bit 3 - Disable Timeout Error"]
     #[inline(always)]
-    #[must_use]
     pub fn disto(&mut self) -> DistoW<MconfigSpec> {
         DistoW::new(self, 3)
     }
     #[doc = "Bit 6 - Open-Drain Stop"]
     #[inline(always)]
-    #[must_use]
     pub fn odstop(&mut self) -> OdstopW<MconfigSpec> {
         OdstopW::new(self, 6)
     }
     #[doc = "Bits 8:11 - Push-Pull Baud Rate"]
     #[inline(always)]
-    #[must_use]
     pub fn ppbaud(&mut self) -> PpbaudW<MconfigSpec> {
         PpbaudW::new(self, 8)
     }
     #[doc = "Bits 12:15 - Push-Pull Low Period"]
     #[inline(always)]
-    #[must_use]
     pub fn pplow(&mut self) -> PplowW<MconfigSpec> {
         PplowW::new(self, 12)
     }
     #[doc = "Bits 16:23 - Open-Drain Baud Rate"]
     #[inline(always)]
-    #[must_use]
     pub fn odbaud(&mut self) -> OdbaudW<MconfigSpec> {
         OdbaudW::new(self, 16)
     }
     #[doc = "Bit 24 - Open-Drain High Period"]
     #[inline(always)]
-    #[must_use]
     pub fn odhpp(&mut self) -> OdhppW<MconfigSpec> {
         OdhppW::new(self, 24)
     }
     #[doc = "Bits 28:31 - I2C Baud Rate"]
     #[inline(always)]
-    #[must_use]
     pub fn i2cbaud(&mut self) -> I2cbaudW<MconfigSpec> {
         I2cbaudW::new(self, 28)
     }

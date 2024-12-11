@@ -74,37 +74,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Host Read Access Error"]
     #[inline(always)]
-    #[must_use]
     pub fn hrerr(&mut self) -> HrerrW<SmcStsSpec> {
         HrerrW::new(self, 0)
     }
     #[doc = "Bit 1 - Host Write Access Error"]
     #[inline(always)]
-    #[must_use]
     pub fn hwerr(&mut self) -> HwerrW<SmcStsSpec> {
         HwerrW::new(self, 1)
     }
     #[doc = "Bit 3 - Host Semaphore Indirect Memory Access Written"]
     #[inline(always)]
-    #[must_use]
     pub fn hsem_imaw(&mut self) -> HsemImawW<SmcStsSpec> {
         HsemImawW::new(self, 3)
     }
     #[doc = "Bit 4 - Host Semaphore 1 Written"]
     #[inline(always)]
-    #[must_use]
     pub fn hsem1w(&mut self) -> Hsem1wW<SmcStsSpec> {
         Hsem1wW::new(self, 4)
     }
     #[doc = "Bit 5 - Host Semaphore 2 Written"]
     #[inline(always)]
-    #[must_use]
     pub fn hsem2w(&mut self) -> Hsem2wW<SmcStsSpec> {
         Hsem2wW::new(self, 5)
     }
     #[doc = "Bit 6 - Host Access to Shared Memory"]
     #[inline(always)]
-    #[must_use]
     pub fn shm_acc(&mut self) -> ShmAccW<SmcStsSpec> {
         ShmAccW::new(self, 6)
     }

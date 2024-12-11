@@ -114,61 +114,51 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 2 - Address NACKed"]
     #[inline(always)]
-    #[must_use]
     pub fn nack(&mut self) -> NackW<MerrwarnSpec> {
         NackW::new(self, 2)
     }
     #[doc = "Bit 3 - Write Aborted"]
     #[inline(always)]
-    #[must_use]
     pub fn wrabt(&mut self) -> WrabtW<MerrwarnSpec> {
         WrabtW::new(self, 3)
     }
     #[doc = "Bit 4 - Terminated"]
     #[inline(always)]
-    #[must_use]
     pub fn term(&mut self) -> TermW<MerrwarnSpec> {
         TermW::new(self, 4)
     }
     #[doc = "Bit 9 - HDR Parity Error"]
     #[inline(always)]
-    #[must_use]
     pub fn hpar(&mut self) -> HparW<MerrwarnSpec> {
         HparW::new(self, 9)
     }
     #[doc = "Bit 10 - HDR-DDR CRC Error"]
     #[inline(always)]
-    #[must_use]
     pub fn hcrc(&mut self) -> HcrcW<MerrwarnSpec> {
         HcrcW::new(self, 10)
     }
     #[doc = "Bit 16 - OREAD"]
     #[inline(always)]
-    #[must_use]
     pub fn oread(&mut self) -> OreadW<MerrwarnSpec> {
         OreadW::new(self, 16)
     }
     #[doc = "Bit 17 - OWRITE"]
     #[inline(always)]
-    #[must_use]
     pub fn owrite(&mut self) -> OwriteW<MerrwarnSpec> {
         OwriteW::new(self, 17)
     }
     #[doc = "Bit 18 - MSGERR"]
     #[inline(always)]
-    #[must_use]
     pub fn msgerr(&mut self) -> MsgerrW<MerrwarnSpec> {
         MsgerrW::new(self, 18)
     }
     #[doc = "Bit 19 - INVREQ"]
     #[inline(always)]
-    #[must_use]
     pub fn invreq(&mut self) -> InvreqW<MerrwarnSpec> {
         InvreqW::new(self, 19)
     }
     #[doc = "Bit 20 - TIMEOUT"]
     #[inline(always)]
-    #[must_use]
     pub fn timeout(&mut self) -> TimeoutW<MerrwarnSpec> {
         TimeoutW::new(self, 20)
     }

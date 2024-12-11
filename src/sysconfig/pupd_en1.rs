@@ -74,37 +74,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - SMBus/I2C Module 6, Bus 1 Pull-Up Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn i2c6_1_pue(&mut self) -> I2c6_1PueW<PupdEn1Spec> {
         I2c6_1PueW::new(self, 0)
     }
     #[doc = "Bit 1 - SMBus/I2C Module 5, Bus 1 Pull-Up Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn i2c5_1_pue(&mut self) -> I2c5_1PueW<PupdEn1Spec> {
         I2c5_1PueW::new(self, 1)
     }
     #[doc = "Bit 2 - SMBus/I2C Module 4, Bus 1 Pull-Up Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn i2c4_1_pue(&mut self) -> I2c4_1PueW<PupdEn1Spec> {
         I2c4_1PueW::new(self, 2)
     }
     #[doc = "Bit 3 - SMBus/I2C Module 7, Bus 1 Pull-Up Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn i2c7_1_pue(&mut self) -> I2c7_1PueW<PupdEn1Spec> {
         I2c7_1PueW::new(self, 3)
     }
     #[doc = "Bit 6 - Private SPI Flash Pull-Up/Down Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn pvt_spi_pud_en(&mut self) -> PvtSpiPudEnW<PupdEn1Spec> {
         PvtSpiPudEnW::new(self, 6)
     }
     #[doc = "Bit 7 - Shared SPI Flash Pull-Up/Down Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn shd_spi_pud_en(&mut self) -> ShdSpiPudEnW<PupdEn1Spec> {
         ShdSpiPudEnW::new(self, 7)
     }

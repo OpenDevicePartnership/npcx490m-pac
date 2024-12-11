@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Host Interrupt Request 1 Control Bit"]
     #[inline(always)]
-    #[must_use]
     pub fn irq1b(&mut self) -> Irq1bW<HiirqcSpec> {
         Irq1bW::new(self, 0)
     }
     #[doc = "Bit 1 - Host Interrupt Request 12 Control Bit"]
     #[inline(always)]
-    #[must_use]
     pub fn irq12b(&mut self) -> Irq12bW<HiirqcSpec> {
         Irq12bW::new(self, 1)
     }
     #[doc = "Bit 6 - Negative Polarity"]
     #[inline(always)]
-    #[must_use]
     pub fn irqnpol(&mut self) -> IrqnpolW<HiirqcSpec> {
         IrqnpolW::new(self, 6)
     }

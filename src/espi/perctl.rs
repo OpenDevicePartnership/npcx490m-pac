@@ -154,85 +154,71 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Peripheral Channel Posted/Completion Receive Queue Free"]
     #[inline(always)]
-    #[must_use]
     pub fn per_pc_free(&mut self) -> PerPcFreeW<PerctlSpec> {
         PerPcFreeW::new(self, 0)
     }
     #[doc = "Bit 1 - Bus Master DMA Transmit/Receive Select"]
     #[inline(always)]
-    #[must_use]
     pub fn bmdma_tr_sl(&mut self) -> BmdmaTrSlW<PerctlSpec> {
         BmdmaTrSlW::new(self, 1)
     }
     #[doc = "Bit 2 - Read Bus Master Strip Header"]
     #[inline(always)]
-    #[must_use]
     pub fn bmstrphdr(&mut self) -> BmstrphdrW<PerctlSpec> {
         BmstrphdrW::new(self, 2)
     }
     #[doc = "Bits 3:4 - Read Bus Master DMA Request Threshold"]
     #[inline(always)]
-    #[must_use]
     pub fn bmdmathresh(&mut self) -> BmdmathreshW<PerctlSpec> {
         BmdmathreshW::new(self, 3)
     }
     #[doc = "Bits 5:12 - Bus Master Burst Mode Read Transfer Size"]
     #[inline(always)]
-    #[must_use]
     pub fn bmburstsize(&mut self) -> BmburstsizeW<PerctlSpec> {
         BmburstsizeW::new(self, 5)
     }
     #[doc = "Bit 13 - Reset Peripheral Buffer Heads"]
     #[inline(always)]
-    #[must_use]
     pub fn rstpbufheads(&mut self) -> RstpbufheadsW<PerctlSpec> {
         RstpbufheadsW::new(self, 13)
     }
     #[doc = "Bit 14 - Memory 64-Bit Access Select"]
     #[inline(always)]
-    #[must_use]
     pub fn mem64_access(&mut self) -> Mem64AccessW<PerctlSpec> {
         Mem64AccessW::new(self, 14)
     }
     #[doc = "Bit 15 - Reset Peripheral Target Buffer Head"]
     #[inline(always)]
-    #[must_use]
     pub fn rstpsbufhead(&mut self) -> RstpsbufheadW<PerctlSpec> {
         RstpsbufheadW::new(self, 15)
     }
     #[doc = "Bit 16 - Bus Master Burst Mode Read Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn bmbrsten(&mut self) -> BmbrstenW<PerctlSpec> {
         BmbrstenW::new(self, 16)
     }
     #[doc = "Bit 17 - Bus Master Burst Mode Read Receive Buffer Full"]
     #[inline(always)]
-    #[must_use]
     pub fn bmburst_bfull(&mut self) -> BmburstBfullW<PerctlSpec> {
         BmburstBfullW::new(self, 17)
     }
     #[doc = "Bit 19 - Bus Master Non-Posted Available"]
     #[inline(always)]
-    #[must_use]
     pub fn bm_np_avail(&mut self) -> BmNpAvailW<PerctlSpec> {
         BmNpAvailW::new(self, 19)
     }
     #[doc = "Bit 20 - Bus Master Posted Available"]
     #[inline(always)]
-    #[must_use]
     pub fn bm_pc_avail(&mut self) -> BmPcAvailW<PerctlSpec> {
         BmPcAvailW::new(self, 20)
     }
     #[doc = "Bit 21 - Bus Master Message Available"]
     #[inline(always)]
-    #[must_use]
     pub fn bm_msg_avail(&mut self) -> BmMsgAvailW<PerctlSpec> {
         BmMsgAvailW::new(self, 21)
     }
     #[doc = "Bits 24:31 - Bus Master Packet Length"]
     #[inline(always)]
-    #[must_use]
     pub fn bmpkt_len(&mut self) -> BmpktLenW<PerctlSpec> {
         BmpktLenW::new(self, 24)
     }

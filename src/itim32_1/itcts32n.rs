@@ -64,31 +64,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Timeout Status"]
     #[inline(always)]
-    #[must_use]
     pub fn to_sts(&mut self) -> ToStsW<Itcts32nSpec> {
         ToStsW::new(self, 0)
     }
     #[doc = "Bit 2 - Timeout Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn to_ie(&mut self) -> ToIeW<Itcts32nSpec> {
         ToIeW::new(self, 2)
     }
     #[doc = "Bit 3 - Timeout Wake-Up Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn to_wue(&mut self) -> ToWueW<Itcts32nSpec> {
         ToWueW::new(self, 3)
     }
     #[doc = "Bit 4 - Input Clock Select"]
     #[inline(always)]
-    #[must_use]
     pub fn cksel(&mut self) -> CkselW<Itcts32nSpec> {
         CkselW::new(self, 4)
     }
     #[doc = "Bit 7 - ITIM32 Module Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn iten(&mut self) -> ItenW<Itcts32nSpec> {
         ItenW::new(self, 7)
     }

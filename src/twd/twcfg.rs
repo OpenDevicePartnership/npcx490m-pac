@@ -84,43 +84,36 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Lock Watchdog Configuration"]
     #[inline(always)]
-    #[must_use]
     pub fn ltwcfg(&mut self) -> LtwcfgW<TwcfgSpec> {
         LtwcfgW::new(self, 0)
     }
     #[doc = "Bit 1 - Lock Prescalers"]
     #[inline(always)]
-    #[must_use]
     pub fn ltwcp(&mut self) -> LtwcpW<TwcfgSpec> {
         LtwcpW::new(self, 1)
     }
     #[doc = "Bit 2 - Lock T0 Timer"]
     #[inline(always)]
-    #[must_use]
     pub fn ltwdt0(&mut self) -> Ltwdt0W<TwcfgSpec> {
         Ltwdt0W::new(self, 2)
     }
     #[doc = "Bit 3 - Lock Watchdog Counter"]
     #[inline(always)]
-    #[must_use]
     pub fn lwdcnt(&mut self) -> LwdcntW<TwcfgSpec> {
         LwdcntW::new(self, 3)
     }
     #[doc = "Bit 4 - Watchdog Clock Select"]
     #[inline(always)]
-    #[must_use]
     pub fn wdct0i(&mut self) -> Wdct0iW<TwcfgSpec> {
         Wdct0iW::new(self, 4)
     }
     #[doc = "Bit 5 - Watchdog Touch Select"]
     #[inline(always)]
-    #[must_use]
     pub fn wdsdme(&mut self) -> WdsdmeW<TwcfgSpec> {
         WdsdmeW::new(self, 5)
     }
     #[doc = "Bit 6 - Disable Unlock"]
     #[inline(always)]
-    #[must_use]
     pub fn disunlck(&mut self) -> DisunlckW<TwcfgSpec> {
         DisunlckW::new(self, 6)
     }

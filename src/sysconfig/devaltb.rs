@@ -94,49 +94,41 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - RXD Select"]
     #[inline(always)]
-    #[must_use]
     pub fn rxd_sl(&mut self) -> RxdSlW<DevaltbSpec> {
         RxdSlW::new(self, 0)
     }
     #[doc = "Bit 1 - TXD Select"]
     #[inline(always)]
-    #[must_use]
     pub fn txd_sl(&mut self) -> TxdSlW<DevaltbSpec> {
         TxdSlW::new(self, 1)
     }
     #[doc = "Bit 2 - RTS Select"]
     #[inline(always)]
-    #[must_use]
     pub fn rts_sl(&mut self) -> RtsSlW<DevaltbSpec> {
         RtsSlW::new(self, 2)
     }
     #[doc = "Bit 3 - CTS Select"]
     #[inline(always)]
-    #[must_use]
     pub fn cts_sl(&mut self) -> CtsSlW<DevaltbSpec> {
         CtsSlW::new(self, 3)
     }
     #[doc = "Bit 4 - RI Select"]
     #[inline(always)]
-    #[must_use]
     pub fn ri_sl(&mut self) -> RiSlW<DevaltbSpec> {
         RiSlW::new(self, 4)
     }
     #[doc = "Bit 5 - DTR_BOUT Select"]
     #[inline(always)]
-    #[must_use]
     pub fn dtr_bout_sl(&mut self) -> DtrBoutSlW<DevaltbSpec> {
         DtrBoutSlW::new(self, 5)
     }
     #[doc = "Bit 6 - DCD Select"]
     #[inline(always)]
-    #[must_use]
     pub fn dcd_sl(&mut self) -> DcdSlW<DevaltbSpec> {
         DcdSlW::new(self, 6)
     }
     #[doc = "Bit 7 - DSR Select"]
     #[inline(always)]
-    #[must_use]
     pub fn dsr_sl(&mut self) -> DsrSlW<DevaltbSpec> {
         DsrSlW::new(self, 7)
     }

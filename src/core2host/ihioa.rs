@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:7 - Indirect Host I/O Offset"]
     #[inline(always)]
-    #[must_use]
     pub fn ih_ofs(&mut self) -> IhOfsW<IhioaSpec> {
         IhOfsW::new(self, 0)
     }

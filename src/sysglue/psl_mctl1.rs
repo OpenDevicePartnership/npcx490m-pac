@@ -84,43 +84,36 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Open-Drain Output Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn od_en(&mut self) -> OdEnW<PslMctl1Spec> {
         OdEnW::new(self, 0)
     }
     #[doc = "Bit 1 - Pulse Mode Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn pls_en(&mut self) -> PlsEnW<PslMctl1Spec> {
         PlsEnW::new(self, 1)
     }
     #[doc = "Bit 3 - VCC1_RST Event"]
     #[inline(always)]
-    #[must_use]
     pub fn vcc1_rst_ev(&mut self) -> Vcc1RstEvW<PslMctl1Spec> {
         Vcc1RstEvW::new(self, 3)
     }
     #[doc = "Bit 4 - LCT Event"]
     #[inline(always)]
-    #[must_use]
     pub fn lct_ev(&mut self) -> LctEvW<PslMctl1Spec> {
         LctEvW::new(self, 4)
     }
     #[doc = "Bit 5 - PSL_GPO2 Control"]
     #[inline(always)]
-    #[must_use]
     pub fn psl_gpo2_ctl(&mut self) -> PslGpo2CtlW<PslMctl1Spec> {
         PslGpo2CtlW::new(self, 5)
     }
     #[doc = "Bit 6 - PSL_GPO1 Control"]
     #[inline(always)]
-    #[must_use]
     pub fn psl_gpo1_ctl(&mut self) -> PslGpo1CtlW<PslMctl1Spec> {
         PslGpo1CtlW::new(self, 6)
     }
     #[doc = "Bit 7 - VCC1_RST Enable to PSL"]
     #[inline(always)]
-    #[must_use]
     pub fn vcc1_rst_psl(&mut self) -> Vcc1RstPslW<PslMctl1Spec> {
         Vcc1RstPslW::new(self, 7)
     }

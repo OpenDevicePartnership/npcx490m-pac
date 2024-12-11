@@ -114,61 +114,51 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - Wire 3-0"]
     #[inline(always)]
-    #[must_use]
     pub fn wire3_0(&mut self) -> Wire3_0W<Vwevsm094Spec> {
         Wire3_0W::new(self, 0)
     }
     #[doc = "Bits 4:7 - Wire 3-0 Valid"]
     #[inline(always)]
-    #[must_use]
     pub fn wire3_0valid(&mut self) -> Wire3_0validW<Vwevsm094Spec> {
         Wire3_0validW::new(self, 4)
     }
     #[doc = "Bits 8:14 - Index Value"]
     #[inline(always)]
-    #[must_use]
     pub fn index(&mut self) -> IndexW<Vwevsm094Spec> {
         IndexW::new(self, 8)
     }
     #[doc = "Bit 15 - Index Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn index_en(&mut self) -> IndexEnW<Vwevsm094Spec> {
         IndexEnW::new(self, 15)
     }
     #[doc = "Bit 16 - Dirty"]
     #[inline(always)]
-    #[must_use]
     pub fn dirty(&mut self) -> DirtyW<Vwevsm094Spec> {
         DirtyW::new(self, 16)
     }
     #[doc = "Bit 17 - Enable PLTRST"]
     #[inline(always)]
-    #[must_use]
     pub fn enpltrst(&mut self) -> EnpltrstW<Vwevsm094Spec> {
         EnpltrstW::new(self, 17)
     }
     #[doc = "Bit 19 - Enable Core Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn encdrst(&mut self) -> EncdrstW<Vwevsm094Spec> {
         EncdrstW::new(self, 19)
     }
     #[doc = "Bits 20:23 - Polarity of Wire 3-0"]
     #[inline(always)]
-    #[must_use]
     pub fn pol_wire3_0(&mut self) -> PolWire3_0W<Vwevsm094Spec> {
         PolWire3_0W::new(self, 20)
     }
     #[doc = "Bits 24:27 - Hardware-Controlled Wire 3-0"]
     #[inline(always)]
-    #[must_use]
     pub fn hw_wire3_0(&mut self) -> HwWire3_0W<Vwevsm094Spec> {
         HwWire3_0W::new(self, 24)
     }
     #[doc = "Bits 28:31 - Edge Type Wire 3-0"]
     #[inline(always)]
-    #[must_use]
     pub fn edge_wire3_0(&mut self) -> EdgeWire3_0W<Vwevsm094Spec> {
         EdgeWire3_0W::new(self, 28)
     }

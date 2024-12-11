@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - Threshold Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn then6_1(&mut self) -> Then6_1W<ThenSpec> {
         Then6_1W::new(self, 0)
     }

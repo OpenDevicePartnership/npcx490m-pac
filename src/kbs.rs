@@ -21,12 +21,12 @@ impl RegisterBlock {
     #[doc = "0x00 - Keyboard Scan Delay 1 Register (KBS_DLY1)"]
     #[inline(always)]
     pub const fn kbs_dly1(&self) -> &KbsDly1 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(0).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().cast() }
     }
     #[doc = "0x00 - Keyboard Scan Buffer Data 0-17 Register (KBSBUF0-17)"]
     #[inline(always)]
     pub const fn kbsbuf017(&self) -> &Kbsbuf017 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(0).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().cast() }
     }
     #[doc = "0x01 - Keyboard Scan Delay 2 Register (KBS_DLY2)"]
     #[inline(always)]
@@ -46,12 +46,12 @@ impl RegisterBlock {
     #[doc = "0x04 - Keyboard Scan Clock Divisor Register (KBS_CDIV)"]
     #[inline(always)]
     pub const fn kbs_cdiv(&self) -> &KbsCdiv {
-        unsafe { &*(self as *const Self).cast::<u8>().add(4).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(4).cast() }
     }
     #[doc = "0x04 - Keyboard Scan In Register (KBSIN)"]
     #[inline(always)]
     pub const fn kbsin(&self) -> &Kbsin {
-        unsafe { &*(self as *const Self).cast::<u8>().add(4).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(4).cast() }
     }
     #[doc = "0x05 - Keyboard Scan In Pull-Up Enable Register (KBSINPU)"]
     #[inline(always)]

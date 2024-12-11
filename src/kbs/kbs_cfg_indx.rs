@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - Keyboard Scan Configuration Index"]
     #[inline(always)]
-    #[must_use]
     pub fn kbs_cfg_indx(&mut self) -> KbsCfgIndxW<KbsCfgIndxSpec> {
         KbsCfgIndxW::new(self, 0)
     }

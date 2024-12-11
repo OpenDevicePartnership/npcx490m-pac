@@ -94,49 +94,41 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - RAM Access Window 2 Read Protect 0"]
     #[inline(always)]
-    #[must_use]
     pub fn ima_rp0(&mut self) -> ImaRp0W<ImaRdProtSpec> {
         ImaRp0W::new(self, 0)
     }
     #[doc = "Bit 1 - RAM Access Window 2 Read Protect 1"]
     #[inline(always)]
-    #[must_use]
     pub fn ima_rp1(&mut self) -> ImaRp1W<ImaRdProtSpec> {
         ImaRp1W::new(self, 1)
     }
     #[doc = "Bit 2 - RAM Access Window 2 Read Protect 2"]
     #[inline(always)]
-    #[must_use]
     pub fn ima_rp2(&mut self) -> ImaRp2W<ImaRdProtSpec> {
         ImaRp2W::new(self, 2)
     }
     #[doc = "Bit 3 - RAM Access Window 2 Read Protect 3"]
     #[inline(always)]
-    #[must_use]
     pub fn ima_rp3(&mut self) -> ImaRp3W<ImaRdProtSpec> {
         ImaRp3W::new(self, 3)
     }
     #[doc = "Bit 4 - RAM Access Window 2 Read Protect 4"]
     #[inline(always)]
-    #[must_use]
     pub fn ima_rp4(&mut self) -> ImaRp4W<ImaRdProtSpec> {
         ImaRp4W::new(self, 4)
     }
     #[doc = "Bit 5 - RAM Access Window 2 Read Protect 5"]
     #[inline(always)]
-    #[must_use]
     pub fn ima_rp5(&mut self) -> ImaRp5W<ImaRdProtSpec> {
         ImaRp5W::new(self, 5)
     }
     #[doc = "Bit 6 - RAM Access Window 2 Read Protect 6"]
     #[inline(always)]
-    #[must_use]
     pub fn ima_rp6(&mut self) -> ImaRp6W<ImaRdProtSpec> {
         ImaRp6W::new(self, 6)
     }
     #[doc = "Bit 7 - RAM Access Window 2 Read Protect 7"]
     #[inline(always)]
-    #[must_use]
     pub fn ima_rp7(&mut self) -> ImaRp7W<ImaRdProtSpec> {
         ImaRp7W::new(self, 7)
     }

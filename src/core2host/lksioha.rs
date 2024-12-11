@@ -64,31 +64,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Lock Configuration Registers Host Access"]
     #[inline(always)]
-    #[must_use]
     pub fn lkcfg(&mut self) -> LkcfgW<LksiohaSpec> {
         LkcfgW::new(self, 0)
     }
     #[doc = "Bit 2 - Lock Serial Port Host Access"]
     #[inline(always)]
-    #[must_use]
     pub fn lkspha(&mut self) -> LksphaW<LksiohaSpec> {
         LksphaW::new(self, 2)
     }
     #[doc = "Bit 3 - Lock Extended Shared Memory Host Access"]
     #[inline(always)]
-    #[must_use]
     pub fn lkesmem(&mut self) -> LkesmemW<LksiohaSpec> {
         LkesmemW::new(self, 3)
     }
     #[doc = "Bit 8 - Lock Mobile System Wake-Up Control Host Access"]
     #[inline(always)]
-    #[must_use]
     pub fn lkmswc(&mut self) -> LkmswcW<LksiohaSpec> {
         LkmswcW::new(self, 8)
     }
     #[doc = "Bit 10 - Lock Shared Memory Host Access"]
     #[inline(always)]
-    #[must_use]
     pub fn lksmem(&mut self) -> LksmemW<LksiohaSpec> {
         LksmemW::new(self, 10)
     }

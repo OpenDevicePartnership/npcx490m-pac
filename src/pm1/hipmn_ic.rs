@@ -64,31 +64,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Host Interrupt Request Control Bit"]
     #[inline(always)]
-    #[must_use]
     pub fn irqb(&mut self) -> IrqbW<HipmnIcSpec> {
         IrqbW::new(self, 0)
     }
     #[doc = "Bit 1 - Host SMI Request Control Bit"]
     #[inline(always)]
-    #[must_use]
     pub fn smib(&mut self) -> SmibW<HipmnIcSpec> {
         SmibW::new(self, 1)
     }
     #[doc = "Bit 2 - Host SCI Request Control Bit"]
     #[inline(always)]
-    #[must_use]
     pub fn scib(&mut self) -> ScibW<HipmnIcSpec> {
         ScibW::new(self, 2)
     }
     #[doc = "Bit 6 - SMI Negative Polarity"]
     #[inline(always)]
-    #[must_use]
     pub fn smipol(&mut self) -> SmipolW<HipmnIcSpec> {
         SmipolW::new(self, 6)
     }
     #[doc = "Bit 7 - SCI on IBF Start"]
     #[inline(always)]
-    #[must_use]
     pub fn sciis(&mut self) -> SciisW<HipmnIcSpec> {
         SciisW::new(self, 7)
     }

@@ -84,43 +84,36 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - Host Error Response"]
     #[inline(always)]
-    #[must_use]
     pub fn heres(&mut self) -> HeresW<SmcCtlSpec> {
         HeresW::new(self, 0)
     }
     #[doc = "Bit 2 - Enable Interrupt by Host Access Errors"]
     #[inline(always)]
-    #[must_use]
     pub fn herr_ie(&mut self) -> HerrIeW<SmcCtlSpec> {
         HerrIeW::new(self, 2)
     }
     #[doc = "Bit 3 - Enable Interrupt by Host Semaphore 1 Written"]
     #[inline(always)]
-    #[must_use]
     pub fn hsem1_ie(&mut self) -> Hsem1IeW<SmcCtlSpec> {
         Hsem1IeW::new(self, 3)
     }
     #[doc = "Bit 4 - Enable Interrupt by Host Semaphore 2 Written"]
     #[inline(always)]
-    #[must_use]
     pub fn hsem2_ie(&mut self) -> Hsem2IeW<SmcCtlSpec> {
         Hsem2IeW::new(self, 4)
     }
     #[doc = "Bit 5 - Enable Interrupt by Host Access to Shared Memory"]
     #[inline(always)]
-    #[must_use]
     pub fn shm_acc_ie(&mut self) -> ShmAccIeW<SmcCtlSpec> {
         ShmAccIeW::new(self, 5)
     }
     #[doc = "Bit 6 - Enable Interrupt by Host Indirect Memory Access Written"]
     #[inline(always)]
-    #[must_use]
     pub fn hsem_ima_ie(&mut self) -> HsemImaIeW<SmcCtlSpec> {
         HsemImaIeW::new(self, 6)
     }
     #[doc = "Bit 7 - Host Access Stall"]
     #[inline(always)]
-    #[must_use]
     pub fn hostwait(&mut self) -> HostwaitW<SmcCtlSpec> {
         HostwaitW::new(self, 7)
     }

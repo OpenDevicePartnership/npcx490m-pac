@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:11 - High-Frequency Reference Divisor I"]
     #[inline(always)]
-    #[must_use]
     pub fn hfrdi(&mut self) -> HfrdiW<HfrdiSpec> {
         HfrdiW::new(self, 0)
     }

@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - Tx-FIFO Threshold"]
     #[inline(always)]
-    #[must_use]
     pub fn tx_thr(&mut self) -> TxThrW<SmbnTxfCtlSpec> {
         TxThrW::new(self, 0)
     }
     #[doc = "Bit 6 - Threshold Tx-FIFO Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn thr_txie(&mut self) -> ThrTxieW<SmbnTxfCtlSpec> {
         ThrTxieW::new(self, 6)
     }

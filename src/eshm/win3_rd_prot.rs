@@ -94,49 +94,41 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - RAM Access Window 3 Read Protect 0"]
     #[inline(always)]
-    #[must_use]
     pub fn rw3_rp0(&mut self) -> Rw3Rp0W<Win3RdProtSpec> {
         Rw3Rp0W::new(self, 0)
     }
     #[doc = "Bit 1 - RAM Access Window 3 Read Protect 1"]
     #[inline(always)]
-    #[must_use]
     pub fn rw3_rp1(&mut self) -> Rw3Rp1W<Win3RdProtSpec> {
         Rw3Rp1W::new(self, 1)
     }
     #[doc = "Bit 2 - RAM Access Window 3 Read Protect 2"]
     #[inline(always)]
-    #[must_use]
     pub fn rw3_rp2(&mut self) -> Rw3Rp2W<Win3RdProtSpec> {
         Rw3Rp2W::new(self, 2)
     }
     #[doc = "Bit 3 - RAM Access Window 3 Read Protect 3"]
     #[inline(always)]
-    #[must_use]
     pub fn rw3_rp3(&mut self) -> Rw3Rp3W<Win3RdProtSpec> {
         Rw3Rp3W::new(self, 3)
     }
     #[doc = "Bit 4 - RAM Access Window 3 Read Protect 4"]
     #[inline(always)]
-    #[must_use]
     pub fn rw3_rp4(&mut self) -> Rw3Rp4W<Win3RdProtSpec> {
         Rw3Rp4W::new(self, 4)
     }
     #[doc = "Bit 5 - RAM Access Window 3 Read Protect 5"]
     #[inline(always)]
-    #[must_use]
     pub fn rw3_rp5(&mut self) -> Rw3Rp5W<Win3RdProtSpec> {
         Rw3Rp5W::new(self, 5)
     }
     #[doc = "Bit 6 - RAM Access Window 3 Read Protect 6"]
     #[inline(always)]
-    #[must_use]
     pub fn rw3_rp6(&mut self) -> Rw3Rp6W<Win3RdProtSpec> {
         Rw3Rp6W::new(self, 6)
     }
     #[doc = "Bit 7 - RAM Access Window 3 Read Protect 7"]
     #[inline(always)]
-    #[must_use]
     pub fn rw3_rp7(&mut self) -> Rw3Rp7W<Win3RdProtSpec> {
         Rw3Rp7W::new(self, 7)
     }

@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - RPMC Counter the 3rd RPMC Flash Device"]
     #[inline(always)]
-    #[must_use]
     pub fn rpmc_cntr_3(&mut self) -> RpmcCntr3W<FlashRpmcCfg2Spec> {
         RpmcCntr3W::new(self, 0)
     }
     #[doc = "Bits 4:11 - RPMC OP1 Opcode on the 3rd RPMC Flash Device"]
     #[inline(always)]
-    #[must_use]
     pub fn rpmc_op1_3(&mut self) -> RpmcOp1_3W<FlashRpmcCfg2Spec> {
         RpmcOp1_3W::new(self, 4)
     }
     #[doc = "Bits 12:15 - RPMC Counter the 4th RPMC Flash Device"]
     #[inline(always)]
-    #[must_use]
     pub fn rpmc_cntr_4(&mut self) -> RpmcCntr4W<FlashRpmcCfg2Spec> {
         RpmcCntr4W::new(self, 12)
     }
     #[doc = "Bits 16:23 - RPMC OP1 Opcode on the 4th RPMC Flash Device"]
     #[inline(always)]
-    #[must_use]
     pub fn rpmc_op1_4(&mut self) -> RpmcOp1_4W<FlashRpmcCfg2Spec> {
         RpmcOp1_4W::new(self, 16)
     }

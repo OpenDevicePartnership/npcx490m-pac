@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 2 - LPC Clock Reference Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn lrefen(&mut self) -> LrefenW<LfcgctlSpec> {
         LrefenW::new(self, 2)
     }
     #[doc = "Bit 3 - LFCG Locked on External Reference"]
     #[inline(always)]
-    #[must_use]
     pub fn lfler(&mut self) -> LflerW<LfcgctlSpec> {
         LflerW::new(self, 3)
     }
     #[doc = "Bit 4 - Update Calibration Parameters"]
     #[inline(always)]
-    #[must_use]
     pub fn udcp(&mut self) -> UdcpW<LfcgctlSpec> {
         UdcpW::new(self, 4)
     }
     #[doc = "Bit 5 - LFCG Register Write Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn lfloc(&mut self) -> LflocW<LfcgctlSpec> {
         LflocW::new(self, 5)
     }

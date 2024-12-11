@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - Dummy Cycles Size"]
     #[inline(always)]
-    #[must_use]
     pub fn dmcsiz(&mut self) -> DmcsizW<UmaDmmSpec> {
         DmcsizW::new(self, 0)
     }

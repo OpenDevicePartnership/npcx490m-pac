@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - DMA from Bus"]
     #[inline(always)]
-    #[must_use]
     pub fn dmafb(&mut self) -> DmafbW<MdmactrlSpec> {
         DmafbW::new(self, 0)
     }
     #[doc = "Bits 2:3 - DMA to Bus"]
     #[inline(always)]
-    #[must_use]
     pub fn dmatb(&mut self) -> DmatbW<MdmactrlSpec> {
         DmatbW::new(self, 2)
     }

@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Input Buffer Half Full 2 Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn ibhf2en(&mut self) -> Ibhf2enW<Evenable2Spec> {
         Ibhf2enW::new(self, 0)
     }
     #[doc = "Bit 1 - SHI_CS Rising Edge Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn csn_reen(&mut self) -> CsnReenW<Evenable2Spec> {
         CsnReenW::new(self, 1)
     }
     #[doc = "Bit 2 - SHI_CS Falling Edge Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn csn_feen(&mut self) -> CsnFeenW<Evenable2Spec> {
         CsnFeenW::new(self, 2)
     }

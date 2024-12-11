@@ -84,43 +84,36 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - 128-Byte Payload Buffer Empty"]
     #[inline(always)]
-    #[must_use]
     pub fn obe(&mut self) -> ObeW<EvstatSpec> {
         ObeW::new(self, 0)
     }
     #[doc = "Bit 1 - 128-Byte Payload Buffer Half Empty"]
     #[inline(always)]
-    #[must_use]
     pub fn obhe(&mut self) -> ObheW<EvstatSpec> {
         ObheW::new(self, 1)
     }
     #[doc = "Bit 2 - Input Buffer Full"]
     #[inline(always)]
-    #[must_use]
     pub fn ibf(&mut self) -> IbfW<EvstatSpec> {
         IbfW::new(self, 2)
     }
     #[doc = "Bit 3 - Input Buffer Half Full"]
     #[inline(always)]
-    #[must_use]
     pub fn ibhf(&mut self) -> IbhfW<EvstatSpec> {
         IbhfW::new(self, 3)
     }
     #[doc = "Bit 4 - End-of-Data for Read Transaction"]
     #[inline(always)]
-    #[must_use]
     pub fn eor(&mut self) -> EorW<EvstatSpec> {
         EorW::new(self, 4)
     }
     #[doc = "Bit 5 - End-of-Data for Write Transaction"]
     #[inline(always)]
-    #[must_use]
     pub fn eow(&mut self) -> EowW<EvstatSpec> {
         EowW::new(self, 5)
     }
     #[doc = "Bit 6 - Status Read"]
     #[inline(always)]
-    #[must_use]
     pub fn stsr(&mut self) -> StsrW<EvstatSpec> {
         StsrW::new(self, 6)
     }

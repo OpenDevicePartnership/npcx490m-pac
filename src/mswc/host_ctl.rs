@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1 - SMI Invert"]
     #[inline(always)]
-    #[must_use]
     pub fn smi_inv(&mut self) -> SmiInvW<HostCtlSpec> {
         SmiInvW::new(self, 1)
     }
     #[doc = "Bit 3 - EC_SCI Invert"]
     #[inline(always)]
-    #[must_use]
     pub fn sci_inv(&mut self) -> SciInvW<HostCtlSpec> {
         SciInvW::new(self, 3)
     }
     #[doc = "Bit 4 - SMI Level Set"]
     #[inline(always)]
-    #[must_use]
     pub fn nsmi_set(&mut self) -> NsmiSetW<HostCtlSpec> {
         NsmiSetW::new(self, 4)
     }

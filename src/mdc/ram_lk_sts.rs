@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - RAM Write Lock Violation"]
     #[inline(always)]
-    #[must_use]
     pub fn ram_wlk_viol(&mut self) -> RamWlkViolW<RamLkStsSpec> {
         RamWlkViolW::new(self, 0)
     }
     #[doc = "Bit 1 - RAM Fetch Violation"]
     #[inline(always)]
-    #[must_use]
     pub fn ram_fetch_viol(&mut self) -> RamFetchViolW<RamLkStsSpec> {
         RamFetchViolW::new(self, 1)
     }

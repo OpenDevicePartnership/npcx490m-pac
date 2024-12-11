@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - Counter 1 Clock Select"]
     #[inline(always)]
-    #[must_use]
     pub fn c1csel(&mut self) -> C1cselW<TnCkcSpec> {
         C1cselW::new(self, 0)
     }
     #[doc = "Bits 3:5 - Counter 2 Clock Select"]
     #[inline(always)]
-    #[must_use]
     pub fn c2csel(&mut self) -> C2cselW<TnCkcSpec> {
         C2cselW::new(self, 3)
     }
     #[doc = "Bit 6 - Pulse Accumulate Clock Select"]
     #[inline(always)]
-    #[must_use]
     pub fn pls_acc_clk(&mut self) -> PlsAccClkW<TnCkcSpec> {
         PlsAccClkW::new(self, 6)
     }
     #[doc = "Bit 7 - Low-Power Mode Select"]
     #[inline(always)]
-    #[must_use]
     pub fn low_pwr(&mut self) -> LowPwrW<TnCkcSpec> {
         LowPwrW::new(self, 7)
     }

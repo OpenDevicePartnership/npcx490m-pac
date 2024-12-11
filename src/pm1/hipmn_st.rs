@@ -64,31 +64,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Output Buffer Full"]
     #[inline(always)]
-    #[must_use]
     pub fn obf(&mut self) -> ObfW<HipmnStSpec> {
         ObfW::new(self, 0)
     }
     #[doc = "Bit 1 - Input Buffer Full"]
     #[inline(always)]
-    #[must_use]
     pub fn ibf(&mut self) -> IbfW<HipmnStSpec> {
         IbfW::new(self, 1)
     }
     #[doc = "Bit 2 - Flag 0"]
     #[inline(always)]
-    #[must_use]
     pub fn f0(&mut self) -> F0W<HipmnStSpec> {
         F0W::new(self, 2)
     }
     #[doc = "Bit 3 - Command Register"]
     #[inline(always)]
-    #[must_use]
     pub fn cmd(&mut self) -> CmdW<HipmnStSpec> {
         CmdW::new(self, 3)
     }
     #[doc = "Bits 4:7 - Status"]
     #[inline(always)]
-    #[must_use]
     pub fn st3_st0(&mut self) -> St3St0W<HipmnStSpec> {
         St3St0W::new(self, 4)
     }

@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 5 - FIFO Was Written"]
     #[inline(always)]
-    #[must_use]
     pub fn fwr(&mut self) -> FwrW<Dp80stsSpec> {
         FwrW::new(self, 5)
     }
     #[doc = "Bit 6 - FIFO Not Empty"]
     #[inline(always)]
-    #[must_use]
     pub fn fne(&mut self) -> FneW<Dp80stsSpec> {
         FneW::new(self, 6)
     }
     #[doc = "Bit 7 - FIFO Overrun"]
     #[inline(always)]
-    #[must_use]
     pub fn for_(&mut self) -> ForW<Dp80stsSpec> {
         ForW::new(self, 7)
     }

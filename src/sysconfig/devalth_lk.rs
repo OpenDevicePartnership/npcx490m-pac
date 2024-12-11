@@ -84,43 +84,36 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1 - FLM_CSI Type Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn fcsi_typ_lk(&mut self) -> FcsiTypLkW<DevalthLkSpec> {
         FcsiTypLkW::new(self, 1)
     }
     #[doc = "Bit 2 - DCY_IN Select Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn dcy_in_sl_lk(&mut self) -> DcyInSlLkW<DevalthLkSpec> {
         DcyInSlLkW::new(self, 2)
     }
     #[doc = "Bit 3 - DCY_ECHO Open-Drain Select Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn dcy_echo_od_lk(&mut self) -> DcyEchoOdLkW<DevalthLkSpec> {
         DcyEchoOdLkW::new(self, 3)
     }
     #[doc = "Bit 4 - DCY_ECHO Select Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn dcy_echo_sl_lk(&mut self) -> DcyEchoSlLkW<DevalthLkSpec> {
         DcyEchoSlLkW::new(self, 4)
     }
     #[doc = "Bit 5 - FLM Quad Interface-Select Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn flm_quad_lk(&mut self) -> FlmQuadLkW<DevalthLkSpec> {
         FlmQuadLkW::new(self, 5)
     }
     #[doc = "Bit 6 - FLM in Monitoring Mode Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn flm_mon_md_lk(&mut self) -> FlmMonMdLkW<DevalthLkSpec> {
         FlmMonMdLkW::new(self, 6)
     }
     #[doc = "Bit 7 - FLM Interface-Select Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn flm_sl_lk(&mut self) -> FlmSlLkW<DevalthLkSpec> {
         FlmSlLkW::new(self, 7)
     }

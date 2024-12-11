@@ -94,49 +94,41 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Read Protect Block 8*n+0"]
     #[inline(always)]
-    #[must_use]
     pub fn rdp8n_0(&mut self) -> Rdp8n0W<OtpRdProt15Spec> {
         Rdp8n0W::new(self, 0)
     }
     #[doc = "Bit 1 - Read Protect Block 8*n+1"]
     #[inline(always)]
-    #[must_use]
     pub fn rdp8n_1(&mut self) -> Rdp8n1W<OtpRdProt15Spec> {
         Rdp8n1W::new(self, 1)
     }
     #[doc = "Bit 2 - Read Protect Block 8*n+2"]
     #[inline(always)]
-    #[must_use]
     pub fn rdp8n_2(&mut self) -> Rdp8n2W<OtpRdProt15Spec> {
         Rdp8n2W::new(self, 2)
     }
     #[doc = "Bit 3 - Read Protect Block 8*n+3"]
     #[inline(always)]
-    #[must_use]
     pub fn rdp8n_3(&mut self) -> Rdp8n3W<OtpRdProt15Spec> {
         Rdp8n3W::new(self, 3)
     }
     #[doc = "Bit 4 - Read Protect Block 8*n+4"]
     #[inline(always)]
-    #[must_use]
     pub fn rdp8n_4(&mut self) -> Rdp8n4W<OtpRdProt15Spec> {
         Rdp8n4W::new(self, 4)
     }
     #[doc = "Bit 5 - Read Protect Block 8*n+5"]
     #[inline(always)]
-    #[must_use]
     pub fn rdp8n_5(&mut self) -> Rdp8n5W<OtpRdProt15Spec> {
         Rdp8n5W::new(self, 5)
     }
     #[doc = "Bit 6 - Read Protect Block 8*n+6"]
     #[inline(always)]
-    #[must_use]
     pub fn rdp8n_6(&mut self) -> Rdp8n6W<OtpRdProt15Spec> {
         Rdp8n6W::new(self, 6)
     }
     #[doc = "Bit 7 - Read Protect Block 8*n+7"]
     #[inline(always)]
-    #[must_use]
     pub fn rdp8n_7(&mut self) -> Rdp8n7W<OtpRdProt15Spec> {
         Rdp8n7W::new(self, 7)
     }

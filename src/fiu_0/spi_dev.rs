@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 5:7 - Device 'n' Number of Address Bytes"]
     #[inline(always)]
-    #[must_use]
     pub fn dn_naddrb(&mut self) -> DnNaddrbW<SpiDevSpec> {
         DnNaddrbW::new(self, 5)
     }

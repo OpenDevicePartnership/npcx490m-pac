@@ -74,37 +74,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Host Reset Control Bit"]
     #[inline(always)]
-    #[must_use]
     pub fn hrstob(&mut self) -> HrstobW<Mswctl1Spec> {
         HrstobW::new(self, 0)
     }
     #[doc = "Bit 1 - Host Power-On"]
     #[inline(always)]
-    #[must_use]
     pub fn hpwron(&mut self) -> HpwronW<Mswctl1Spec> {
         HpwronW::new(self, 1)
     }
     #[doc = "Bit 2 - LRESET or PLTRST Active"]
     #[inline(always)]
-    #[must_use]
     pub fn lreset_pltrst_act(&mut self) -> LresetPltrstActW<Mswctl1Spec> {
         LresetPltrstActW::new(self, 2)
     }
     #[doc = "Bit 3 - Valid Host Configuration Address"]
     #[inline(always)]
-    #[must_use]
     pub fn vhcfga(&mut self) -> VhcfgaW<Mswctl1Spec> {
         VhcfgaW::new(self, 3)
     }
     #[doc = "Bit 4 - Host Configuration Address Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn hcfglk(&mut self) -> HcfglkW<Mswctl1Spec> {
         HcfglkW::new(self, 4)
     }
     #[doc = "Bit 6 - RESET_OUT Control Bit"]
     #[inline(always)]
-    #[must_use]
     pub fn reset_outb(&mut self) -> ResetOutbW<Mswctl1Spec> {
         ResetOutbW::new(self, 6)
     }

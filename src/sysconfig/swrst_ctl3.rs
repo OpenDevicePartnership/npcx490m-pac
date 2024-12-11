@@ -264,151 +264,126 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - SuperI/O Configuration Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn siocfg_rst(&mut self) -> SiocfgRstW<SwrstCtl3Spec> {
         SiocfgRstW::new(self, 0)
     }
     #[doc = "Bit 1 - Serial Port Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn serport_rst(&mut self) -> SerportRstW<SwrstCtl3Spec> {
         SerportRstW::new(self, 1)
     }
     #[doc = "Bit 4 - I3CI1 Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn i3c1_rst(&mut self) -> I3c1RstW<SwrstCtl3Spec> {
         I3c1RstW::new(self, 4)
     }
     #[doc = "Bit 5 - I3CI2 Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn i3c2_rst(&mut self) -> I3c2RstW<SwrstCtl3Spec> {
         I3c2RstW::new(self, 5)
     }
     #[doc = "Bit 6 - I3CI3 Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn i3c3_rst(&mut self) -> I3c3RstW<SwrstCtl3Spec> {
         I3c3RstW::new(self, 6)
     }
     #[doc = "Bit 8 - MSWC Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn mswc_rst(&mut self) -> MswcRstW<SwrstCtl3Spec> {
         MswcRstW::new(self, 8)
     }
     #[doc = "Bit 9 - SHM Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn shm_rst(&mut self) -> ShmRstW<SwrstCtl3Spec> {
         ShmRstW::new(self, 9)
     }
     #[doc = "Bit 10 - PM Channel 1 Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn pmch1_rst(&mut self) -> Pmch1RstW<SwrstCtl3Spec> {
         Pmch1RstW::new(self, 10)
     }
     #[doc = "Bit 11 - PM Channel 2 Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn pmch2_rst(&mut self) -> Pmch2RstW<SwrstCtl3Spec> {
         Pmch2RstW::new(self, 11)
     }
     #[doc = "Bit 12 - PM Channel 3 Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn pmch3_rst(&mut self) -> Pmch3RstW<SwrstCtl3Spec> {
         Pmch3RstW::new(self, 12)
     }
     #[doc = "Bit 13 - PM Channel 4 Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn pmch4_rst(&mut self) -> Pmch4RstW<SwrstCtl3Spec> {
         Pmch4RstW::new(self, 13)
     }
     #[doc = "Bit 15 - KBC Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn kbc_rst(&mut self) -> KbcRstW<SwrstCtl3Spec> {
         KbcRstW::new(self, 15)
     }
     #[doc = "Bit 16 - Core-to-Host Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn c2host_rst(&mut self) -> C2hostRstW<SwrstCtl3Spec> {
         C2hostRstW::new(self, 16)
     }
     #[doc = "Bit 18 - CR_UART 3 Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn crurt3_rst(&mut self) -> Crurt3RstW<SwrstCtl3Spec> {
         Crurt3RstW::new(self, 18)
     }
     #[doc = "Bit 19 - CR_UART 4 Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn crurt4_rst(&mut self) -> Crurt4RstW<SwrstCtl3Spec> {
         Crurt4RstW::new(self, 19)
     }
     #[doc = "Bit 20 - LFCG Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn lfcg_rst(&mut self) -> LfcgRstW<SwrstCtl3Spec> {
         LfcgRstW::new(self, 20)
     }
     #[doc = "Bit 22 - Development Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn dev_rst(&mut self) -> DevRstW<SwrstCtl3Spec> {
         DevRstW::new(self, 22)
     }
     #[doc = "Bit 23 - SYSCFG Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn syscfg_rst(&mut self) -> SyscfgRstW<SwrstCtl3Spec> {
         SyscfgRstW::new(self, 23)
     }
     #[doc = "Bit 25 - BBRM Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn bbrm_rst(&mut self) -> BbrmRstW<SwrstCtl3Spec> {
         BbrmRstW::new(self, 25)
     }
     #[doc = "Bit 26 - SHAb Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn shab_rst(&mut self) -> ShabRstW<SwrstCtl3Spec> {
         ShabRstW::new(self, 26)
     }
     #[doc = "Bit 27 - OTPI Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn otpi_rst(&mut self) -> OtpiRstW<SwrstCtl3Spec> {
         OtpiRstW::new(self, 27)
     }
     #[doc = "Bit 28 - RNG Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn rng_rst(&mut self) -> RngRstW<SwrstCtl3Spec> {
         RngRstW::new(self, 28)
     }
     #[doc = "Bit 29 - SHAa Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn shaa_rst(&mut self) -> ShaaRstW<SwrstCtl3Spec> {
         ShaaRstW::new(self, 29)
     }
     #[doc = "Bit 30 - PKA Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn pka_rst(&mut self) -> PkaRstW<SwrstCtl3Spec> {
         PkaRstW::new(self, 30)
     }
     #[doc = "Bit 31 - AES Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn aes_rst(&mut self) -> AesRstW<SwrstCtl3Spec> {
         AesRstW::new(self, 31)
     }

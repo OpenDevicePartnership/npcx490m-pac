@@ -74,37 +74,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Timer Interrupt A Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn taien(&mut self) -> TaienW<TnIenSpec> {
         TaienW::new(self, 0)
     }
     #[doc = "Bit 1 - Timer Interrupt B Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn tbien(&mut self) -> TbienW<TnIenSpec> {
         TbienW::new(self, 1)
     }
     #[doc = "Bit 2 - Timer Interrupt C Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn tcien(&mut self) -> TcienW<TnIenSpec> {
         TcienW::new(self, 2)
     }
     #[doc = "Bit 3 - Timer Interrupt D Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn tdien(&mut self) -> TdienW<TnIenSpec> {
         TdienW::new(self, 3)
     }
     #[doc = "Bit 4 - Timer Interrupt E Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn teien(&mut self) -> TeienW<TnIenSpec> {
         TeienW::new(self, 4)
     }
     #[doc = "Bit 5 - Timer Interrupt F Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn tfien(&mut self) -> TfienW<TnIenSpec> {
         TfienW::new(self, 5)
     }

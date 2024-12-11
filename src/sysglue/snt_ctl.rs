@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Snooze Timer Start"]
     #[inline(always)]
-    #[must_use]
     pub fn snt_go(&mut self) -> SntGoW<SntCtlSpec> {
         SntGoW::new(self, 0)
     }
     #[doc = "Bits 3:14 - Snooze Timer Count"]
     #[inline(always)]
-    #[must_use]
     pub fn snt_cnt(&mut self) -> SntCntW<SntCtlSpec> {
         SntCntW::new(self, 3)
     }

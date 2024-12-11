@@ -94,49 +94,41 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - PSL_IN1 Event"]
     #[inline(always)]
-    #[must_use]
     pub fn psl_in1_ev(&mut self) -> PslIn1EvW<PslCtsSpec> {
         PslIn1EvW::new(self, 0)
     }
     #[doc = "Bit 1 - PSL_IN2 Event"]
     #[inline(always)]
-    #[must_use]
     pub fn psl_in2_ev(&mut self) -> PslIn2EvW<PslCtsSpec> {
         PslIn2EvW::new(self, 1)
     }
     #[doc = "Bit 2 - PSL_IN3 Event"]
     #[inline(always)]
-    #[must_use]
     pub fn psl_in3_ev(&mut self) -> PslIn3EvW<PslCtsSpec> {
         PslIn3EvW::new(self, 2)
     }
     #[doc = "Bit 3 - PSL_IN4 Event"]
     #[inline(always)]
-    #[must_use]
     pub fn psl_in4_ev(&mut self) -> PslIn4EvW<PslCtsSpec> {
         PslIn4EvW::new(self, 3)
     }
     #[doc = "Bit 4 - PSL_IN1 Edge Mode"]
     #[inline(always)]
-    #[must_use]
     pub fn psl_in1_edg(&mut self) -> PslIn1EdgW<PslCtsSpec> {
         PslIn1EdgW::new(self, 4)
     }
     #[doc = "Bit 5 - PSL_IN2 Edge Mode"]
     #[inline(always)]
-    #[must_use]
     pub fn psl_in2_edg(&mut self) -> PslIn2EdgW<PslCtsSpec> {
         PslIn2EdgW::new(self, 5)
     }
     #[doc = "Bit 6 - PSL_IN3 Edge Mode"]
     #[inline(always)]
-    #[must_use]
     pub fn psl_in3_edg(&mut self) -> PslIn3EdgW<PslCtsSpec> {
         PslIn3EdgW::new(self, 6)
     }
     #[doc = "Bit 7 - PSL_IN4 Edge Mode"]
     #[inline(always)]
-    #[must_use]
     pub fn psl_in4_edg(&mut self) -> PslIn4EdgW<PslCtsSpec> {
         PslIn4EdgW::new(self, 7)
     }

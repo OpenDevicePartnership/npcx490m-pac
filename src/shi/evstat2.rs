@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Input Buffer Half Full 2"]
     #[inline(always)]
-    #[must_use]
     pub fn ibhf2(&mut self) -> Ibhf2W<Evstat2Spec> {
         Ibhf2W::new(self, 0)
     }
     #[doc = "Bit 1 - SHI_CS Rising Edge"]
     #[inline(always)]
-    #[must_use]
     pub fn csn_re(&mut self) -> CsnReW<Evstat2Spec> {
         CsnReW::new(self, 1)
     }
     #[doc = "Bit 2 - SHI_CS Falling Edge"]
     #[inline(always)]
-    #[must_use]
     pub fn csn_fe(&mut self) -> CsnFeW<Evstat2Spec> {
         CsnFeW::new(self, 2)
     }

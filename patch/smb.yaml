@@ -1,0 +1,8 @@
+_derive:
+  SMB1: SMB0
+  SMB2: SMB0
+  SMB3: SMB0
+  SMB4: SMB0
+  SMB5: SMB0
+  SMB6: SMB0
+  SMB7: SMB0

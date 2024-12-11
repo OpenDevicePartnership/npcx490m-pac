@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Start Of Transaction Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn sotie(&mut self) -> SotieW<PsienSpec> {
         SotieW::new(self, 0)
     }
     #[doc = "Bit 1 - End Of Transaction Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn eotie(&mut self) -> EotieW<PsienSpec> {
         EotieW::new(self, 1)
     }
     #[doc = "Bit 4 - PS/2 Wake-Up Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn ps2_wue(&mut self) -> Ps2WueW<PsienSpec> {
         Ps2WueW::new(self, 4)
     }
     #[doc = "Bit 7 - PS/2 Interface Clock Select"]
     #[inline(always)]
-    #[must_use]
     pub fn ps2_clk_sel(&mut self) -> Ps2ClkSelW<PsienSpec> {
         Ps2ClkSelW::new(self, 7)
     }

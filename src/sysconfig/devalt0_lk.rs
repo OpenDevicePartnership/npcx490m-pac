@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - SPI Peripheral Interface-Select Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn spip_sl_lk(&mut self) -> SpipSlLkW<Devalt0LkSpec> {
         SpipSlLkW::new(self, 0)
     }
     #[doc = "Bit 3 - No Private SPI Flash-Select Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn no_pvt_spi_lk(&mut self) -> NoPvtSpiLkW<Devalt0LkSpec> {
         NoPvtSpiLkW::new(self, 3)
     }

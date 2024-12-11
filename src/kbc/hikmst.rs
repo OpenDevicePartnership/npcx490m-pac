@@ -64,31 +64,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Output Buffer Full"]
     #[inline(always)]
-    #[must_use]
     pub fn obf(&mut self) -> ObfW<HikmstSpec> {
         ObfW::new(self, 0)
     }
     #[doc = "Bit 1 - Input Buffer Full"]
     #[inline(always)]
-    #[must_use]
     pub fn ibf(&mut self) -> IbfW<HikmstSpec> {
         IbfW::new(self, 1)
     }
     #[doc = "Bit 2 - Flag 0"]
     #[inline(always)]
-    #[must_use]
     pub fn f0(&mut self) -> F0W<HikmstSpec> {
         F0W::new(self, 2)
     }
     #[doc = "Bit 3 - A2 Address"]
     #[inline(always)]
-    #[must_use]
     pub fn a2(&mut self) -> A2W<HikmstSpec> {
         A2W::new(self, 3)
     }
     #[doc = "Bits 4:7 - Status Bits"]
     #[inline(always)]
-    #[must_use]
     pub fn st3_st0(&mut self) -> St3St0W<HikmstSpec> {
         St3St0W::new(self, 4)
     }

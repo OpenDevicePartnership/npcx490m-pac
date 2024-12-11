@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - Days Value"]
     #[inline(always)]
-    #[must_use]
     pub fn days(&mut self) -> DaysW<LctdaySpec> {
         DaysW::new(self, 0)
     }

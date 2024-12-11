@@ -94,49 +94,41 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:6 - IRQ Number"]
     #[inline(always)]
-    #[must_use]
     pub fn irq_num(&mut self) -> IrqNumW<VwswirqSpec> {
         IrqNumW::new(self, 0)
     }
     #[doc = "Bit 7 - IRQ Level"]
     #[inline(always)]
-    #[must_use]
     pub fn irq_lvl(&mut self) -> IrqLvlW<VwswirqSpec> {
         IrqLvlW::new(self, 7)
     }
     #[doc = "Bits 8:14 - Index Value"]
     #[inline(always)]
-    #[must_use]
     pub fn index(&mut self) -> IndexW<VwswirqSpec> {
         IndexW::new(self, 8)
     }
     #[doc = "Bit 15 - Index Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn index_en(&mut self) -> IndexEnW<VwswirqSpec> {
         IndexEnW::new(self, 15)
     }
     #[doc = "Bit 16 - Dirty"]
     #[inline(always)]
-    #[must_use]
     pub fn dirty(&mut self) -> DirtyW<VwswirqSpec> {
         DirtyW::new(self, 16)
     }
     #[doc = "Bit 17 - Enable PLTRST"]
     #[inline(always)]
-    #[must_use]
     pub fn enpltrst(&mut self) -> EnpltrstW<VwswirqSpec> {
         EnpltrstW::new(self, 17)
     }
     #[doc = "Bit 19 - Enable Core Reset"]
     #[inline(always)]
-    #[must_use]
     pub fn encdrst(&mut self) -> EncdrstW<VwswirqSpec> {
         EncdrstW::new(self, 19)
     }
     #[doc = "Bit 28 - Edge Type IRQ"]
     #[inline(always)]
-    #[must_use]
     pub fn edge_irq(&mut self) -> EdgeIrqW<VwswirqSpec> {
         EdgeIrqW::new(self, 28)
     }

@@ -64,31 +64,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - AC_IN Input Select"]
     #[inline(always)]
-    #[must_use]
     pub fn ac_in_sel(&mut self) -> AcInSelW<PslMctl2Spec> {
         AcInSelW::new(self, 0)
     }
     #[doc = "Bit 3 - AC_IN Blocking of LCT PSL Event, Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn ac_in_block_en(&mut self) -> AcInBlockEnW<PslMctl2Spec> {
         AcInBlockEnW::new(self, 3)
     }
     #[doc = "Bit 4 - PSL Debouncer Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn psl_db_en(&mut self) -> PslDbEnW<PslMctl2Spec> {
         PslDbEnW::new(self, 4)
     }
     #[doc = "Bit 6 - PSL Glitch Protection Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn psl_gp_en(&mut self) -> PslGpEnW<PslMctl2Spec> {
         PslGpEnW::new(self, 6)
     }
     #[doc = "Bit 7 - VCC1_RST Enable to PSL Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn vcc1_rst_psl_lk(&mut self) -> Vcc1RstPslLkW<PslMctl2Spec> {
         Vcc1RstPslLkW::new(self, 7)
     }

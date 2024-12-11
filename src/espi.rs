@@ -478,22 +478,22 @@ impl RegisterBlock {
     #[doc = "0x180 - Virtual Wire GPIO Target-to-Controller Register 0-15 (VWGPSM0-15)"]
     #[inline(always)]
     pub const fn vwgpsm0150(&self) -> &Vwgpsm0150 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(384).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(384).cast() }
     }
     #[doc = "0x180 - Virtual Wire Event Controller-to-Target Register 0-11 (VWEVMS0-11)"]
     #[inline(always)]
     pub const fn vwevms01110(&self) -> &Vwevms01110 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(384).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(384).cast() }
     }
     #[doc = "0x184 - Virtual Wire GPIO Target-to-Controller Register 0-15 (VWGPSM0-15)"]
     #[inline(always)]
     pub const fn vwgpsm0151(&self) -> &Vwgpsm0151 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(388).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(388).cast() }
     }
     #[doc = "0x184 - Virtual Wire Event Controller-to-Target Register 0-11 (VWEVMS0-11)"]
     #[inline(always)]
     pub const fn vwevms01111(&self) -> &Vwevms01111 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(388).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(388).cast() }
     }
     #[doc = "0x188 - Virtual Wire GPIO Target-to-Controller Register 0-15 (VWGPSM0-15)"]
     #[inline(always)]
@@ -503,137 +503,137 @@ impl RegisterBlock {
     #[doc = "0x190 - Virtual Wire GPIO Controller-to-Target Register 0-15 (VWGPMS0-15)"]
     #[inline(always)]
     pub const fn vwgpms0150(&self) -> &Vwgpms0150 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(400).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(400).cast() }
     }
     #[doc = "0x192 - Virtual Wire GPIO Target-to-Controller Register 0-15 (VWGPSM0-15)"]
     #[inline(always)]
     pub const fn vwgpsm0153(&self) -> &Vwgpsm0153 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(402).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(402).cast() }
     }
     #[doc = "0x194 - Virtual Wire GPIO Controller-to-Target Register 0-15 (VWGPMS0-15)"]
     #[inline(always)]
     pub const fn vwgpms0151(&self) -> &Vwgpms0151 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(404).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(404).cast() }
     }
     #[doc = "0x196 - Virtual Wire GPIO Target-to-Controller Register 0-15 (VWGPSM0-15)"]
     #[inline(always)]
     pub const fn vwgpsm0154(&self) -> &Vwgpsm0154 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(406).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(406).cast() }
     }
     #[doc = "0x198 - Virtual Wire GPIO Controller-to-Target Register 0-15 (VWGPMS0-15)"]
     #[inline(always)]
     pub const fn vwgpms0152(&self) -> &Vwgpms0152 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(408).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(408).cast() }
     }
     #[doc = "0x200 - Virtual Wire GPIO Target-to-Controller Register 0-15 (VWGPSM0-15)"]
     #[inline(always)]
     pub const fn vwgpsm0155(&self) -> &Vwgpsm0155 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(512).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(512).cast() }
     }
     #[doc = "0x202 - Virtual Wire GPIO Controller-to-Target Register 0-15 (VWGPMS0-15)"]
     #[inline(always)]
     pub const fn vwgpms0153(&self) -> &Vwgpms0153 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(514).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(514).cast() }
     }
     #[doc = "0x204 - Virtual Wire GPIO Target-to-Controller Register 0-15 (VWGPSM0-15)"]
     #[inline(always)]
     pub const fn vwgpsm0156(&self) -> &Vwgpsm0156 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(516).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(516).cast() }
     }
     #[doc = "0x206 - Virtual Wire GPIO Controller-to-Target Register 0-15 (VWGPMS0-15)"]
     #[inline(always)]
     pub const fn vwgpms0154(&self) -> &Vwgpms0154 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(518).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(518).cast() }
     }
     #[doc = "0x208 - Virtual Wire GPIO Target-to-Controller Register 0-15 (VWGPSM0-15)"]
     #[inline(always)]
     pub const fn vwgpsm0157(&self) -> &Vwgpsm0157 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(520).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(520).cast() }
     }
     #[doc = "0x210 - Virtual Wire GPIO Controller-to-Target Register 0-15 (VWGPMS0-15)"]
     #[inline(always)]
     pub const fn vwgpms0155(&self) -> &Vwgpms0155 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(528).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(528).cast() }
     }
     #[doc = "0x212 - Virtual Wire GPIO Target-to-Controller Register 0-15 (VWGPSM0-15)"]
     #[inline(always)]
     pub const fn vwgpsm0158(&self) -> &Vwgpsm0158 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(530).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(530).cast() }
     }
     #[doc = "0x214 - Virtual Wire GPIO Controller-to-Target Register 0-15 (VWGPMS0-15)"]
     #[inline(always)]
     pub const fn vwgpms0156(&self) -> &Vwgpms0156 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(532).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(532).cast() }
     }
     #[doc = "0x216 - Virtual Wire GPIO Target-to-Controller Register 0-15 (VWGPSM0-15)"]
     #[inline(always)]
     pub const fn vwgpsm0159(&self) -> &Vwgpsm0159 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(534).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(534).cast() }
     }
     #[doc = "0x218 - Virtual Wire GPIO Controller-to-Target Register 0-15 (VWGPMS0-15)"]
     #[inline(always)]
     pub const fn vwgpms0157(&self) -> &Vwgpms0157 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(536).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(536).cast() }
     }
     #[doc = "0x220 - Virtual Wire GPIO Target-to-Controller Register 0-15 (VWGPSM0-15)"]
     #[inline(always)]
     pub const fn vwgpsm01510(&self) -> &Vwgpsm01510 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(544).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(544).cast() }
     }
     #[doc = "0x222 - Virtual Wire GPIO Controller-to-Target Register 0-15 (VWGPMS0-15)"]
     #[inline(always)]
     pub const fn vwgpms0158(&self) -> &Vwgpms0158 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(546).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(546).cast() }
     }
     #[doc = "0x224 - Virtual Wire GPIO Target-to-Controller Register 0-15 (VWGPSM0-15)"]
     #[inline(always)]
     pub const fn vwgpsm01511(&self) -> &Vwgpsm01511 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(548).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(548).cast() }
     }
     #[doc = "0x226 - Virtual Wire GPIO Controller-to-Target Register 0-15 (VWGPMS0-15)"]
     #[inline(always)]
     pub const fn vwgpms0159(&self) -> &Vwgpms0159 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(550).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(550).cast() }
     }
     #[doc = "0x228 - Virtual Wire GPIO Target-to-Controller Register 0-15 (VWGPSM0-15)"]
     #[inline(always)]
     pub const fn vwgpsm01512(&self) -> &Vwgpsm01512 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(552).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(552).cast() }
     }
     #[doc = "0x230 - Virtual Wire GPIO Controller-to-Target Register 0-15 (VWGPMS0-15)"]
     #[inline(always)]
     pub const fn vwgpms01510(&self) -> &Vwgpms01510 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(560).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(560).cast() }
     }
     #[doc = "0x232 - Virtual Wire GPIO Target-to-Controller Register 0-15 (VWGPSM0-15)"]
     #[inline(always)]
     pub const fn vwgpsm01513(&self) -> &Vwgpsm01513 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(562).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(562).cast() }
     }
     #[doc = "0x234 - Virtual Wire GPIO Controller-to-Target Register 0-15 (VWGPMS0-15)"]
     #[inline(always)]
     pub const fn vwgpms01511(&self) -> &Vwgpms01511 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(564).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(564).cast() }
     }
     #[doc = "0x236 - Virtual Wire GPIO Target-to-Controller Register 0-15 (VWGPSM0-15)"]
     #[inline(always)]
     pub const fn vwgpsm01514(&self) -> &Vwgpsm01514 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(566).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(566).cast() }
     }
     #[doc = "0x238 - Virtual Wire GPIO Controller-to-Target Register 0-15 (VWGPMS0-15)"]
     #[inline(always)]
     pub const fn vwgpms01512(&self) -> &Vwgpms01512 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(568).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(568).cast() }
     }
     #[doc = "0x240 - Virtual Wire GPIO Target-to-Controller Register 0-15 (VWGPSM0-15)"]
     #[inline(always)]
     pub const fn vwgpsm01515(&self) -> &Vwgpsm01515 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(576).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(576).cast() }
     }
     #[doc = "0x242 - Virtual Wire GPIO Controller-to-Target Register 0-15 (VWGPMS0-15)"]
     #[inline(always)]
     pub const fn vwgpms01513(&self) -> &Vwgpms01513 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(578).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(578).cast() }
     }
     #[doc = "0x246 - Virtual Wire GPIO Controller-to-Target Register 0-15 (VWGPMS0-15)"]
     #[inline(always)]
@@ -778,152 +778,152 @@ impl RegisterBlock {
     #[doc = "0x400 - Flash Receive Buffer Register 0-17 (FLASHRXBUF0-17)"]
     #[inline(always)]
     pub const fn flashrxbuf0170(&self) -> &Flashrxbuf0170 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1024).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1024).cast() }
     }
     #[doc = "0x400 - OOB Transmit Buffer Register 0-19 (OOBTXBUF0-19)"]
     #[inline(always)]
     pub const fn oobtxbuf0195(&self) -> &Oobtxbuf0195 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1024).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1024).cast() }
     }
     #[doc = "0x404 - Flash Receive Buffer Register 0-17 (FLASHRXBUF0-17)"]
     #[inline(always)]
     pub const fn flashrxbuf0171(&self) -> &Flashrxbuf0171 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1028).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1028).cast() }
     }
     #[doc = "0x404 - OOB Transmit Buffer Register 0-19 (OOBTXBUF0-19)"]
     #[inline(always)]
     pub const fn oobtxbuf0196(&self) -> &Oobtxbuf0196 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1028).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1028).cast() }
     }
     #[doc = "0x408 - Flash Receive Buffer Register 0-17 (FLASHRXBUF0-17)"]
     #[inline(always)]
     pub const fn flashrxbuf0172(&self) -> &Flashrxbuf0172 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1032).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1032).cast() }
     }
     #[doc = "0x408 - OOB Transmit Buffer Register 0-19 (OOBTXBUF0-19)"]
     #[inline(always)]
     pub const fn oobtxbuf0197(&self) -> &Oobtxbuf0197 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1032).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1032).cast() }
     }
     #[doc = "0x412 - Flash Receive Buffer Register 0-17 (FLASHRXBUF0-17)"]
     #[inline(always)]
     pub const fn flashrxbuf0173(&self) -> &Flashrxbuf0173 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1042).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1042).cast() }
     }
     #[doc = "0x412 - OOB Transmit Buffer Register 0-19 (OOBTXBUF0-19)"]
     #[inline(always)]
     pub const fn oobtxbuf0198(&self) -> &Oobtxbuf0198 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1042).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1042).cast() }
     }
     #[doc = "0x416 - Flash Receive Buffer Register 0-17 (FLASHRXBUF0-17)"]
     #[inline(always)]
     pub const fn flashrxbuf0174(&self) -> &Flashrxbuf0174 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1046).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1046).cast() }
     }
     #[doc = "0x416 - OOB Transmit Buffer Register 0-19 (OOBTXBUF0-19)"]
     #[inline(always)]
     pub const fn oobtxbuf0199(&self) -> &Oobtxbuf0199 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1046).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1046).cast() }
     }
     #[doc = "0x420 - Flash Receive Buffer Register 0-17 (FLASHRXBUF0-17)"]
     #[inline(always)]
     pub const fn flashrxbuf0175(&self) -> &Flashrxbuf0175 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1056).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1056).cast() }
     }
     #[doc = "0x420 - OOB Transmit Buffer Register 0-19 (OOBTXBUF0-19)"]
     #[inline(always)]
     pub const fn oobtxbuf01910(&self) -> &Oobtxbuf01910 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1056).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1056).cast() }
     }
     #[doc = "0x424 - Flash Receive Buffer Register 0-17 (FLASHRXBUF0-17)"]
     #[inline(always)]
     pub const fn flashrxbuf0176(&self) -> &Flashrxbuf0176 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1060).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1060).cast() }
     }
     #[doc = "0x424 - OOB Transmit Buffer Register 0-19 (OOBTXBUF0-19)"]
     #[inline(always)]
     pub const fn oobtxbuf01911(&self) -> &Oobtxbuf01911 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1060).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1060).cast() }
     }
     #[doc = "0x428 - Flash Receive Buffer Register 0-17 (FLASHRXBUF0-17)"]
     #[inline(always)]
     pub const fn flashrxbuf0177(&self) -> &Flashrxbuf0177 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1064).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1064).cast() }
     }
     #[doc = "0x428 - OOB Transmit Buffer Register 0-19 (OOBTXBUF0-19)"]
     #[inline(always)]
     pub const fn oobtxbuf01912(&self) -> &Oobtxbuf01912 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1064).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1064).cast() }
     }
     #[doc = "0x432 - Flash Receive Buffer Register 0-17 (FLASHRXBUF0-17)"]
     #[inline(always)]
     pub const fn flashrxbuf0178(&self) -> &Flashrxbuf0178 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1074).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1074).cast() }
     }
     #[doc = "0x432 - OOB Transmit Buffer Register 0-19 (OOBTXBUF0-19)"]
     #[inline(always)]
     pub const fn oobtxbuf01913(&self) -> &Oobtxbuf01913 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1074).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1074).cast() }
     }
     #[doc = "0x436 - Flash Receive Buffer Register 0-17 (FLASHRXBUF0-17)"]
     #[inline(always)]
     pub const fn flashrxbuf0179(&self) -> &Flashrxbuf0179 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1078).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1078).cast() }
     }
     #[doc = "0x436 - OOB Transmit Buffer Register 0-19 (OOBTXBUF0-19)"]
     #[inline(always)]
     pub const fn oobtxbuf01914(&self) -> &Oobtxbuf01914 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1078).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1078).cast() }
     }
     #[doc = "0x440 - Flash Receive Buffer Register 0-17 (FLASHRXBUF0-17)"]
     #[inline(always)]
     pub const fn flashrxbuf01710(&self) -> &Flashrxbuf01710 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1088).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1088).cast() }
     }
     #[doc = "0x440 - OOB Transmit Buffer Register 0-19 (OOBTXBUF0-19)"]
     #[inline(always)]
     pub const fn oobtxbuf01915(&self) -> &Oobtxbuf01915 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1088).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1088).cast() }
     }
     #[doc = "0x444 - Flash Receive Buffer Register 0-17 (FLASHRXBUF0-17)"]
     #[inline(always)]
     pub const fn flashrxbuf01711(&self) -> &Flashrxbuf01711 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1092).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1092).cast() }
     }
     #[doc = "0x444 - OOB Transmit Buffer Register 0-19 (OOBTXBUF0-19)"]
     #[inline(always)]
     pub const fn oobtxbuf01916(&self) -> &Oobtxbuf01916 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1092).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1092).cast() }
     }
     #[doc = "0x448 - Flash Receive Buffer Register 0-17 (FLASHRXBUF0-17)"]
     #[inline(always)]
     pub const fn flashrxbuf01712(&self) -> &Flashrxbuf01712 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1096).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1096).cast() }
     }
     #[doc = "0x448 - OOB Transmit Buffer Register 0-19 (OOBTXBUF0-19)"]
     #[inline(always)]
     pub const fn oobtxbuf01917(&self) -> &Oobtxbuf01917 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1096).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1096).cast() }
     }
     #[doc = "0x452 - Flash Receive Buffer Register 0-17 (FLASHRXBUF0-17)"]
     #[inline(always)]
     pub const fn flashrxbuf01713(&self) -> &Flashrxbuf01713 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1106).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1106).cast() }
     }
     #[doc = "0x452 - OOB Transmit Buffer Register 0-19 (OOBTXBUF0-19)"]
     #[inline(always)]
     pub const fn oobtxbuf01918(&self) -> &Oobtxbuf01918 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1106).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1106).cast() }
     }
     #[doc = "0x456 - Flash Receive Buffer Register 0-17 (FLASHRXBUF0-17)"]
     #[inline(always)]
     pub const fn flashrxbuf01714(&self) -> &Flashrxbuf01714 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1110).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1110).cast() }
     }
     #[doc = "0x456 - OOB Transmit Buffer Register 0-19 (OOBTXBUF0-19)"]
     #[inline(always)]
     pub const fn oobtxbuf01919(&self) -> &Oobtxbuf01919 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1110).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1110).cast() }
     }
     #[doc = "0x460 - Flash Receive Buffer Register 0-17 (FLASHRXBUF0-17)"]
     #[inline(always)]
@@ -968,122 +968,122 @@ impl RegisterBlock {
     #[doc = "0x500 - Peripheral Bus Master Receive Buffer Register 0-17 (PBMRXBUF0-17)"]
     #[inline(always)]
     pub const fn pbmrxbuf0170(&self) -> &Pbmrxbuf0170 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1280).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1280).cast() }
     }
     #[doc = "0x500 - Flash Transmit Buffer Register 0-16 (FLASHTXBUF0-16)"]
     #[inline(always)]
     pub const fn flashtxbuf0165(&self) -> &Flashtxbuf0165 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1280).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1280).cast() }
     }
     #[doc = "0x504 - Peripheral Bus Master Receive Buffer Register 0-17 (PBMRXBUF0-17)"]
     #[inline(always)]
     pub const fn pbmrxbuf0171(&self) -> &Pbmrxbuf0171 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1284).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1284).cast() }
     }
     #[doc = "0x504 - Flash Transmit Buffer Register 0-16 (FLASHTXBUF0-16)"]
     #[inline(always)]
     pub const fn flashtxbuf0166(&self) -> &Flashtxbuf0166 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1284).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1284).cast() }
     }
     #[doc = "0x508 - Peripheral Bus Master Receive Buffer Register 0-17 (PBMRXBUF0-17)"]
     #[inline(always)]
     pub const fn pbmrxbuf0172(&self) -> &Pbmrxbuf0172 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1288).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1288).cast() }
     }
     #[doc = "0x508 - Flash Transmit Buffer Register 0-16 (FLASHTXBUF0-16)"]
     #[inline(always)]
     pub const fn flashtxbuf0167(&self) -> &Flashtxbuf0167 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1288).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1288).cast() }
     }
     #[doc = "0x512 - Peripheral Bus Master Receive Buffer Register 0-17 (PBMRXBUF0-17)"]
     #[inline(always)]
     pub const fn pbmrxbuf0173(&self) -> &Pbmrxbuf0173 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1298).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1298).cast() }
     }
     #[doc = "0x512 - Flash Transmit Buffer Register 0-16 (FLASHTXBUF0-16)"]
     #[inline(always)]
     pub const fn flashtxbuf0168(&self) -> &Flashtxbuf0168 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1298).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1298).cast() }
     }
     #[doc = "0x516 - Peripheral Bus Master Receive Buffer Register 0-17 (PBMRXBUF0-17)"]
     #[inline(always)]
     pub const fn pbmrxbuf0174(&self) -> &Pbmrxbuf0174 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1302).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1302).cast() }
     }
     #[doc = "0x516 - Flash Transmit Buffer Register 0-16 (FLASHTXBUF0-16)"]
     #[inline(always)]
     pub const fn flashtxbuf0169(&self) -> &Flashtxbuf0169 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1302).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1302).cast() }
     }
     #[doc = "0x520 - Peripheral Bus Master Receive Buffer Register 0-17 (PBMRXBUF0-17)"]
     #[inline(always)]
     pub const fn pbmrxbuf0175(&self) -> &Pbmrxbuf0175 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1312).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1312).cast() }
     }
     #[doc = "0x520 - Flash Transmit Buffer Register 0-16 (FLASHTXBUF0-16)"]
     #[inline(always)]
     pub const fn flashtxbuf01610(&self) -> &Flashtxbuf01610 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1312).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1312).cast() }
     }
     #[doc = "0x524 - Peripheral Bus Master Receive Buffer Register 0-17 (PBMRXBUF0-17)"]
     #[inline(always)]
     pub const fn pbmrxbuf0176(&self) -> &Pbmrxbuf0176 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1316).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1316).cast() }
     }
     #[doc = "0x524 - Flash Transmit Buffer Register 0-16 (FLASHTXBUF0-16)"]
     #[inline(always)]
     pub const fn flashtxbuf01611(&self) -> &Flashtxbuf01611 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1316).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1316).cast() }
     }
     #[doc = "0x528 - Peripheral Bus Master Receive Buffer Register 0-17 (PBMRXBUF0-17)"]
     #[inline(always)]
     pub const fn pbmrxbuf0177(&self) -> &Pbmrxbuf0177 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1320).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1320).cast() }
     }
     #[doc = "0x528 - Flash Transmit Buffer Register 0-16 (FLASHTXBUF0-16)"]
     #[inline(always)]
     pub const fn flashtxbuf01612(&self) -> &Flashtxbuf01612 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1320).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1320).cast() }
     }
     #[doc = "0x532 - Peripheral Bus Master Receive Buffer Register 0-17 (PBMRXBUF0-17)"]
     #[inline(always)]
     pub const fn pbmrxbuf0178(&self) -> &Pbmrxbuf0178 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1330).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1330).cast() }
     }
     #[doc = "0x532 - Flash Transmit Buffer Register 0-16 (FLASHTXBUF0-16)"]
     #[inline(always)]
     pub const fn flashtxbuf01613(&self) -> &Flashtxbuf01613 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1330).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1330).cast() }
     }
     #[doc = "0x536 - Peripheral Bus Master Receive Buffer Register 0-17 (PBMRXBUF0-17)"]
     #[inline(always)]
     pub const fn pbmrxbuf0179(&self) -> &Pbmrxbuf0179 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1334).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1334).cast() }
     }
     #[doc = "0x536 - Flash Transmit Buffer Register 0-16 (FLASHTXBUF0-16)"]
     #[inline(always)]
     pub const fn flashtxbuf01614(&self) -> &Flashtxbuf01614 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1334).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1334).cast() }
     }
     #[doc = "0x540 - Peripheral Bus Master Receive Buffer Register 0-17 (PBMRXBUF0-17)"]
     #[inline(always)]
     pub const fn pbmrxbuf01710(&self) -> &Pbmrxbuf01710 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1344).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1344).cast() }
     }
     #[doc = "0x540 - Flash Transmit Buffer Register 0-16 (FLASHTXBUF0-16)"]
     #[inline(always)]
     pub const fn flashtxbuf01615(&self) -> &Flashtxbuf01615 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1344).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1344).cast() }
     }
     #[doc = "0x544 - Peripheral Bus Master Receive Buffer Register 0-17 (PBMRXBUF0-17)"]
     #[inline(always)]
     pub const fn pbmrxbuf01711(&self) -> &Pbmrxbuf01711 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1348).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1348).cast() }
     }
     #[doc = "0x544 - Flash Transmit Buffer Register 0-16 (FLASHTXBUF0-16)"]
     #[inline(always)]
     pub const fn flashtxbuf01616(&self) -> &Flashtxbuf01616 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1348).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1348).cast() }
     }
     #[doc = "0x548 - Peripheral Bus Master Receive Buffer Register 0-17 (PBMRXBUF0-17)"]
     #[inline(always)]
@@ -1143,182 +1143,182 @@ impl RegisterBlock {
     #[doc = "0x600 - Flash Protection Range Base Address Register 0-15 (FLASH_PRTR_BADDR0-15)"]
     #[inline(always)]
     pub const fn flash_prtr_baddr0150(&self) -> &FlashPrtrBaddr0150 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1536).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1536).cast() }
     }
     #[doc = "0x600 - Peripheral Bus Master Transmit Buffer Register 0-18 (PBMTXBUF0-18)"]
     #[inline(always)]
     pub const fn pbmtxbuf0185(&self) -> &Pbmtxbuf0185 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1536).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1536).cast() }
     }
     #[doc = "0x604 - Flash Protection Range Base Address Register 0-15 (FLASH_PRTR_BADDR0-15)"]
     #[inline(always)]
     pub const fn flash_prtr_baddr0151(&self) -> &FlashPrtrBaddr0151 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1540).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1540).cast() }
     }
     #[doc = "0x604 - Peripheral Bus Master Transmit Buffer Register 0-18 (PBMTXBUF0-18)"]
     #[inline(always)]
     pub const fn pbmtxbuf0186(&self) -> &Pbmtxbuf0186 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1540).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1540).cast() }
     }
     #[doc = "0x608 - Flash Protection Range Base Address Register 0-15 (FLASH_PRTR_BADDR0-15)"]
     #[inline(always)]
     pub const fn flash_prtr_baddr0152(&self) -> &FlashPrtrBaddr0152 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1544).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1544).cast() }
     }
     #[doc = "0x608 - Peripheral Bus Master Transmit Buffer Register 0-18 (PBMTXBUF0-18)"]
     #[inline(always)]
     pub const fn pbmtxbuf0187(&self) -> &Pbmtxbuf0187 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1544).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1544).cast() }
     }
     #[doc = "0x612 - Flash Protection Range Base Address Register 0-15 (FLASH_PRTR_BADDR0-15)"]
     #[inline(always)]
     pub const fn flash_prtr_baddr0153(&self) -> &FlashPrtrBaddr0153 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1554).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1554).cast() }
     }
     #[doc = "0x612 - Peripheral Bus Master Transmit Buffer Register 0-18 (PBMTXBUF0-18)"]
     #[inline(always)]
     pub const fn pbmtxbuf0188(&self) -> &Pbmtxbuf0188 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1554).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1554).cast() }
     }
     #[doc = "0x616 - Flash Protection Range Base Address Register 0-15 (FLASH_PRTR_BADDR0-15)"]
     #[inline(always)]
     pub const fn flash_prtr_baddr0154(&self) -> &FlashPrtrBaddr0154 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1558).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1558).cast() }
     }
     #[doc = "0x616 - Peripheral Bus Master Transmit Buffer Register 0-18 (PBMTXBUF0-18)"]
     #[inline(always)]
     pub const fn pbmtxbuf0189(&self) -> &Pbmtxbuf0189 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1558).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1558).cast() }
     }
     #[doc = "0x620 - Flash Protection Range Base Address Register 0-15 (FLASH_PRTR_BADDR0-15)"]
     #[inline(always)]
     pub const fn flash_prtr_baddr0155(&self) -> &FlashPrtrBaddr0155 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1568).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1568).cast() }
     }
     #[doc = "0x620 - Peripheral Bus Master Transmit Buffer Register 0-18 (PBMTXBUF0-18)"]
     #[inline(always)]
     pub const fn pbmtxbuf01810(&self) -> &Pbmtxbuf01810 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1568).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1568).cast() }
     }
     #[doc = "0x624 - Flash Protection Range Base Address Register 0-15 (FLASH_PRTR_BADDR0-15)"]
     #[inline(always)]
     pub const fn flash_prtr_baddr0156(&self) -> &FlashPrtrBaddr0156 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1572).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1572).cast() }
     }
     #[doc = "0x624 - Peripheral Bus Master Transmit Buffer Register 0-18 (PBMTXBUF0-18)"]
     #[inline(always)]
     pub const fn pbmtxbuf01811(&self) -> &Pbmtxbuf01811 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1572).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1572).cast() }
     }
     #[doc = "0x628 - Flash Protection Range Base Address Register 0-15 (FLASH_PRTR_BADDR0-15)"]
     #[inline(always)]
     pub const fn flash_prtr_baddr0157(&self) -> &FlashPrtrBaddr0157 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1576).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1576).cast() }
     }
     #[doc = "0x628 - Peripheral Bus Master Transmit Buffer Register 0-18 (PBMTXBUF0-18)"]
     #[inline(always)]
     pub const fn pbmtxbuf01812(&self) -> &Pbmtxbuf01812 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1576).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1576).cast() }
     }
     #[doc = "0x632 - Flash Protection Range Base Address Register 0-15 (FLASH_PRTR_BADDR0-15)"]
     #[inline(always)]
     pub const fn flash_prtr_baddr0158(&self) -> &FlashPrtrBaddr0158 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1586).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1586).cast() }
     }
     #[doc = "0x632 - Peripheral Bus Master Transmit Buffer Register 0-18 (PBMTXBUF0-18)"]
     #[inline(always)]
     pub const fn pbmtxbuf01813(&self) -> &Pbmtxbuf01813 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1586).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1586).cast() }
     }
     #[doc = "0x636 - Flash Protection Range Base Address Register 0-15 (FLASH_PRTR_BADDR0-15)"]
     #[inline(always)]
     pub const fn flash_prtr_baddr0159(&self) -> &FlashPrtrBaddr0159 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1590).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1590).cast() }
     }
     #[doc = "0x636 - Peripheral Bus Master Transmit Buffer Register 0-18 (PBMTXBUF0-18)"]
     #[inline(always)]
     pub const fn pbmtxbuf01814(&self) -> &Pbmtxbuf01814 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1590).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1590).cast() }
     }
     #[doc = "0x640 - Flash Protection Range Top Address Register 0-15 (FLASH_PRTR_TADDR0-15)"]
     #[inline(always)]
     pub const fn flash_prtr_taddr0150(&self) -> &FlashPrtrTaddr0150 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1600).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1600).cast() }
     }
     #[doc = "0x640 - Flash Protection Range Base Address Register 0-15 (FLASH_PRTR_BADDR0-15)"]
     #[inline(always)]
     pub const fn flash_prtr_baddr01510(&self) -> &FlashPrtrBaddr01510 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1600).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1600).cast() }
     }
     #[doc = "0x640 - Peripheral Bus Master Transmit Buffer Register 0-18 (PBMTXBUF0-18)"]
     #[inline(always)]
     pub const fn pbmtxbuf01815(&self) -> &Pbmtxbuf01815 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1600).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1600).cast() }
     }
     #[doc = "0x644 - Flash Protection Range Top Address Register 0-15 (FLASH_PRTR_TADDR0-15)"]
     #[inline(always)]
     pub const fn flash_prtr_taddr0151(&self) -> &FlashPrtrTaddr0151 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1604).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1604).cast() }
     }
     #[doc = "0x644 - Flash Protection Range Base Address Register 0-15 (FLASH_PRTR_BADDR0-15)"]
     #[inline(always)]
     pub const fn flash_prtr_baddr01511(&self) -> &FlashPrtrBaddr01511 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1604).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1604).cast() }
     }
     #[doc = "0x644 - Peripheral Bus Master Transmit Buffer Register 0-18 (PBMTXBUF0-18)"]
     #[inline(always)]
     pub const fn pbmtxbuf01816(&self) -> &Pbmtxbuf01816 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1604).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1604).cast() }
     }
     #[doc = "0x648 - Flash Protection Range Top Address Register 0-15 (FLASH_PRTR_TADDR0-15)"]
     #[inline(always)]
     pub const fn flash_prtr_taddr0152(&self) -> &FlashPrtrTaddr0152 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1608).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1608).cast() }
     }
     #[doc = "0x648 - Flash Protection Range Base Address Register 0-15 (FLASH_PRTR_BADDR0-15)"]
     #[inline(always)]
     pub const fn flash_prtr_baddr01512(&self) -> &FlashPrtrBaddr01512 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1608).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1608).cast() }
     }
     #[doc = "0x648 - Peripheral Bus Master Transmit Buffer Register 0-18 (PBMTXBUF0-18)"]
     #[inline(always)]
     pub const fn pbmtxbuf01817(&self) -> &Pbmtxbuf01817 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1608).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1608).cast() }
     }
     #[doc = "0x652 - Flash Protection Range Top Address Register 0-15 (FLASH_PRTR_TADDR0-15)"]
     #[inline(always)]
     pub const fn flash_prtr_taddr0153(&self) -> &FlashPrtrTaddr0153 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1618).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1618).cast() }
     }
     #[doc = "0x652 - Flash Protection Range Base Address Register 0-15 (FLASH_PRTR_BADDR0-15)"]
     #[inline(always)]
     pub const fn flash_prtr_baddr01513(&self) -> &FlashPrtrBaddr01513 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1618).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1618).cast() }
     }
     #[doc = "0x652 - Peripheral Bus Master Transmit Buffer Register 0-18 (PBMTXBUF0-18)"]
     #[inline(always)]
     pub const fn pbmtxbuf01818(&self) -> &Pbmtxbuf01818 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1618).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1618).cast() }
     }
     #[doc = "0x656 - Flash Protection Range Top Address Register 0-15 (FLASH_PRTR_TADDR0-15)"]
     #[inline(always)]
     pub const fn flash_prtr_taddr0154(&self) -> &FlashPrtrTaddr0154 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1622).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1622).cast() }
     }
     #[doc = "0x656 - Flash Protection Range Base Address Register 0-15 (FLASH_PRTR_BADDR0-15)"]
     #[inline(always)]
     pub const fn flash_prtr_baddr01514(&self) -> &FlashPrtrBaddr01514 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1622).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1622).cast() }
     }
     #[doc = "0x660 - Flash Protection Range Top Address Register 0-15 (FLASH_PRTR_TADDR0-15)"]
     #[inline(always)]
     pub const fn flash_prtr_taddr0155(&self) -> &FlashPrtrTaddr0155 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1632).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1632).cast() }
     }
     #[doc = "0x660 - Flash Protection Range Base Address Register 0-15 (FLASH_PRTR_BADDR0-15)"]
     #[inline(always)]
     pub const fn flash_prtr_baddr01515(&self) -> &FlashPrtrBaddr01515 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1632).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1632).cast() }
     }
     #[doc = "0x664 - Flash Protection Range Top Address Register 0-15 (FLASH_PRTR_TADDR0-15)"]
     #[inline(always)]
@@ -1343,62 +1343,62 @@ impl RegisterBlock {
     #[doc = "0x680 - Flash Range Tag Override Register 0-15 (FLASH_RNG_TAG_OVR0-15)"]
     #[inline(always)]
     pub const fn flash_rng_tag_ovr0150(&self) -> &FlashRngTagOvr0150 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1664).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1664).cast() }
     }
     #[doc = "0x680 - Flash Protection Range Top Address Register 0-15 (FLASH_PRTR_TADDR0-15)"]
     #[inline(always)]
     pub const fn flash_prtr_taddr01510(&self) -> &FlashPrtrTaddr01510 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1664).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1664).cast() }
     }
     #[doc = "0x684 - Flash Range Tag Override Register 0-15 (FLASH_RNG_TAG_OVR0-15)"]
     #[inline(always)]
     pub const fn flash_rng_tag_ovr0151(&self) -> &FlashRngTagOvr0151 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1668).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1668).cast() }
     }
     #[doc = "0x684 - Flash Protection Range Top Address Register 0-15 (FLASH_PRTR_TADDR0-15)"]
     #[inline(always)]
     pub const fn flash_prtr_taddr01511(&self) -> &FlashPrtrTaddr01511 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1668).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1668).cast() }
     }
     #[doc = "0x688 - Flash Range Tag Override Register 0-15 (FLASH_RNG_TAG_OVR0-15)"]
     #[inline(always)]
     pub const fn flash_rng_tag_ovr0152(&self) -> &FlashRngTagOvr0152 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1672).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1672).cast() }
     }
     #[doc = "0x688 - Flash Protection Range Top Address Register 0-15 (FLASH_PRTR_TADDR0-15)"]
     #[inline(always)]
     pub const fn flash_prtr_taddr01512(&self) -> &FlashPrtrTaddr01512 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1672).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1672).cast() }
     }
     #[doc = "0x692 - Flash Range Tag Override Register 0-15 (FLASH_RNG_TAG_OVR0-15)"]
     #[inline(always)]
     pub const fn flash_rng_tag_ovr0153(&self) -> &FlashRngTagOvr0153 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1682).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1682).cast() }
     }
     #[doc = "0x692 - Flash Protection Range Top Address Register 0-15 (FLASH_PRTR_TADDR0-15)"]
     #[inline(always)]
     pub const fn flash_prtr_taddr01513(&self) -> &FlashPrtrTaddr01513 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1682).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1682).cast() }
     }
     #[doc = "0x696 - Flash Range Tag Override Register 0-15 (FLASH_RNG_TAG_OVR0-15)"]
     #[inline(always)]
     pub const fn flash_rng_tag_ovr0154(&self) -> &FlashRngTagOvr0154 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1686).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1686).cast() }
     }
     #[doc = "0x696 - Flash Protection Range Top Address Register 0-15 (FLASH_PRTR_TADDR0-15)"]
     #[inline(always)]
     pub const fn flash_prtr_taddr01514(&self) -> &FlashPrtrTaddr01514 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1686).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1686).cast() }
     }
     #[doc = "0x700 - Flash Range Tag Override Register 0-15 (FLASH_RNG_TAG_OVR0-15)"]
     #[inline(always)]
     pub const fn flash_rng_tag_ovr0155(&self) -> &FlashRngTagOvr0155 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1792).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1792).cast() }
     }
     #[doc = "0x700 - Flash Protection Range Top Address Register 0-15 (FLASH_PRTR_TADDR0-15)"]
     #[inline(always)]
     pub const fn flash_prtr_taddr01515(&self) -> &FlashPrtrTaddr01515 {
-        unsafe { &*(self as *const Self).cast::<u8>().add(1792).cast() }
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(1792).cast() }
     }
     #[doc = "0x704 - Flash Range Tag Override Register 0-15 (FLASH_RNG_TAG_OVR0-15)"]
     #[inline(always)]

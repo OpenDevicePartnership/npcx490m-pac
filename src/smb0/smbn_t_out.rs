@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - Timeout Clock Divisor"]
     #[inline(always)]
-    #[must_use]
     pub fn to_ckdiv(&mut self) -> ToCkdivW<SmbnTOutSpec> {
         ToCkdivW::new(self, 0)
     }
     #[doc = "Bit 6 - Timeout Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn t_outie(&mut self) -> TOutieW<SmbnTOutSpec> {
         TOutieW::new(self, 6)
     }
     #[doc = "Bit 7 - Timeout Status"]
     #[inline(always)]
-    #[must_use]
     pub fn t_outst(&mut self) -> TOutstW<SmbnTOutSpec> {
         TOutstW::new(self, 7)
     }

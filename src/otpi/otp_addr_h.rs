@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - OTP Byte Address High"]
     #[inline(always)]
-    #[must_use]
     pub fn addr_h(&mut self) -> AddrHW<OtpAddrHSpec> {
         AddrHW::new(self, 0)
     }

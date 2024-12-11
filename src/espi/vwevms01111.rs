@@ -104,55 +104,46 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - Wire 3-0"]
     #[inline(always)]
-    #[must_use]
     pub fn wire3_0(&mut self) -> Wire3_0W<Vwevms01111Spec> {
         Wire3_0W::new(self, 0)
     }
     #[doc = "Bits 4:7 - Wire 3-0 Valid"]
     #[inline(always)]
-    #[must_use]
     pub fn wire3_0valid(&mut self) -> Wire3_0validW<Vwevms01111Spec> {
         Wire3_0validW::new(self, 4)
     }
     #[doc = "Bits 8:14 - Index Value"]
     #[inline(always)]
-    #[must_use]
     pub fn index(&mut self) -> IndexW<Vwevms01111Spec> {
         IndexW::new(self, 8)
     }
     #[doc = "Bit 15 - Index Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn index_en(&mut self) -> IndexEnW<Vwevms01111Spec> {
         IndexEnW::new(self, 15)
     }
     #[doc = "Bit 16 - Modified"]
     #[inline(always)]
-    #[must_use]
     pub fn modified(&mut self) -> ModifiedW<Vwevms01111Spec> {
         ModifiedW::new(self, 16)
     }
     #[doc = "Bit 17 - Enable PLTRST"]
     #[inline(always)]
-    #[must_use]
     pub fn enpltrst(&mut self) -> EnpltrstW<Vwevms01111Spec> {
         EnpltrstW::new(self, 17)
     }
     #[doc = "Bit 18 - Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn ie(&mut self) -> IeW<Vwevms01111Spec> {
         IeW::new(self, 18)
     }
     #[doc = "Bit 19 - Enable eSPI_RST"]
     #[inline(always)]
-    #[must_use]
     pub fn enespirst(&mut self) -> EnespirstW<Vwevms01111Spec> {
         EnespirstW::new(self, 19)
     }
     #[doc = "Bit 20 - Wake-up Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn we(&mut self) -> WeW<Vwevms01111Spec> {
         WeW::new(self, 20)
     }

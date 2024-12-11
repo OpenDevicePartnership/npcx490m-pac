@@ -94,49 +94,41 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - SMBus/I2C 0 Start Bit Detection"]
     #[inline(always)]
-    #[must_use]
     pub fn smb0sbd(&mut self) -> Smb0sbdW<SmbSbdSpec> {
         Smb0sbdW::new(self, 0)
     }
     #[doc = "Bit 1 - SMBus/I2C Module 1 Start Bit Detection"]
     #[inline(always)]
-    #[must_use]
     pub fn smb1sbd(&mut self) -> Smb1sbdW<SmbSbdSpec> {
         Smb1sbdW::new(self, 1)
     }
     #[doc = "Bit 2 - SMBus/I2C Module 2 Start Bit Detection"]
     #[inline(always)]
-    #[must_use]
     pub fn smb2sbd(&mut self) -> Smb2sbdW<SmbSbdSpec> {
         Smb2sbdW::new(self, 2)
     }
     #[doc = "Bit 3 - SMBus/I2C Module 3 Start Bit Detection"]
     #[inline(always)]
-    #[must_use]
     pub fn smb3sbd(&mut self) -> Smb3sbdW<SmbSbdSpec> {
         Smb3sbdW::new(self, 3)
     }
     #[doc = "Bit 4 - SMBus/I2C Module 4 Start Bit Detection"]
     #[inline(always)]
-    #[must_use]
     pub fn smb4sbd(&mut self) -> Smb4sbdW<SmbSbdSpec> {
         Smb4sbdW::new(self, 4)
     }
     #[doc = "Bit 5 - SMBus/I2C Module 5 Start Bit Detection"]
     #[inline(always)]
-    #[must_use]
     pub fn smb5sbd(&mut self) -> Smb5sbdW<SmbSbdSpec> {
         Smb5sbdW::new(self, 5)
     }
     #[doc = "Bit 6 - SMBus/I2C Module 6 Start Bit Detection"]
     #[inline(always)]
-    #[must_use]
     pub fn smb6sbd(&mut self) -> Smb6sbdW<SmbSbdSpec> {
         Smb6sbdW::new(self, 6)
     }
     #[doc = "Bit 7 - SMBus/I2C Module 7 Start Bit Detection"]
     #[inline(always)]
-    #[must_use]
     pub fn smb7sbd(&mut self) -> Smb7sbdW<SmbSbdSpec> {
         Smb7sbdW::new(self, 7)
     }

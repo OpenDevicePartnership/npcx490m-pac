@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1 - Disable High-Frequency Oscillator"]
     #[inline(always)]
-    #[must_use]
     pub fn dhf(&mut self) -> DhfW<PmcsrSpec> {
         DhfW::new(self, 1)
     }
     #[doc = "Bit 2 - Sleep Power States"]
     #[inline(always)]
-    #[must_use]
     pub fn sleep(&mut self) -> SleepW<PmcsrSpec> {
         SleepW::new(self, 2)
     }
     #[doc = "Bit 6 - Oscillating High-Frequency Clock"]
     #[inline(always)]
-    #[must_use]
     pub fn ohfc(&mut self) -> OhfcW<PmcsrSpec> {
         OhfcW::new(self, 6)
     }
     #[doc = "Bit 7 - Oscillating Low-Frequency Clock"]
     #[inline(always)]
-    #[must_use]
     pub fn olfc(&mut self) -> OlfcW<PmcsrSpec> {
         OlfcW::new(self, 7)
     }

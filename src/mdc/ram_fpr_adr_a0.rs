@@ -94,49 +94,41 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Fetch Protect Sector 0"]
     #[inline(always)]
-    #[must_use]
     pub fn fpr_sk0(&mut self) -> FprSk0W<RamFprAdrA0Spec> {
         FprSk0W::new(self, 0)
     }
     #[doc = "Bit 1 - Fetch Protect Sector 1"]
     #[inline(always)]
-    #[must_use]
     pub fn fpr_sk1(&mut self) -> FprSk1W<RamFprAdrA0Spec> {
         FprSk1W::new(self, 1)
     }
     #[doc = "Bit 2 - Fetch Protect Sector 2"]
     #[inline(always)]
-    #[must_use]
     pub fn fpr_sk2(&mut self) -> FprSk2W<RamFprAdrA0Spec> {
         FprSk2W::new(self, 2)
     }
     #[doc = "Bit 3 - Fetch Protect Sector 3"]
     #[inline(always)]
-    #[must_use]
     pub fn fpr_sk3(&mut self) -> FprSk3W<RamFprAdrA0Spec> {
         FprSk3W::new(self, 3)
     }
     #[doc = "Bit 4 - Fetch Protect Sector 4"]
     #[inline(always)]
-    #[must_use]
     pub fn fpr_sk4(&mut self) -> FprSk4W<RamFprAdrA0Spec> {
         FprSk4W::new(self, 4)
     }
     #[doc = "Bit 5 - Fetch Protect Sector 5"]
     #[inline(always)]
-    #[must_use]
     pub fn fpr_sk5(&mut self) -> FprSk5W<RamFprAdrA0Spec> {
         FprSk5W::new(self, 5)
     }
     #[doc = "Bit 6 - Fetch Protect Sector 6"]
     #[inline(always)]
-    #[must_use]
     pub fn fpr_sk6(&mut self) -> FprSk6W<RamFprAdrA0Spec> {
         FprSk6W::new(self, 6)
     }
     #[doc = "Bit 7 - Fetch Protect Sector 7"]
     #[inline(always)]
-    #[must_use]
     pub fn fpr_sk7(&mut self) -> FprSk7W<RamFprAdrA0Spec> {
         FprSk7W::new(self, 7)
     }

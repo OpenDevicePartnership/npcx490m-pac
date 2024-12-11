@@ -124,67 +124,56 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Flash Access Non-Posted Queue Free"]
     #[inline(always)]
-    #[must_use]
     pub fn flash_acc_np_free(&mut self) -> FlashAccNpFreeW<FlashctlSpec> {
         FlashAccNpFreeW::new(self, 0)
     }
     #[doc = "Bit 1 - Flash Access Transmit Queue Available"]
     #[inline(always)]
-    #[must_use]
     pub fn flash_acc_tx_avail(&mut self) -> FlashAccTxAvailW<FlashctlSpec> {
         FlashAccTxAvailW::new(self, 1)
     }
     #[doc = "Bit 2 - Strip Header"]
     #[inline(always)]
-    #[must_use]
     pub fn strphdr(&mut self) -> StrphdrW<FlashctlSpec> {
         StrphdrW::new(self, 2)
     }
     #[doc = "Bits 3:4 - DMA Request Threshold"]
     #[inline(always)]
-    #[must_use]
     pub fn dmathresh(&mut self) -> DmathreshW<FlashctlSpec> {
         DmathreshW::new(self, 3)
     }
     #[doc = "Bits 5:12 - Automatic Mode Transfer Size"]
     #[inline(always)]
-    #[must_use]
     pub fn amtsize(&mut self) -> AmtsizeW<FlashctlSpec> {
         AmtsizeW::new(self, 5)
     }
     #[doc = "Bit 13 - Reset Buffer Heads"]
     #[inline(always)]
-    #[must_use]
     pub fn rstbufheads(&mut self) -> RstbufheadsW<FlashctlSpec> {
         RstbufheadsW::new(self, 13)
     }
     #[doc = "Bit 16 - Automatic Mode Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn amten(&mut self) -> AmtenW<FlashctlSpec> {
         AmtenW::new(self, 16)
     }
     #[doc = "Bit 17 - Automatic Mode Receive Buffer Full"]
     #[inline(always)]
-    #[must_use]
     pub fn amt_bfull(&mut self) -> AmtBfullW<FlashctlSpec> {
         AmtBfullW::new(self, 17)
     }
     #[doc = "Bit 18 - Target-Attached Flash Automatic Read"]
     #[inline(always)]
-    #[must_use]
     pub fn saf_auto_read(&mut self) -> SafAutoReadW<FlashctlSpec> {
         SafAutoReadW::new(self, 18)
     }
     #[doc = "Bit 19 - Disable Automatic Read Control"]
     #[inline(always)]
-    #[must_use]
     pub fn auto_rd_dis_ctl(&mut self) -> AutoRdDisCtlW<FlashctlSpec> {
         AutoRdDisCtlW::new(self, 19)
     }
     #[doc = "Bit 20 - Block FLASH_NP_FREE"]
     #[inline(always)]
-    #[must_use]
     pub fn blk_flash_np_free(&mut self) -> BlkFlashNpFreeW<FlashctlSpec> {
         BlkFlashNpFreeW::new(self, 20)
     }

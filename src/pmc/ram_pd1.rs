@@ -94,49 +94,41 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - RAM Power-Down Code Block 0"]
     #[inline(always)]
-    #[must_use]
     pub fn ram_pd_bkc0(&mut self) -> RamPdBkc0W<RamPd1Spec> {
         RamPdBkc0W::new(self, 0)
     }
     #[doc = "Bit 1 - RAM Power-Down Code Block 1"]
     #[inline(always)]
-    #[must_use]
     pub fn ram_pd_bkc1(&mut self) -> RamPdBkc1W<RamPd1Spec> {
         RamPdBkc1W::new(self, 1)
     }
     #[doc = "Bit 2 - RAM Power-Down Code Block 2"]
     #[inline(always)]
-    #[must_use]
     pub fn ram_pd_bkc2(&mut self) -> RamPdBkc2W<RamPd1Spec> {
         RamPdBkc2W::new(self, 2)
     }
     #[doc = "Bit 3 - RAM Power-Down Code Block 3"]
     #[inline(always)]
-    #[must_use]
     pub fn ram_pd_bkc3(&mut self) -> RamPdBkc3W<RamPd1Spec> {
         RamPdBkc3W::new(self, 3)
     }
     #[doc = "Bit 4 - RAM Power-Down Code Block 4"]
     #[inline(always)]
-    #[must_use]
     pub fn ram_pd_bkc4(&mut self) -> RamPdBkc4W<RamPd1Spec> {
         RamPdBkc4W::new(self, 4)
     }
     #[doc = "Bit 5 - RAM Power-Down Code Block 5"]
     #[inline(always)]
-    #[must_use]
     pub fn ram_pd_bkc5(&mut self) -> RamPdBkc5W<RamPd1Spec> {
         RamPdBkc5W::new(self, 5)
     }
     #[doc = "Bit 6 - RAM Power-Down Code Block 6"]
     #[inline(always)]
-    #[must_use]
     pub fn ram_pd_bkc6(&mut self) -> RamPdBkc6W<RamPd1Spec> {
         RamPdBkc6W::new(self, 6)
     }
     #[doc = "Bit 7 - RAM Power-Down Code Block 7"]
     #[inline(always)]
-    #[must_use]
     pub fn ram_pd_bkc7(&mut self) -> RamPdBkc7W<RamPd1Spec> {
         RamPdBkc7W::new(self, 7)
     }

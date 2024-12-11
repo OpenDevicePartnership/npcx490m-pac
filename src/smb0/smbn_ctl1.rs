@@ -94,49 +94,41 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - MASTER in SMBnST register is set to 0"]
     #[inline(always)]
-    #[must_use]
     pub fn start(&mut self) -> StartW<SmbnCtl1Spec> {
         StartW::new(self, 0)
     }
     #[doc = "Bit 1 - default"]
     #[inline(always)]
-    #[must_use]
     pub fn stop(&mut self) -> StopW<SmbnCtl1Spec> {
         StopW::new(self, 1)
     }
     #[doc = "Bit 2 - Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn inten(&mut self) -> IntenW<SmbnCtl1Spec> {
         IntenW::new(self, 2)
     }
     #[doc = "Bit 3 - End of Busy Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn eobinte(&mut self) -> EobinteW<SmbnCtl1Spec> {
         EobinteW::new(self, 3)
     }
     #[doc = "Bit 4 - Acknowledge"]
     #[inline(always)]
-    #[must_use]
     pub fn ack(&mut self) -> AckW<SmbnCtl1Spec> {
         AckW::new(self, 4)
     }
     #[doc = "Bit 5 - Global Call Match Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn gcmen(&mut self) -> GcmenW<SmbnCtl1Spec> {
         GcmenW::new(self, 5)
     }
     #[doc = "Bit 6 - New Match Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn nminte(&mut self) -> NminteW<SmbnCtl1Spec> {
         NminteW::new(self, 6)
     }
     #[doc = "Bit 7 - Stall After Start Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn stastre(&mut self) -> StastreW<SmbnCtl1Spec> {
         StastreW::new(self, 7)
     }

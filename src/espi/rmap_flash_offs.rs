@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:26 - Remapping Flash Offset"]
     #[inline(always)]
-    #[must_use]
     pub fn rmap_flash_offs(&mut self) -> RmapFlashOffsW<RmapFlashOffsSpec> {
         RmapFlashOffsW::new(self, 0)
     }

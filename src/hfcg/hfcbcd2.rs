@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - APB3 Clock Divider"]
     #[inline(always)]
-    #[must_use]
     pub fn apb3div(&mut self) -> Apb3divW<Hfcbcd2Spec> {
         Apb3divW::new(self, 0)
     }
     #[doc = "Bits 4:7 - APB4 Clock Divider"]
     #[inline(always)]
-    #[must_use]
     pub fn apb4div(&mut self) -> Apb4divW<Hfcbcd2Spec> {
         Apb4divW::new(self, 4)
     }

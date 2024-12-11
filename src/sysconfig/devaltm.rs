@@ -64,31 +64,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - AD21 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn ad21_sl(&mut self) -> Ad21SlW<DevaltmSpec> {
         Ad21SlW::new(self, 0)
     }
     #[doc = "Bit 1 - AD22 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn ad22_sl(&mut self) -> Ad22SlW<DevaltmSpec> {
         Ad22SlW::new(self, 1)
     }
     #[doc = "Bit 2 - AD23 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn ad23_sl(&mut self) -> Ad23SlW<DevaltmSpec> {
         Ad23SlW::new(self, 2)
     }
     #[doc = "Bit 3 - AD24 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn ad24_sl(&mut self) -> Ad24SlW<DevaltmSpec> {
         Ad24SlW::new(self, 3)
     }
     #[doc = "Bit 4 - AD25 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn ad25_sl(&mut self) -> Ad25SlW<DevaltmSpec> {
         Ad25SlW::new(self, 4)
     }

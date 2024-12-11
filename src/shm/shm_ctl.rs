@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 6 - Stall Host Access to Shared Memory"]
     #[inline(always)]
-    #[must_use]
     pub fn stall_host(&mut self) -> StallHostW<ShmCtlSpec> {
         StallHostW::new(self, 6)
     }

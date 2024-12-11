@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Load M and N Values"]
     #[inline(always)]
-    #[must_use]
     pub fn load(&mut self) -> LoadW<HfcgctrlSpec> {
         LoadW::new(self, 0)
     }
     #[doc = "Bit 2 - Disable Writing to all HFCG registers"]
     #[inline(always)]
-    #[must_use]
     pub fn lock(&mut self) -> LockW<HfcgctrlSpec> {
         LockW::new(self, 2)
     }
     #[doc = "Bit 7 - Clock Changing"]
     #[inline(always)]
-    #[must_use]
     pub fn clk_chng(&mut self) -> ClkChngW<HfcgctrlSpec> {
         ClkChngW::new(self, 7)
     }

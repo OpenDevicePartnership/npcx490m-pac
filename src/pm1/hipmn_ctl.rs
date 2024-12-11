@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Input Buffer Full Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn ibfie(&mut self) -> IbfieW<HipmnCtlSpec> {
         IbfieW::new(self, 0)
     }
     #[doc = "Bit 1 - Output Buffer Empty Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn obeie(&mut self) -> ObeieW<HipmnCtlSpec> {
         ObeieW::new(self, 1)
     }
     #[doc = "Bit 6 - SCI Negative Polarity"]
     #[inline(always)]
-    #[must_use]
     pub fn scipol(&mut self) -> ScipolW<HipmnCtlSpec> {
         ScipolW::new(self, 6)
     }

@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Keyboard Scan Done Indication"]
     #[inline(always)]
-    #[must_use]
     pub fn kbsdone(&mut self) -> KbsdoneW<KbsevtSpec> {
         KbsdoneW::new(self, 0)
     }
     #[doc = "Bit 1 - Keyboard Scan Error"]
     #[inline(always)]
-    #[must_use]
     pub fn kbserr(&mut self) -> KbserrW<KbsevtSpec> {
         KbserrW::new(self, 1)
     }

@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Enhanced Buffer Mode"]
     #[inline(always)]
-    #[must_use]
     pub fn ebufmd(&mut self) -> EbufmdW<Shicfg6Spec> {
         EbufmdW::new(self, 0)
     }
     #[doc = "Bit 1 - OBUF Select"]
     #[inline(always)]
-    #[must_use]
     pub fn obuf_sl(&mut self) -> ObufSlW<Shicfg6Spec> {
         ObufSlW::new(self, 1)
     }

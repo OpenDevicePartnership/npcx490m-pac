@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - PSL Debounce Select"]
     #[inline(always)]
-    #[must_use]
     pub fn bc_sel(&mut self) -> BcSelW<PslDbcSpec> {
         BcSelW::new(self, 0)
     }

@@ -74,37 +74,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - eSPI_SIF FMCLK Enable in Sleep"]
     #[inline(always)]
-    #[must_use]
     pub fn espi_fmclk_enslp(&mut self) -> EspiFmclkEnslpW<EnslpCtlSpec> {
         EspiFmclkEnslpW::new(self, 0)
     }
     #[doc = "Bit 1 - ADC Access is Disabled"]
     #[inline(always)]
-    #[must_use]
     pub fn adc_acc_dis(&mut self) -> AdcAccDisW<EnslpCtlSpec> {
         AdcAccDisW::new(self, 1)
     }
     #[doc = "Bit 2 - PECI Enable in Sleep"]
     #[inline(always)]
-    #[must_use]
     pub fn peci_enslp(&mut self) -> PeciEnslpW<EnslpCtlSpec> {
         PeciEnslpW::new(self, 2)
     }
     #[doc = "Bits 4:5 - Low-Power Wake-Up Control"]
     #[inline(always)]
-    #[must_use]
     pub fn lp_wk_ctlx(&mut self) -> LpWkCtlxW<EnslpCtlSpec> {
         LpWkCtlxW::new(self, 4)
     }
     #[doc = "Bit 6 - ADC_EREF Low-Frequency Clock Select"]
     #[inline(always)]
-    #[must_use]
     pub fn adc_eref_lfsl(&mut self) -> AdcErefLfslW<EnslpCtlSpec> {
         AdcErefLfslW::new(self, 6)
     }
     #[doc = "Bit 7 - ADC_IREF Low-Frequency Clock Select"]
     #[inline(always)]
-    #[must_use]
     pub fn adc_iref_lfsl(&mut self) -> AdcIrefLfslW<EnslpCtlSpec> {
         AdcIrefLfslW::new(self, 7)
     }

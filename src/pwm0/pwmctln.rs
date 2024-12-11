@@ -74,37 +74,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Inverse PWM Output"]
     #[inline(always)]
-    #[must_use]
     pub fn invp(&mut self) -> InvpW<PwmctlnSpec> {
         InvpW::new(self, 0)
     }
     #[doc = "Bit 1 - Input Clock Select"]
     #[inline(always)]
-    #[must_use]
     pub fn cksel(&mut self) -> CkselW<PwmctlnSpec> {
         CkselW::new(self, 1)
     }
     #[doc = "Bits 2:3 - Heartbeat Duty Cycle Control"]
     #[inline(always)]
-    #[must_use]
     pub fn hb_dc_ctl(&mut self) -> HbDcCtlW<PwmctlnSpec> {
         HbDcCtlW::new(self, 2)
     }
     #[doc = "Bit 4 - Operation Synchronization"]
     #[inline(always)]
-    #[must_use]
     pub fn sync(&mut self) -> SyncW<PwmctlnSpec> {
         SyncW::new(self, 4)
     }
     #[doc = "Bit 6 - Heartbeat Bank Select"]
     #[inline(always)]
-    #[must_use]
     pub fn hbnk_sel(&mut self) -> HbnkSelW<PwmctlnSpec> {
         HbnkSelW::new(self, 6)
     }
     #[doc = "Bit 7 - Power Mode"]
     #[inline(always)]
-    #[must_use]
     pub fn pwr(&mut self) -> PwrW<PwmctlnSpec> {
         PwrW::new(self, 7)
     }

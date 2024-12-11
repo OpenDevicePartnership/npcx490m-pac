@@ -1,0 +1,18 @@
+# Path to the SVD file we're targeting. Relative to this file.
+# This must be included only in the device YAML file.
+_svd: "../svd/NPCX490M.svd"
+
+_include:
+  - "fiu.yaml"
+  - "flm.yaml"
+  - "gdma.yaml"
+  - "gpio.yaml"
+  - "i3c.yaml"
+  - "itim32.yaml"
+  - "mdma.yaml"
+  - "mft16.yaml"
+  - "miwu.yaml"
+  - "pm.yaml"
+  - "pwm.yaml"
+  - "smb.yaml"
+  - "uart.yaml"

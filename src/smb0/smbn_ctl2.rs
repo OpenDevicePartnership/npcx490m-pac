@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - default"]
     #[inline(always)]
-    #[must_use]
     pub fn enable(&mut self) -> EnableW<SmbnCtl2Spec> {
         EnableW::new(self, 0)
     }
     #[doc = "Bits 1:7 - SCL Frequency bits 6 through 0"]
     #[inline(always)]
-    #[must_use]
     pub fn sclfrq6_0(&mut self) -> Sclfrq6_0W<SmbnCtl2Spec> {
         Sclfrq6_0W::new(self, 1)
     }

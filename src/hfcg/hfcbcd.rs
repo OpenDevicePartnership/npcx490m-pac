@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1 - AHB6 Clock Block"]
     #[inline(always)]
-    #[must_use]
     pub fn ahb6clk_blk(&mut self) -> Ahb6clkBlkW<HfcbcdSpec> {
         Ahb6clkBlkW::new(self, 1)
     }
     #[doc = "Bits 2:3 - FIU0 Clock Divider"]
     #[inline(always)]
-    #[must_use]
     pub fn fiu0div(&mut self) -> Fiu0divW<HfcbcdSpec> {
         Fiu0divW::new(self, 2)
     }
     #[doc = "Bits 4:5 - FIU1 Clock Divider"]
     #[inline(always)]
-    #[must_use]
     pub fn fiu1div(&mut self) -> Fiu1divW<HfcbcdSpec> {
         Fiu1divW::new(self, 4)
     }

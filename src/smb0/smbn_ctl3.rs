@@ -84,43 +84,36 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - SCL Frequency bits 8 and 7"]
     #[inline(always)]
-    #[must_use]
     pub fn sclfrq8_7(&mut self) -> Sclfrq8_7W<SmbnCtl3Spec> {
         Sclfrq8_7W::new(self, 0)
     }
     #[doc = "Bit 2 - ARP Match Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn arpmen(&mut self) -> ArpmenW<SmbnCtl3Spec> {
         ArpmenW::new(self, 2)
     }
     #[doc = "Bit 3 - Start Detect in Sleep Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn slp_start(&mut self) -> SlpStartW<SmbnCtl3Spec> {
         SlpStartW::new(self, 3)
     }
     #[doc = "Bit 4 - 400 KHz Master Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn _400k_mode(&mut self) -> _400kModeW<SmbnCtl3Spec> {
         _400kModeW::new(self, 4)
     }
     #[doc = "Bit 5 - Bank Select"]
     #[inline(always)]
-    #[must_use]
     pub fn bnk_sel(&mut self) -> BnkSelW<SmbnCtl3Spec> {
         BnkSelW::new(self, 5)
     }
     #[doc = "Bit 6 - SDA Level"]
     #[inline(always)]
-    #[must_use]
     pub fn sda_lvl(&mut self) -> SdaLvlW<SmbnCtl3Spec> {
         SdaLvlW::new(self, 6)
     }
     #[doc = "Bit 7 - SCL Level"]
     #[inline(always)]
-    #[must_use]
     pub fn scl_lvl(&mut self) -> SclLvlW<SmbnCtl3Spec> {
         SclLvlW::new(self, 7)
     }

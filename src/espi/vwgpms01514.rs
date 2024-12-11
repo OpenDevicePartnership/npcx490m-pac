@@ -94,49 +94,41 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - Wire 3-0"]
     #[inline(always)]
-    #[must_use]
     pub fn wire3_0(&mut self) -> Wire3_0W<Vwgpms01514Spec> {
         Wire3_0W::new(self, 0)
     }
     #[doc = "Bits 4:7 - Wire 3-0 Valid"]
     #[inline(always)]
-    #[must_use]
     pub fn wire3_0valid(&mut self) -> Wire3_0validW<Vwgpms01514Spec> {
         Wire3_0validW::new(self, 4)
     }
     #[doc = "Bit 15 - Index Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn index_en(&mut self) -> IndexEnW<Vwgpms01514Spec> {
         IndexEnW::new(self, 15)
     }
     #[doc = "Bit 16 - Modified"]
     #[inline(always)]
-    #[must_use]
     pub fn modified(&mut self) -> ModifiedW<Vwgpms01514Spec> {
         ModifiedW::new(self, 16)
     }
     #[doc = "Bit 17 - Enable PLTRST"]
     #[inline(always)]
-    #[must_use]
     pub fn enpltrst(&mut self) -> EnpltrstW<Vwgpms01514Spec> {
         EnpltrstW::new(self, 17)
     }
     #[doc = "Bit 18 - Interrupt Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn ie(&mut self) -> IeW<Vwgpms01514Spec> {
         IeW::new(self, 18)
     }
     #[doc = "Bit 19 - Enable eSPI_RST"]
     #[inline(always)]
-    #[must_use]
     pub fn enespirst(&mut self) -> EnespirstW<Vwgpms01514Spec> {
         EnespirstW::new(self, 19)
     }
     #[doc = "Bit 20 - Wake-up Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn we(&mut self) -> WeW<Vwgpms01514Spec> {
         WeW::new(self, 20)
     }

@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:6 - 128-Byte Payload Buffer Level"]
     #[inline(always)]
-    #[must_use]
     pub fn obuflvl(&mut self) -> ObuflvlW<Shicfg3Spec> {
         ObuflvlW::new(self, 0)
     }
     #[doc = "Bit 7 - 128-Byte Payload Buffer Level Disabled"]
     #[inline(always)]
-    #[must_use]
     pub fn obuflvldis(&mut self) -> ObuflvldisW<Shicfg3Spec> {
         ObuflvldisW::new(self, 7)
     }

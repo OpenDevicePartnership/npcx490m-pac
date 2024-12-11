@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1 - PWM1 Select Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn pwm1_sl_lk(&mut self) -> Pwm1SlLkW<Devalt4LkSpec> {
         Pwm1SlLkW::new(self, 1)
     }
     #[doc = "Bit 2 - PWM2_TACH2PWM_OUT Select Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn pwm2_pwm_out_sl_lk(&mut self) -> Pwm2PwmOutSlLkW<Devalt4LkSpec> {
         Pwm2PwmOutSlLkW::new(self, 2)
     }
     #[doc = "Bit 3 - PWM3_LED3 Select Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn pwm3_led3_sl_lk(&mut self) -> Pwm3Led3SlLkW<Devalt4LkSpec> {
         Pwm3Led3SlLkW::new(self, 3)
     }

@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 7 - Input Buffer Full Status"]
     #[inline(always)]
-    #[must_use]
     pub fn ibfs(&mut self) -> IbfsW<StatusSpec> {
         IbfsW::new(self, 7)
     }

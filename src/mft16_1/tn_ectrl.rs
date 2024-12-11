@@ -74,37 +74,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Timer Event Source A Pending"]
     #[inline(always)]
-    #[must_use]
     pub fn tapnd(&mut self) -> TapndW<TnEctrlSpec> {
         TapndW::new(self, 0)
     }
     #[doc = "Bit 1 - Timer Event Source B Pending"]
     #[inline(always)]
-    #[must_use]
     pub fn tbpnd(&mut self) -> TbpndW<TnEctrlSpec> {
         TbpndW::new(self, 1)
     }
     #[doc = "Bit 2 - Timer Event Source C Pending"]
     #[inline(always)]
-    #[must_use]
     pub fn tcpnd(&mut self) -> TcpndW<TnEctrlSpec> {
         TcpndW::new(self, 2)
     }
     #[doc = "Bit 3 - Timer Event Source D Pending"]
     #[inline(always)]
-    #[must_use]
     pub fn tdpnd(&mut self) -> TdpndW<TnEctrlSpec> {
         TdpndW::new(self, 3)
     }
     #[doc = "Bit 4 - Timer Event Source E Pending"]
     #[inline(always)]
-    #[must_use]
     pub fn tepnd(&mut self) -> TepndW<TnEctrlSpec> {
         TepndW::new(self, 4)
     }
     #[doc = "Bit 5 - Timer Event Source F Pending"]
     #[inline(always)]
-    #[must_use]
     pub fn tfpnd(&mut self) -> TfpndW<TnEctrlSpec> {
         TfpndW::new(self, 5)
     }

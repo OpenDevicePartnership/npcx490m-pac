@@ -104,55 +104,46 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Flush To-Bus Buffer"]
     #[inline(always)]
-    #[must_use]
     pub fn flushtb(&mut self) -> FlushtbW<MdatactrlSpec> {
         FlushtbW::new(self, 0)
     }
     #[doc = "Bit 1 - Flush From-Bus Buffer"]
     #[inline(always)]
-    #[must_use]
     pub fn flushfb(&mut self) -> FlushfbW<MdatactrlSpec> {
         FlushfbW::new(self, 1)
     }
     #[doc = "Bit 3 - UNLOCK"]
     #[inline(always)]
-    #[must_use]
     pub fn unlock(&mut self) -> UnlockW<MdatactrlSpec> {
         UnlockW::new(self, 3)
     }
     #[doc = "Bits 4:5 - Transmit Trigger"]
     #[inline(always)]
-    #[must_use]
     pub fn txtrig(&mut self) -> TxtrigW<MdatactrlSpec> {
         TxtrigW::new(self, 4)
     }
     #[doc = "Bits 6:7 - Receive Trigger"]
     #[inline(always)]
-    #[must_use]
     pub fn rxtrig(&mut self) -> RxtrigW<MdatactrlSpec> {
         RxtrigW::new(self, 6)
     }
     #[doc = "Bits 16:21 - Transmit Count"]
     #[inline(always)]
-    #[must_use]
     pub fn txcount(&mut self) -> TxcountW<MdatactrlSpec> {
         TxcountW::new(self, 16)
     }
     #[doc = "Bits 24:29 - Receive Count"]
     #[inline(always)]
-    #[must_use]
     pub fn rxcount(&mut self) -> RxcountW<MdatactrlSpec> {
         RxcountW::new(self, 24)
     }
     #[doc = "Bit 30 - Transmit Buffer Full"]
     #[inline(always)]
-    #[must_use]
     pub fn txfull(&mut self) -> TxfullW<MdatactrlSpec> {
         TxfullW::new(self, 30)
     }
     #[doc = "Bit 31 - Receive Buffer Empty"]
     #[inline(always)]
-    #[must_use]
     pub fn rxempty(&mut self) -> RxemptyW<MdatactrlSpec> {
         RxemptyW::new(self, 31)
     }

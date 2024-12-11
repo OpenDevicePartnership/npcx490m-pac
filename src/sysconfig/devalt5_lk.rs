@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1 - JTAG Enable Lock, Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn jen_lk_lk(&mut self) -> JenLkLkW<Devalt5LkSpec> {
         JenLkLkW::new(self, 1)
     }
     #[doc = "Bit 2 - Intruder 1 Detect Select Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn intrud1_sl_lk(&mut self) -> Intrud1SlLkW<Devalt5LkSpec> {
         Intrud1SlLkW::new(self, 2)
     }
     #[doc = "Bit 3 - Intruder 2 Detect Select Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn intrud2_sl_lk(&mut self) -> Intrud2SlLkW<Devalt5LkSpec> {
         Intrud2SlLkW::new(self, 3)
     }

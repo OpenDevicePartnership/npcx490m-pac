@@ -74,37 +74,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Shared Memory Freeze Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn shmfen(&mut self) -> ShmfenW<Dbgfrzen3Spec> {
         ShmfenW::new(self, 0)
     }
     #[doc = "Bit 1 - SMB4 Freeze Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn smb4fen(&mut self) -> Smb4fenW<Dbgfrzen3Spec> {
         Smb4fenW::new(self, 1)
     }
     #[doc = "Bit 4 - ITIM32-1 Freeze Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn itim1fen(&mut self) -> Itim1fenW<Dbgfrzen3Spec> {
         Itim1fenW::new(self, 4)
     }
     #[doc = "Bit 5 - ITIM32-2 Freeze Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn itim2fen(&mut self) -> Itim2fenW<Dbgfrzen3Spec> {
         Itim2fenW::new(self, 5)
     }
     #[doc = "Bit 6 - ITIM32-3 Freeze Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn itim3fen(&mut self) -> Itim3fenW<Dbgfrzen3Spec> {
         Itim3fenW::new(self, 6)
     }
     #[doc = "Bit 7 - Global Freeze Disable"]
     #[inline(always)]
-    #[must_use]
     pub fn glbl_frz_dis(&mut self) -> GlblFrzDisW<Dbgfrzen3Spec> {
         GlblFrzDisW::new(self, 7)
     }

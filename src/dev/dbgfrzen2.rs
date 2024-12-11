@@ -84,43 +84,36 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - MFT16-3 Freeze Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn mft3fen(&mut self) -> Mft3fenW<Dbgfrzen2Spec> {
         Mft3fenW::new(self, 0)
     }
     #[doc = "Bit 1 - SMB0 Freeze Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn smb0fen(&mut self) -> Smb0fenW<Dbgfrzen2Spec> {
         Smb0fenW::new(self, 1)
     }
     #[doc = "Bit 2 - SMB1 Freeze Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn smb1fen(&mut self) -> Smb1fenW<Dbgfrzen2Spec> {
         Smb1fenW::new(self, 2)
     }
     #[doc = "Bit 3 - ITIM64 Freeze Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn itim64fen(&mut self) -> Itim64fenW<Dbgfrzen2Spec> {
         Itim64fenW::new(self, 3)
     }
     #[doc = "Bit 5 - ITIM32-4 Freeze Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn itim4fen(&mut self) -> Itim4fenW<Dbgfrzen2Spec> {
         Itim4fenW::new(self, 5)
     }
     #[doc = "Bit 6 - ITIM32-5 Freeze Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn itim5fen(&mut self) -> Itim5fenW<Dbgfrzen2Spec> {
         Itim5fenW::new(self, 6)
     }
     #[doc = "Bit 7 - ITIM32-6 Freeze Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn itim6fen(&mut self) -> Itim6fenW<Dbgfrzen2Spec> {
         Itim6fenW::new(self, 7)
     }

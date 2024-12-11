@@ -74,37 +74,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - IRQ Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn irqe(&mut self) -> IrqeW<HipmnIeSpec> {
         IrqeW::new(self, 0)
     }
     #[doc = "Bit 1 - SCI Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn scie(&mut self) -> ScieW<HipmnIeSpec> {
         ScieW::new(self, 1)
     }
     #[doc = "Bit 2 - SMI Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn smie(&mut self) -> SmieW<HipmnIeSpec> {
         SmieW::new(self, 2)
     }
     #[doc = "Bit 3 - Hardware IRQ Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn hirqe(&mut self) -> HirqeW<HipmnIeSpec> {
         HirqeW::new(self, 3)
     }
     #[doc = "Bit 4 - Hardware SCI Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn hscie(&mut self) -> HscieW<HipmnIeSpec> {
         HscieW::new(self, 4)
     }
     #[doc = "Bit 5 - Hardware SMI Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn hsmie(&mut self) -> HsmieW<HipmnIeSpec> {
         HsmieW::new(self, 5)
     }

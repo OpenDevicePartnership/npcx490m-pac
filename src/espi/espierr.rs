@@ -154,85 +154,71 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Invalid Command Type"]
     #[inline(always)]
-    #[must_use]
     pub fn invcmd(&mut self) -> InvcmdW<EspierrSpec> {
         InvcmdW::new(self, 0)
     }
     #[doc = "Bit 1 - Invalid Cycle Type"]
     #[inline(always)]
-    #[must_use]
     pub fn invcyc(&mut self) -> InvcycW<EspierrSpec> {
         InvcycW::new(self, 1)
     }
     #[doc = "Bit 2 - Transaction CRC Error"]
     #[inline(always)]
-    #[must_use]
     pub fn crcerr(&mut self) -> CrcerrW<EspierrSpec> {
         CrcerrW::new(self, 2)
     }
     #[doc = "Bit 3 - Abnormal Completion"]
     #[inline(always)]
-    #[must_use]
     pub fn abcomp(&mut self) -> AbcompW<EspierrSpec> {
         AbcompW::new(self, 3)
     }
     #[doc = "Bit 4 - Protocol Error"]
     #[inline(always)]
-    #[must_use]
     pub fn proterr(&mut self) -> ProterrW<EspierrSpec> {
         ProterrW::new(self, 4)
     }
     #[doc = "Bit 5 - Bad Size"]
     #[inline(always)]
-    #[must_use]
     pub fn badsize(&mut self) -> BadsizeW<EspierrSpec> {
         BadsizeW::new(self, 5)
     }
     #[doc = "Bit 6 - Non-Posted Peripheral Channel Bad Address Alignment"]
     #[inline(always)]
-    #[must_use]
     pub fn npbadaln(&mut self) -> NpbadalnW<EspierrSpec> {
         NpbadalnW::new(self, 6)
     }
     #[doc = "Bit 7 - Posted Peripheral Channel Bad Address Alignment"]
     #[inline(always)]
-    #[must_use]
     pub fn pcbadaln(&mut self) -> PcbadalnW<EspierrSpec> {
         PcbadalnW::new(self, 7)
     }
     #[doc = "Bit 8 - Target-Attached Flash Bad Address Alignment"]
     #[inline(always)]
-    #[must_use]
     pub fn flbadaln(&mut self) -> FlbadalnW<EspierrSpec> {
         FlbadalnW::new(self, 8)
     }
     #[doc = "Bit 9 - Unsupported Command or Cycle Type"]
     #[inline(always)]
-    #[must_use]
     pub fn uncmd(&mut self) -> UncmdW<EspierrSpec> {
         UncmdW::new(self, 9)
     }
     #[doc = "Bit 10 - Virtual Channel Access Error"]
     #[inline(always)]
-    #[must_use]
     pub fn vwerr(&mut self) -> VwerrW<EspierrSpec> {
         VwerrW::new(self, 10)
     }
     #[doc = "Bit 10 - Extra eSPI Clock Cycles"]
     #[inline(always)]
-    #[must_use]
     pub fn extracyc(&mut self) -> ExtracycW<EspierrSpec> {
         ExtracycW::new(self, 10)
     }
     #[doc = "Bit 14 - Unsuccessful Bus Master Completion"]
     #[inline(always)]
-    #[must_use]
     pub fn unpbm(&mut self) -> UnpbmW<EspierrSpec> {
         UnpbmW::new(self, 14)
     }
     #[doc = "Bit 15 - Unsuccessful Flash Completion"]
     #[inline(always)]
-    #[must_use]
     pub fn unflash(&mut self) -> UnflashW<EspierrSpec> {
         UnflashW::new(self, 15)
     }

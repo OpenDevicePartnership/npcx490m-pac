@@ -84,43 +84,36 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - SPI Peripheral Interface-Select"]
     #[inline(always)]
-    #[must_use]
     pub fn spip_sl(&mut self) -> SpipSlW<Devalt0Spec> {
         SpipSlW::new(self, 0)
     }
     #[doc = "Bit 1 - Private SPI Flash Chip-Select 1 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn pvt_spi_cs1(&mut self) -> PvtSpiCs1W<Devalt0Spec> {
         PvtSpiCs1W::new(self, 1)
     }
     #[doc = "Bit 2 - Private SPI Flash Quad Interface-Select"]
     #[inline(always)]
-    #[must_use]
     pub fn pvt_spi_quad(&mut self) -> PvtSpiQuadW<Devalt0Spec> {
         PvtSpiQuadW::new(self, 2)
     }
     #[doc = "Bit 3 - No Private SPI Flash-Select"]
     #[inline(always)]
-    #[must_use]
     pub fn no_pvt_spi(&mut self) -> NoPvtSpiW<Devalt0Spec> {
         NoPvtSpiW::new(self, 3)
     }
     #[doc = "Bit 4 - Shared SPI Flash Chip-Select 1"]
     #[inline(always)]
-    #[must_use]
     pub fn shd_spi_cs1(&mut self) -> ShdSpiCs1W<Devalt0Spec> {
         ShdSpiCs1W::new(self, 4)
     }
     #[doc = "Bit 6 - Shared SPI Flash Quad Interface-Select"]
     #[inline(always)]
-    #[must_use]
     pub fn shd_spi_quad(&mut self) -> ShdSpiQuadW<Devalt0Spec> {
         ShdSpiQuadW::new(self, 6)
     }
     #[doc = "Bit 7 - No Shared SPI Flash-Select"]
     #[inline(always)]
-    #[must_use]
     pub fn no_shd_spi(&mut self) -> NoShdSpiW<Devalt0Spec> {
         NoShdSpiW::new(self, 7)
     }

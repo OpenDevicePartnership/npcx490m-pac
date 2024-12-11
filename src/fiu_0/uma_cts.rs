@@ -21,7 +21,7 @@ pub type RdWrW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EXEC_DONE` reader - Operation Execute/Done"]
 pub type ExecDoneR = crate::BitReader;
 #[doc = "Field `EXEC_DONE` writer - Operation Execute/Done"]
-pub type ExecDoneW<'a, REG> = crate::BitWriter1S<'a, REG>;
+pub type ExecDoneW<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:2 - Data Field Size Select"]
     #[inline(always)]
@@ -64,31 +64,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - Data Field Size Select"]
     #[inline(always)]
-    #[must_use]
     pub fn d_size(&mut self) -> DSizeW<UmaCtsSpec> {
         DSizeW::new(self, 0)
     }
     #[doc = "Bit 3 - UMA Fast Write"]
     #[inline(always)]
-    #[must_use]
     pub fn uma_f_wr(&mut self) -> UmaFWrW<UmaCtsSpec> {
         UmaFWrW::new(self, 3)
     }
     #[doc = "Bit 4 - Code Field Size Select"]
     #[inline(always)]
-    #[must_use]
     pub fn c_size(&mut self) -> CSizeW<UmaCtsSpec> {
         CSizeW::new(self, 4)
     }
     #[doc = "Bit 5 - Read/Write Select"]
     #[inline(always)]
-    #[must_use]
     pub fn rd_wr(&mut self) -> RdWrW<UmaCtsSpec> {
         RdWrW::new(self, 5)
     }
     #[doc = "Bit 7 - Operation Execute/Done"]
     #[inline(always)]
-    #[must_use]
     pub fn exec_done(&mut self) -> ExecDoneW<UmaCtsSpec> {
         ExecDoneW::new(self, 7)
     }
@@ -104,7 +99,7 @@ impl crate::Readable for UmaCtsSpec {}
 impl crate::Writable for UmaCtsSpec {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u8 = 0x80;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
 }
 #[doc = "`reset()` method sets UMA_CTS to value 0"]
 impl crate::Resettable for UmaCtsSpec {

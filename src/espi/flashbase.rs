@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - FLASHBASE Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn flbase_lck(&mut self) -> FlbaseLckW<FlashbaseSpec> {
         FlbaseLckW::new(self, 0)
     }
     #[doc = "Bits 12:26 - Flash Base Address"]
     #[inline(always)]
-    #[must_use]
     pub fn flbase_addr(&mut self) -> FlbaseAddrW<FlashbaseSpec> {
         FlbaseAddrW::new(self, 12)
     }

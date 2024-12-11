@@ -74,37 +74,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:2 - Mode Select"]
     #[inline(always)]
-    #[must_use]
     pub fn mdsel(&mut self) -> MdselW<TnMctrlSpec> {
         MdselW::new(self, 0)
     }
     #[doc = "Bit 3 - TAn Edge Polarity"]
     #[inline(always)]
-    #[must_use]
     pub fn taedg(&mut self) -> TaedgW<TnMctrlSpec> {
         TaedgW::new(self, 3)
     }
     #[doc = "Bit 4 - TBn Edge Polarity"]
     #[inline(always)]
-    #[must_use]
     pub fn tbedg(&mut self) -> TbedgW<TnMctrlSpec> {
         TbedgW::new(self, 4)
     }
     #[doc = "Bit 5 - TAn Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn taen(&mut self) -> TaenW<TnMctrlSpec> {
         TaenW::new(self, 5)
     }
     #[doc = "Bit 6 - TBn Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn tben(&mut self) -> TbenW<TnMctrlSpec> {
         TbenW::new(self, 6)
     }
     #[doc = "Bit 7 - TAn Output Data"]
     #[inline(always)]
-    #[must_use]
     pub fn taout(&mut self) -> TaoutW<TnMctrlSpec> {
         TaoutW::new(self, 7)
     }

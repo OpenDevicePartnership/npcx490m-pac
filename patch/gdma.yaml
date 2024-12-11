@@ -1,0 +1,22 @@
+_derive:
+  GDMA2: GDMA1
+
+GDMA1:
+  _cluster:
+    CHANNEL%s:
+      GDMA_CTL*:
+        name: CTL
+      GDMA_SRCB*:
+        name: SRCB
+      GDMA_DSTB*:
+        name: DSTB
+      GDMA_TCNT*:
+        name: TCNT
+      GDMA_CSRC*:
+        name: CSRC
+      GDMA_CDST*:
+        name: CDST
+      GDMA_CTCNT*:
+        name: CTCNT
+      GDMA_REQ_SL*:
+        name: REQ_SL

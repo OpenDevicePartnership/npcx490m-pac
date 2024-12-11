@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:5 - Basic Clock Division Factor"]
     #[inline(always)]
-    #[must_use]
     pub fn sclkdiv(&mut self) -> SclkdivW<AtctlSpec> {
         SclkdivW::new(self, 0)
     }
     #[doc = "Bits 8:10 - Channel Delay"]
     #[inline(always)]
-    #[must_use]
     pub fn dly(&mut self) -> DlyW<AtctlSpec> {
         DlyW::new(self, 8)
     }
     #[doc = "Bits 12:15 - ADC MFT Select"]
     #[inline(always)]
-    #[must_use]
     pub fn adc_mft_sel(&mut self) -> AdcMftSelW<AtctlSpec> {
         AdcMftSelW::new(self, 12)
     }

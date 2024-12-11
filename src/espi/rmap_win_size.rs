@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Target-Attached Flash Remap Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn saf_rmap_lck(&mut self) -> SafRmapLckW<RmapWinSizeSpec> {
         SafRmapLckW::new(self, 0)
     }
     #[doc = "Bits 11:28 - Mapping Window Size"]
     #[inline(always)]
-    #[must_use]
     pub fn rmap_win_sz(&mut self) -> RmapWinSzW<RmapWinSizeSpec> {
         RmapWinSzW::new(self, 11)
     }

@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - PSL_IN1 Status"]
     #[inline(always)]
-    #[must_use]
     pub fn psl_in1_sts(&mut self) -> PslIn1StsW<PslInStsSpec> {
         PslIn1StsW::new(self, 0)
     }
     #[doc = "Bit 1 - PSL_IN2 Status"]
     #[inline(always)]
-    #[must_use]
     pub fn psl_in2_sts(&mut self) -> PslIn2StsW<PslInStsSpec> {
         PslIn2StsW::new(self, 1)
     }
     #[doc = "Bit 2 - PSL_IN3 Status"]
     #[inline(always)]
-    #[must_use]
     pub fn psl_in3_sts(&mut self) -> PslIn3StsW<PslInStsSpec> {
         PslIn3StsW::new(self, 2)
     }
     #[doc = "Bit 3 - PSL_IN4 Status"]
     #[inline(always)]
-    #[must_use]
     pub fn psl_in4_sts(&mut self) -> PslIn4StsW<PslInStsSpec> {
         PslIn4StsW::new(self, 3)
     }

@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:1 - VCIO Supply Type Select"]
     #[inline(always)]
-    #[must_use]
     pub fn vcio_typ_sel(&mut self) -> VcioTypSelW<DevCtl4Spec> {
         VcioTypSelW::new(self, 0)
     }
     #[doc = "Bit 2 - Shared Flash SPI Interface-Select Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn shd_spi_sllk(&mut self) -> ShdSpiSllkW<DevCtl4Spec> {
         ShdSpiSllkW::new(self, 2)
     }
     #[doc = "Bit 5 - Write-Protect Internal Flash"]
     #[inline(always)]
-    #[must_use]
     pub fn wp_if(&mut self) -> WpIfW<DevCtl4Spec> {
         WpIfW::new(self, 5)
     }
     #[doc = "Bit 6 - NO_VCC1_RST Bit Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn vcc1_rst_lk(&mut self) -> Vcc1RstLkW<DevCtl4Spec> {
         Vcc1RstLkW::new(self, 6)
     }

@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:4 - Software-Triggered Address"]
     #[inline(always)]
-    #[must_use]
     pub fn saddr(&mut self) -> SaddrW<AscaddSpec> {
         SaddrW::new(self, 0)
     }
     #[doc = "Bits 8:12 - Timer-Triggered Address"]
     #[inline(always)]
-    #[must_use]
     pub fn ttaddr(&mut self) -> TtaddrW<AscaddSpec> {
         TtaddrW::new(self, 8)
     }

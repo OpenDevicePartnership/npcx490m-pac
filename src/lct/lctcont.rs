@@ -64,31 +64,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - LCT Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn lcten(&mut self) -> LctenW<LctcontSpec> {
         LctenW::new(self, 0)
     }
     #[doc = "Bit 1 - LCT Event Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn lcteven(&mut self) -> LctevenW<LctcontSpec> {
         LctevenW::new(self, 1)
     }
     #[doc = "Bit 2 - LCT PSL Event Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn lct_psl_en(&mut self) -> LctPslEnW<LctcontSpec> {
         LctPslEnW::new(self, 2)
     }
     #[doc = "Bit 6 - LCT Clock Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn lct_clk_en(&mut self) -> LctClkEnW<LctcontSpec> {
         LctClkEnW::new(self, 6)
     }
     #[doc = "Bit 7 - LCT, VSBY Power Select"]
     #[inline(always)]
-    #[must_use]
     pub fn lct_vsby_pwr(&mut self) -> LctVsbyPwrW<LctcontSpec> {
         LctVsbyPwrW::new(self, 7)
     }

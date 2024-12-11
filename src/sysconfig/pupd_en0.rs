@@ -94,49 +94,41 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - SMBus/I2C Module 0, Bus 0 Pull-Up Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn i2c0_0_pue(&mut self) -> I2c0_0PueW<PupdEn0Spec> {
         I2c0_0PueW::new(self, 0)
     }
     #[doc = "Bit 1 - SMBus/I2C Module 7, Bus 0 Pull-Up Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn i2c7_0_pue(&mut self) -> I2c7_0PueW<PupdEn0Spec> {
         I2c7_0PueW::new(self, 1)
     }
     #[doc = "Bit 2 - SMBus/I2C Module 1, Bus 0 Pull-Up Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn i2c1_0_pue(&mut self) -> I2c1_0PueW<PupdEn0Spec> {
         I2c1_0PueW::new(self, 2)
     }
     #[doc = "Bit 3 - SMBus/I2C Module 6, Bus 0 Pull-Up Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn i2c6_0_pue(&mut self) -> I2c6_0PueW<PupdEn0Spec> {
         I2c6_0PueW::new(self, 3)
     }
     #[doc = "Bit 4 - SMBus/I2C Module 2, Bus 0 Pull-Up Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn i2c2_0_pue(&mut self) -> I2c2_0PueW<PupdEn0Spec> {
         I2c2_0PueW::new(self, 4)
     }
     #[doc = "Bit 5 - SMBus/I2C Module 5, Bus 0 Pull-Up Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn i2c5_0_pue(&mut self) -> I2c5_0PueW<PupdEn0Spec> {
         I2c5_0PueW::new(self, 5)
     }
     #[doc = "Bit 6 - SMBus/I2C Module 3, Bus 0 Pull-Up Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn i2c3_0_pue(&mut self) -> I2c3_0PueW<PupdEn0Spec> {
         I2c3_0PueW::new(self, 6)
     }
     #[doc = "Bit 7 - SMBus/I2C Module 4, Bus 0 Pull-Up Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn i2c4_0_pue(&mut self) -> I2c4_0PueW<PupdEn0Spec> {
         I2c4_0PueW::new(self, 7)
     }

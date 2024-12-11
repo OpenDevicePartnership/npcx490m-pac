@@ -131,11 +131,13 @@ jobs:
     # https://docs.github.com/en/actions/learn-github-actions/contexts#context-availability
     strategy:
       matrix:
-        msrv: ["1.71"] # We're relying on namespaced-features, which
+        msrv: ["1.80"] # We're relying on namespaced-features, which
                        # was released in 1.60
                        #
                        # We also depend on `fixed' which requires rust
                        # 1.71
+                       #
+                       # Update to 1.80 due to newer svd2rust
     name: ubuntu / ${{ matrix.msrv }}
     steps:
       - uses: actions/checkout@v4

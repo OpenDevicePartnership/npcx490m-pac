@@ -64,31 +64,26 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Configuration Registers Core Access Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn cfgae(&mut self) -> CfgaeW<CrsmaeSpec> {
         CfgaeW::new(self, 0)
     }
     #[doc = "Bit 2 - Serial Port Core Access Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn spae(&mut self) -> SpaeW<CrsmaeSpec> {
         SpaeW::new(self, 2)
     }
     #[doc = "Bit 3 - ESHM Core Access Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn esmemae(&mut self) -> EsmemaeW<CrsmaeSpec> {
         EsmemaeW::new(self, 3)
     }
     #[doc = "Bit 8 - Mobile System Wake-Up Control Access Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn mswcae(&mut self) -> MswcaeW<CrsmaeSpec> {
         MswcaeW::new(self, 8)
     }
     #[doc = "Bit 10 - Shared Memory Core Access Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn smemae(&mut self) -> SmemaeW<CrsmaeSpec> {
         SmemaeW::new(self, 10)
     }

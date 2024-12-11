@@ -94,49 +94,41 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - CR_SIN1 Select-1"]
     #[inline(always)]
-    #[must_use]
     pub fn cr_sin1_sl1(&mut self) -> CrSin1Sl1W<DevaltjSpec> {
         CrSin1Sl1W::new(self, 0)
     }
     #[doc = "Bit 1 - CR_SOUT1 Select-1"]
     #[inline(always)]
-    #[must_use]
     pub fn cr_sout1_sl1(&mut self) -> CrSout1Sl1W<DevaltjSpec> {
         CrSout1Sl1W::new(self, 1)
     }
     #[doc = "Bit 2 - CR_SIN1 Select-2"]
     #[inline(always)]
-    #[must_use]
     pub fn cr_sin1_sl2(&mut self) -> CrSin1Sl2W<DevaltjSpec> {
         CrSin1Sl2W::new(self, 2)
     }
     #[doc = "Bit 3 - CR_SOUT1 Select-2"]
     #[inline(always)]
-    #[must_use]
     pub fn cr_sout1_sl2(&mut self) -> CrSout1Sl2W<DevaltjSpec> {
         CrSout1Sl2W::new(self, 3)
     }
     #[doc = "Bit 4 - CR_SIN2 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn cr_sin2_sl(&mut self) -> CrSin2SlW<DevaltjSpec> {
         CrSin2SlW::new(self, 4)
     }
     #[doc = "Bit 5 - CR_SOUT2 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn cr_sout2_sl(&mut self) -> CrSout2SlW<DevaltjSpec> {
         CrSout2SlW::new(self, 5)
     }
     #[doc = "Bit 6 - CR_SIN3 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn cr_sin3_sl(&mut self) -> CrSin3SlW<DevaltjSpec> {
         CrSin3SlW::new(self, 6)
     }
     #[doc = "Bit 7 - CR_SOUT3 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn cr_sout3_sl(&mut self) -> CrSout3SlW<DevaltjSpec> {
         CrSout3SlW::new(self, 7)
     }

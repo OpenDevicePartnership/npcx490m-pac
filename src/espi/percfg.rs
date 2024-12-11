@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 2 - Bus Master Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn bmmen(&mut self) -> BmmenW<PercfgSpec> {
         BmmenW::new(self, 2)
     }
     #[doc = "Bits 10:12 - Peripheral Channel Maximum Payload Size"]
     #[inline(always)]
-    #[must_use]
     pub fn perplsize(&mut self) -> PerplsizeW<PercfgSpec> {
         PerplsizeW::new(self, 10)
     }
     #[doc = "Bits 13:15 - Peripheral Channel Maximum Read Request Size"]
     #[inline(always)]
-    #[must_use]
     pub fn bmreqsize(&mut self) -> BmreqsizeW<PercfgSpec> {
         BmreqsizeW::new(self, 13)
     }

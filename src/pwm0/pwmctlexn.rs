@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1 - One-Shot Trigger"]
     #[inline(always)]
-    #[must_use]
     pub fn one_shot_trg(&mut self) -> OneShotTrgW<PwmctlexnSpec> {
         OneShotTrgW::new(self, 1)
     }
     #[doc = "Bits 2:3 - One-Shot Mode"]
     #[inline(always)]
-    #[must_use]
     pub fn one_shot(&mut self) -> OneShotW<PwmctlexnSpec> {
         OneShotW::new(self, 2)
     }
     #[doc = "Bits 4:5 - Fixed Frequency Clock Select"]
     #[inline(always)]
-    #[must_use]
     pub fn fck_sel(&mut self) -> FckSelW<PwmctlexnSpec> {
         FckSelW::new(self, 4)
     }
     #[doc = "Bit 7 - Open-Drain Output"]
     #[inline(always)]
-    #[must_use]
     pub fn od_out(&mut self) -> OdOutW<PwmctlexnSpec> {
         OdOutW::new(self, 7)
     }

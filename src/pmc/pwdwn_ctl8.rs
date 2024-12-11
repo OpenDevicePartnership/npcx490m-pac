@@ -74,37 +74,31 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - I3C1 Power-Down"]
     #[inline(always)]
-    #[must_use]
     pub fn i3c1_pd(&mut self) -> I3c1PdW<PwdwnCtl8Spec> {
         I3c1PdW::new(self, 0)
     }
     #[doc = "Bit 1 - FLM Power-Down"]
     #[inline(always)]
-    #[must_use]
     pub fn flm_pd(&mut self) -> FlmPdW<PwdwnCtl8Spec> {
         FlmPdW::new(self, 1)
     }
     #[doc = "Bit 2 - I3C2 Power-Down"]
     #[inline(always)]
-    #[must_use]
     pub fn i3c2_pd(&mut self) -> I3c2PdW<PwdwnCtl8Spec> {
         I3c2PdW::new(self, 2)
     }
     #[doc = "Bit 3 - I3C3 Power-Down"]
     #[inline(always)]
-    #[must_use]
     pub fn i3c3_pd(&mut self) -> I3c3PdW<PwdwnCtl8Spec> {
         I3c3PdW::new(self, 3)
     }
     #[doc = "Bit 5 - FIU0 Power-Down"]
     #[inline(always)]
-    #[must_use]
     pub fn fiu0_pd(&mut self) -> Fiu0PdW<PwdwnCtl8Spec> {
         Fiu0PdW::new(self, 5)
     }
     #[doc = "Bit 6 - FIU1 Power-Down"]
     #[inline(always)]
-    #[must_use]
     pub fn fiu1_pd(&mut self) -> Fiu1PdW<PwdwnCtl8Spec> {
         Fiu1PdW::new(self, 6)
     }

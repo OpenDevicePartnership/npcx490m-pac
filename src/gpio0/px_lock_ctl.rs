@@ -5,55 +5,55 @@ pub type W = crate::W<PxLockCtlSpec>;
 #[doc = "Output Data and Configuration Lock for Pin %s\n\nValue on reset: 0"]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
-pub enum LockCtl {
-    #[doc = "0: `0`"]
-    Unlock = 0,
-    #[doc = "1: `1`"]
-    Lock = 1,
+pub enum Lock {
+    #[doc = "0: Unlocked"]
+    Unlocked = 0,
+    #[doc = "1: Locked"]
+    Locked = 1,
 }
-impl From<LockCtl> for bool {
+impl From<Lock> for bool {
     #[inline(always)]
-    fn from(variant: LockCtl) -> Self {
+    fn from(variant: Lock) -> Self {
         variant as u8 != 0
     }
 }
 #[doc = "Field `PIN(0-7)` reader - Output Data and Configuration Lock for Pin %s"]
-pub type PinR = crate::BitReader<LockCtl>;
+pub type PinR = crate::BitReader<Lock>;
 impl PinR {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub const fn variant(&self) -> LockCtl {
+    pub const fn variant(&self) -> Lock {
         match self.bits {
-            false => LockCtl::Unlock,
-            true => LockCtl::Lock,
+            false => Lock::Unlocked,
+            true => Lock::Locked,
         }
     }
-    #[doc = "`0`"]
+    #[doc = "Unlocked"]
     #[inline(always)]
-    pub fn is_unlock(&self) -> bool {
-        *self == LockCtl::Unlock
+    pub fn is_unlocked(&self) -> bool {
+        *self == Lock::Unlocked
     }
-    #[doc = "`1`"]
+    #[doc = "Locked"]
     #[inline(always)]
-    pub fn is_lock(&self) -> bool {
-        *self == LockCtl::Lock
+    pub fn is_locked(&self) -> bool {
+        *self == Lock::Locked
     }
 }
 #[doc = "Field `PIN(0-7)` writer - Output Data and Configuration Lock for Pin %s"]
-pub type PinW<'a, REG> = crate::BitWriter<'a, REG, LockCtl>;
+pub type PinW<'a, REG> = crate::BitWriter<'a, REG, Lock>;
 impl<'a, REG> PinW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
-    #[doc = "`0`"]
+    #[doc = "Unlocked"]
     #[inline(always)]
-    pub fn unlock(self) -> &'a mut crate::W<REG> {
-        self.variant(LockCtl::Unlock)
+    pub fn unlocked(self) -> &'a mut crate::W<REG> {
+        self.variant(Lock::Unlocked)
     }
-    #[doc = "`1`"]
+    #[doc = "Locked"]
     #[inline(always)]
-    pub fn lock(self) -> &'a mut crate::W<REG> {
-        self.variant(LockCtl::Lock)
+    pub fn locked(self) -> &'a mut crate::W<REG> {
+        self.variant(Lock::Locked)
     }
 }
 impl R {
@@ -133,7 +133,6 @@ impl W {
     #[doc = ""]
     #[doc = "<div class=\"warning\">`n` is number of field in register. `n == 0` corresponds to `PIN0` field.</div>"]
     #[inline(always)]
-    #[must_use]
     pub fn pin(&mut self, n: u8) -> PinW<PxLockCtlSpec> {
         #[allow(clippy::no_effect)]
         [(); 8][n as usize];
@@ -141,49 +140,41 @@ impl W {
     }
     #[doc = "Bit 0 - Output Data and Configuration Lock for Pin 0"]
     #[inline(always)]
-    #[must_use]
     pub fn pin0(&mut self) -> PinW<PxLockCtlSpec> {
         PinW::new(self, 0)
     }
     #[doc = "Bit 1 - Output Data and Configuration Lock for Pin 1"]
     #[inline(always)]
-    #[must_use]
     pub fn pin1(&mut self) -> PinW<PxLockCtlSpec> {
         PinW::new(self, 1)
     }
     #[doc = "Bit 2 - Output Data and Configuration Lock for Pin 2"]
     #[inline(always)]
-    #[must_use]
     pub fn pin2(&mut self) -> PinW<PxLockCtlSpec> {
         PinW::new(self, 2)
     }
     #[doc = "Bit 3 - Output Data and Configuration Lock for Pin 3"]
     #[inline(always)]
-    #[must_use]
     pub fn pin3(&mut self) -> PinW<PxLockCtlSpec> {
         PinW::new(self, 3)
     }
     #[doc = "Bit 4 - Output Data and Configuration Lock for Pin 4"]
     #[inline(always)]
-    #[must_use]
     pub fn pin4(&mut self) -> PinW<PxLockCtlSpec> {
         PinW::new(self, 4)
     }
     #[doc = "Bit 5 - Output Data and Configuration Lock for Pin 5"]
     #[inline(always)]
-    #[must_use]
     pub fn pin5(&mut self) -> PinW<PxLockCtlSpec> {
         PinW::new(self, 5)
     }
     #[doc = "Bit 6 - Output Data and Configuration Lock for Pin 6"]
     #[inline(always)]
-    #[must_use]
     pub fn pin6(&mut self) -> PinW<PxLockCtlSpec> {
         PinW::new(self, 6)
     }
     #[doc = "Bit 7 - Output Data and Configuration Lock for Pin 7"]
     #[inline(always)]
-    #[must_use]
     pub fn pin7(&mut self) -> PinW<PxLockCtlSpec> {
         PinW::new(self, 7)
     }

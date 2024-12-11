@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:15 - Data for HDR-DDR Writes"]
     #[inline(always)]
-    #[must_use]
     pub fn data(&mut self) -> DataW<MwmsgDdrSpec> {
         DataW::new(self, 0)
     }

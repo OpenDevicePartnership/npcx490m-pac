@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 1 - SPI Write Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn spi_wr_en(&mut self) -> SpiWrEnW<RespCfgSpec> {
         SpiWrEnW::new(self, 1)
     }
     #[doc = "Bit 2 - FIU IO2, IO3 Drive High"]
     #[inline(always)]
-    #[must_use]
     pub fn fiu_drv1(&mut self) -> FiuDrv1W<RespCfgSpec> {
         FiuDrv1W::new(self, 2)
     }
     #[doc = "Bit 3 - Device 'n' Quad Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn dn_quad_en(&mut self) -> DnQuadEnW<RespCfgSpec> {
         DnQuadEnW::new(self, 3)
     }

@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - RAM Write Lock BusFault Trap Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn wlk_bf_en(&mut self) -> WlkBfEnW<RamLkCtlSpec> {
         WlkBfEnW::new(self, 0)
     }
     #[doc = "Bit 1 - RAM Fetch BusFault Trap Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn fetch_bf_en(&mut self) -> FetchBfEnW<RamLkCtlSpec> {
         FetchBfEnW::new(self, 1)
     }
     #[doc = "Bit 7 - BusFault Trap Enable Lock"]
     #[inline(always)]
-    #[must_use]
     pub fn bf_en_lk(&mut self) -> BfEnLkW<RamLkCtlSpec> {
         BfEnLkW::new(self, 7)
     }

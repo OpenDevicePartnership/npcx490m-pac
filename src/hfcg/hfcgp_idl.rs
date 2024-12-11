@@ -34,13 +34,11 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 3 - Core Clock Prescaler Divider in Idle Value Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn fpred_idl_en(&mut self) -> FpredIdlEnW<HfcgpIdlSpec> {
         FpredIdlEnW::new(self, 3)
     }
     #[doc = "Bits 4:7 - Core Clock Prescaler Divider in Idle Value"]
     #[inline(always)]
-    #[must_use]
     pub fn fpred_idl(&mut self) -> FpredIdlW<HfcgpIdlSpec> {
         FpredIdlW::new(self, 4)
     }

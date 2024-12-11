@@ -94,49 +94,41 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - SMBus/I2C 0 Event Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn smb0een(&mut self) -> Smb0eenW<SmbEenSpec> {
         Smb0eenW::new(self, 0)
     }
     #[doc = "Bit 1 - SMBus/I2C 1 Event Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn smb1een(&mut self) -> Smb1eenW<SmbEenSpec> {
         Smb1eenW::new(self, 1)
     }
     #[doc = "Bit 2 - SMBus/I2C 2 Event Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn smb2een(&mut self) -> Smb2eenW<SmbEenSpec> {
         Smb2eenW::new(self, 2)
     }
     #[doc = "Bit 3 - SMBus/I2C 3 Event Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn smb3een(&mut self) -> Smb3eenW<SmbEenSpec> {
         Smb3eenW::new(self, 3)
     }
     #[doc = "Bit 4 - SMBus/I2C 4 Event Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn smb4een(&mut self) -> Smb4eenW<SmbEenSpec> {
         Smb4eenW::new(self, 4)
     }
     #[doc = "Bit 5 - SMBus/I2C 5 Event Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn smb5een(&mut self) -> Smb5eenW<SmbEenSpec> {
         Smb5eenW::new(self, 5)
     }
     #[doc = "Bit 6 - SMBus/I2C 6 Event Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn smb6een(&mut self) -> Smb6eenW<SmbEenSpec> {
         Smb6eenW::new(self, 6)
     }
     #[doc = "Bit 7 - SMBus/I2C 7 Event Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn smb7een(&mut self) -> Smb7eenW<SmbEenSpec> {
         Smb7eenW::new(self, 7)
     }

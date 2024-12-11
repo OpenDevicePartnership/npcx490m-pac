@@ -54,25 +54,21 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - Host Read from Offset in Window 1 Status"]
     #[inline(always)]
-    #[must_use]
     pub fn hofs1r(&mut self) -> Hofs1rW<HofsStsSpec> {
         Hofs1rW::new(self, 0)
     }
     #[doc = "Bit 1 - Host Write to Offset in Window 1 Status"]
     #[inline(always)]
-    #[must_use]
     pub fn hofs1w(&mut self) -> Hofs1wW<HofsStsSpec> {
         Hofs1wW::new(self, 1)
     }
     #[doc = "Bit 2 - Host Read from Offset in Window 2 Status"]
     #[inline(always)]
-    #[must_use]
     pub fn hofs2r(&mut self) -> Hofs2rW<HofsStsSpec> {
         Hofs2rW::new(self, 2)
     }
     #[doc = "Bit 3 - Host Write to Offset in Window 2 Status"]
     #[inline(always)]
-    #[must_use]
     pub fn hofs2w(&mut self) -> Hofs2wW<HofsStsSpec> {
         Hofs2wW::new(self, 3)
     }

@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:9 - Threshold Value"]
     #[inline(always)]
-    #[must_use]
     pub fn thrval(&mut self) -> ThrvalW<Thrctl3Spec> {
         ThrvalW::new(self, 0)
     }
     #[doc = "Bits 10:14 - Channel Select"]
     #[inline(always)]
-    #[must_use]
     pub fn chnsel(&mut self) -> ChnselW<Thrctl3Spec> {
         ChnselW::new(self, 10)
     }
     #[doc = "Bit 15 - Lower or Higher"]
     #[inline(always)]
-    #[must_use]
     pub fn l_h(&mut self) -> LHW<Thrctl3Spec> {
         LHW::new(self, 15)
     }

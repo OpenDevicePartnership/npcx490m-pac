@@ -314,181 +314,151 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - In-Band Reset Command Received"]
     #[inline(always)]
-    #[must_use]
     pub fn ibrst(&mut self) -> IbrstW<EspistsSpec> {
         IbrstW::new(self, 0)
     }
     #[doc = "Bit 1 - eSPI Configuration Updated"]
     #[inline(always)]
-    #[must_use]
     pub fn cfgupd(&mut self) -> CfgupdW<EspistsSpec> {
         CfgupdW::new(self, 1)
     }
     #[doc = "Bit 2 - eSPI Bus Error"]
     #[inline(always)]
-    #[must_use]
     pub fn berr(&mut self) -> BerrW<EspistsSpec> {
         BerrW::new(self, 2)
     }
     #[doc = "Bit 3 - OOB Data Received"]
     #[inline(always)]
-    #[must_use]
     pub fn oobrx(&mut self) -> OobrxW<EspistsSpec> {
         OobrxW::new(self, 3)
     }
     #[doc = "Bit 4 - Flash Data Received"]
     #[inline(always)]
-    #[must_use]
     pub fn flashrx(&mut self) -> FlashrxW<EspistsSpec> {
         FlashrxW::new(self, 4)
     }
     #[doc = "Bit 5 - Flash Non-Automatic Completion Sent"]
     #[inline(always)]
-    #[must_use]
     pub fn flnacs(&mut self) -> FlnacsW<EspistsSpec> {
         FlnacsW::new(self, 5)
     }
     #[doc = "Bit 6 - Peripheral Channel Access Detected"]
     #[inline(always)]
-    #[must_use]
     pub fn peracc(&mut self) -> PeraccW<EspistsSpec> {
         PeraccW::new(self, 6)
     }
     #[doc = "Bit 7 - Peripheral Channel Transaction Deferred"]
     #[inline(always)]
-    #[must_use]
     pub fn dfrd(&mut self) -> DfrdW<EspistsSpec> {
         DfrdW::new(self, 7)
     }
     #[doc = "Bit 8 - Virtual Wire Updated"]
     #[inline(always)]
-    #[must_use]
     pub fn vwupd(&mut self) -> VwupdW<EspistsSpec> {
         VwupdW::new(self, 8)
     }
     #[doc = "Bit 9 - eSPI_RST Activated"]
     #[inline(always)]
-    #[must_use]
     pub fn espirst(&mut self) -> EspirstW<EspistsSpec> {
         EspirstW::new(self, 9)
     }
     #[doc = "Bit 10 - PLTRST Activated"]
     #[inline(always)]
-    #[must_use]
     pub fn pltrst(&mut self) -> PltrstW<EspistsSpec> {
         PltrstW::new(self, 10)
     }
     #[doc = "Bit 11 - Bus Master Burst Mode Write Queue Empty"]
     #[inline(always)]
-    #[must_use]
     pub fn bmwburstqemp(&mut self) -> BmwburstqempW<EspistsSpec> {
         BmwburstqempW::new(self, 11)
     }
     #[doc = "Bit 14 - Flash Automatic Read Request"]
     #[inline(always)]
-    #[must_use]
     pub fn flautordreq(&mut self) -> FlautordreqW<EspistsSpec> {
         FlautordreqW::new(self, 14)
     }
     #[doc = "Bit 15 - Automatic Mode Transfer Error"]
     #[inline(always)]
-    #[must_use]
     pub fn amerr(&mut self) -> AmerrW<EspistsSpec> {
         AmerrW::new(self, 15)
     }
     #[doc = "Bit 16 - Automatic Mode Transfer Done"]
     #[inline(always)]
-    #[must_use]
     pub fn amdone(&mut self) -> AmdoneW<EspistsSpec> {
         AmdoneW::new(self, 16)
     }
     #[doc = "Bit 17 - Virtual Wire Updated Wake-Up"]
     #[inline(always)]
-    #[must_use]
     pub fn vwupdw(&mut self) -> VwupdwW<EspistsSpec> {
         VwupdwW::new(self, 17)
     }
     #[doc = "Bit 18 - Flash Non-Posted Request Sent"]
     #[inline(always)]
-    #[must_use]
     pub fn flnprqs(&mut self) -> FlnprqsW<EspistsSpec> {
         FlnprqsW::new(self, 18)
     }
     #[doc = "Bit 19 - Peripheral Bus Master Data Transmitted"]
     #[inline(always)]
-    #[must_use]
     pub fn bmtxdone(&mut self) -> BmtxdoneW<EspistsSpec> {
         BmtxdoneW::new(self, 19)
     }
     #[doc = "Bit 20 - Peripheral Bus Master Data Received"]
     #[inline(always)]
-    #[must_use]
     pub fn pbmrx(&mut self) -> PbmrxW<EspistsSpec> {
         PbmrxW::new(self, 20)
     }
     #[doc = "Bit 21 - Peripheral Message Data Received"]
     #[inline(always)]
-    #[must_use]
     pub fn pmsgrx(&mut self) -> PmsgrxW<EspistsSpec> {
         PmsgrxW::new(self, 21)
     }
     #[doc = "Bit 22 - Bus Master Burst Mode Read Transfer Error"]
     #[inline(always)]
-    #[must_use]
     pub fn bmbursterr(&mut self) -> BmbursterrW<EspistsSpec> {
         BmbursterrW::new(self, 22)
     }
     #[doc = "Bit 23 - Bus Master Burst Mode Read Transfer Done"]
     #[inline(always)]
-    #[must_use]
     pub fn bmburstdone(&mut self) -> BmburstdoneW<EspistsSpec> {
         BmburstdoneW::new(self, 23)
     }
     #[doc = "Bit 24 - eSPI_RST Level"]
     #[inline(always)]
-    #[must_use]
     pub fn espirst_lvl(&mut self) -> EspirstLvlW<EspistsSpec> {
         EspirstLvlW::new(self, 24)
     }
     #[doc = "Bit 25 - Flash Protection Error"]
     #[inline(always)]
-    #[must_use]
     pub fn flprterr(&mut self) -> FlprterrW<EspistsSpec> {
         FlprterrW::new(self, 25)
     }
     #[doc = "Bit 26 - Flash Automatic Read Request Start"]
     #[inline(always)]
-    #[must_use]
     pub fn flautordstr(&mut self) -> FlautordstrW<EspistsSpec> {
         FlautordstrW::new(self, 26)
     }
     #[doc = "Bit 27 - Flash Automatic Read Request Pending"]
     #[inline(always)]
-    #[must_use]
     pub fn flautordpnd(&mut self) -> FlautordpndW<EspistsSpec> {
         FlautordpndW::new(self, 27)
     }
     #[doc = "Bit 28 - Flash Automatic Read Queue Empty"]
     #[inline(always)]
-    #[must_use]
     pub fn flautordqemp(&mut self) -> FlautordqempW<EspistsSpec> {
         FlautordqempW::new(self, 28)
     }
     #[doc = "Bit 29 - Automatic Read Disable Status"]
     #[inline(always)]
-    #[must_use]
     pub fn auto_rd_dis_sts(&mut self) -> AutoRdDisStsW<EspistsSpec> {
         AutoRdDisStsW::new(self, 29)
     }
     #[doc = "Bit 30 - Bus Master Burst Mode Write Transfer Error"]
     #[inline(always)]
-    #[must_use]
     pub fn bmwbursterr(&mut self) -> BmwbursterrW<EspistsSpec> {
         BmwbursterrW::new(self, 30)
     }
     #[doc = "Bit 31 - Bus Master Burst Mode Write Transfer Done"]
     #[inline(always)]
-    #[must_use]
     pub fn bmwburstdone(&mut self) -> BmwburstdoneW<EspistsSpec> {
         BmwburstdoneW::new(self, 31)
     }

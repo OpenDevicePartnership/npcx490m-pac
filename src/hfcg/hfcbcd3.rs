@@ -44,19 +44,16 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - MCLK Division for I3CI1 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn mclkd1_sl(&mut self) -> Mclkd1SlW<Hfcbcd3Spec> {
         Mclkd1SlW::new(self, 0)
     }
     #[doc = "Bit 1 - MCLK Division for I3CI2 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn mclkd2_sl(&mut self) -> Mclkd2SlW<Hfcbcd3Spec> {
         Mclkd2SlW::new(self, 1)
     }
     #[doc = "Bit 2 - MCLK Division for I3CI3 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn mclkd3_sl(&mut self) -> Mclkd3SlW<Hfcbcd3Spec> {
         Mclkd3SlW::new(self, 2)
     }

@@ -24,7 +24,6 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bits 0:3 - JTAG Enable"]
     #[inline(always)]
-    #[must_use]
     pub fn jen_en(&mut self) -> JenEnW<JenCtl1Spec> {
         JenEnW::new(self, 0)
     }

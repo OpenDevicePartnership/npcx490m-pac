@@ -94,49 +94,41 @@ impl core::fmt::Debug for R {
 impl W {
     #[doc = "Bit 0 - No KSO08 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn no_kso08_sl(&mut self) -> NoKso08SlW<Devalt9Spec> {
         NoKso08SlW::new(self, 0)
     }
     #[doc = "Bit 1 - No KSO09 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn no_kso09_sl(&mut self) -> NoKso09SlW<Devalt9Spec> {
         NoKso09SlW::new(self, 1)
     }
     #[doc = "Bit 2 - No KSO10 and P80_CLK Select"]
     #[inline(always)]
-    #[must_use]
     pub fn no_kso10_sl(&mut self) -> NoKso10SlW<Devalt9Spec> {
         NoKso10SlW::new(self, 2)
     }
     #[doc = "Bit 3 - No KSO11 and P80_DAT Select"]
     #[inline(always)]
-    #[must_use]
     pub fn no_kso11_sl(&mut self) -> NoKso11SlW<Devalt9Spec> {
         NoKso11SlW::new(self, 3)
     }
     #[doc = "Bit 4 - No KSO12 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn no_kso12_sl(&mut self) -> NoKso12SlW<Devalt9Spec> {
         NoKso12SlW::new(self, 4)
     }
     #[doc = "Bit 5 - No KSO13 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn no_kso13_sl(&mut self) -> NoKso13SlW<Devalt9Spec> {
         NoKso13SlW::new(self, 5)
     }
     #[doc = "Bit 6 - No KSO14 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn no_kso14_sl(&mut self) -> NoKso14SlW<Devalt9Spec> {
         NoKso14SlW::new(self, 6)
     }
     #[doc = "Bit 7 - No KSO15 Select"]
     #[inline(always)]
-    #[must_use]
     pub fn no_kso15_sl(&mut self) -> NoKso15SlW<Devalt9Spec> {
         NoKso15SlW::new(self, 7)
     }
