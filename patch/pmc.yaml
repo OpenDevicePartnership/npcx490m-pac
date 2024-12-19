@@ -1,0 +1,6 @@
+PMC:
+  _add:
+    _interrupts:
+      PKA:
+        description: PKA (RSA-2048 accelerator) module interrupt
+        value: 40

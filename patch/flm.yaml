@@ -278,3 +278,8 @@ FLM:
     FLM_CMB29: FLM_CMB0
     FLM_CMB30: FLM_CMB0
     FLM_CMB31: FLM_CMB0
+  _add:
+    _interrupts:
+      FLM:
+        description: FLM module interrupt
+        value: 30

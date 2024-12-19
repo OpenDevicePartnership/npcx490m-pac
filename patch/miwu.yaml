@@ -29,3 +29,59 @@ MIWU0:
       WKINTH_0:
         description: MIWU0 - WKINTH_0 (GPIO, I3C1_SDA)
         value: 46
+
+MIWU1:
+  _add:
+    _interrupts:
+      WKINTA_1:
+        description: MIWU1 - WKINTA_1 (GPIO)
+        value: 47
+      WKINTB_1:
+        description: MIWU1 - WKINTB_1 (GPIO, I3C3_SDA)
+        value: 48
+      WKINTC_1:
+        description: MIWU1 - WKINTC_1 (Keyboard Scan, GPIO)
+        value: 49
+      WKINTD_1:
+        description: MIWU1 - WKINTD_1 (PS/2, GPIO)
+        value: 50
+      WKINTE_1:
+        description: MIWU1 - WKINTE_1 (GPIO, TA1, RI)
+        value: 51
+      WKINTF_1:
+        description: MIWU1 - WKINTF_1 (GPIO, I3C2_SDA, SHI_CS)
+        value: 52
+      WKINTG_1:
+        description: MIWU1 - WKINTG_1 (PS/2, GPIO, TB2, INTRUDER2)
+        value: 53
+      WKINTH_1:
+        description: MIWU1 - WKINTH_1 (PS/2, PWRGD, CR_SIN1, TA2, GPIO)
+        value: 54
+
+MIWU2:
+  _add:
+    _interrupts:
+      WKINTA_2:
+        description: MIWU2 - WKINTA_2 (VW02x and VW03x)
+        value: 60
+      WKINTB_2:
+        description: MIWU2 - WKINTB_2 (VW07x and VW41x)
+        value: 61
+      WKINTC_2:
+        description: MIWU2 - WKINTC_2 (VW42x and VW43x)
+        value: 62
+      WKINTD_2:
+        description: MIWU2 - WKINTD_2 (VW44x and VW47x)
+        value: 63
+      WKINTE_2:
+        description: MIWU2 - WKINTE_2 (VW33x)
+        value: 64
+      WKINTF_2:
+        description: MIWU2 - WKINTF_2 (GPIO, LCT Event, SMBus)
+        value: 59
+      WKINTG_2:
+        description: MIWU2 - WKINTG_2 (SMBus, CR_SIN2, CR_SIN3, CR_SIN4, I3C1_ADRW, I3C1_RSTW)
+        value: 55
+      WKINTH_2:
+        description: MIWU2 - WKINTH_2 (I3Cn_ADRW, I3Cn_RSTW (n = 2,3))
+        value: 82

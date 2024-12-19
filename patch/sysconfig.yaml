@@ -1,0 +1,6 @@
+SYS CONFIG:
+  _add:
+    _interrupts:
+      RNG:
+        description: RNG modules (see RNGINT_MD bit on page 77)
+        value: 34

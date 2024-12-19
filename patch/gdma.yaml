@@ -20,3 +20,15 @@ GDMA1:
         name: CTCNT
       GDMA_REQ_SL*:
         name: REQ_SL
+  _add:
+    _interrupts:
+      GDMA1:
+        description: GDMA1 interrupt
+        value: 12
+
+GDMA2:
+  _add:
+    _interrupts:
+      GDMA2:
+        description: GDMA2 interrupt
+        value: 65

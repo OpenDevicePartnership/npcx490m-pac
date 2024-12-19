@@ -6,3 +6,59 @@ _derive:
   SMB5: SMB0
   SMB6: SMB0
   SMB7: SMB0
+
+SMB0:
+  _add:
+    _interrupts:
+      SMB0:
+        description: SMB0 module interrupt
+        value: 13
+
+SMB1:
+  _add:
+    _interrupts:
+      SMB1:
+        description: SMB1 module interrupt
+        value: 14
+
+SMB2:
+  _add:
+    _interrupts:
+      SMB2:
+        description: SMB2 module interrupt
+        value: 36
+
+SMB3:
+  _add:
+    _interrupts:
+      SMB3:
+        description: SMB3 module interrupt
+        value: 37
+
+SMB4:
+  _add:
+    _interrupts:
+      SMB4:
+        description: SMB4 module interrupt
+        value: 19
+
+SMB5:
+  _add:
+    _interrupts:
+      SMB5:
+        description: SMB5 module interrupt
+        value: 20
+
+SMB6:
+  _add:
+    _interrupts:
+      SMB6:
+        description: SMB6 module interrupt
+        value: 16
+
+SMB7:
+  _add:
+    _interrupts:
+      SMB7:
+        description: SMB7 module interrupt
+        value: 8

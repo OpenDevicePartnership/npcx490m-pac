@@ -1,0 +1,9 @@
+KBC:
+  _add:
+    _interrupts:
+      KBC_IBF:
+        description: Host I/F Keyboard/Mouse channel Input Buffer Full
+        value: 25
+      KBC_OBE:
+        description: Host I/F Keyboard/Mouse channel Output Buffer Empty
+        value: 56

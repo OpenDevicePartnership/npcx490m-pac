@@ -41,3 +41,29 @@ CR_UART1:
         access: read-only
       ERR:
         access: read-only
+  _add:
+    _interrupts:
+      CR_UART1_MDMA1:
+        description: CR_UART1 module interrupt or MDMA1 module interrupt
+        value: 33
+
+CR_UART2:
+  _add:
+    _interrupts:
+      CR_UART2_MDMA2:
+        description: CR_UART2 module interrupt or MDMA2 module interrupt
+        value: 32
+
+CR_UART3:
+  _add:
+    _interrupts:
+      CR_UART3_MDMA3:
+        description: CR_UART3 module interrupt or MDMA3 module interrupt
+        value: 38
+
+CR_UART4:
+  _add:
+    _interrupts:
+      CR_UART4_MDMA4:
+        description: CR_UART4 module interrupt or MDMA4 module interrupt
+        value: 39
