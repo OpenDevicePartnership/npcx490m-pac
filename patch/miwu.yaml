@@ -1,3 +1,31 @@
 _derive:
   MIWU1: MIWU0
   MIWU2: MIWU0
+
+MIWU0:
+  _add:
+    _interrupts:
+      WKINTA_0:
+        description: MIWU0 - WKINTA_0 (GPIO)
+        value: 7
+      WKINTB_0:
+        description: MIWU0 - WKINTB_0 (GPIO, TA1, MSWC wake-up - MSWCI, TWD system tick - T0OUT)
+        value: 31
+      WKINTC_0:
+        description: MIWU0 - WKINTC_0 (GPIO, TB1)
+        value: 15
+      WKINTD_0:
+        description: MIWU0 - WKINTD_0 (GPIO, PS/2, TA2, TB2, SMBus, MTC)
+        value: 5
+      WKINTE_0:
+        description: MIWU0 - WKINTE_0 (GPIO, Host access, SMBus, nLRESET/nPLTRST)
+        value: 11
+      WKINTF_0:
+        description: MIWU0 - WKINTF_0 (GPIO)
+        value: 35
+      WKINTG_0:
+        description: MIWU0 - WKINTG_0 (GPIO, TB1, nINTRUDER1)
+        value: 42
+      WKINTH_0:
+        description: MIWU0 - WKINTH_0 (GPIO, I3C1_SDA)
+        value: 46

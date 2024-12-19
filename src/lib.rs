@@ -16,7 +16,16 @@ use generic::*;
 #[doc = r"Common register and bit access and modify traits"]
 pub mod generic;
 #[cfg(feature = "rt")]
-extern "C" {}
+extern "C" {
+    fn WKINTD_0();
+    fn WKINTA_0();
+    fn WKINTE_0();
+    fn WKINTC_0();
+    fn WKINTB_0();
+    fn WKINTF_0();
+    fn WKINTG_0();
+    fn WKINTH_0();
+}
 #[doc(hidden)]
 #[repr(C)]
 pub union Vector {
@@ -27,15 +36,81 @@ pub union Vector {
 #[doc(hidden)]
 #[link_section = ".vector_table.interrupts"]
 #[no_mangle]
-pub static __INTERRUPTS: [Vector; 0] = [];
+pub static __INTERRUPTS: [Vector; 47] = [
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _handler: WKINTD_0 },
+    Vector { _reserved: 0 },
+    Vector { _handler: WKINTA_0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _handler: WKINTE_0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _handler: WKINTC_0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _handler: WKINTB_0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _handler: WKINTF_0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _handler: WKINTG_0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _handler: WKINTH_0 },
+];
 #[doc = r"Enumeration of all the interrupts."]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 #[derive(Copy, Clone, Debug, PartialEq, Eq)]
-pub enum Interrupt {}
+#[repr(u16)]
+pub enum Interrupt {
+    #[doc = "5 - MIWU0 - WKINTD_0 (GPIO, PS/2, TA2, TB2, SMBus, MTC)"]
+    WKINTD_0 = 5,
+    #[doc = "7 - MIWU0 - WKINTA_0 (GPIO)"]
+    WKINTA_0 = 7,
+    #[doc = "11 - MIWU0 - WKINTE_0 (GPIO, Host access, SMBus, nLRESET/nPLTRST)"]
+    WKINTE_0 = 11,
+    #[doc = "15 - MIWU0 - WKINTC_0 (GPIO, TB1)"]
+    WKINTC_0 = 15,
+    #[doc = "31 - MIWU0 - WKINTB_0 (GPIO, TA1, MSWC wake-up - MSWCI, TWD system tick - T0OUT)"]
+    WKINTB_0 = 31,
+    #[doc = "35 - MIWU0 - WKINTF_0 (GPIO)"]
+    WKINTF_0 = 35,
+    #[doc = "42 - MIWU0 - WKINTG_0 (GPIO, TB1, INTRUDER1)"]
+    WKINTG_0 = 42,
+    #[doc = "46 - MIWU0 - WKINTH_0 (GPIO, I3C1_SDA)"]
+    WKINTH_0 = 46,
+}
 unsafe impl cortex_m::interrupt::InterruptNumber for Interrupt {
     #[inline(always)]
     fn number(self) -> u16 {
-        match self {}
+        self as u16
     }
 }
 #[doc = "ADC_IREF"]
