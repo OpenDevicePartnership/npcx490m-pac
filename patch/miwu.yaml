@@ -5,140 +5,148 @@ _derive:
 MIWU0:
   _modify:
     # Fix the erroneous address offsets in the SVD
-    WKEDGn0:
-      addressOffset: 0x00
     WKEDGn1:
-      addressOffset: 0x10
+      addressOffset: 0x00
     WKEDGn2:
-      addressOffset: 0x20
+      addressOffset: 0x10
     WKEDGn3:
-      addressOffset: 0x30
+      addressOffset: 0x20
     WKEDGn4:
-      addressOffset: 0x40
+      addressOffset: 0x30
     WKEDGn5:
-      addressOffset: 0x50
+      addressOffset: 0x40
     WKEDGn6:
-      addressOffset: 0x60
+      addressOffset: 0x50
     WKEDGn7:
+      addressOffset: 0x60
+    WKEDGn0:
+      name: WKEDGn8
       addressOffset: 0x70
 
-    WKAEDGn0:
-      addressOffset: 0x01
     WKAEDGn1:
-      addressOffset: 0x11
+      addressOffset: 0x01
     WKAEDGn2:
-      addressOffset: 0x21
+      addressOffset: 0x11
     WKAEDGn3:
-      addressOffset: 0x31
+      addressOffset: 0x21
     WKAEDGn4:
-      addressOffset: 0x41
+      addressOffset: 0x31
     WKAEDGn5:
-      addressOffset: 0x51
+      addressOffset: 0x41
     WKAEDGn6:
-      addressOffset: 0x61
+      addressOffset: 0x51
     WKAEDGn7:
+      addressOffset: 0x61
+    WKAEDGn0:
+      name: WKAEDGn8
       addressOffset: 0x71
 
-    WKMODn0:
-      addressOffset: 0x02
     WKMODn1:
-      addressOffset: 0x12
+      addressOffset: 0x02
     WKMODn2:
-      addressOffset: 0x22
+      addressOffset: 0x12
     WKMODn3:
-      addressOffset: 0x32
+      addressOffset: 0x22
     WKMODn4:
-      addressOffset: 0x42
+      addressOffset: 0x32
     WKMODn5:
-      addressOffset: 0x52
+      addressOffset: 0x42
     WKMODn6:
-      addressOffset: 0x62
+      addressOffset: 0x52
     WKMODn7:
+      addressOffset: 0x62
+    WKMODn0:
+      name: WKMODn8
       addressOffset: 0x72
 
-    WKPNDn0:
-      addressOffset: 0x03
     WKPNDn1:
-      addressOffset: 0x13
+      addressOffset: 0x03
     WKPNDn2:
-      addressOffset: 0x23
+      addressOffset: 0x13
     WKPNDn3:
-      addressOffset: 0x33
+      addressOffset: 0x23
     WKPNDn4:
-      addressOffset: 0x43
+      addressOffset: 0x33
     WKPNDn5:
-      addressOffset: 0x53
+      addressOffset: 0x43
     WKPNDn6:
-      addressOffset: 0x63
+      addressOffset: 0x53
     WKPNDn7:
+      addressOffset: 0x63
+    WKPNDn0:
+      name: WKPNDn8
       addressOffset: 0x73
 
-    WKPCLn0:
-      addressOffset: 0x04
     WKPCLn1:
-      addressOffset: 0x14
+      addressOffset: 0x04
     WKPCLn2:
-      addressOffset: 0x24
+      addressOffset: 0x14
     WKPCLn3:
-      addressOffset: 0x34
+      addressOffset: 0x24
     WKPCLn4:
-      addressOffset: 0x44
+      addressOffset: 0x34
     WKPCLn5:
-      addressOffset: 0x54
+      addressOffset: 0x44
     WKPCLn6:
-      addressOffset: 0x64
+      addressOffset: 0x54
     WKPCLn7:
+      addressOffset: 0x64
+    WKPCLn0:
+      name: WKPCLn8
       addressOffset: 0x74
 
-    WKENn0:
-      addressOffset: 0x05
     WKENn1:
-      addressOffset: 0x15
+      addressOffset: 0x05
     WKENn2:
-      addressOffset: 0x25
+      addressOffset: 0x15
     WKENn3:
-      addressOffset: 0x35
+      addressOffset: 0x25
     WKENn4:
-      addressOffset: 0x45
+      addressOffset: 0x35
     WKENn5:
-      addressOffset: 0x55
+      addressOffset: 0x45
     WKENn6:
-      addressOffset: 0x65
+      addressOffset: 0x55
     WKENn7:
+      addressOffset: 0x65
+    WKENn0:
+      name: WKENn8
       addressOffset: 0x75
 
-    WKSTn0:
-      addressOffset: 0x06
     WKSTn1:
-      addressOffset: 0x16
+      addressOffset: 0x06
     WKSTn2:
-      addressOffset: 0x26
+      addressOffset: 0x16
     WKSTn3:
-      addressOffset: 0x36
+      addressOffset: 0x26
     WKSTn4:
-      addressOffset: 0x46
+      addressOffset: 0x36
     WKSTn5:
-      addressOffset: 0x56
+      addressOffset: 0x46
     WKSTn6:
-      addressOffset: 0x66
+      addressOffset: 0x56
     WKSTn7:
+      addressOffset: 0x66
+    WKSTn0:
+      name: WKSTn8
       addressOffset: 0x76
 
-    WKINENn0:
-      addressOffset: 0x07
     WKINENn1:
-      addressOffset: 0x17
+      addressOffset: 0x07
     WKINENn2:
-      addressOffset: 0x27
+      addressOffset: 0x17
     WKINENn3:
-      addressOffset: 0x37
+      addressOffset: 0x27
     WKINENn4:
-      addressOffset: 0x47
+      addressOffset: 0x37
     WKINENn5:
-      addressOffset: 0x57
+      addressOffset: 0x47
     WKINENn6:
-      addressOffset: 0x67
+      addressOffset: 0x57
     WKINENn7:
+      addressOffset: 0x67
+    WKINENn0:
+      name: WKINENn8
       addressOffset: 0x77
 
   _add:
