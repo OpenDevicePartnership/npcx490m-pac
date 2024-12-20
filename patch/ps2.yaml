@@ -1,0 +1,6 @@
+PS2:
+  _add:
+    _interrupts:
+      PS2:
+        description: PS/2 shift mechanism (PSINT1)
+        value: 21

@@ -1,0 +1,6 @@
+PECI:
+  _add:
+    _interrupts:
+      PECI:
+        description: PECI 4.0 event
+        value: 4

@@ -1,3 +1,24 @@
 _derive:
   MFT16_2: MFT16_1
   MFT16_3: MFT16_1
+
+MFT16_1:
+  _add:
+    _interrupts:
+      MFT16_1:
+        description: MFT16-1 (MFT16_INT1 or MFT16_INT2)
+        value: 9
+
+MFT16_2:
+  _add:
+    _interrupts:
+      MFT16_2:
+        description: MFT16-2 (MFT16_INT1 or MFT16_INT2)
+        value: 23
+
+MFT16_3:
+  _add:
+    _interrupts:
+      MFT16_3:
+        description: MFT16-3 (MFT16_INT1 or MFT16_INT2)
+        value: 41

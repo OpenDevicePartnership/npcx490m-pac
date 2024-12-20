@@ -1,0 +1,9 @@
+SHM:
+  _add:
+    _interrupts:
+      DP80:
+        description: Debug Port 80 interrupt
+        value: 6
+      SHM:
+        description: Shared Memory module interrupt
+        value: 24

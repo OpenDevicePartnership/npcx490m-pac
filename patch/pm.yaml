@@ -2,3 +2,13 @@ _derive:
   PM2: PM1
   PM3: PM1
   PM4: PM1
+
+PM1:
+  _add:
+    _interrupts:
+      PM_OBE:
+        description: Host I/F Power Management Channel 1 or Channel 2 or Channel 3 or Channel 4, Output Buffer Empty interrupt
+        value: 3
+      PM_IBF:
+        description: Host I/F Power Management Channel 1 or Channel 2 or Channel 3 or Channel 4, Input Buffer Full
+        value: 26

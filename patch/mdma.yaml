@@ -5,3 +5,52 @@ _derive:
   MDMA5: MDMA1
   MDMA6: MDMA1
   MDMA7: MDMA1
+
+MDMA1:
+  _add:
+    _interrupts:
+      CR_UART1_MDMA1:
+        description: CR_UART1 module interrupt or MDMA1 module interrupt
+        value: 33
+
+MDMA2:
+  _add:
+    _interrupts:
+      CR_UART2_MDMA2:
+        description: CR_UART2 module interrupt or MDMA2 module interrupt
+        value: 32
+
+MDMA3:
+  _add:
+    _interrupts:
+      CR_UART3_MDMA3:
+        description: CR_UART3 module interrupt or MDMA3 module interrupt
+        value: 38
+
+MDMA4:
+  _add:
+    _interrupts:
+      CR_UART4_MDMA4:
+        description: CR_UART4 module interrupt or MDMA4 module interrupt
+        value: 39
+
+MDMA5:
+  _add:
+    _interrupts:
+      I3C1_MDMA5:
+        description: I3CI1 module interrupt or MDMA5 module interrupt
+        value: 29
+
+MDMA6:
+  _add:
+    _interrupts:
+      I3C2_MDMA6:
+        description: I3CI2 module interrupt or MDMA6 module interrupt
+        value: 66
+
+MDMA7:
+  _add:
+    _interrupts:
+      I3C3_MDMA7:
+        description: I3CI3 module interrupt or MDMA7 module interrupt
+        value: 67

@@ -17,14 +17,73 @@ use generic::*;
 pub mod generic;
 #[cfg(feature = "rt")]
 extern "C" {
+    fn KBS();
+    fn PM_OBE();
+    fn PECI();
     fn WKINTD_0();
+    fn DP80();
     fn WKINTA_0();
+    fn SMB7();
+    fn MFT16_1();
+    fn ADC_IREF();
     fn WKINTE_0();
+    fn GDMA1();
+    fn SMB0();
+    fn SMB1();
     fn WKINTC_0();
+    fn SMB6();
+    fn ITIM32_3();
+    fn ESPI_SHI();
+    fn SMB4();
+    fn SMB5();
+    fn PS2();
+    fn ADC_EREF();
+    fn MFT16_2();
+    fn SHM();
+    fn KBC_IBF();
+    fn PM_IBF();
+    fn ITIM32_2();
+    fn ITIM32_1();
+    fn I3C1_MDMA5();
+    fn FLM();
     fn WKINTB_0();
+    fn CR_UART2_MDMA2();
+    fn CR_UART1_MDMA1();
+    fn RNG();
     fn WKINTF_0();
+    fn SMB2();
+    fn SMB3();
+    fn CR_UART3_MDMA3();
+    fn CR_UART4_MDMA4();
+    fn PKA();
+    fn MFT16_3();
     fn WKINTG_0();
+    fn ITIM32_4();
+    fn ITIM32_5();
+    fn ITIM32_6();
     fn WKINTH_0();
+    fn WKINTA_1();
+    fn WKINTB_1();
+    fn WKINTC_1();
+    fn WKINTD_1();
+    fn WKINTE_1();
+    fn WKINTF_1();
+    fn WKINTG_1();
+    fn WKINTH_1();
+    fn WKINTG_2();
+    fn KBC_OBE();
+    fn SPIP();
+    fn WKINTF_2();
+    fn WKINTA_2();
+    fn WKINTB_2();
+    fn WKINTC_2();
+    fn WKINTD_2();
+    fn WKINTE_2();
+    fn GDMA2();
+    fn I3C2_MDMA6();
+    fn I3C3_MDMA7();
+    fn ITIM64();
+    fn WKINTH_2();
 }
 #[doc(hidden)]
 #[repr(C)]
@@ -36,76 +95,244 @@ pub union Vector {
 #[doc(hidden)]
 #[link_section = ".vector_table.interrupts"]
 #[no_mangle]
-pub static __INTERRUPTS: [Vector; 47] = [
+pub static __INTERRUPTS: [Vector; 83] = [
     Vector { _reserved: 0 },
     Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+    Vector { _handler: KBS },
+    Vector { _handler: PM_OBE },
+    Vector { _handler: PECI },
     Vector { _handler: WKINTD_0 },
-    Vector { _reserved: 0 },
+    Vector { _handler: DP80 },
     Vector { _handler: WKINTA_0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+    Vector { _handler: SMB7 },
+    Vector { _handler: MFT16_1 },
+    Vector { _handler: ADC_IREF },
     Vector { _handler: WKINTE_0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+    Vector { _handler: GDMA1 },
+    Vector { _handler: SMB0 },
+    Vector { _handler: SMB1 },
     Vector { _handler: WKINTC_0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+    Vector { _handler: SMB6 },
+    Vector { _handler: ITIM32_3 },
+    Vector { _handler: ESPI_SHI },
+    Vector { _handler: SMB4 },
+    Vector { _handler: SMB5 },
+    Vector { _handler: PS2 },
+    Vector { _handler: ADC_EREF },
+    Vector { _handler: MFT16_2 },
+    Vector { _handler: SHM },
+    Vector { _handler: KBC_IBF },
+    Vector { _handler: PM_IBF },
+    Vector { _handler: ITIM32_2 },
+    Vector { _handler: ITIM32_1 },
+    Vector {
+        _handler: I3C1_MDMA5,
+    },
+    Vector { _handler: FLM },
     Vector { _handler: WKINTB_0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+    Vector {
+        _handler: CR_UART2_MDMA2,
+    },
+    Vector {
+        _handler: CR_UART1_MDMA1,
+    },
+    Vector { _handler: RNG },
     Vector { _handler: WKINTF_0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+    Vector { _handler: SMB2 },
+    Vector { _handler: SMB3 },
+    Vector {
+        _handler: CR_UART3_MDMA3,
+    },
+    Vector {
+        _handler: CR_UART4_MDMA4,
+    },
+    Vector { _handler: PKA },
+    Vector { _handler: MFT16_3 },
     Vector { _handler: WKINTG_0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
-    Vector { _reserved: 0 },
+    Vector { _handler: ITIM32_4 },
+    Vector { _handler: ITIM32_5 },
+    Vector { _handler: ITIM32_6 },
     Vector { _handler: WKINTH_0 },
+    Vector { _handler: WKINTA_1 },
+    Vector { _handler: WKINTB_1 },
+    Vector { _handler: WKINTC_1 },
+    Vector { _handler: WKINTD_1 },
+    Vector { _handler: WKINTE_1 },
+    Vector { _handler: WKINTF_1 },
+    Vector { _handler: WKINTG_1 },
+    Vector { _handler: WKINTH_1 },
+    Vector { _handler: WKINTG_2 },
+    Vector { _handler: KBC_OBE },
+    Vector { _handler: SPIP },
+    Vector { _reserved: 0 },
+    Vector { _handler: WKINTF_2 },
+    Vector { _handler: WKINTA_2 },
+    Vector { _handler: WKINTB_2 },
+    Vector { _handler: WKINTC_2 },
+    Vector { _handler: WKINTD_2 },
+    Vector { _handler: WKINTE_2 },
+    Vector { _handler: GDMA2 },
+    Vector {
+        _handler: I3C2_MDMA6,
+    },
+    Vector {
+        _handler: I3C3_MDMA7,
+    },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _reserved: 0 },
+    Vector { _handler: ITIM64 },
+    Vector { _reserved: 0 },
+    Vector { _handler: WKINTH_2 },
 ];
 #[doc = r"Enumeration of all the interrupts."]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 #[derive(Copy, Clone, Debug, PartialEq, Eq)]
 #[repr(u16)]
 pub enum Interrupt {
+    #[doc = "2 - Automatic Keyboard Scan interrupt"]
+    KBS = 2,
+    #[doc = "3 - Host I/F Power Management Channel 1 or Channel 2 or Channel 3 or Channel 4, Output Buffer Empty interrupt"]
+    PM_OBE = 3,
+    #[doc = "4 - PECI 4.0 event"]
+    PECI = 4,
     #[doc = "5 - MIWU0 - WKINTD_0 (GPIO, PS/2, TA2, TB2, SMBus, MTC)"]
     WKINTD_0 = 5,
+    #[doc = "6 - Debug Port 80 interrupt"]
+    DP80 = 6,
     #[doc = "7 - MIWU0 - WKINTA_0 (GPIO)"]
     WKINTA_0 = 7,
+    #[doc = "8 - SMB7 module interrupt"]
+    SMB7 = 8,
+    #[doc = "9 - MFT16-1 (MFT16_INT1 or MFT16_INT2)"]
+    MFT16_1 = 9,
+    #[doc = "10 - ADC_IREF interrupt"]
+    ADC_IREF = 10,
     #[doc = "11 - MIWU0 - WKINTE_0 (GPIO, Host access, SMBus, nLRESET/nPLTRST)"]
     WKINTE_0 = 11,
+    #[doc = "12 - GDMA1 interrupt"]
+    GDMA1 = 12,
+    #[doc = "13 - SMB0 module interrupt"]
+    SMB0 = 13,
+    #[doc = "14 - SMB1 module interrupt"]
+    SMB1 = 14,
     #[doc = "15 - MIWU0 - WKINTC_0 (GPIO, TB1)"]
     WKINTC_0 = 15,
+    #[doc = "16 - SMB6 module interrupt"]
+    SMB6 = 16,
+    #[doc = "17 - ITIM32-3 interrupt"]
+    ITIM32_3 = 17,
+    #[doc = "18 - eSPI interrupt or SHI interrupt"]
+    ESPI_SHI = 18,
+    #[doc = "19 - SMB4 module interrupt"]
+    SMB4 = 19,
+    #[doc = "20 - SMB5 module interrupt"]
+    SMB5 = 20,
+    #[doc = "21 - PS/2 shift mechanism (PSINT1)"]
+    PS2 = 21,
+    #[doc = "22 - ADC_EREF interrupt"]
+    ADC_EREF = 22,
+    #[doc = "23 - MFT16-2 (MFT16_INT1 or MFT16_INT2)"]
+    MFT16_2 = 23,
+    #[doc = "24 - Shared Memory module interrupt"]
+    SHM = 24,
+    #[doc = "25 - Host I/F Keyboard/Mouse channel Input Buffer Full"]
+    KBC_IBF = 25,
+    #[doc = "26 - Host I/F Power Management Channel 1 or Channel 2 or Channel 3 or Channel 4, Input Buffer Full"]
+    PM_IBF = 26,
+    #[doc = "27 - ITIM32-2 interrupt"]
+    ITIM32_2 = 27,
+    #[doc = "28 - ITIM32-1 interrupt"]
+    ITIM32_1 = 28,
+    #[doc = "29 - I3CI1 module interrupt or MDMA5 module interrupt"]
+    I3C1_MDMA5 = 29,
+    #[doc = "30 - FLM module interrupt"]
+    FLM = 30,
     #[doc = "31 - MIWU0 - WKINTB_0 (GPIO, TA1, MSWC wake-up - MSWCI, TWD system tick - T0OUT)"]
     WKINTB_0 = 31,
+    #[doc = "32 - CR_UART2 module interrupt or MDMA2 module interrupt"]
+    CR_UART2_MDMA2 = 32,
+    #[doc = "33 - CR_UART1 module interrupt or MDMA1 module interrupt"]
+    CR_UART1_MDMA1 = 33,
+    #[doc = "34 - RNG modules (see RNGINT_MD bit on page 77)"]
+    RNG = 34,
     #[doc = "35 - MIWU0 - WKINTF_0 (GPIO)"]
     WKINTF_0 = 35,
-    #[doc = "42 - MIWU0 - WKINTG_0 (GPIO, TB1, INTRUDER1)"]
+    #[doc = "36 - SMB2 module interrupt"]
+    SMB2 = 36,
+    #[doc = "37 - SMB3 module interrupt"]
+    SMB3 = 37,
+    #[doc = "38 - CR_UART3 module interrupt or MDMA3 module interrupt"]
+    CR_UART3_MDMA3 = 38,
+    #[doc = "39 - CR_UART4 module interrupt or MDMA4 module interrupt"]
+    CR_UART4_MDMA4 = 39,
+    #[doc = "40 - PKA (RSA-2048 accelerator) module interrupt"]
+    PKA = 40,
+    #[doc = "41 - MFT16-3 (MFT16_INT1 or MFT16_INT2)"]
+    MFT16_3 = 41,
+    #[doc = "42 - MIWU0 - WKINTG_0 (GPIO, TB1, nINTRUDER1)"]
     WKINTG_0 = 42,
+    #[doc = "43 - ITIM32-4 interrupt"]
+    ITIM32_4 = 43,
+    #[doc = "44 - ITIM32-5 interrupt"]
+    ITIM32_5 = 44,
+    #[doc = "45 - ITIM32-6 interrupt"]
+    ITIM32_6 = 45,
     #[doc = "46 - MIWU0 - WKINTH_0 (GPIO, I3C1_SDA)"]
     WKINTH_0 = 46,
+    #[doc = "47 - MIWU1 - WKINTA_1 (GPIO)"]
+    WKINTA_1 = 47,
+    #[doc = "48 - MIWU1 - WKINTB_1 (GPIO, I3C3_SDA)"]
+    WKINTB_1 = 48,
+    #[doc = "49 - MIWU1 - WKINTC_1 (Keyboard Scan, GPIO)"]
+    WKINTC_1 = 49,
+    #[doc = "50 - MIWU1 - WKINTD_1 (PS/2, GPIO)"]
+    WKINTD_1 = 50,
+    #[doc = "51 - MIWU1 - WKINTE_1 (GPIO, TA1, RI)"]
+    WKINTE_1 = 51,
+    #[doc = "52 - MIWU1 - WKINTF_1 (GPIO, I3C2_SDA, SHI_CS)"]
+    WKINTF_1 = 52,
+    #[doc = "53 - MIWU1 - WKINTG_1 (PS/2, GPIO, TB2, INTRUDER2)"]
+    WKINTG_1 = 53,
+    #[doc = "54 - MIWU1 - WKINTH_1 (PS/2, PWRGD, CR_SIN1, TA2, GPIO)"]
+    WKINTH_1 = 54,
+    #[doc = "55 - MIWU2 - WKINTG_2 (SMBus, CR_SIN2, CR_SIN3, CR_SIN4, I3C1_ADRW, I3C1_RSTW)"]
+    WKINTG_2 = 55,
+    #[doc = "56 - Host I/F Keyboard/Mouse channel Output Buffer Empty"]
+    KBC_OBE = 56,
+    #[doc = "57 - SPIP module interrupt"]
+    SPIP = 57,
+    #[doc = "59 - MIWU2 - WKINTF_2 (GPIO, LCT Event, SMBus)"]
+    WKINTF_2 = 59,
+    #[doc = "60 - MIWU2 - WKINTA_2 (VW02x and VW03x)"]
+    WKINTA_2 = 60,
+    #[doc = "61 - MIWU2 - WKINTB_2 (VW07x and VW41x)"]
+    WKINTB_2 = 61,
+    #[doc = "62 - MIWU2 - WKINTC_2 (VW42x and VW43x)"]
+    WKINTC_2 = 62,
+    #[doc = "63 - MIWU2 - WKINTD_2 (VW44x and VW47x)"]
+    WKINTD_2 = 63,
+    #[doc = "64 - MIWU2 - WKINTE_2 (VW33x)"]
+    WKINTE_2 = 64,
+    #[doc = "65 - GDMA2 interrupt"]
+    GDMA2 = 65,
+    #[doc = "66 - I3CI2 module interrupt or MDMA6 module interrupt"]
+    I3C2_MDMA6 = 66,
+    #[doc = "67 - I3CI3 module interrupt or MDMA7 module interrupt"]
+    I3C3_MDMA7 = 67,
+    #[doc = "80 - ITIM64 interrupt"]
+    ITIM64 = 80,
+    #[doc = "82 - MIWU2 - WKINTH_2 (I3Cn_ADRW, I3Cn_RSTW (n = 2,3))"]
+    WKINTH_2 = 82,
 }
 unsafe impl cortex_m::interrupt::InterruptNumber for Interrupt {
     #[inline(always)]

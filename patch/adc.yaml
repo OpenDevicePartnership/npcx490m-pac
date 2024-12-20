@@ -1,0 +1,13 @@
+ADC_IREF:
+  _add:
+    _interrupts:
+      ADC_IREF:
+        description: ADC_IREF interrupt
+        value: 10
+
+ADC_EREF:
+  _add:
+    _interrupts:
+      ADC_EREF:
+        description: ADC_EREF interrupt
+        value: 22

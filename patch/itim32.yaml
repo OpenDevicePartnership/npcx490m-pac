@@ -4,3 +4,45 @@ _derive:
   ITIM32_4: ITIM32_1
   ITIM32_5: ITIM32_1
   ITIM32_6: ITIM32_1
+
+ITIM32_1:
+  _add:
+    _interrupts:
+      ITIM32_1:
+        description: ITIM32-1 interrupt
+        value: 28
+
+ITIM32_2:
+  _add:
+    _interrupts:
+      ITIM32_2:
+        description: ITIM32-2 interrupt
+        value: 27
+
+ITIM32_3:
+  _add:
+    _interrupts:
+      ITIM32_3:
+        description: ITIM32-3 interrupt
+        value: 17
+
+ITIM32_4:
+  _add:
+    _interrupts:
+      ITIM32_4:
+        description: ITIM32-4 interrupt
+        value: 43
+
+ITIM32_5:
+  _add:
+    _interrupts:
+      ITIM32_5:
+        description: ITIM32-5 interrupt
+        value: 44
+
+ITIM32_6:
+  _add:
+    _interrupts:
+      ITIM32_6:
+        description: ITIM32-6 interrupt
+        value: 45

@@ -1,3 +1,24 @@
 _derive:
   I3C2: I3C1
   I3C3: I3C1
+
+I3C1:
+  _add:
+    _interrupts:
+      I3C1_MDMA5:
+        description: I3CI1 module interrupt or MDMA5 module interrupt
+        value: 29
+
+I3C2:
+  _add:
+    _interrupts:
+      I3C2_MDMA6:
+        description: I3CI2 module interrupt or MDMA6 module interrupt
+        value: 66
+
+I3C3:
+  _add:
+    _interrupts:
+      I3C3_MDMA7:
+        description: I3CI3 module interrupt or MDMA7 module interrupt
+        value: 67

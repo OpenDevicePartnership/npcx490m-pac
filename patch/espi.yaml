@@ -1,0 +1,6 @@
+ESPI:
+  _add:
+    _interrupts:
+      ESPI_SHI:
+        description: eSPI interrupt or SHI interrupt
+        value: 18

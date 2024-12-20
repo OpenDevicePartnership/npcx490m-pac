@@ -1,0 +1,6 @@
+ITIM64:
+  _add:
+    _interrupts:
+      ITIM64:
+        description: ITIM64 interrupt
+        value: 80

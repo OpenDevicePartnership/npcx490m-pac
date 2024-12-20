@@ -1,0 +1,6 @@
+KBS:
+  _add:
+    _interrupts:
+      KBS:
+        description: Automatic Keyboard Scan interrupt
+        value: 2

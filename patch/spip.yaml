@@ -1,0 +1,6 @@
+SPIP:
+  _add:
+    _interrupts:
+      SPIP:
+        description: SPIP module interrupt
+        value: 57
