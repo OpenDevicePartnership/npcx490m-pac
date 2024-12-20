@@ -3,6 +3,144 @@ _derive:
   MIWU2: MIWU0
 
 MIWU0:
+  _modify:
+    # Fix the erroneous address offsets in the SVD
+    WKEDGn0:
+      addressOffset: 0x00
+    WKEDGn1:
+      addressOffset: 0x10
+    WKEDGn2:
+      addressOffset: 0x20
+    WKEDGn3:
+      addressOffset: 0x30
+    WKEDGn4:
+      addressOffset: 0x40
+    WKEDGn5:
+      addressOffset: 0x50
+    WKEDGn6:
+      addressOffset: 0x60
+    WKEDGn7:
+      addressOffset: 0x70
+
+    WKAEDGn0:
+      addressOffset: 0x01
+    WKAEDGn1:
+      addressOffset: 0x11
+    WKAEDGn2:
+      addressOffset: 0x21
+    WKAEDGn3:
+      addressOffset: 0x31
+    WKAEDGn4:
+      addressOffset: 0x41
+    WKAEDGn5:
+      addressOffset: 0x51
+    WKAEDGn6:
+      addressOffset: 0x61
+    WKAEDGn7:
+      addressOffset: 0x71
+
+    WKMODn0:
+      addressOffset: 0x02
+    WKMODn1:
+      addressOffset: 0x12
+    WKMODn2:
+      addressOffset: 0x22
+    WKMODn3:
+      addressOffset: 0x32
+    WKMODn4:
+      addressOffset: 0x42
+    WKMODn5:
+      addressOffset: 0x52
+    WKMODn6:
+      addressOffset: 0x62
+    WKMODn7:
+      addressOffset: 0x72
+
+    WKPNDn0:
+      addressOffset: 0x03
+    WKPNDn1:
+      addressOffset: 0x13
+    WKPNDn2:
+      addressOffset: 0x23
+    WKPNDn3:
+      addressOffset: 0x33
+    WKPNDn4:
+      addressOffset: 0x43
+    WKPNDn5:
+      addressOffset: 0x53
+    WKPNDn6:
+      addressOffset: 0x63
+    WKPNDn7:
+      addressOffset: 0x73
+
+    WKPCLn0:
+      addressOffset: 0x04
+    WKPCLn1:
+      addressOffset: 0x14
+    WKPCLn2:
+      addressOffset: 0x24
+    WKPCLn3:
+      addressOffset: 0x34
+    WKPCLn4:
+      addressOffset: 0x44
+    WKPCLn5:
+      addressOffset: 0x54
+    WKPCLn6:
+      addressOffset: 0x64
+    WKPCLn7:
+      addressOffset: 0x74
+
+    WKENn0:
+      addressOffset: 0x05
+    WKENn1:
+      addressOffset: 0x15
+    WKENn2:
+      addressOffset: 0x25
+    WKENn3:
+      addressOffset: 0x35
+    WKENn4:
+      addressOffset: 0x45
+    WKENn5:
+      addressOffset: 0x55
+    WKENn6:
+      addressOffset: 0x65
+    WKENn7:
+      addressOffset: 0x75
+
+    WKSTn0:
+      addressOffset: 0x06
+    WKSTn1:
+      addressOffset: 0x16
+    WKSTn2:
+      addressOffset: 0x26
+    WKSTn3:
+      addressOffset: 0x36
+    WKSTn4:
+      addressOffset: 0x46
+    WKSTn5:
+      addressOffset: 0x56
+    WKSTn6:
+      addressOffset: 0x66
+    WKSTn7:
+      addressOffset: 0x76
+
+    WKINENn0:
+      addressOffset: 0x07
+    WKINENn1:
+      addressOffset: 0x17
+    WKINENn2:
+      addressOffset: 0x27
+    WKINENn3:
+      addressOffset: 0x37
+    WKINENn4:
+      addressOffset: 0x47
+    WKINENn5:
+      addressOffset: 0x57
+    WKINENn6:
+      addressOffset: 0x67
+    WKINENn7:
+      addressOffset: 0x77
+
   _add:
     _interrupts:
       WKINTA_0:

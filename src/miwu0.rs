@@ -13,33 +13,6 @@ pub struct RegisterBlock {
     _reserved8: [u8; 0x06],
     low_pnd_wun: LowPndWun,
     _reserved9: [u8; 0x01],
-    wkedgn2: Wkedgn2,
-    wkaedgn2: Wkaedgn2,
-    wkmodn2: Wkmodn2,
-    wkpndn2: Wkpndn2,
-    wkpcln2: Wkpcln2,
-    wkenn2: Wkenn2,
-    wkstn2: Wkstn2,
-    wkinenn2: Wkinenn2,
-    _reserved17: [u8; 0x08],
-    wkedgn4: Wkedgn4,
-    wkaedgn4: Wkaedgn4,
-    wkmodn4: Wkmodn4,
-    wkpndn4: Wkpndn4,
-    wkpcln4: Wkpcln4,
-    wkenn4: Wkenn4,
-    wkstn4: Wkstn4,
-    wkinenn4: Wkinenn4,
-    _reserved25: [u8; 0x08],
-    wkedgn6: Wkedgn6,
-    wkaedgn6: Wkaedgn6,
-    wkmodn6: Wkmodn6,
-    wkpndn6: Wkpndn6,
-    wkpcln6: Wkpcln6,
-    wkenn6: Wkenn6,
-    wkstn6: Wkstn6,
-    wkinenn6: Wkinenn6,
-    _reserved33: [u8; 0x08],
     wkedgn1: Wkedgn1,
     wkaedgn1: Wkaedgn1,
     wkmodn1: Wkmodn1,
@@ -48,7 +21,16 @@ pub struct RegisterBlock {
     wkenn1: Wkenn1,
     wkstn1: Wkstn1,
     wkinenn1: Wkinenn1,
-    _reserved41: [u8; 0x08],
+    _reserved17: [u8; 0x08],
+    wkedgn2: Wkedgn2,
+    wkaedgn2: Wkaedgn2,
+    wkmodn2: Wkmodn2,
+    wkpndn2: Wkpndn2,
+    wkpcln2: Wkpcln2,
+    wkenn2: Wkenn2,
+    wkstn2: Wkstn2,
+    wkinenn2: Wkinenn2,
+    _reserved25: [u8; 0x08],
     wkedgn3: Wkedgn3,
     wkaedgn3: Wkaedgn3,
     wkmodn3: Wkmodn3,
@@ -57,7 +39,16 @@ pub struct RegisterBlock {
     wkenn3: Wkenn3,
     wkstn3: Wkstn3,
     wkinenn3: Wkinenn3,
-    _reserved49: [u8; 0x08],
+    _reserved33: [u8; 0x08],
+    wkedgn4: Wkedgn4,
+    wkaedgn4: Wkaedgn4,
+    wkmodn4: Wkmodn4,
+    wkpndn4: Wkpndn4,
+    wkpcln4: Wkpcln4,
+    wkenn4: Wkenn4,
+    wkstn4: Wkstn4,
+    wkinenn4: Wkinenn4,
+    _reserved41: [u8; 0x08],
     wkedgn5: Wkedgn5,
     wkaedgn5: Wkaedgn5,
     wkmodn5: Wkmodn5,
@@ -66,6 +57,15 @@ pub struct RegisterBlock {
     wkenn5: Wkenn5,
     wkstn5: Wkstn5,
     wkinenn5: Wkinenn5,
+    _reserved49: [u8; 0x08],
+    wkedgn6: Wkedgn6,
+    wkaedgn6: Wkaedgn6,
+    wkmodn6: Wkmodn6,
+    wkpndn6: Wkpndn6,
+    wkpcln6: Wkpcln6,
+    wkenn6: Wkenn6,
+    wkstn6: Wkstn6,
+    wkinenn6: Wkinenn6,
     _reserved57: [u8; 0x08],
     wkedgn7: Wkedgn7,
     wkaedgn7: Wkaedgn7,
@@ -124,243 +124,243 @@ impl RegisterBlock {
     }
     #[doc = "0x10 - Edge Detection nx Register (WKEDGnx)"]
     #[inline(always)]
-    pub const fn wkedgn2(&self) -> &Wkedgn2 {
-        &self.wkedgn2
-    }
-    #[doc = "0x11 - Any Edge Detection nx Register (WKAEDGnx)"]
-    #[inline(always)]
-    pub const fn wkaedgn2(&self) -> &Wkaedgn2 {
-        &self.wkaedgn2
-    }
-    #[doc = "0x12 - Wake-Up Detection Mode nx Register (WKMODnx)"]
-    #[inline(always)]
-    pub const fn wkmodn2(&self) -> &Wkmodn2 {
-        &self.wkmodn2
-    }
-    #[doc = "0x13 - Pending nx Register (WKPNDnx)"]
-    #[inline(always)]
-    pub const fn wkpndn2(&self) -> &Wkpndn2 {
-        &self.wkpndn2
-    }
-    #[doc = "0x14 - Pending Clear nx Register (WKPCLnx)"]
-    #[inline(always)]
-    pub const fn wkpcln2(&self) -> &Wkpcln2 {
-        &self.wkpcln2
-    }
-    #[doc = "0x15 - Enable nx Register (WKENnx)"]
-    #[inline(always)]
-    pub const fn wkenn2(&self) -> &Wkenn2 {
-        &self.wkenn2
-    }
-    #[doc = "0x16 - Wake-Up Status nx Register (WKSTnx)"]
-    #[inline(always)]
-    pub const fn wkstn2(&self) -> &Wkstn2 {
-        &self.wkstn2
-    }
-    #[doc = "0x17 - Wake-Up Input Enable nx Register (WKINENnx)"]
-    #[inline(always)]
-    pub const fn wkinenn2(&self) -> &Wkinenn2 {
-        &self.wkinenn2
-    }
-    #[doc = "0x20 - Edge Detection nx Register (WKEDGnx)"]
-    #[inline(always)]
-    pub const fn wkedgn4(&self) -> &Wkedgn4 {
-        &self.wkedgn4
-    }
-    #[doc = "0x21 - Any Edge Detection nx Register (WKAEDGnx)"]
-    #[inline(always)]
-    pub const fn wkaedgn4(&self) -> &Wkaedgn4 {
-        &self.wkaedgn4
-    }
-    #[doc = "0x22 - Wake-Up Detection Mode nx Register (WKMODnx)"]
-    #[inline(always)]
-    pub const fn wkmodn4(&self) -> &Wkmodn4 {
-        &self.wkmodn4
-    }
-    #[doc = "0x23 - Pending nx Register (WKPNDnx)"]
-    #[inline(always)]
-    pub const fn wkpndn4(&self) -> &Wkpndn4 {
-        &self.wkpndn4
-    }
-    #[doc = "0x24 - Pending Clear nx Register (WKPCLnx)"]
-    #[inline(always)]
-    pub const fn wkpcln4(&self) -> &Wkpcln4 {
-        &self.wkpcln4
-    }
-    #[doc = "0x25 - Enable nx Register (WKENnx)"]
-    #[inline(always)]
-    pub const fn wkenn4(&self) -> &Wkenn4 {
-        &self.wkenn4
-    }
-    #[doc = "0x26 - Wake-Up Status nx Register (WKSTnx)"]
-    #[inline(always)]
-    pub const fn wkstn4(&self) -> &Wkstn4 {
-        &self.wkstn4
-    }
-    #[doc = "0x27 - Wake-Up Input Enable nx Register (WKINENnx)"]
-    #[inline(always)]
-    pub const fn wkinenn4(&self) -> &Wkinenn4 {
-        &self.wkinenn4
-    }
-    #[doc = "0x30 - Edge Detection nx Register (WKEDGnx)"]
-    #[inline(always)]
-    pub const fn wkedgn6(&self) -> &Wkedgn6 {
-        &self.wkedgn6
-    }
-    #[doc = "0x31 - Any Edge Detection nx Register (WKAEDGnx)"]
-    #[inline(always)]
-    pub const fn wkaedgn6(&self) -> &Wkaedgn6 {
-        &self.wkaedgn6
-    }
-    #[doc = "0x32 - Wake-Up Detection Mode nx Register (WKMODnx)"]
-    #[inline(always)]
-    pub const fn wkmodn6(&self) -> &Wkmodn6 {
-        &self.wkmodn6
-    }
-    #[doc = "0x33 - Pending nx Register (WKPNDnx)"]
-    #[inline(always)]
-    pub const fn wkpndn6(&self) -> &Wkpndn6 {
-        &self.wkpndn6
-    }
-    #[doc = "0x34 - Pending Clear nx Register (WKPCLnx)"]
-    #[inline(always)]
-    pub const fn wkpcln6(&self) -> &Wkpcln6 {
-        &self.wkpcln6
-    }
-    #[doc = "0x35 - Enable nx Register (WKENnx)"]
-    #[inline(always)]
-    pub const fn wkenn6(&self) -> &Wkenn6 {
-        &self.wkenn6
-    }
-    #[doc = "0x36 - Wake-Up Status nx Register (WKSTnx)"]
-    #[inline(always)]
-    pub const fn wkstn6(&self) -> &Wkstn6 {
-        &self.wkstn6
-    }
-    #[doc = "0x37 - Wake-Up Input Enable nx Register (WKINENnx)"]
-    #[inline(always)]
-    pub const fn wkinenn6(&self) -> &Wkinenn6 {
-        &self.wkinenn6
-    }
-    #[doc = "0x40 - Edge Detection nx Register (WKEDGnx)"]
-    #[inline(always)]
     pub const fn wkedgn1(&self) -> &Wkedgn1 {
         &self.wkedgn1
     }
-    #[doc = "0x41 - Any Edge Detection nx Register (WKAEDGnx)"]
+    #[doc = "0x11 - Any Edge Detection nx Register (WKAEDGnx)"]
     #[inline(always)]
     pub const fn wkaedgn1(&self) -> &Wkaedgn1 {
         &self.wkaedgn1
     }
-    #[doc = "0x42 - Wake-Up Detection Mode nx Register (WKMODnx)"]
+    #[doc = "0x12 - Wake-Up Detection Mode nx Register (WKMODnx)"]
     #[inline(always)]
     pub const fn wkmodn1(&self) -> &Wkmodn1 {
         &self.wkmodn1
     }
-    #[doc = "0x43 - Pending nx Register (WKPNDnx)"]
+    #[doc = "0x13 - Pending nx Register (WKPNDnx)"]
     #[inline(always)]
     pub const fn wkpndn1(&self) -> &Wkpndn1 {
         &self.wkpndn1
     }
-    #[doc = "0x44 - Pending Clear nx Register (WKPCLnx)"]
+    #[doc = "0x14 - Pending Clear nx Register (WKPCLnx)"]
     #[inline(always)]
     pub const fn wkpcln1(&self) -> &Wkpcln1 {
         &self.wkpcln1
     }
-    #[doc = "0x45 - Enable nx Register (WKENnx)"]
+    #[doc = "0x15 - Enable nx Register (WKENnx)"]
     #[inline(always)]
     pub const fn wkenn1(&self) -> &Wkenn1 {
         &self.wkenn1
     }
-    #[doc = "0x46 - Wake-Up Status nx Register (WKSTnx)"]
+    #[doc = "0x16 - Wake-Up Status nx Register (WKSTnx)"]
     #[inline(always)]
     pub const fn wkstn1(&self) -> &Wkstn1 {
         &self.wkstn1
     }
-    #[doc = "0x47 - Wake-Up Input Enable nx Register (WKINENnx)"]
+    #[doc = "0x17 - Wake-Up Input Enable nx Register (WKINENnx)"]
     #[inline(always)]
     pub const fn wkinenn1(&self) -> &Wkinenn1 {
         &self.wkinenn1
     }
-    #[doc = "0x50 - Edge Detection nx Register (WKEDGnx)"]
+    #[doc = "0x20 - Edge Detection nx Register (WKEDGnx)"]
+    #[inline(always)]
+    pub const fn wkedgn2(&self) -> &Wkedgn2 {
+        &self.wkedgn2
+    }
+    #[doc = "0x21 - Any Edge Detection nx Register (WKAEDGnx)"]
+    #[inline(always)]
+    pub const fn wkaedgn2(&self) -> &Wkaedgn2 {
+        &self.wkaedgn2
+    }
+    #[doc = "0x22 - Wake-Up Detection Mode nx Register (WKMODnx)"]
+    #[inline(always)]
+    pub const fn wkmodn2(&self) -> &Wkmodn2 {
+        &self.wkmodn2
+    }
+    #[doc = "0x23 - Pending nx Register (WKPNDnx)"]
+    #[inline(always)]
+    pub const fn wkpndn2(&self) -> &Wkpndn2 {
+        &self.wkpndn2
+    }
+    #[doc = "0x24 - Pending Clear nx Register (WKPCLnx)"]
+    #[inline(always)]
+    pub const fn wkpcln2(&self) -> &Wkpcln2 {
+        &self.wkpcln2
+    }
+    #[doc = "0x25 - Enable nx Register (WKENnx)"]
+    #[inline(always)]
+    pub const fn wkenn2(&self) -> &Wkenn2 {
+        &self.wkenn2
+    }
+    #[doc = "0x26 - Wake-Up Status nx Register (WKSTnx)"]
+    #[inline(always)]
+    pub const fn wkstn2(&self) -> &Wkstn2 {
+        &self.wkstn2
+    }
+    #[doc = "0x27 - Wake-Up Input Enable nx Register (WKINENnx)"]
+    #[inline(always)]
+    pub const fn wkinenn2(&self) -> &Wkinenn2 {
+        &self.wkinenn2
+    }
+    #[doc = "0x30 - Edge Detection nx Register (WKEDGnx)"]
     #[inline(always)]
     pub const fn wkedgn3(&self) -> &Wkedgn3 {
         &self.wkedgn3
     }
-    #[doc = "0x51 - Any Edge Detection nx Register (WKAEDGnx)"]
+    #[doc = "0x31 - Any Edge Detection nx Register (WKAEDGnx)"]
     #[inline(always)]
     pub const fn wkaedgn3(&self) -> &Wkaedgn3 {
         &self.wkaedgn3
     }
-    #[doc = "0x52 - Wake-Up Detection Mode nx Register (WKMODnx)"]
+    #[doc = "0x32 - Wake-Up Detection Mode nx Register (WKMODnx)"]
     #[inline(always)]
     pub const fn wkmodn3(&self) -> &Wkmodn3 {
         &self.wkmodn3
     }
-    #[doc = "0x53 - Pending nx Register (WKPNDnx)"]
+    #[doc = "0x33 - Pending nx Register (WKPNDnx)"]
     #[inline(always)]
     pub const fn wkpndn3(&self) -> &Wkpndn3 {
         &self.wkpndn3
     }
-    #[doc = "0x54 - Pending Clear nx Register (WKPCLnx)"]
+    #[doc = "0x34 - Pending Clear nx Register (WKPCLnx)"]
     #[inline(always)]
     pub const fn wkpcln3(&self) -> &Wkpcln3 {
         &self.wkpcln3
     }
-    #[doc = "0x55 - Enable nx Register (WKENnx)"]
+    #[doc = "0x35 - Enable nx Register (WKENnx)"]
     #[inline(always)]
     pub const fn wkenn3(&self) -> &Wkenn3 {
         &self.wkenn3
     }
-    #[doc = "0x56 - Wake-Up Status nx Register (WKSTnx)"]
+    #[doc = "0x36 - Wake-Up Status nx Register (WKSTnx)"]
     #[inline(always)]
     pub const fn wkstn3(&self) -> &Wkstn3 {
         &self.wkstn3
     }
-    #[doc = "0x57 - Wake-Up Input Enable nx Register (WKINENnx)"]
+    #[doc = "0x37 - Wake-Up Input Enable nx Register (WKINENnx)"]
     #[inline(always)]
     pub const fn wkinenn3(&self) -> &Wkinenn3 {
         &self.wkinenn3
     }
-    #[doc = "0x60 - Edge Detection nx Register (WKEDGnx)"]
+    #[doc = "0x40 - Edge Detection nx Register (WKEDGnx)"]
+    #[inline(always)]
+    pub const fn wkedgn4(&self) -> &Wkedgn4 {
+        &self.wkedgn4
+    }
+    #[doc = "0x41 - Any Edge Detection nx Register (WKAEDGnx)"]
+    #[inline(always)]
+    pub const fn wkaedgn4(&self) -> &Wkaedgn4 {
+        &self.wkaedgn4
+    }
+    #[doc = "0x42 - Wake-Up Detection Mode nx Register (WKMODnx)"]
+    #[inline(always)]
+    pub const fn wkmodn4(&self) -> &Wkmodn4 {
+        &self.wkmodn4
+    }
+    #[doc = "0x43 - Pending nx Register (WKPNDnx)"]
+    #[inline(always)]
+    pub const fn wkpndn4(&self) -> &Wkpndn4 {
+        &self.wkpndn4
+    }
+    #[doc = "0x44 - Pending Clear nx Register (WKPCLnx)"]
+    #[inline(always)]
+    pub const fn wkpcln4(&self) -> &Wkpcln4 {
+        &self.wkpcln4
+    }
+    #[doc = "0x45 - Enable nx Register (WKENnx)"]
+    #[inline(always)]
+    pub const fn wkenn4(&self) -> &Wkenn4 {
+        &self.wkenn4
+    }
+    #[doc = "0x46 - Wake-Up Status nx Register (WKSTnx)"]
+    #[inline(always)]
+    pub const fn wkstn4(&self) -> &Wkstn4 {
+        &self.wkstn4
+    }
+    #[doc = "0x47 - Wake-Up Input Enable nx Register (WKINENnx)"]
+    #[inline(always)]
+    pub const fn wkinenn4(&self) -> &Wkinenn4 {
+        &self.wkinenn4
+    }
+    #[doc = "0x50 - Edge Detection nx Register (WKEDGnx)"]
     #[inline(always)]
     pub const fn wkedgn5(&self) -> &Wkedgn5 {
         &self.wkedgn5
     }
-    #[doc = "0x61 - Any Edge Detection nx Register (WKAEDGnx)"]
+    #[doc = "0x51 - Any Edge Detection nx Register (WKAEDGnx)"]
     #[inline(always)]
     pub const fn wkaedgn5(&self) -> &Wkaedgn5 {
         &self.wkaedgn5
     }
-    #[doc = "0x62 - Wake-Up Detection Mode nx Register (WKMODnx)"]
+    #[doc = "0x52 - Wake-Up Detection Mode nx Register (WKMODnx)"]
     #[inline(always)]
     pub const fn wkmodn5(&self) -> &Wkmodn5 {
         &self.wkmodn5
     }
-    #[doc = "0x63 - Pending nx Register (WKPNDnx)"]
+    #[doc = "0x53 - Pending nx Register (WKPNDnx)"]
     #[inline(always)]
     pub const fn wkpndn5(&self) -> &Wkpndn5 {
         &self.wkpndn5
     }
-    #[doc = "0x64 - Pending Clear nx Register (WKPCLnx)"]
+    #[doc = "0x54 - Pending Clear nx Register (WKPCLnx)"]
     #[inline(always)]
     pub const fn wkpcln5(&self) -> &Wkpcln5 {
         &self.wkpcln5
     }
-    #[doc = "0x65 - Enable nx Register (WKENnx)"]
+    #[doc = "0x55 - Enable nx Register (WKENnx)"]
     #[inline(always)]
     pub const fn wkenn5(&self) -> &Wkenn5 {
         &self.wkenn5
     }
-    #[doc = "0x66 - Wake-Up Status nx Register (WKSTnx)"]
+    #[doc = "0x56 - Wake-Up Status nx Register (WKSTnx)"]
     #[inline(always)]
     pub const fn wkstn5(&self) -> &Wkstn5 {
         &self.wkstn5
     }
-    #[doc = "0x67 - Wake-Up Input Enable nx Register (WKINENnx)"]
+    #[doc = "0x57 - Wake-Up Input Enable nx Register (WKINENnx)"]
     #[inline(always)]
     pub const fn wkinenn5(&self) -> &Wkinenn5 {
         &self.wkinenn5
+    }
+    #[doc = "0x60 - Edge Detection nx Register (WKEDGnx)"]
+    #[inline(always)]
+    pub const fn wkedgn6(&self) -> &Wkedgn6 {
+        &self.wkedgn6
+    }
+    #[doc = "0x61 - Any Edge Detection nx Register (WKAEDGnx)"]
+    #[inline(always)]
+    pub const fn wkaedgn6(&self) -> &Wkaedgn6 {
+        &self.wkaedgn6
+    }
+    #[doc = "0x62 - Wake-Up Detection Mode nx Register (WKMODnx)"]
+    #[inline(always)]
+    pub const fn wkmodn6(&self) -> &Wkmodn6 {
+        &self.wkmodn6
+    }
+    #[doc = "0x63 - Pending nx Register (WKPNDnx)"]
+    #[inline(always)]
+    pub const fn wkpndn6(&self) -> &Wkpndn6 {
+        &self.wkpndn6
+    }
+    #[doc = "0x64 - Pending Clear nx Register (WKPCLnx)"]
+    #[inline(always)]
+    pub const fn wkpcln6(&self) -> &Wkpcln6 {
+        &self.wkpcln6
+    }
+    #[doc = "0x65 - Enable nx Register (WKENnx)"]
+    #[inline(always)]
+    pub const fn wkenn6(&self) -> &Wkenn6 {
+        &self.wkenn6
+    }
+    #[doc = "0x66 - Wake-Up Status nx Register (WKSTnx)"]
+    #[inline(always)]
+    pub const fn wkstn6(&self) -> &Wkstn6 {
+        &self.wkstn6
+    }
+    #[doc = "0x67 - Wake-Up Input Enable nx Register (WKINENnx)"]
+    #[inline(always)]
+    pub const fn wkinenn6(&self) -> &Wkinenn6 {
+        &self.wkinenn6
     }
     #[doc = "0x70 - Edge Detection nx Register (WKEDGnx)"]
     #[inline(always)]
