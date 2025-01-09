@@ -575,7 +575,7 @@ module"]
 pub type Wkpndn = crate::Reg<wkpndn::WkpndnSpec>;
 #[doc = "Pending nx Register (WKPNDnx)"]
 pub mod wkpndn;
-#[doc = "WKPCLn (rw) register accessor: Pending Clear nx Register (WKPCLnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkpcln::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkpcln::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkpcln`]
+#[doc = "WKPCLn (w) register accessor: Pending Clear nx Register (WKPCLnx)\n\nYou can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkpcln::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkpcln`]
 module"]
 #[doc(alias = "WKPCLn")]
 pub type Wkpcln = crate::Reg<wkpcln::WkpclnSpec>;
