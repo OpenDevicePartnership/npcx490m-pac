@@ -1,5 +1,131 @@
 SYS CONFIG:
   _add:
+    _registers:
+      DEVALTD:
+        description: Device Alternate Function D Register (DEVALTD)
+        addressOffset: 0x1d
+        size: 8
+        access: read-write
+        resetValue: 0x00
+        resetMask: 0xFF
+        fields:
+          PSL_IN4_SL:
+            description: PSL4_IN4 Select
+            bitOffset: 7
+            bitWidth: 1
+          PSL_IN4_AHI:
+            description: PSL4_IN4 Active-High
+            bitOffset: 6
+            bitWidth: 1
+          PSL_IN3_SL:
+            description: PSL_IN3 Select
+            bitOffset: 5
+            bitWidth: 1
+          PSL_IN3_AHI:
+            description: PSL_IN3 Active-High
+            bitOffset: 4
+            bitWidth: 1
+          nPSL_IN2_SL:
+            description: PSL_IN2 Select
+            bitOffset: 3
+            bitWidth: 1
+          PSL_IN2_AHI:
+            description: PSL_IN2 Active-High
+            bitOffset: 2
+            bitWidth: 1
+          nPSL_IN1_SL:
+            description: PSL_IN1 Select
+            bitOffset: 1
+            bitWidth: 1
+          PSL_IN1_AHI:
+            description: PSL_IN1 Active-High
+            bitOffset: 0
+            bitWidth: 1
+      DEVALTG:
+        description: Device Alternate Function G Register (DEVALTG)
+        addressOffset: 0x20
+        size: 8
+        access: read-write
+        resetValue: 0xC0
+        resetMask: 0xFF
+        fields:
+          PSL_GPO_SL:
+            description: PSL-Controlled GPO Select
+            bitOffset: 7
+            bitWidth: 1
+          PSL_OUT_SL:
+            description: PSL Output Select
+            bitOffset: 6
+            bitWidth: 1
+          VCC1_RST_PUD:
+            description: VCC1_RST Pull-Up Disable
+            bitOffset: 5
+            bitWidth: 1
+          VCC1_RST_PUD_LK:
+            description: VCC1_RST Pull-Up Disable Lock
+            bitOffset: 4
+            bitWidth: 1
+      DEVALTD_LK:
+        description: Device Alternate Function D Lock Register (DEVALTD_LK)
+        addressOffset: 0x21d
+        size: 8
+        access: read-write
+        resetValue: 0x00
+        resetMask: 0xFF
+        fields:
+          PSL_IN4_SL_LK:
+            description: PSL_IN4 Select Lock
+            bitOffset: 7
+            bitWidth: 1
+          PSL_IN4_AHI_LK:
+            description: PSL_IN4 Active-High Lock
+            bitOffset: 6
+            bitWidth: 1
+          PSL_IN3_SL_LK:
+            description: PSL_IN3 Select Lock
+            bitOffset: 5
+            bitWidth: 1
+          PSL_IN3_AHI_LK:
+            description: PSL_IN3 Active-High Lock
+            bitOffset: 4
+            bitWidth: 1
+          nPSL_IN2_SL_LK:
+            description: PSL_IN2 Select Lock
+            bitOffset: 3
+            bitWidth: 1
+          PSL_IN2_AHI_LK:
+            description: PSL_IN2 Active-High Lock
+            bitOffset: 2
+            bitWidth: 1
+          nPSL_IN1_SL_LK:
+            description: PSL_IN1 Select Lock
+            bitOffset: 1
+            bitWidth: 1
+          PSL_IN1_AHI_LK:
+            description: PSL_IN1 Active-High Lock
+            bitOffset: 0
+            bitWidth: 1
+      DEVALTG_LK:
+        description: Device Alternate Function G Lock Register (DEVALTG_LK)
+        addressOffset: 0x220
+        size: 8
+        access: read-write
+        resetValue: 0x00
+        resetMask: 0xFF
+        fields:
+          PSL_GPO_SL_LK:
+            description: PSL-Controlled GPO Select Lock
+            bitOffset: 7
+            bitWidth: 1
+          PSL_OUT_SL_LK:
+            description: PSL Output Select Lock
+            bitOffset: 6
+            bitWidth: 1
+          NO_VCC1_RST_LK:
+            description: VSBY NO_VCC1_RST Bit Lock
+            bitOffset: 5
+            bitWidth: 1
+
     _interrupts:
       RNG:
         description: RNG modules (see RNGINT_MD bit on page 77)
