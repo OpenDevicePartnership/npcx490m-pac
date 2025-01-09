@@ -41,7 +41,7 @@ impl crate::Writable for Divcor2Spec {
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
 }
-#[doc = "`reset()` method sets DIVCOR2 to value 0"]
+#[doc = "`reset()` method sets DIVCOR2 to value 0x0129"]
 impl crate::Resettable for Divcor2Spec {
-    const RESET_VALUE: u16 = 0;
+    const RESET_VALUE: u16 = 0x0129;
 }
