@@ -1,4 +1,11 @@
 SYS CONFIG:
+  DEVALTC:
+    _add:
+      SHI_SL:
+        description: SHI Interface-Select
+        bitOffset: 1
+        bitWidth: 1
+
   _add:
     _registers:
       DEVALTD:

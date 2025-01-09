@@ -2,6 +2,10 @@
 pub type R = crate::R<DevaltcSpec>;
 #[doc = "Register `DEVALTC` writer"]
 pub type W = crate::W<DevaltcSpec>;
+#[doc = "Field `SHI_SL` reader - SHI Interface-Select"]
+pub type ShiSlR = crate::BitReader;
+#[doc = "Field `SHI_SL` writer - SHI Interface-Select"]
+pub type ShiSlW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `NO_PVT_CS0` reader - No Private SPI Flash Chip-Select 0 Select"]
 pub type NoPvtCs0R = crate::BitReader;
 #[doc = "Field `NO_PVT_CS0` writer - No Private SPI Flash Chip-Select 0 Select"]
@@ -27,6 +31,11 @@ pub type Tb2Sl2R = crate::BitReader;
 #[doc = "Field `TB2_SL2` writer - TB2 Select-2"]
 pub type Tb2Sl2W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
+    #[doc = "Bit 1 - SHI Interface-Select"]
+    #[inline(always)]
+    pub fn shi_sl(&self) -> ShiSlR {
+        ShiSlR::new(((self.bits >> 1) & 1) != 0)
+    }
     #[doc = "Bit 2 - No Private SPI Flash Chip-Select 0 Select"]
     #[inline(always)]
     pub fn no_pvt_cs0(&self) -> NoPvtCs0R {
@@ -68,10 +77,16 @@ impl core::fmt::Debug for R {
             .field("tb1_tach2_sl2", &self.tb1_tach2_sl2())
             .field("ta2_sl2", &self.ta2_sl2())
             .field("tb2_sl2", &self.tb2_sl2())
+            .field("shi_sl", &self.shi_sl())
             .finish()
     }
 }
 impl W {
+    #[doc = "Bit 1 - SHI Interface-Select"]
+    #[inline(always)]
+    pub fn shi_sl(&mut self) -> ShiSlW<DevaltcSpec> {
+        ShiSlW::new(self, 1)
+    }
     #[doc = "Bit 2 - No Private SPI Flash Chip-Select 0 Select"]
     #[inline(always)]
     pub fn no_pvt_cs0(&mut self) -> NoPvtCs0W<DevaltcSpec> {
