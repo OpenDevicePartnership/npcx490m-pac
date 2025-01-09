@@ -587,7 +587,7 @@ module"]
 pub type Wkenn = crate::Reg<wkenn::WkennSpec>;
 #[doc = "Enable nx Register (WKENnx)"]
 pub mod wkenn;
-#[doc = "WKSTn (rw) register accessor: Wake-Up Status nx Register (WKSTnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkstn::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkstn::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkstn`]
+#[doc = "WKSTn (r) register accessor: Wake-Up Status nx Register (WKSTnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkstn::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkstn`]
 module"]
 #[doc(alias = "WKSTn")]
 pub type Wkstn = crate::Reg<wkstn::WkstnSpec>;

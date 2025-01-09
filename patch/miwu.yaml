@@ -43,6 +43,7 @@ MIWU0:
       WKSTn0:
         name: WKSTn%s
         addressOffset: 0x06
+        access: read-only
       WKINENn0:
         name: WKINENn%s
         addressOffset: 0x07
