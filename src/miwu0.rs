@@ -2,791 +2,603 @@
 #[cfg_attr(feature = "debug", derive(Debug))]
 #[doc = "Register block"]
 pub struct RegisterBlock {
-    wkedgn1: Wkedgn1,
-    wkaedgn1: Wkaedgn1,
-    wkmodn1: Wkmodn1,
-    wkpndn1: Wkpndn1,
-    wkpcln1: Wkpcln1,
-    wkenn1: Wkenn1,
-    wkstn1: Wkstn1,
-    wkinenn1: Wkinenn1,
-    _reserved8: [u8; 0x06],
+    wkedgn: (),
+    _reserved1: [u8; 0x01],
+    wkaedgn: (),
+    _reserved2: [u8; 0x01],
+    wkmodn: (),
+    _reserved3: [u8; 0x01],
+    wkpndn: (),
+    _reserved4: [u8; 0x01],
+    wkpcln: (),
+    _reserved5: [u8; 0x01],
+    wkenn: (),
+    _reserved6: [u8; 0x01],
+    wkstn: (),
+    _reserved7: [u8; 0x01],
+    wkinenn: (),
+    _reserved8: [u8; 0x07],
     low_pnd_wun: LowPndWun,
-    _reserved9: [u8; 0x01],
-    wkedgn2: Wkedgn2,
-    wkaedgn2: Wkaedgn2,
-    wkmodn2: Wkmodn2,
-    wkpndn2: Wkpndn2,
-    wkpcln2: Wkpcln2,
-    wkenn2: Wkenn2,
-    wkstn2: Wkstn2,
-    wkinenn2: Wkinenn2,
-    _reserved17: [u8; 0x08],
-    wkedgn3: Wkedgn3,
-    wkaedgn3: Wkaedgn3,
-    wkmodn3: Wkmodn3,
-    wkpndn3: Wkpndn3,
-    wkpcln3: Wkpcln3,
-    wkenn3: Wkenn3,
-    wkstn3: Wkstn3,
-    wkinenn3: Wkinenn3,
-    _reserved25: [u8; 0x08],
-    wkedgn4: Wkedgn4,
-    wkaedgn4: Wkaedgn4,
-    wkmodn4: Wkmodn4,
-    wkpndn4: Wkpndn4,
-    wkpcln4: Wkpcln4,
-    wkenn4: Wkenn4,
-    wkstn4: Wkstn4,
-    wkinenn4: Wkinenn4,
-    _reserved33: [u8; 0x08],
-    wkedgn5: Wkedgn5,
-    wkaedgn5: Wkaedgn5,
-    wkmodn5: Wkmodn5,
-    wkpndn5: Wkpndn5,
-    wkpcln5: Wkpcln5,
-    wkenn5: Wkenn5,
-    wkstn5: Wkstn5,
-    wkinenn5: Wkinenn5,
-    _reserved41: [u8; 0x08],
-    wkedgn6: Wkedgn6,
-    wkaedgn6: Wkaedgn6,
-    wkmodn6: Wkmodn6,
-    wkpndn6: Wkpndn6,
-    wkpcln6: Wkpcln6,
-    wkenn6: Wkenn6,
-    wkstn6: Wkstn6,
-    wkinenn6: Wkinenn6,
-    _reserved49: [u8; 0x08],
-    wkedgn7: Wkedgn7,
-    wkaedgn7: Wkaedgn7,
-    wkmodn7: Wkmodn7,
-    wkpndn7: Wkpndn7,
-    wkpcln7: Wkpcln7,
-    wkenn7: Wkenn7,
-    wkstn7: Wkstn7,
-    wkinenn7: Wkinenn7,
-    _reserved57: [u8; 0x08],
-    wkedgn8: Wkedgn8,
-    wkaedgn8: Wkaedgn8,
-    wkmodn8: Wkmodn8,
-    wkpndn8: Wkpndn8,
-    wkpcln8: Wkpcln8,
-    wkenn8: Wkenn8,
-    wkstn8: Wkstn8,
-    wkinenn8: Wkinenn8,
 }
 impl RegisterBlock {
+    #[doc = "0x00..0x08 - Edge Detection nx Register (WKEDGnx)"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is the index of register in the array. `n == 0` corresponds to `WKEDGn1` register.</div>"]
+    #[inline(always)]
+    pub const fn wkedgn(&self, n: usize) -> &Wkedgn {
+        #[allow(clippy::no_effect)]
+        [(); 8][n];
+        unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(16 * n).cast() }
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x00..0x08 - Edge Detection nx Register (WKEDGnx)"]
+    #[inline(always)]
+    pub fn wkedgn_iter(&self) -> impl Iterator<Item = &Wkedgn> {
+        (0..8).map(move |n| unsafe { &*core::ptr::from_ref(self).cast::<u8>().add(16 * n).cast() })
+    }
     #[doc = "0x00 - Edge Detection nx Register (WKEDGnx)"]
     #[inline(always)]
-    pub const fn wkedgn1(&self) -> &Wkedgn1 {
-        &self.wkedgn1
+    pub const fn wkedgn1(&self) -> &Wkedgn {
+        self.wkedgn(0)
+    }
+    #[doc = "0x10 - Edge Detection nx Register (WKEDGnx)"]
+    #[inline(always)]
+    pub const fn wkedgn2(&self) -> &Wkedgn {
+        self.wkedgn(1)
+    }
+    #[doc = "0x20 - Edge Detection nx Register (WKEDGnx)"]
+    #[inline(always)]
+    pub const fn wkedgn3(&self) -> &Wkedgn {
+        self.wkedgn(2)
+    }
+    #[doc = "0x30 - Edge Detection nx Register (WKEDGnx)"]
+    #[inline(always)]
+    pub const fn wkedgn4(&self) -> &Wkedgn {
+        self.wkedgn(3)
+    }
+    #[doc = "0x40 - Edge Detection nx Register (WKEDGnx)"]
+    #[inline(always)]
+    pub const fn wkedgn5(&self) -> &Wkedgn {
+        self.wkedgn(4)
+    }
+    #[doc = "0x50 - Edge Detection nx Register (WKEDGnx)"]
+    #[inline(always)]
+    pub const fn wkedgn6(&self) -> &Wkedgn {
+        self.wkedgn(5)
+    }
+    #[doc = "0x60 - Edge Detection nx Register (WKEDGnx)"]
+    #[inline(always)]
+    pub const fn wkedgn7(&self) -> &Wkedgn {
+        self.wkedgn(6)
+    }
+    #[doc = "0x70 - Edge Detection nx Register (WKEDGnx)"]
+    #[inline(always)]
+    pub const fn wkedgn8(&self) -> &Wkedgn {
+        self.wkedgn(7)
+    }
+    #[doc = "0x01..0x09 - Any Edge Detection nx Register (WKAEDGnx)"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is the index of register in the array. `n == 0` corresponds to `WKAEDGn1` register.</div>"]
+    #[inline(always)]
+    pub const fn wkaedgn(&self, n: usize) -> &Wkaedgn {
+        #[allow(clippy::no_effect)]
+        [(); 8][n];
+        unsafe {
+            &*core::ptr::from_ref(self)
+                .cast::<u8>()
+                .add(1)
+                .add(16 * n)
+                .cast()
+        }
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x01..0x09 - Any Edge Detection nx Register (WKAEDGnx)"]
+    #[inline(always)]
+    pub fn wkaedgn_iter(&self) -> impl Iterator<Item = &Wkaedgn> {
+        (0..8).map(move |n| unsafe {
+            &*core::ptr::from_ref(self)
+                .cast::<u8>()
+                .add(1)
+                .add(16 * n)
+                .cast()
+        })
     }
     #[doc = "0x01 - Any Edge Detection nx Register (WKAEDGnx)"]
     #[inline(always)]
-    pub const fn wkaedgn1(&self) -> &Wkaedgn1 {
-        &self.wkaedgn1
+    pub const fn wkaedgn1(&self) -> &Wkaedgn {
+        self.wkaedgn(0)
+    }
+    #[doc = "0x11 - Any Edge Detection nx Register (WKAEDGnx)"]
+    #[inline(always)]
+    pub const fn wkaedgn2(&self) -> &Wkaedgn {
+        self.wkaedgn(1)
+    }
+    #[doc = "0x21 - Any Edge Detection nx Register (WKAEDGnx)"]
+    #[inline(always)]
+    pub const fn wkaedgn3(&self) -> &Wkaedgn {
+        self.wkaedgn(2)
+    }
+    #[doc = "0x31 - Any Edge Detection nx Register (WKAEDGnx)"]
+    #[inline(always)]
+    pub const fn wkaedgn4(&self) -> &Wkaedgn {
+        self.wkaedgn(3)
+    }
+    #[doc = "0x41 - Any Edge Detection nx Register (WKAEDGnx)"]
+    #[inline(always)]
+    pub const fn wkaedgn5(&self) -> &Wkaedgn {
+        self.wkaedgn(4)
+    }
+    #[doc = "0x51 - Any Edge Detection nx Register (WKAEDGnx)"]
+    #[inline(always)]
+    pub const fn wkaedgn6(&self) -> &Wkaedgn {
+        self.wkaedgn(5)
+    }
+    #[doc = "0x61 - Any Edge Detection nx Register (WKAEDGnx)"]
+    #[inline(always)]
+    pub const fn wkaedgn7(&self) -> &Wkaedgn {
+        self.wkaedgn(6)
+    }
+    #[doc = "0x71 - Any Edge Detection nx Register (WKAEDGnx)"]
+    #[inline(always)]
+    pub const fn wkaedgn8(&self) -> &Wkaedgn {
+        self.wkaedgn(7)
+    }
+    #[doc = "0x02..0x0a - Wake-Up Detection Mode nx Register (WKMODnx)"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is the index of register in the array. `n == 0` corresponds to `WKMODn1` register.</div>"]
+    #[inline(always)]
+    pub const fn wkmodn(&self, n: usize) -> &Wkmodn {
+        #[allow(clippy::no_effect)]
+        [(); 8][n];
+        unsafe {
+            &*core::ptr::from_ref(self)
+                .cast::<u8>()
+                .add(2)
+                .add(16 * n)
+                .cast()
+        }
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x02..0x0a - Wake-Up Detection Mode nx Register (WKMODnx)"]
+    #[inline(always)]
+    pub fn wkmodn_iter(&self) -> impl Iterator<Item = &Wkmodn> {
+        (0..8).map(move |n| unsafe {
+            &*core::ptr::from_ref(self)
+                .cast::<u8>()
+                .add(2)
+                .add(16 * n)
+                .cast()
+        })
     }
     #[doc = "0x02 - Wake-Up Detection Mode nx Register (WKMODnx)"]
     #[inline(always)]
-    pub const fn wkmodn1(&self) -> &Wkmodn1 {
-        &self.wkmodn1
+    pub const fn wkmodn1(&self) -> &Wkmodn {
+        self.wkmodn(0)
+    }
+    #[doc = "0x12 - Wake-Up Detection Mode nx Register (WKMODnx)"]
+    #[inline(always)]
+    pub const fn wkmodn2(&self) -> &Wkmodn {
+        self.wkmodn(1)
+    }
+    #[doc = "0x22 - Wake-Up Detection Mode nx Register (WKMODnx)"]
+    #[inline(always)]
+    pub const fn wkmodn3(&self) -> &Wkmodn {
+        self.wkmodn(2)
+    }
+    #[doc = "0x32 - Wake-Up Detection Mode nx Register (WKMODnx)"]
+    #[inline(always)]
+    pub const fn wkmodn4(&self) -> &Wkmodn {
+        self.wkmodn(3)
+    }
+    #[doc = "0x42 - Wake-Up Detection Mode nx Register (WKMODnx)"]
+    #[inline(always)]
+    pub const fn wkmodn5(&self) -> &Wkmodn {
+        self.wkmodn(4)
+    }
+    #[doc = "0x52 - Wake-Up Detection Mode nx Register (WKMODnx)"]
+    #[inline(always)]
+    pub const fn wkmodn6(&self) -> &Wkmodn {
+        self.wkmodn(5)
+    }
+    #[doc = "0x62 - Wake-Up Detection Mode nx Register (WKMODnx)"]
+    #[inline(always)]
+    pub const fn wkmodn7(&self) -> &Wkmodn {
+        self.wkmodn(6)
+    }
+    #[doc = "0x72 - Wake-Up Detection Mode nx Register (WKMODnx)"]
+    #[inline(always)]
+    pub const fn wkmodn8(&self) -> &Wkmodn {
+        self.wkmodn(7)
+    }
+    #[doc = "0x03..0x0b - Pending nx Register (WKPNDnx)"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is the index of register in the array. `n == 0` corresponds to `WKPNDn1` register.</div>"]
+    #[inline(always)]
+    pub const fn wkpndn(&self, n: usize) -> &Wkpndn {
+        #[allow(clippy::no_effect)]
+        [(); 8][n];
+        unsafe {
+            &*core::ptr::from_ref(self)
+                .cast::<u8>()
+                .add(3)
+                .add(16 * n)
+                .cast()
+        }
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x03..0x0b - Pending nx Register (WKPNDnx)"]
+    #[inline(always)]
+    pub fn wkpndn_iter(&self) -> impl Iterator<Item = &Wkpndn> {
+        (0..8).map(move |n| unsafe {
+            &*core::ptr::from_ref(self)
+                .cast::<u8>()
+                .add(3)
+                .add(16 * n)
+                .cast()
+        })
     }
     #[doc = "0x03 - Pending nx Register (WKPNDnx)"]
     #[inline(always)]
-    pub const fn wkpndn1(&self) -> &Wkpndn1 {
-        &self.wkpndn1
+    pub const fn wkpndn1(&self) -> &Wkpndn {
+        self.wkpndn(0)
+    }
+    #[doc = "0x13 - Pending nx Register (WKPNDnx)"]
+    #[inline(always)]
+    pub const fn wkpndn2(&self) -> &Wkpndn {
+        self.wkpndn(1)
+    }
+    #[doc = "0x23 - Pending nx Register (WKPNDnx)"]
+    #[inline(always)]
+    pub const fn wkpndn3(&self) -> &Wkpndn {
+        self.wkpndn(2)
+    }
+    #[doc = "0x33 - Pending nx Register (WKPNDnx)"]
+    #[inline(always)]
+    pub const fn wkpndn4(&self) -> &Wkpndn {
+        self.wkpndn(3)
+    }
+    #[doc = "0x43 - Pending nx Register (WKPNDnx)"]
+    #[inline(always)]
+    pub const fn wkpndn5(&self) -> &Wkpndn {
+        self.wkpndn(4)
+    }
+    #[doc = "0x53 - Pending nx Register (WKPNDnx)"]
+    #[inline(always)]
+    pub const fn wkpndn6(&self) -> &Wkpndn {
+        self.wkpndn(5)
+    }
+    #[doc = "0x63 - Pending nx Register (WKPNDnx)"]
+    #[inline(always)]
+    pub const fn wkpndn7(&self) -> &Wkpndn {
+        self.wkpndn(6)
+    }
+    #[doc = "0x73 - Pending nx Register (WKPNDnx)"]
+    #[inline(always)]
+    pub const fn wkpndn8(&self) -> &Wkpndn {
+        self.wkpndn(7)
+    }
+    #[doc = "0x04..0x0c - Pending Clear nx Register (WKPCLnx)"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is the index of register in the array. `n == 0` corresponds to `WKPCLn1` register.</div>"]
+    #[inline(always)]
+    pub const fn wkpcln(&self, n: usize) -> &Wkpcln {
+        #[allow(clippy::no_effect)]
+        [(); 8][n];
+        unsafe {
+            &*core::ptr::from_ref(self)
+                .cast::<u8>()
+                .add(4)
+                .add(16 * n)
+                .cast()
+        }
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x04..0x0c - Pending Clear nx Register (WKPCLnx)"]
+    #[inline(always)]
+    pub fn wkpcln_iter(&self) -> impl Iterator<Item = &Wkpcln> {
+        (0..8).map(move |n| unsafe {
+            &*core::ptr::from_ref(self)
+                .cast::<u8>()
+                .add(4)
+                .add(16 * n)
+                .cast()
+        })
     }
     #[doc = "0x04 - Pending Clear nx Register (WKPCLnx)"]
     #[inline(always)]
-    pub const fn wkpcln1(&self) -> &Wkpcln1 {
-        &self.wkpcln1
+    pub const fn wkpcln1(&self) -> &Wkpcln {
+        self.wkpcln(0)
+    }
+    #[doc = "0x14 - Pending Clear nx Register (WKPCLnx)"]
+    #[inline(always)]
+    pub const fn wkpcln2(&self) -> &Wkpcln {
+        self.wkpcln(1)
+    }
+    #[doc = "0x24 - Pending Clear nx Register (WKPCLnx)"]
+    #[inline(always)]
+    pub const fn wkpcln3(&self) -> &Wkpcln {
+        self.wkpcln(2)
+    }
+    #[doc = "0x34 - Pending Clear nx Register (WKPCLnx)"]
+    #[inline(always)]
+    pub const fn wkpcln4(&self) -> &Wkpcln {
+        self.wkpcln(3)
+    }
+    #[doc = "0x44 - Pending Clear nx Register (WKPCLnx)"]
+    #[inline(always)]
+    pub const fn wkpcln5(&self) -> &Wkpcln {
+        self.wkpcln(4)
+    }
+    #[doc = "0x54 - Pending Clear nx Register (WKPCLnx)"]
+    #[inline(always)]
+    pub const fn wkpcln6(&self) -> &Wkpcln {
+        self.wkpcln(5)
+    }
+    #[doc = "0x64 - Pending Clear nx Register (WKPCLnx)"]
+    #[inline(always)]
+    pub const fn wkpcln7(&self) -> &Wkpcln {
+        self.wkpcln(6)
+    }
+    #[doc = "0x74 - Pending Clear nx Register (WKPCLnx)"]
+    #[inline(always)]
+    pub const fn wkpcln8(&self) -> &Wkpcln {
+        self.wkpcln(7)
+    }
+    #[doc = "0x05..0x0d - Enable nx Register (WKENnx)"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is the index of register in the array. `n == 0` corresponds to `WKENn1` register.</div>"]
+    #[inline(always)]
+    pub const fn wkenn(&self, n: usize) -> &Wkenn {
+        #[allow(clippy::no_effect)]
+        [(); 8][n];
+        unsafe {
+            &*core::ptr::from_ref(self)
+                .cast::<u8>()
+                .add(5)
+                .add(16 * n)
+                .cast()
+        }
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x05..0x0d - Enable nx Register (WKENnx)"]
+    #[inline(always)]
+    pub fn wkenn_iter(&self) -> impl Iterator<Item = &Wkenn> {
+        (0..8).map(move |n| unsafe {
+            &*core::ptr::from_ref(self)
+                .cast::<u8>()
+                .add(5)
+                .add(16 * n)
+                .cast()
+        })
     }
     #[doc = "0x05 - Enable nx Register (WKENnx)"]
     #[inline(always)]
-    pub const fn wkenn1(&self) -> &Wkenn1 {
-        &self.wkenn1
+    pub const fn wkenn1(&self) -> &Wkenn {
+        self.wkenn(0)
+    }
+    #[doc = "0x15 - Enable nx Register (WKENnx)"]
+    #[inline(always)]
+    pub const fn wkenn2(&self) -> &Wkenn {
+        self.wkenn(1)
+    }
+    #[doc = "0x25 - Enable nx Register (WKENnx)"]
+    #[inline(always)]
+    pub const fn wkenn3(&self) -> &Wkenn {
+        self.wkenn(2)
+    }
+    #[doc = "0x35 - Enable nx Register (WKENnx)"]
+    #[inline(always)]
+    pub const fn wkenn4(&self) -> &Wkenn {
+        self.wkenn(3)
+    }
+    #[doc = "0x45 - Enable nx Register (WKENnx)"]
+    #[inline(always)]
+    pub const fn wkenn5(&self) -> &Wkenn {
+        self.wkenn(4)
+    }
+    #[doc = "0x55 - Enable nx Register (WKENnx)"]
+    #[inline(always)]
+    pub const fn wkenn6(&self) -> &Wkenn {
+        self.wkenn(5)
+    }
+    #[doc = "0x65 - Enable nx Register (WKENnx)"]
+    #[inline(always)]
+    pub const fn wkenn7(&self) -> &Wkenn {
+        self.wkenn(6)
+    }
+    #[doc = "0x75 - Enable nx Register (WKENnx)"]
+    #[inline(always)]
+    pub const fn wkenn8(&self) -> &Wkenn {
+        self.wkenn(7)
+    }
+    #[doc = "0x06..0x0e - Wake-Up Status nx Register (WKSTnx)"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is the index of register in the array. `n == 0` corresponds to `WKSTn1` register.</div>"]
+    #[inline(always)]
+    pub const fn wkstn(&self, n: usize) -> &Wkstn {
+        #[allow(clippy::no_effect)]
+        [(); 8][n];
+        unsafe {
+            &*core::ptr::from_ref(self)
+                .cast::<u8>()
+                .add(6)
+                .add(16 * n)
+                .cast()
+        }
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x06..0x0e - Wake-Up Status nx Register (WKSTnx)"]
+    #[inline(always)]
+    pub fn wkstn_iter(&self) -> impl Iterator<Item = &Wkstn> {
+        (0..8).map(move |n| unsafe {
+            &*core::ptr::from_ref(self)
+                .cast::<u8>()
+                .add(6)
+                .add(16 * n)
+                .cast()
+        })
     }
     #[doc = "0x06 - Wake-Up Status nx Register (WKSTnx)"]
     #[inline(always)]
-    pub const fn wkstn1(&self) -> &Wkstn1 {
-        &self.wkstn1
+    pub const fn wkstn1(&self) -> &Wkstn {
+        self.wkstn(0)
+    }
+    #[doc = "0x16 - Wake-Up Status nx Register (WKSTnx)"]
+    #[inline(always)]
+    pub const fn wkstn2(&self) -> &Wkstn {
+        self.wkstn(1)
+    }
+    #[doc = "0x26 - Wake-Up Status nx Register (WKSTnx)"]
+    #[inline(always)]
+    pub const fn wkstn3(&self) -> &Wkstn {
+        self.wkstn(2)
+    }
+    #[doc = "0x36 - Wake-Up Status nx Register (WKSTnx)"]
+    #[inline(always)]
+    pub const fn wkstn4(&self) -> &Wkstn {
+        self.wkstn(3)
+    }
+    #[doc = "0x46 - Wake-Up Status nx Register (WKSTnx)"]
+    #[inline(always)]
+    pub const fn wkstn5(&self) -> &Wkstn {
+        self.wkstn(4)
+    }
+    #[doc = "0x56 - Wake-Up Status nx Register (WKSTnx)"]
+    #[inline(always)]
+    pub const fn wkstn6(&self) -> &Wkstn {
+        self.wkstn(5)
+    }
+    #[doc = "0x66 - Wake-Up Status nx Register (WKSTnx)"]
+    #[inline(always)]
+    pub const fn wkstn7(&self) -> &Wkstn {
+        self.wkstn(6)
+    }
+    #[doc = "0x76 - Wake-Up Status nx Register (WKSTnx)"]
+    #[inline(always)]
+    pub const fn wkstn8(&self) -> &Wkstn {
+        self.wkstn(7)
+    }
+    #[doc = "0x07..0x0f - Wake-Up Input Enable nx Register (WKINENnx)"]
+    #[doc = ""]
+    #[doc = "<div class=\"warning\">`n` is the index of register in the array. `n == 0` corresponds to `WKINENn1` register.</div>"]
+    #[inline(always)]
+    pub const fn wkinenn(&self, n: usize) -> &Wkinenn {
+        #[allow(clippy::no_effect)]
+        [(); 8][n];
+        unsafe {
+            &*core::ptr::from_ref(self)
+                .cast::<u8>()
+                .add(7)
+                .add(16 * n)
+                .cast()
+        }
+    }
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x07..0x0f - Wake-Up Input Enable nx Register (WKINENnx)"]
+    #[inline(always)]
+    pub fn wkinenn_iter(&self) -> impl Iterator<Item = &Wkinenn> {
+        (0..8).map(move |n| unsafe {
+            &*core::ptr::from_ref(self)
+                .cast::<u8>()
+                .add(7)
+                .add(16 * n)
+                .cast()
+        })
     }
     #[doc = "0x07 - Wake-Up Input Enable nx Register (WKINENnx)"]
     #[inline(always)]
-    pub const fn wkinenn1(&self) -> &Wkinenn1 {
-        &self.wkinenn1
+    pub const fn wkinenn1(&self) -> &Wkinenn {
+        self.wkinenn(0)
+    }
+    #[doc = "0x17 - Wake-Up Input Enable nx Register (WKINENnx)"]
+    #[inline(always)]
+    pub const fn wkinenn2(&self) -> &Wkinenn {
+        self.wkinenn(1)
+    }
+    #[doc = "0x27 - Wake-Up Input Enable nx Register (WKINENnx)"]
+    #[inline(always)]
+    pub const fn wkinenn3(&self) -> &Wkinenn {
+        self.wkinenn(2)
+    }
+    #[doc = "0x37 - Wake-Up Input Enable nx Register (WKINENnx)"]
+    #[inline(always)]
+    pub const fn wkinenn4(&self) -> &Wkinenn {
+        self.wkinenn(3)
+    }
+    #[doc = "0x47 - Wake-Up Input Enable nx Register (WKINENnx)"]
+    #[inline(always)]
+    pub const fn wkinenn5(&self) -> &Wkinenn {
+        self.wkinenn(4)
+    }
+    #[doc = "0x57 - Wake-Up Input Enable nx Register (WKINENnx)"]
+    #[inline(always)]
+    pub const fn wkinenn6(&self) -> &Wkinenn {
+        self.wkinenn(5)
+    }
+    #[doc = "0x67 - Wake-Up Input Enable nx Register (WKINENnx)"]
+    #[inline(always)]
+    pub const fn wkinenn7(&self) -> &Wkinenn {
+        self.wkinenn(6)
+    }
+    #[doc = "0x77 - Wake-Up Input Enable nx Register (WKINENnx)"]
+    #[inline(always)]
+    pub const fn wkinenn8(&self) -> &Wkinenn {
+        self.wkinenn(7)
     }
     #[doc = "0x0e - Lowest Pending Wake-Up Register (LOW_PND_WUn)"]
     #[inline(always)]
     pub const fn low_pnd_wun(&self) -> &LowPndWun {
         &self.low_pnd_wun
     }
-    #[doc = "0x10 - Edge Detection nx Register (WKEDGnx)"]
-    #[inline(always)]
-    pub const fn wkedgn2(&self) -> &Wkedgn2 {
-        &self.wkedgn2
-    }
-    #[doc = "0x11 - Any Edge Detection nx Register (WKAEDGnx)"]
-    #[inline(always)]
-    pub const fn wkaedgn2(&self) -> &Wkaedgn2 {
-        &self.wkaedgn2
-    }
-    #[doc = "0x12 - Wake-Up Detection Mode nx Register (WKMODnx)"]
-    #[inline(always)]
-    pub const fn wkmodn2(&self) -> &Wkmodn2 {
-        &self.wkmodn2
-    }
-    #[doc = "0x13 - Pending nx Register (WKPNDnx)"]
-    #[inline(always)]
-    pub const fn wkpndn2(&self) -> &Wkpndn2 {
-        &self.wkpndn2
-    }
-    #[doc = "0x14 - Pending Clear nx Register (WKPCLnx)"]
-    #[inline(always)]
-    pub const fn wkpcln2(&self) -> &Wkpcln2 {
-        &self.wkpcln2
-    }
-    #[doc = "0x15 - Enable nx Register (WKENnx)"]
-    #[inline(always)]
-    pub const fn wkenn2(&self) -> &Wkenn2 {
-        &self.wkenn2
-    }
-    #[doc = "0x16 - Wake-Up Status nx Register (WKSTnx)"]
-    #[inline(always)]
-    pub const fn wkstn2(&self) -> &Wkstn2 {
-        &self.wkstn2
-    }
-    #[doc = "0x17 - Wake-Up Input Enable nx Register (WKINENnx)"]
-    #[inline(always)]
-    pub const fn wkinenn2(&self) -> &Wkinenn2 {
-        &self.wkinenn2
-    }
-    #[doc = "0x20 - Edge Detection nx Register (WKEDGnx)"]
-    #[inline(always)]
-    pub const fn wkedgn3(&self) -> &Wkedgn3 {
-        &self.wkedgn3
-    }
-    #[doc = "0x21 - Any Edge Detection nx Register (WKAEDGnx)"]
-    #[inline(always)]
-    pub const fn wkaedgn3(&self) -> &Wkaedgn3 {
-        &self.wkaedgn3
-    }
-    #[doc = "0x22 - Wake-Up Detection Mode nx Register (WKMODnx)"]
-    #[inline(always)]
-    pub const fn wkmodn3(&self) -> &Wkmodn3 {
-        &self.wkmodn3
-    }
-    #[doc = "0x23 - Pending nx Register (WKPNDnx)"]
-    #[inline(always)]
-    pub const fn wkpndn3(&self) -> &Wkpndn3 {
-        &self.wkpndn3
-    }
-    #[doc = "0x24 - Pending Clear nx Register (WKPCLnx)"]
-    #[inline(always)]
-    pub const fn wkpcln3(&self) -> &Wkpcln3 {
-        &self.wkpcln3
-    }
-    #[doc = "0x25 - Enable nx Register (WKENnx)"]
-    #[inline(always)]
-    pub const fn wkenn3(&self) -> &Wkenn3 {
-        &self.wkenn3
-    }
-    #[doc = "0x26 - Wake-Up Status nx Register (WKSTnx)"]
-    #[inline(always)]
-    pub const fn wkstn3(&self) -> &Wkstn3 {
-        &self.wkstn3
-    }
-    #[doc = "0x27 - Wake-Up Input Enable nx Register (WKINENnx)"]
-    #[inline(always)]
-    pub const fn wkinenn3(&self) -> &Wkinenn3 {
-        &self.wkinenn3
-    }
-    #[doc = "0x30 - Edge Detection nx Register (WKEDGnx)"]
-    #[inline(always)]
-    pub const fn wkedgn4(&self) -> &Wkedgn4 {
-        &self.wkedgn4
-    }
-    #[doc = "0x31 - Any Edge Detection nx Register (WKAEDGnx)"]
-    #[inline(always)]
-    pub const fn wkaedgn4(&self) -> &Wkaedgn4 {
-        &self.wkaedgn4
-    }
-    #[doc = "0x32 - Wake-Up Detection Mode nx Register (WKMODnx)"]
-    #[inline(always)]
-    pub const fn wkmodn4(&self) -> &Wkmodn4 {
-        &self.wkmodn4
-    }
-    #[doc = "0x33 - Pending nx Register (WKPNDnx)"]
-    #[inline(always)]
-    pub const fn wkpndn4(&self) -> &Wkpndn4 {
-        &self.wkpndn4
-    }
-    #[doc = "0x34 - Pending Clear nx Register (WKPCLnx)"]
-    #[inline(always)]
-    pub const fn wkpcln4(&self) -> &Wkpcln4 {
-        &self.wkpcln4
-    }
-    #[doc = "0x35 - Enable nx Register (WKENnx)"]
-    #[inline(always)]
-    pub const fn wkenn4(&self) -> &Wkenn4 {
-        &self.wkenn4
-    }
-    #[doc = "0x36 - Wake-Up Status nx Register (WKSTnx)"]
-    #[inline(always)]
-    pub const fn wkstn4(&self) -> &Wkstn4 {
-        &self.wkstn4
-    }
-    #[doc = "0x37 - Wake-Up Input Enable nx Register (WKINENnx)"]
-    #[inline(always)]
-    pub const fn wkinenn4(&self) -> &Wkinenn4 {
-        &self.wkinenn4
-    }
-    #[doc = "0x40 - Edge Detection nx Register (WKEDGnx)"]
-    #[inline(always)]
-    pub const fn wkedgn5(&self) -> &Wkedgn5 {
-        &self.wkedgn5
-    }
-    #[doc = "0x41 - Any Edge Detection nx Register (WKAEDGnx)"]
-    #[inline(always)]
-    pub const fn wkaedgn5(&self) -> &Wkaedgn5 {
-        &self.wkaedgn5
-    }
-    #[doc = "0x42 - Wake-Up Detection Mode nx Register (WKMODnx)"]
-    #[inline(always)]
-    pub const fn wkmodn5(&self) -> &Wkmodn5 {
-        &self.wkmodn5
-    }
-    #[doc = "0x43 - Pending nx Register (WKPNDnx)"]
-    #[inline(always)]
-    pub const fn wkpndn5(&self) -> &Wkpndn5 {
-        &self.wkpndn5
-    }
-    #[doc = "0x44 - Pending Clear nx Register (WKPCLnx)"]
-    #[inline(always)]
-    pub const fn wkpcln5(&self) -> &Wkpcln5 {
-        &self.wkpcln5
-    }
-    #[doc = "0x45 - Enable nx Register (WKENnx)"]
-    #[inline(always)]
-    pub const fn wkenn5(&self) -> &Wkenn5 {
-        &self.wkenn5
-    }
-    #[doc = "0x46 - Wake-Up Status nx Register (WKSTnx)"]
-    #[inline(always)]
-    pub const fn wkstn5(&self) -> &Wkstn5 {
-        &self.wkstn5
-    }
-    #[doc = "0x47 - Wake-Up Input Enable nx Register (WKINENnx)"]
-    #[inline(always)]
-    pub const fn wkinenn5(&self) -> &Wkinenn5 {
-        &self.wkinenn5
-    }
-    #[doc = "0x50 - Edge Detection nx Register (WKEDGnx)"]
-    #[inline(always)]
-    pub const fn wkedgn6(&self) -> &Wkedgn6 {
-        &self.wkedgn6
-    }
-    #[doc = "0x51 - Any Edge Detection nx Register (WKAEDGnx)"]
-    #[inline(always)]
-    pub const fn wkaedgn6(&self) -> &Wkaedgn6 {
-        &self.wkaedgn6
-    }
-    #[doc = "0x52 - Wake-Up Detection Mode nx Register (WKMODnx)"]
-    #[inline(always)]
-    pub const fn wkmodn6(&self) -> &Wkmodn6 {
-        &self.wkmodn6
-    }
-    #[doc = "0x53 - Pending nx Register (WKPNDnx)"]
-    #[inline(always)]
-    pub const fn wkpndn6(&self) -> &Wkpndn6 {
-        &self.wkpndn6
-    }
-    #[doc = "0x54 - Pending Clear nx Register (WKPCLnx)"]
-    #[inline(always)]
-    pub const fn wkpcln6(&self) -> &Wkpcln6 {
-        &self.wkpcln6
-    }
-    #[doc = "0x55 - Enable nx Register (WKENnx)"]
-    #[inline(always)]
-    pub const fn wkenn6(&self) -> &Wkenn6 {
-        &self.wkenn6
-    }
-    #[doc = "0x56 - Wake-Up Status nx Register (WKSTnx)"]
-    #[inline(always)]
-    pub const fn wkstn6(&self) -> &Wkstn6 {
-        &self.wkstn6
-    }
-    #[doc = "0x57 - Wake-Up Input Enable nx Register (WKINENnx)"]
-    #[inline(always)]
-    pub const fn wkinenn6(&self) -> &Wkinenn6 {
-        &self.wkinenn6
-    }
-    #[doc = "0x60 - Edge Detection nx Register (WKEDGnx)"]
-    #[inline(always)]
-    pub const fn wkedgn7(&self) -> &Wkedgn7 {
-        &self.wkedgn7
-    }
-    #[doc = "0x61 - Any Edge Detection nx Register (WKAEDGnx)"]
-    #[inline(always)]
-    pub const fn wkaedgn7(&self) -> &Wkaedgn7 {
-        &self.wkaedgn7
-    }
-    #[doc = "0x62 - Wake-Up Detection Mode nx Register (WKMODnx)"]
-    #[inline(always)]
-    pub const fn wkmodn7(&self) -> &Wkmodn7 {
-        &self.wkmodn7
-    }
-    #[doc = "0x63 - Pending nx Register (WKPNDnx)"]
-    #[inline(always)]
-    pub const fn wkpndn7(&self) -> &Wkpndn7 {
-        &self.wkpndn7
-    }
-    #[doc = "0x64 - Pending Clear nx Register (WKPCLnx)"]
-    #[inline(always)]
-    pub const fn wkpcln7(&self) -> &Wkpcln7 {
-        &self.wkpcln7
-    }
-    #[doc = "0x65 - Enable nx Register (WKENnx)"]
-    #[inline(always)]
-    pub const fn wkenn7(&self) -> &Wkenn7 {
-        &self.wkenn7
-    }
-    #[doc = "0x66 - Wake-Up Status nx Register (WKSTnx)"]
-    #[inline(always)]
-    pub const fn wkstn7(&self) -> &Wkstn7 {
-        &self.wkstn7
-    }
-    #[doc = "0x67 - Wake-Up Input Enable nx Register (WKINENnx)"]
-    #[inline(always)]
-    pub const fn wkinenn7(&self) -> &Wkinenn7 {
-        &self.wkinenn7
-    }
-    #[doc = "0x70 - Edge Detection nx Register (WKEDGnx)"]
-    #[inline(always)]
-    pub const fn wkedgn8(&self) -> &Wkedgn8 {
-        &self.wkedgn8
-    }
-    #[doc = "0x71 - Any Edge Detection nx Register (WKAEDGnx)"]
-    #[inline(always)]
-    pub const fn wkaedgn8(&self) -> &Wkaedgn8 {
-        &self.wkaedgn8
-    }
-    #[doc = "0x72 - Wake-Up Detection Mode nx Register (WKMODnx)"]
-    #[inline(always)]
-    pub const fn wkmodn8(&self) -> &Wkmodn8 {
-        &self.wkmodn8
-    }
-    #[doc = "0x73 - Pending nx Register (WKPNDnx)"]
-    #[inline(always)]
-    pub const fn wkpndn8(&self) -> &Wkpndn8 {
-        &self.wkpndn8
-    }
-    #[doc = "0x74 - Pending Clear nx Register (WKPCLnx)"]
-    #[inline(always)]
-    pub const fn wkpcln8(&self) -> &Wkpcln8 {
-        &self.wkpcln8
-    }
-    #[doc = "0x75 - Enable nx Register (WKENnx)"]
-    #[inline(always)]
-    pub const fn wkenn8(&self) -> &Wkenn8 {
-        &self.wkenn8
-    }
-    #[doc = "0x76 - Wake-Up Status nx Register (WKSTnx)"]
-    #[inline(always)]
-    pub const fn wkstn8(&self) -> &Wkstn8 {
-        &self.wkstn8
-    }
-    #[doc = "0x77 - Wake-Up Input Enable nx Register (WKINENnx)"]
-    #[inline(always)]
-    pub const fn wkinenn8(&self) -> &Wkinenn8 {
-        &self.wkinenn8
-    }
 }
-#[doc = "WKEDGn8 (rw) register accessor: Edge Detection nx Register (WKEDGnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkedgn8::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkedgn8::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkedgn8`]
+#[doc = "WKEDGn (rw) register accessor: Edge Detection nx Register (WKEDGnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkedgn::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkedgn::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkedgn`]
 module"]
-#[doc(alias = "WKEDGn8")]
-pub type Wkedgn8 = crate::Reg<wkedgn8::Wkedgn8Spec>;
+#[doc(alias = "WKEDGn")]
+pub type Wkedgn = crate::Reg<wkedgn::WkedgnSpec>;
 #[doc = "Edge Detection nx Register (WKEDGnx)"]
-pub mod wkedgn8;
-#[doc = "WKEDGn1 (rw) register accessor: Edge Detection nx Register (WKEDGnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkedgn1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkedgn1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkedgn1`]
+pub mod wkedgn;
+#[doc = "WKAEDGn (rw) register accessor: Any Edge Detection nx Register (WKAEDGnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkaedgn::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkaedgn::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkaedgn`]
 module"]
-#[doc(alias = "WKEDGn1")]
-pub type Wkedgn1 = crate::Reg<wkedgn1::Wkedgn1Spec>;
-#[doc = "Edge Detection nx Register (WKEDGnx)"]
-pub mod wkedgn1;
-#[doc = "WKEDGn2 (rw) register accessor: Edge Detection nx Register (WKEDGnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkedgn2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkedgn2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkedgn2`]
-module"]
-#[doc(alias = "WKEDGn2")]
-pub type Wkedgn2 = crate::Reg<wkedgn2::Wkedgn2Spec>;
-#[doc = "Edge Detection nx Register (WKEDGnx)"]
-pub mod wkedgn2;
-#[doc = "WKEDGn3 (rw) register accessor: Edge Detection nx Register (WKEDGnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkedgn3::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkedgn3::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkedgn3`]
-module"]
-#[doc(alias = "WKEDGn3")]
-pub type Wkedgn3 = crate::Reg<wkedgn3::Wkedgn3Spec>;
-#[doc = "Edge Detection nx Register (WKEDGnx)"]
-pub mod wkedgn3;
-#[doc = "WKEDGn4 (rw) register accessor: Edge Detection nx Register (WKEDGnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkedgn4::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkedgn4::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkedgn4`]
-module"]
-#[doc(alias = "WKEDGn4")]
-pub type Wkedgn4 = crate::Reg<wkedgn4::Wkedgn4Spec>;
-#[doc = "Edge Detection nx Register (WKEDGnx)"]
-pub mod wkedgn4;
-#[doc = "WKEDGn5 (rw) register accessor: Edge Detection nx Register (WKEDGnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkedgn5::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkedgn5::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkedgn5`]
-module"]
-#[doc(alias = "WKEDGn5")]
-pub type Wkedgn5 = crate::Reg<wkedgn5::Wkedgn5Spec>;
-#[doc = "Edge Detection nx Register (WKEDGnx)"]
-pub mod wkedgn5;
-#[doc = "WKEDGn6 (rw) register accessor: Edge Detection nx Register (WKEDGnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkedgn6::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkedgn6::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkedgn6`]
-module"]
-#[doc(alias = "WKEDGn6")]
-pub type Wkedgn6 = crate::Reg<wkedgn6::Wkedgn6Spec>;
-#[doc = "Edge Detection nx Register (WKEDGnx)"]
-pub mod wkedgn6;
-#[doc = "WKEDGn7 (rw) register accessor: Edge Detection nx Register (WKEDGnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkedgn7::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkedgn7::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkedgn7`]
-module"]
-#[doc(alias = "WKEDGn7")]
-pub type Wkedgn7 = crate::Reg<wkedgn7::Wkedgn7Spec>;
-#[doc = "Edge Detection nx Register (WKEDGnx)"]
-pub mod wkedgn7;
-#[doc = "WKAEDGn8 (rw) register accessor: Any Edge Detection nx Register (WKAEDGnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkaedgn8::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkaedgn8::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkaedgn8`]
-module"]
-#[doc(alias = "WKAEDGn8")]
-pub type Wkaedgn8 = crate::Reg<wkaedgn8::Wkaedgn8Spec>;
+#[doc(alias = "WKAEDGn")]
+pub type Wkaedgn = crate::Reg<wkaedgn::WkaedgnSpec>;
 #[doc = "Any Edge Detection nx Register (WKAEDGnx)"]
-pub mod wkaedgn8;
-#[doc = "WKAEDGn1 (rw) register accessor: Any Edge Detection nx Register (WKAEDGnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkaedgn1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkaedgn1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkaedgn1`]
+pub mod wkaedgn;
+#[doc = "WKMODn (rw) register accessor: Wake-Up Detection Mode nx Register (WKMODnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkmodn::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkmodn::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkmodn`]
 module"]
-#[doc(alias = "WKAEDGn1")]
-pub type Wkaedgn1 = crate::Reg<wkaedgn1::Wkaedgn1Spec>;
-#[doc = "Any Edge Detection nx Register (WKAEDGnx)"]
-pub mod wkaedgn1;
-#[doc = "WKAEDGn2 (rw) register accessor: Any Edge Detection nx Register (WKAEDGnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkaedgn2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkaedgn2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkaedgn2`]
-module"]
-#[doc(alias = "WKAEDGn2")]
-pub type Wkaedgn2 = crate::Reg<wkaedgn2::Wkaedgn2Spec>;
-#[doc = "Any Edge Detection nx Register (WKAEDGnx)"]
-pub mod wkaedgn2;
-#[doc = "WKAEDGn3 (rw) register accessor: Any Edge Detection nx Register (WKAEDGnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkaedgn3::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkaedgn3::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkaedgn3`]
-module"]
-#[doc(alias = "WKAEDGn3")]
-pub type Wkaedgn3 = crate::Reg<wkaedgn3::Wkaedgn3Spec>;
-#[doc = "Any Edge Detection nx Register (WKAEDGnx)"]
-pub mod wkaedgn3;
-#[doc = "WKAEDGn4 (rw) register accessor: Any Edge Detection nx Register (WKAEDGnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkaedgn4::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkaedgn4::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkaedgn4`]
-module"]
-#[doc(alias = "WKAEDGn4")]
-pub type Wkaedgn4 = crate::Reg<wkaedgn4::Wkaedgn4Spec>;
-#[doc = "Any Edge Detection nx Register (WKAEDGnx)"]
-pub mod wkaedgn4;
-#[doc = "WKAEDGn5 (rw) register accessor: Any Edge Detection nx Register (WKAEDGnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkaedgn5::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkaedgn5::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkaedgn5`]
-module"]
-#[doc(alias = "WKAEDGn5")]
-pub type Wkaedgn5 = crate::Reg<wkaedgn5::Wkaedgn5Spec>;
-#[doc = "Any Edge Detection nx Register (WKAEDGnx)"]
-pub mod wkaedgn5;
-#[doc = "WKAEDGn6 (rw) register accessor: Any Edge Detection nx Register (WKAEDGnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkaedgn6::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkaedgn6::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkaedgn6`]
-module"]
-#[doc(alias = "WKAEDGn6")]
-pub type Wkaedgn6 = crate::Reg<wkaedgn6::Wkaedgn6Spec>;
-#[doc = "Any Edge Detection nx Register (WKAEDGnx)"]
-pub mod wkaedgn6;
-#[doc = "WKAEDGn7 (rw) register accessor: Any Edge Detection nx Register (WKAEDGnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkaedgn7::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkaedgn7::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkaedgn7`]
-module"]
-#[doc(alias = "WKAEDGn7")]
-pub type Wkaedgn7 = crate::Reg<wkaedgn7::Wkaedgn7Spec>;
-#[doc = "Any Edge Detection nx Register (WKAEDGnx)"]
-pub mod wkaedgn7;
-#[doc = "WKMODn8 (rw) register accessor: Wake-Up Detection Mode nx Register (WKMODnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkmodn8::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkmodn8::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkmodn8`]
-module"]
-#[doc(alias = "WKMODn8")]
-pub type Wkmodn8 = crate::Reg<wkmodn8::Wkmodn8Spec>;
+#[doc(alias = "WKMODn")]
+pub type Wkmodn = crate::Reg<wkmodn::WkmodnSpec>;
 #[doc = "Wake-Up Detection Mode nx Register (WKMODnx)"]
-pub mod wkmodn8;
-#[doc = "WKMODn1 (rw) register accessor: Wake-Up Detection Mode nx Register (WKMODnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkmodn1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkmodn1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkmodn1`]
+pub mod wkmodn;
+#[doc = "WKPNDn (rw) register accessor: Pending nx Register (WKPNDnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkpndn::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkpndn::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkpndn`]
 module"]
-#[doc(alias = "WKMODn1")]
-pub type Wkmodn1 = crate::Reg<wkmodn1::Wkmodn1Spec>;
-#[doc = "Wake-Up Detection Mode nx Register (WKMODnx)"]
-pub mod wkmodn1;
-#[doc = "WKMODn2 (rw) register accessor: Wake-Up Detection Mode nx Register (WKMODnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkmodn2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkmodn2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkmodn2`]
-module"]
-#[doc(alias = "WKMODn2")]
-pub type Wkmodn2 = crate::Reg<wkmodn2::Wkmodn2Spec>;
-#[doc = "Wake-Up Detection Mode nx Register (WKMODnx)"]
-pub mod wkmodn2;
-#[doc = "WKMODn3 (rw) register accessor: Wake-Up Detection Mode nx Register (WKMODnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkmodn3::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkmodn3::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkmodn3`]
-module"]
-#[doc(alias = "WKMODn3")]
-pub type Wkmodn3 = crate::Reg<wkmodn3::Wkmodn3Spec>;
-#[doc = "Wake-Up Detection Mode nx Register (WKMODnx)"]
-pub mod wkmodn3;
-#[doc = "WKMODn4 (rw) register accessor: Wake-Up Detection Mode nx Register (WKMODnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkmodn4::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkmodn4::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkmodn4`]
-module"]
-#[doc(alias = "WKMODn4")]
-pub type Wkmodn4 = crate::Reg<wkmodn4::Wkmodn4Spec>;
-#[doc = "Wake-Up Detection Mode nx Register (WKMODnx)"]
-pub mod wkmodn4;
-#[doc = "WKMODn5 (rw) register accessor: Wake-Up Detection Mode nx Register (WKMODnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkmodn5::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkmodn5::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkmodn5`]
-module"]
-#[doc(alias = "WKMODn5")]
-pub type Wkmodn5 = crate::Reg<wkmodn5::Wkmodn5Spec>;
-#[doc = "Wake-Up Detection Mode nx Register (WKMODnx)"]
-pub mod wkmodn5;
-#[doc = "WKMODn6 (rw) register accessor: Wake-Up Detection Mode nx Register (WKMODnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkmodn6::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkmodn6::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkmodn6`]
-module"]
-#[doc(alias = "WKMODn6")]
-pub type Wkmodn6 = crate::Reg<wkmodn6::Wkmodn6Spec>;
-#[doc = "Wake-Up Detection Mode nx Register (WKMODnx)"]
-pub mod wkmodn6;
-#[doc = "WKMODn7 (rw) register accessor: Wake-Up Detection Mode nx Register (WKMODnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkmodn7::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkmodn7::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkmodn7`]
-module"]
-#[doc(alias = "WKMODn7")]
-pub type Wkmodn7 = crate::Reg<wkmodn7::Wkmodn7Spec>;
-#[doc = "Wake-Up Detection Mode nx Register (WKMODnx)"]
-pub mod wkmodn7;
-#[doc = "WKPNDn8 (rw) register accessor: Pending nx Register (WKPNDnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkpndn8::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkpndn8::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkpndn8`]
-module"]
-#[doc(alias = "WKPNDn8")]
-pub type Wkpndn8 = crate::Reg<wkpndn8::Wkpndn8Spec>;
+#[doc(alias = "WKPNDn")]
+pub type Wkpndn = crate::Reg<wkpndn::WkpndnSpec>;
 #[doc = "Pending nx Register (WKPNDnx)"]
-pub mod wkpndn8;
-#[doc = "WKPNDn1 (rw) register accessor: Pending nx Register (WKPNDnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkpndn1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkpndn1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkpndn1`]
+pub mod wkpndn;
+#[doc = "WKPCLn (rw) register accessor: Pending Clear nx Register (WKPCLnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkpcln::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkpcln::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkpcln`]
 module"]
-#[doc(alias = "WKPNDn1")]
-pub type Wkpndn1 = crate::Reg<wkpndn1::Wkpndn1Spec>;
-#[doc = "Pending nx Register (WKPNDnx)"]
-pub mod wkpndn1;
-#[doc = "WKPNDn2 (rw) register accessor: Pending nx Register (WKPNDnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkpndn2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkpndn2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkpndn2`]
-module"]
-#[doc(alias = "WKPNDn2")]
-pub type Wkpndn2 = crate::Reg<wkpndn2::Wkpndn2Spec>;
-#[doc = "Pending nx Register (WKPNDnx)"]
-pub mod wkpndn2;
-#[doc = "WKPNDn3 (rw) register accessor: Pending nx Register (WKPNDnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkpndn3::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkpndn3::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkpndn3`]
-module"]
-#[doc(alias = "WKPNDn3")]
-pub type Wkpndn3 = crate::Reg<wkpndn3::Wkpndn3Spec>;
-#[doc = "Pending nx Register (WKPNDnx)"]
-pub mod wkpndn3;
-#[doc = "WKPNDn4 (rw) register accessor: Pending nx Register (WKPNDnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkpndn4::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkpndn4::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkpndn4`]
-module"]
-#[doc(alias = "WKPNDn4")]
-pub type Wkpndn4 = crate::Reg<wkpndn4::Wkpndn4Spec>;
-#[doc = "Pending nx Register (WKPNDnx)"]
-pub mod wkpndn4;
-#[doc = "WKPNDn5 (rw) register accessor: Pending nx Register (WKPNDnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkpndn5::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkpndn5::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkpndn5`]
-module"]
-#[doc(alias = "WKPNDn5")]
-pub type Wkpndn5 = crate::Reg<wkpndn5::Wkpndn5Spec>;
-#[doc = "Pending nx Register (WKPNDnx)"]
-pub mod wkpndn5;
-#[doc = "WKPNDn6 (rw) register accessor: Pending nx Register (WKPNDnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkpndn6::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkpndn6::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkpndn6`]
-module"]
-#[doc(alias = "WKPNDn6")]
-pub type Wkpndn6 = crate::Reg<wkpndn6::Wkpndn6Spec>;
-#[doc = "Pending nx Register (WKPNDnx)"]
-pub mod wkpndn6;
-#[doc = "WKPNDn7 (rw) register accessor: Pending nx Register (WKPNDnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkpndn7::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkpndn7::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkpndn7`]
-module"]
-#[doc(alias = "WKPNDn7")]
-pub type Wkpndn7 = crate::Reg<wkpndn7::Wkpndn7Spec>;
-#[doc = "Pending nx Register (WKPNDnx)"]
-pub mod wkpndn7;
-#[doc = "WKPCLn8 (rw) register accessor: Pending Clear nx Register (WKPCLnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkpcln8::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkpcln8::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkpcln8`]
-module"]
-#[doc(alias = "WKPCLn8")]
-pub type Wkpcln8 = crate::Reg<wkpcln8::Wkpcln8Spec>;
+#[doc(alias = "WKPCLn")]
+pub type Wkpcln = crate::Reg<wkpcln::WkpclnSpec>;
 #[doc = "Pending Clear nx Register (WKPCLnx)"]
-pub mod wkpcln8;
-#[doc = "WKPCLn1 (rw) register accessor: Pending Clear nx Register (WKPCLnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkpcln1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkpcln1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkpcln1`]
+pub mod wkpcln;
+#[doc = "WKENn (rw) register accessor: Enable nx Register (WKENnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkenn::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkenn::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkenn`]
 module"]
-#[doc(alias = "WKPCLn1")]
-pub type Wkpcln1 = crate::Reg<wkpcln1::Wkpcln1Spec>;
-#[doc = "Pending Clear nx Register (WKPCLnx)"]
-pub mod wkpcln1;
-#[doc = "WKPCLn2 (rw) register accessor: Pending Clear nx Register (WKPCLnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkpcln2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkpcln2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkpcln2`]
-module"]
-#[doc(alias = "WKPCLn2")]
-pub type Wkpcln2 = crate::Reg<wkpcln2::Wkpcln2Spec>;
-#[doc = "Pending Clear nx Register (WKPCLnx)"]
-pub mod wkpcln2;
-#[doc = "WKPCLn3 (rw) register accessor: Pending Clear nx Register (WKPCLnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkpcln3::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkpcln3::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkpcln3`]
-module"]
-#[doc(alias = "WKPCLn3")]
-pub type Wkpcln3 = crate::Reg<wkpcln3::Wkpcln3Spec>;
-#[doc = "Pending Clear nx Register (WKPCLnx)"]
-pub mod wkpcln3;
-#[doc = "WKPCLn4 (rw) register accessor: Pending Clear nx Register (WKPCLnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkpcln4::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkpcln4::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkpcln4`]
-module"]
-#[doc(alias = "WKPCLn4")]
-pub type Wkpcln4 = crate::Reg<wkpcln4::Wkpcln4Spec>;
-#[doc = "Pending Clear nx Register (WKPCLnx)"]
-pub mod wkpcln4;
-#[doc = "WKPCLn5 (rw) register accessor: Pending Clear nx Register (WKPCLnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkpcln5::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkpcln5::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkpcln5`]
-module"]
-#[doc(alias = "WKPCLn5")]
-pub type Wkpcln5 = crate::Reg<wkpcln5::Wkpcln5Spec>;
-#[doc = "Pending Clear nx Register (WKPCLnx)"]
-pub mod wkpcln5;
-#[doc = "WKPCLn6 (rw) register accessor: Pending Clear nx Register (WKPCLnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkpcln6::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkpcln6::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkpcln6`]
-module"]
-#[doc(alias = "WKPCLn6")]
-pub type Wkpcln6 = crate::Reg<wkpcln6::Wkpcln6Spec>;
-#[doc = "Pending Clear nx Register (WKPCLnx)"]
-pub mod wkpcln6;
-#[doc = "WKPCLn7 (rw) register accessor: Pending Clear nx Register (WKPCLnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkpcln7::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkpcln7::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkpcln7`]
-module"]
-#[doc(alias = "WKPCLn7")]
-pub type Wkpcln7 = crate::Reg<wkpcln7::Wkpcln7Spec>;
-#[doc = "Pending Clear nx Register (WKPCLnx)"]
-pub mod wkpcln7;
-#[doc = "WKENn8 (rw) register accessor: Enable nx Register (WKENnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkenn8::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkenn8::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkenn8`]
-module"]
-#[doc(alias = "WKENn8")]
-pub type Wkenn8 = crate::Reg<wkenn8::Wkenn8Spec>;
+#[doc(alias = "WKENn")]
+pub type Wkenn = crate::Reg<wkenn::WkennSpec>;
 #[doc = "Enable nx Register (WKENnx)"]
-pub mod wkenn8;
-#[doc = "WKENn1 (rw) register accessor: Enable nx Register (WKENnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkenn1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkenn1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkenn1`]
+pub mod wkenn;
+#[doc = "WKSTn (rw) register accessor: Wake-Up Status nx Register (WKSTnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkstn::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkstn::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkstn`]
 module"]
-#[doc(alias = "WKENn1")]
-pub type Wkenn1 = crate::Reg<wkenn1::Wkenn1Spec>;
-#[doc = "Enable nx Register (WKENnx)"]
-pub mod wkenn1;
-#[doc = "WKENn2 (rw) register accessor: Enable nx Register (WKENnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkenn2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkenn2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkenn2`]
-module"]
-#[doc(alias = "WKENn2")]
-pub type Wkenn2 = crate::Reg<wkenn2::Wkenn2Spec>;
-#[doc = "Enable nx Register (WKENnx)"]
-pub mod wkenn2;
-#[doc = "WKENn3 (rw) register accessor: Enable nx Register (WKENnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkenn3::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkenn3::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkenn3`]
-module"]
-#[doc(alias = "WKENn3")]
-pub type Wkenn3 = crate::Reg<wkenn3::Wkenn3Spec>;
-#[doc = "Enable nx Register (WKENnx)"]
-pub mod wkenn3;
-#[doc = "WKENn4 (rw) register accessor: Enable nx Register (WKENnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkenn4::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkenn4::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkenn4`]
-module"]
-#[doc(alias = "WKENn4")]
-pub type Wkenn4 = crate::Reg<wkenn4::Wkenn4Spec>;
-#[doc = "Enable nx Register (WKENnx)"]
-pub mod wkenn4;
-#[doc = "WKENn5 (rw) register accessor: Enable nx Register (WKENnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkenn5::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkenn5::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkenn5`]
-module"]
-#[doc(alias = "WKENn5")]
-pub type Wkenn5 = crate::Reg<wkenn5::Wkenn5Spec>;
-#[doc = "Enable nx Register (WKENnx)"]
-pub mod wkenn5;
-#[doc = "WKENn6 (rw) register accessor: Enable nx Register (WKENnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkenn6::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkenn6::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkenn6`]
-module"]
-#[doc(alias = "WKENn6")]
-pub type Wkenn6 = crate::Reg<wkenn6::Wkenn6Spec>;
-#[doc = "Enable nx Register (WKENnx)"]
-pub mod wkenn6;
-#[doc = "WKENn7 (rw) register accessor: Enable nx Register (WKENnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkenn7::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkenn7::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkenn7`]
-module"]
-#[doc(alias = "WKENn7")]
-pub type Wkenn7 = crate::Reg<wkenn7::Wkenn7Spec>;
-#[doc = "Enable nx Register (WKENnx)"]
-pub mod wkenn7;
-#[doc = "WKSTn8 (rw) register accessor: Wake-Up Status nx Register (WKSTnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkstn8::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkstn8::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkstn8`]
-module"]
-#[doc(alias = "WKSTn8")]
-pub type Wkstn8 = crate::Reg<wkstn8::Wkstn8Spec>;
+#[doc(alias = "WKSTn")]
+pub type Wkstn = crate::Reg<wkstn::WkstnSpec>;
 #[doc = "Wake-Up Status nx Register (WKSTnx)"]
-pub mod wkstn8;
-#[doc = "WKSTn1 (rw) register accessor: Wake-Up Status nx Register (WKSTnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkstn1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkstn1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkstn1`]
+pub mod wkstn;
+#[doc = "WKINENn (rw) register accessor: Wake-Up Input Enable nx Register (WKINENnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkinenn::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkinenn::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkinenn`]
 module"]
-#[doc(alias = "WKSTn1")]
-pub type Wkstn1 = crate::Reg<wkstn1::Wkstn1Spec>;
-#[doc = "Wake-Up Status nx Register (WKSTnx)"]
-pub mod wkstn1;
-#[doc = "WKSTn2 (rw) register accessor: Wake-Up Status nx Register (WKSTnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkstn2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkstn2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkstn2`]
-module"]
-#[doc(alias = "WKSTn2")]
-pub type Wkstn2 = crate::Reg<wkstn2::Wkstn2Spec>;
-#[doc = "Wake-Up Status nx Register (WKSTnx)"]
-pub mod wkstn2;
-#[doc = "WKSTn3 (rw) register accessor: Wake-Up Status nx Register (WKSTnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkstn3::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkstn3::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkstn3`]
-module"]
-#[doc(alias = "WKSTn3")]
-pub type Wkstn3 = crate::Reg<wkstn3::Wkstn3Spec>;
-#[doc = "Wake-Up Status nx Register (WKSTnx)"]
-pub mod wkstn3;
-#[doc = "WKSTn4 (rw) register accessor: Wake-Up Status nx Register (WKSTnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkstn4::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkstn4::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkstn4`]
-module"]
-#[doc(alias = "WKSTn4")]
-pub type Wkstn4 = crate::Reg<wkstn4::Wkstn4Spec>;
-#[doc = "Wake-Up Status nx Register (WKSTnx)"]
-pub mod wkstn4;
-#[doc = "WKSTn5 (rw) register accessor: Wake-Up Status nx Register (WKSTnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkstn5::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkstn5::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkstn5`]
-module"]
-#[doc(alias = "WKSTn5")]
-pub type Wkstn5 = crate::Reg<wkstn5::Wkstn5Spec>;
-#[doc = "Wake-Up Status nx Register (WKSTnx)"]
-pub mod wkstn5;
-#[doc = "WKSTn6 (rw) register accessor: Wake-Up Status nx Register (WKSTnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkstn6::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkstn6::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkstn6`]
-module"]
-#[doc(alias = "WKSTn6")]
-pub type Wkstn6 = crate::Reg<wkstn6::Wkstn6Spec>;
-#[doc = "Wake-Up Status nx Register (WKSTnx)"]
-pub mod wkstn6;
-#[doc = "WKSTn7 (rw) register accessor: Wake-Up Status nx Register (WKSTnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkstn7::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkstn7::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkstn7`]
-module"]
-#[doc(alias = "WKSTn7")]
-pub type Wkstn7 = crate::Reg<wkstn7::Wkstn7Spec>;
-#[doc = "Wake-Up Status nx Register (WKSTnx)"]
-pub mod wkstn7;
-#[doc = "WKINENn8 (rw) register accessor: Wake-Up Input Enable nx Register (WKINENnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkinenn8::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkinenn8::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkinenn8`]
-module"]
-#[doc(alias = "WKINENn8")]
-pub type Wkinenn8 = crate::Reg<wkinenn8::Wkinenn8Spec>;
+#[doc(alias = "WKINENn")]
+pub type Wkinenn = crate::Reg<wkinenn::WkinennSpec>;
 #[doc = "Wake-Up Input Enable nx Register (WKINENnx)"]
-pub mod wkinenn8;
-#[doc = "WKINENn1 (rw) register accessor: Wake-Up Input Enable nx Register (WKINENnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkinenn1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkinenn1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkinenn1`]
-module"]
-#[doc(alias = "WKINENn1")]
-pub type Wkinenn1 = crate::Reg<wkinenn1::Wkinenn1Spec>;
-#[doc = "Wake-Up Input Enable nx Register (WKINENnx)"]
-pub mod wkinenn1;
-#[doc = "WKINENn2 (rw) register accessor: Wake-Up Input Enable nx Register (WKINENnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkinenn2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkinenn2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkinenn2`]
-module"]
-#[doc(alias = "WKINENn2")]
-pub type Wkinenn2 = crate::Reg<wkinenn2::Wkinenn2Spec>;
-#[doc = "Wake-Up Input Enable nx Register (WKINENnx)"]
-pub mod wkinenn2;
-#[doc = "WKINENn3 (rw) register accessor: Wake-Up Input Enable nx Register (WKINENnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkinenn3::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkinenn3::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkinenn3`]
-module"]
-#[doc(alias = "WKINENn3")]
-pub type Wkinenn3 = crate::Reg<wkinenn3::Wkinenn3Spec>;
-#[doc = "Wake-Up Input Enable nx Register (WKINENnx)"]
-pub mod wkinenn3;
-#[doc = "WKINENn4 (rw) register accessor: Wake-Up Input Enable nx Register (WKINENnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkinenn4::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkinenn4::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkinenn4`]
-module"]
-#[doc(alias = "WKINENn4")]
-pub type Wkinenn4 = crate::Reg<wkinenn4::Wkinenn4Spec>;
-#[doc = "Wake-Up Input Enable nx Register (WKINENnx)"]
-pub mod wkinenn4;
-#[doc = "WKINENn5 (rw) register accessor: Wake-Up Input Enable nx Register (WKINENnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkinenn5::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkinenn5::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkinenn5`]
-module"]
-#[doc(alias = "WKINENn5")]
-pub type Wkinenn5 = crate::Reg<wkinenn5::Wkinenn5Spec>;
-#[doc = "Wake-Up Input Enable nx Register (WKINENnx)"]
-pub mod wkinenn5;
-#[doc = "WKINENn6 (rw) register accessor: Wake-Up Input Enable nx Register (WKINENnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkinenn6::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkinenn6::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkinenn6`]
-module"]
-#[doc(alias = "WKINENn6")]
-pub type Wkinenn6 = crate::Reg<wkinenn6::Wkinenn6Spec>;
-#[doc = "Wake-Up Input Enable nx Register (WKINENnx)"]
-pub mod wkinenn6;
-#[doc = "WKINENn7 (rw) register accessor: Wake-Up Input Enable nx Register (WKINENnx)\n\nYou can [`read`](crate::Reg::read) this register and get [`wkinenn7::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`wkinenn7::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@wkinenn7`]
-module"]
-#[doc(alias = "WKINENn7")]
-pub type Wkinenn7 = crate::Reg<wkinenn7::Wkinenn7Spec>;
-#[doc = "Wake-Up Input Enable nx Register (WKINENnx)"]
-pub mod wkinenn7;
+pub mod wkinenn;
 #[doc = "LOW_PND_WUn (rw) register accessor: Lowest Pending Wake-Up Register (LOW_PND_WUn)\n\nYou can [`read`](crate::Reg::read) this register and get [`low_pnd_wun::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`low_pnd_wun::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@low_pnd_wun`]
 module"]
 #[doc(alias = "LOW_PND_WUn")]
