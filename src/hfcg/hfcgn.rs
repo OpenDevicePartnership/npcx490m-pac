@@ -71,7 +71,7 @@ impl crate::Writable for HfcgnSpec {
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
 }
-#[doc = "`reset()` method sets HFCGN to value 0"]
+#[doc = "`reset()` method sets HFCGN to value 0x02"]
 impl crate::Resettable for HfcgnSpec {
-    const RESET_VALUE: u8 = 0;
+    const RESET_VALUE: u8 = 0x02;
 }

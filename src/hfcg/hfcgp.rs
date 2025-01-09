@@ -56,7 +56,7 @@ impl crate::Writable for HfcgpSpec {
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
 }
-#[doc = "`reset()` method sets HFCGP to value 0"]
+#[doc = "`reset()` method sets HFCGP to value 0x10"]
 impl crate::Resettable for HfcgpSpec {
-    const RESET_VALUE: u8 = 0;
+    const RESET_VALUE: u8 = 0x10;
 }
