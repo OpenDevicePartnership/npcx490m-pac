@@ -25,32 +25,32 @@ pub struct RegisterBlock {
     devalta: Devalta,
     devaltb: Devaltb,
     devaltc: Devaltc,
-    _reserved19: [u8; 0x01],
+    devaltd: Devaltd,
     devalte: Devalte,
     devaltf: Devaltf,
-    _reserved21: [u8; 0x01],
+    devaltg: Devaltg,
     devalth: Devalth,
     devaltj: Devaltj,
     devaltk: Devaltk,
     devaltl: Devaltl,
     devaltm: Devaltm,
     devaltn: Devaltn,
-    _reserved27: [u8; 0x04],
+    _reserved29: [u8; 0x04],
     pupd_en0: PupdEn0,
     pupd_en1: PupdEn1,
-    _reserved29: [u8; 0x01],
+    _reserved31: [u8; 0x01],
     bl_ctl: BlCtl,
-    _reserved30: [u8; 0xd1],
+    _reserved32: [u8; 0xd1],
     swrst_trg: SwrstTrg,
-    _reserved31: [u8; 0x02],
+    _reserved33: [u8; 0x02],
     swrst_ctl1: SwrstCtl1,
     swrst_ctl2: SwrstCtl2,
     swrst_ctl3: SwrstCtl3,
     swrst_ctl4: SwrstCtl4,
-    _reserved35: [u8; 0x0c],
+    _reserved37: [u8; 0x0c],
     jen_ctl1: JenCtl1,
     jen_ctl2: JenCtl2,
-    _reserved37: [u8; 0x2e],
+    _reserved39: [u8; 0x2e],
     lv_gpio_ctl0: LvGpioCtl0,
     lv_gpio_ctl1: LvGpioCtl1,
     lv_gpio_ctl2: LvGpioCtl2,
@@ -63,27 +63,29 @@ pub struct RegisterBlock {
     lv_gpio_ctl9: LvGpioCtl9,
     lv_gpio_ctla: LvGpioCtla,
     lv_gpio_ctlb: LvGpioCtlb,
-    _reserved49: [u8; 0x04],
+    _reserved51: [u8; 0x04],
     lv_gpio_ctlp: LvGpioCtlp,
-    _reserved50: [u8; 0xaf],
+    _reserved52: [u8; 0xaf],
     devalt0_lk: Devalt0Lk,
-    _reserved51: [u8; 0x01],
+    _reserved53: [u8; 0x01],
     devalt2_lk: Devalt2Lk,
     devalt3_lk: Devalt3Lk,
     devalt4_lk: Devalt4Lk,
     devalt5_lk: Devalt5Lk,
     devalt6_lk: Devalt6Lk,
-    _reserved56: [u8; 0x04],
+    _reserved58: [u8; 0x04],
     devaltb_lk: DevaltbLk,
-    _reserved57: [u8; 0x03],
+    _reserved59: [u8; 0x01],
+    devaltd_lk: DevaltdLk,
+    _reserved60: [u8; 0x01],
     devaltf_lk: DevaltfLk,
-    _reserved58: [u8; 0x01],
+    devaltg_lk: DevaltgLk,
     devalth_lk: DevalthLk,
     devaltj_lk: DevaltjLk,
     devaltk_lk: DevaltkLk,
-    _reserved61: [u8; 0x02],
+    _reserved65: [u8; 0x02],
     devaltn_lk: DevaltnLk,
-    _reserved62: [u8; 0xdd],
+    _reserved66: [u8; 0xdd],
     swrst_ctl1_lk: SwrstCtl1Lk,
     swrst_ctl2_lk: SwrstCtl2Lk,
     swrst_ctl3_lk: SwrstCtl3Lk,
@@ -185,6 +187,11 @@ impl RegisterBlock {
     pub const fn devaltc(&self) -> &Devaltc {
         &self.devaltc
     }
+    #[doc = "0x1d - Device Alternate Function D Register (DEVALTD)"]
+    #[inline(always)]
+    pub const fn devaltd(&self) -> &Devaltd {
+        &self.devaltd
+    }
     #[doc = "0x1e - Device Alternate Function E Register (DEVALTE)"]
     #[inline(always)]
     pub const fn devalte(&self) -> &Devalte {
@@ -194,6 +201,11 @@ impl RegisterBlock {
     #[inline(always)]
     pub const fn devaltf(&self) -> &Devaltf {
         &self.devaltf
+    }
+    #[doc = "0x20 - Device Alternate Function G Register (DEVALTG)"]
+    #[inline(always)]
+    pub const fn devaltg(&self) -> &Devaltg {
+        &self.devaltg
     }
     #[doc = "0x21 - Device Alternate Function H Register (DEVALTH)"]
     #[inline(always)]
@@ -375,10 +387,20 @@ impl RegisterBlock {
     pub const fn devaltb_lk(&self) -> &DevaltbLk {
         &self.devaltb_lk
     }
+    #[doc = "0x21d - Device Alternate Function D Lock Register (DEVALTD_LK)"]
+    #[inline(always)]
+    pub const fn devaltd_lk(&self) -> &DevaltdLk {
+        &self.devaltd_lk
+    }
     #[doc = "0x21f - Device Alternate Function F Lock Register (DEVALTF_LK)"]
     #[inline(always)]
     pub const fn devaltf_lk(&self) -> &DevaltfLk {
         &self.devaltf_lk
+    }
+    #[doc = "0x220 - Device Alternate Function G Lock Register (DEVALTG_LK)"]
+    #[inline(always)]
+    pub const fn devaltg_lk(&self) -> &DevaltgLk {
+        &self.devaltg_lk
     }
     #[doc = "0x221 - Alternate Function H Lock Register (DEVALTH_LK)"]
     #[inline(always)]
@@ -817,3 +839,27 @@ module"]
 pub type SwrstCtl4Lk = crate::Reg<swrst_ctl4_lk::SwrstCtl4LkSpec>;
 #[doc = "Software Reset Control 4 Lock Register (SWRST_CTL4_LK)"]
 pub mod swrst_ctl4_lk;
+#[doc = "DEVALTD (rw) register accessor: Device Alternate Function D Register (DEVALTD)\n\nYou can [`read`](crate::Reg::read) this register and get [`devaltd::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`devaltd::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@devaltd`]
+module"]
+#[doc(alias = "DEVALTD")]
+pub type Devaltd = crate::Reg<devaltd::DevaltdSpec>;
+#[doc = "Device Alternate Function D Register (DEVALTD)"]
+pub mod devaltd;
+#[doc = "DEVALTG (rw) register accessor: Device Alternate Function G Register (DEVALTG)\n\nYou can [`read`](crate::Reg::read) this register and get [`devaltg::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`devaltg::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@devaltg`]
+module"]
+#[doc(alias = "DEVALTG")]
+pub type Devaltg = crate::Reg<devaltg::DevaltgSpec>;
+#[doc = "Device Alternate Function G Register (DEVALTG)"]
+pub mod devaltg;
+#[doc = "DEVALTD_LK (rw) register accessor: Device Alternate Function D Lock Register (DEVALTD_LK)\n\nYou can [`read`](crate::Reg::read) this register and get [`devaltd_lk::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`devaltd_lk::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@devaltd_lk`]
+module"]
+#[doc(alias = "DEVALTD_LK")]
+pub type DevaltdLk = crate::Reg<devaltd_lk::DevaltdLkSpec>;
+#[doc = "Device Alternate Function D Lock Register (DEVALTD_LK)"]
+pub mod devaltd_lk;
+#[doc = "DEVALTG_LK (rw) register accessor: Device Alternate Function G Lock Register (DEVALTG_LK)\n\nYou can [`read`](crate::Reg::read) this register and get [`devaltg_lk::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`devaltg_lk::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@devaltg_lk`]
+module"]
+#[doc(alias = "DEVALTG_LK")]
+pub type DevaltgLk = crate::Reg<devaltg_lk::DevaltgLkSpec>;
+#[doc = "Device Alternate Function G Lock Register (DEVALTG_LK)"]
+pub mod devaltg_lk;
