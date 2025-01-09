@@ -30,7 +30,7 @@ variants:
           name: CODE_RAM_alias
           range:
             # The start address of the memory (inclusive).
-            start: 0x20080000
+            start: 0x20060000
             # The end address of the memory (inclusive).
             end: 0x200BFFFF
           # List of cores that can access this region
