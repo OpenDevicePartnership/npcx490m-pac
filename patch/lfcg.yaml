@@ -4,7 +4,7 @@ LFCG:
       LFCGCTL:
         resetValue: 0x01
       HFRDI:
-        resetValue: 0x01FF
+        resetValue: 0x01FB
       HFRDF:
         resetValue: 0xA055
       FRCDIV:

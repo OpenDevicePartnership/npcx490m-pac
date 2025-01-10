@@ -2,7 +2,7 @@ HFCG:
   _modify:
     _registers:
       HFCGML:
-        resetValue: 0xDA
+        resetValue: 0xCA
       HFCGMH:
         resetValue: 0x0A
       HFCGN:
