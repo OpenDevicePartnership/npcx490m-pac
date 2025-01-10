@@ -18,10 +18,10 @@ pub type EcSciSlW<'a, REG> = crate::BitWriter<'a, REG>;
 pub type NoPwrgdR = crate::BitReader;
 #[doc = "Field `NO_PWRGD` writer - No PWRGD Select"]
 pub type NoPwrgdW<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `RST_OUT_SL` reader - RESET_OUT Select"]
-pub type RstOutSlR = crate::BitReader;
-#[doc = "Field `RST_OUT_SL` writer - RESET_OUT Select"]
-pub type RstOutSlW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `PWROFF_SL` reader - PWROFF Select"]
+pub type PwroffSlR = crate::BitReader;
+#[doc = "Field `PWROFF_SL` writer - PWROFF Select"]
+pub type PwroffSlW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CLKRN_SL` reader - CLKRUN Select"]
 pub type ClkrnSlR = crate::BitReader;
 #[doc = "Field `CLKRN_SL` writer - CLKRUN Select"]
@@ -51,10 +51,10 @@ impl R {
     pub fn no_pwrgd(&self) -> NoPwrgdR {
         NoPwrgdR::new(((self.bits >> 4) & 1) != 0)
     }
-    #[doc = "Bit 5 - RESET_OUT Select"]
+    #[doc = "Bit 5 - PWROFF Select"]
     #[inline(always)]
-    pub fn rst_out_sl(&self) -> RstOutSlR {
-        RstOutSlR::new(((self.bits >> 5) & 1) != 0)
+    pub fn pwroff_sl(&self) -> PwroffSlR {
+        PwroffSlR::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - CLKRUN Select"]
     #[inline(always)]
@@ -75,9 +75,9 @@ impl core::fmt::Debug for R {
             .field("smi_sl", &self.smi_sl())
             .field("ec_sci_sl", &self.ec_sci_sl())
             .field("no_pwrgd", &self.no_pwrgd())
-            .field("rst_out_sl", &self.rst_out_sl())
             .field("clkrn_sl", &self.clkrn_sl())
             .field("no_lpc_espi", &self.no_lpc_espi())
+            .field("pwroff_sl", &self.pwroff_sl())
             .finish()
     }
 }
@@ -102,10 +102,10 @@ impl W {
     pub fn no_pwrgd(&mut self) -> NoPwrgdW<Devalt1Spec> {
         NoPwrgdW::new(self, 4)
     }
-    #[doc = "Bit 5 - RESET_OUT Select"]
+    #[doc = "Bit 5 - PWROFF Select"]
     #[inline(always)]
-    pub fn rst_out_sl(&mut self) -> RstOutSlW<Devalt1Spec> {
-        RstOutSlW::new(self, 5)
+    pub fn pwroff_sl(&mut self) -> PwroffSlW<Devalt1Spec> {
+        PwroffSlW::new(self, 5)
     }
     #[doc = "Bit 6 - CLKRUN Select"]
     #[inline(always)]

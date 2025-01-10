@@ -94,10 +94,6 @@ pub type Itim32_5RstLkW<'a, REG> = crate::BitWriter<'a, REG>;
 pub type Itim32_6RstLkR = crate::BitReader;
 #[doc = "Field `ITIM32_6_RST_LK` writer - ITIM32-6 Reset Lock"]
 pub type Itim32_6RstLkW<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `MIWU3_RST_LK` reader - MIWU3 Reset Lock"]
-pub type Miwu3RstLkR = crate::BitReader;
-#[doc = "Field `MIWU3_RST_LK` writer - MIWU3 Reset Lock"]
-pub type Miwu3RstLkW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MTC_RST_LK` reader - MTC Reset Lock"]
 pub type MtcRstLkR = crate::BitReader;
 #[doc = "Field `MTC_RST_LK` writer - MTC Reset Lock"]
@@ -238,11 +234,6 @@ impl R {
     pub fn itim32_6_rst_lk(&self) -> Itim32_6RstLkR {
         Itim32_6RstLkR::new(((self.bits >> 23) & 1) != 0)
     }
-    #[doc = "Bit 24 - MIWU3 Reset Lock"]
-    #[inline(always)]
-    pub fn miwu3_rst_lk(&self) -> Miwu3RstLkR {
-        Miwu3RstLkR::new(((self.bits >> 24) & 1) != 0)
-    }
     #[doc = "Bit 25 - MTC Reset Lock"]
     #[inline(always)]
     pub fn mtc_rst_lk(&self) -> MtcRstLkR {
@@ -301,7 +292,6 @@ impl core::fmt::Debug for R {
             .field("itim32_4_rst_lk", &self.itim32_4_rst_lk())
             .field("itim32_5_rst_lk", &self.itim32_5_rst_lk())
             .field("itim32_6_rst_lk", &self.itim32_6_rst_lk())
-            .field("miwu3_rst_lk", &self.miwu3_rst_lk())
             .field("mtc_rst_lk", &self.mtc_rst_lk())
             .field("miwu0_rst_lk", &self.miwu0_rst_lk())
             .field("miwu1_rst_lk", &self.miwu1_rst_lk())
@@ -426,11 +416,6 @@ impl W {
     #[inline(always)]
     pub fn itim32_6_rst_lk(&mut self) -> Itim32_6RstLkW<SwrstCtl1LkSpec> {
         Itim32_6RstLkW::new(self, 23)
-    }
-    #[doc = "Bit 24 - MIWU3 Reset Lock"]
-    #[inline(always)]
-    pub fn miwu3_rst_lk(&mut self) -> Miwu3RstLkW<SwrstCtl1LkSpec> {
-        Miwu3RstLkW::new(self, 24)
     }
     #[doc = "Bit 25 - MTC Reset Lock"]
     #[inline(always)]

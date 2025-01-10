@@ -74,14 +74,18 @@ pub type DevRstLkW<'a, REG> = crate::BitWriter<'a, REG>;
 pub type SyscfgRstLkR = crate::BitReader;
 #[doc = "Field `SYSCFG_RST_LK` writer - SYSCFG Reset Lock"]
 pub type SyscfgRstLkW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SBY_RST_LK` reader - Standby Reset Lock"]
+pub type SbyRstLkR = crate::BitReader;
+#[doc = "Field `SBY_RST_LK` writer - Standby Reset Lock"]
+pub type SbyRstLkW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BBRM_RST_LK` reader - BBRM Reset Lock"]
 pub type BbrmRstLkR = crate::BitReader;
 #[doc = "Field `BBRM_RST_LK` writer - BBRM Reset Lock"]
 pub type BbrmRstLkW<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `SHAB_RST_LK` reader - SHAb Reset Lock"]
-pub type ShabRstLkR = crate::BitReader;
-#[doc = "Field `SHAB_RST_LK` writer - SHAb Reset Lock"]
-pub type ShabRstLkW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SHA2b_RST_LK` reader - SHAb Reset Lock"]
+pub type Sha2bRstLkR = crate::BitReader;
+#[doc = "Field `SHA2b_RST_LK` writer - SHAb Reset Lock"]
+pub type Sha2bRstLkW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OTPI_RST_LK` reader - OTPI Reset Lock"]
 pub type OtpiRstLkR = crate::BitReader;
 #[doc = "Field `OTPI_RST_LK` writer - OTPI Reset Lock"]
@@ -90,10 +94,10 @@ pub type OtpiRstLkW<'a, REG> = crate::BitWriter<'a, REG>;
 pub type RngRstLkR = crate::BitReader;
 #[doc = "Field `RNG_RST_LK` writer - RNG Reset Lock"]
 pub type RngRstLkW<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `SHAA_RST_LK` reader - SHAa Reset Lock"]
-pub type ShaaRstLkR = crate::BitReader;
-#[doc = "Field `SHAA_RST_LK` writer - SHAa Reset Lock"]
-pub type ShaaRstLkW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SHA2a_RST_LK` reader - SHAa Reset Lock"]
+pub type Sha2aRstLkR = crate::BitReader;
+#[doc = "Field `SHA2a_RST_LK` writer - SHAa Reset Lock"]
+pub type Sha2aRstLkW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PKA_RST_LK` reader - PKA Reset Lock"]
 pub type PkaRstLkR = crate::BitReader;
 #[doc = "Field `PKA_RST_LK` writer - PKA Reset Lock"]
@@ -193,6 +197,11 @@ impl R {
     pub fn syscfg_rst_lk(&self) -> SyscfgRstLkR {
         SyscfgRstLkR::new(((self.bits >> 23) & 1) != 0)
     }
+    #[doc = "Bit 24 - Standby Reset Lock"]
+    #[inline(always)]
+    pub fn sby_rst_lk(&self) -> SbyRstLkR {
+        SbyRstLkR::new(((self.bits >> 24) & 1) != 0)
+    }
     #[doc = "Bit 25 - BBRM Reset Lock"]
     #[inline(always)]
     pub fn bbrm_rst_lk(&self) -> BbrmRstLkR {
@@ -200,8 +209,8 @@ impl R {
     }
     #[doc = "Bit 26 - SHAb Reset Lock"]
     #[inline(always)]
-    pub fn shab_rst_lk(&self) -> ShabRstLkR {
-        ShabRstLkR::new(((self.bits >> 26) & 1) != 0)
+    pub fn sha2b_rst_lk(&self) -> Sha2bRstLkR {
+        Sha2bRstLkR::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 27 - OTPI Reset Lock"]
     #[inline(always)]
@@ -215,8 +224,8 @@ impl R {
     }
     #[doc = "Bit 29 - SHAa Reset Lock"]
     #[inline(always)]
-    pub fn shaa_rst_lk(&self) -> ShaaRstLkR {
-        ShaaRstLkR::new(((self.bits >> 29) & 1) != 0)
+    pub fn sha2a_rst_lk(&self) -> Sha2aRstLkR {
+        Sha2aRstLkR::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 30 - PKA Reset Lock"]
     #[inline(always)]
@@ -252,12 +261,13 @@ impl core::fmt::Debug for R {
             .field("dev_rst_lk", &self.dev_rst_lk())
             .field("syscfg_rst_lk", &self.syscfg_rst_lk())
             .field("bbrm_rst_lk", &self.bbrm_rst_lk())
-            .field("shab_rst_lk", &self.shab_rst_lk())
+            .field("sha2b_rst_lk", &self.sha2b_rst_lk())
             .field("otpi_rst_lk", &self.otpi_rst_lk())
             .field("rng_rst_lk", &self.rng_rst_lk())
-            .field("shaa_rst_lk", &self.shaa_rst_lk())
+            .field("sha2a_rst_lk", &self.sha2a_rst_lk())
             .field("pka_rst_lk", &self.pka_rst_lk())
             .field("aes_rst_lk", &self.aes_rst_lk())
+            .field("sby_rst_lk", &self.sby_rst_lk())
             .finish()
     }
 }
@@ -352,6 +362,11 @@ impl W {
     pub fn syscfg_rst_lk(&mut self) -> SyscfgRstLkW<SwrstCtl3LkSpec> {
         SyscfgRstLkW::new(self, 23)
     }
+    #[doc = "Bit 24 - Standby Reset Lock"]
+    #[inline(always)]
+    pub fn sby_rst_lk(&mut self) -> SbyRstLkW<SwrstCtl3LkSpec> {
+        SbyRstLkW::new(self, 24)
+    }
     #[doc = "Bit 25 - BBRM Reset Lock"]
     #[inline(always)]
     pub fn bbrm_rst_lk(&mut self) -> BbrmRstLkW<SwrstCtl3LkSpec> {
@@ -359,8 +374,8 @@ impl W {
     }
     #[doc = "Bit 26 - SHAb Reset Lock"]
     #[inline(always)]
-    pub fn shab_rst_lk(&mut self) -> ShabRstLkW<SwrstCtl3LkSpec> {
-        ShabRstLkW::new(self, 26)
+    pub fn sha2b_rst_lk(&mut self) -> Sha2bRstLkW<SwrstCtl3LkSpec> {
+        Sha2bRstLkW::new(self, 26)
     }
     #[doc = "Bit 27 - OTPI Reset Lock"]
     #[inline(always)]
@@ -374,8 +389,8 @@ impl W {
     }
     #[doc = "Bit 29 - SHAa Reset Lock"]
     #[inline(always)]
-    pub fn shaa_rst_lk(&mut self) -> ShaaRstLkW<SwrstCtl3LkSpec> {
-        ShaaRstLkW::new(self, 29)
+    pub fn sha2a_rst_lk(&mut self) -> Sha2aRstLkW<SwrstCtl3LkSpec> {
+        Sha2aRstLkW::new(self, 29)
     }
     #[doc = "Bit 30 - PKA Reset Lock"]
     #[inline(always)]

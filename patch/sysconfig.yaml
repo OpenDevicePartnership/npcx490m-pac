@@ -1,4 +1,51 @@
 SYS CONFIG:
+  _modify:
+    _registers:
+      DEVCNT:
+        resetValue: 0xC0
+      STRPST:
+        access: read-only
+  
+  DEVCNT:
+    _delete:
+      - SHD_TRIS_MODE
+      - PVT_SPI_TRIS
+      - SHD_SPI_TRIS
+    _add:
+      F_SPI_TRIS:
+        description: SPI Flash Interface TRI-STATE
+        bitOffset: 6
+        bitWidth: 1
+      F_TRIS_MODE:
+        description: SPI Flash TRI-STATE Mode
+        bitOffset: 0
+        bitWidth: 1
+  
+  STRPST:
+    _delete:
+      - NJEN
+    _add:
+      nGP_SEL:
+        description: Gang Programmer Mode Select
+        bitOffset: 6
+        bitWidth: 1
+  
+  RSTCTL:
+    _add:
+      DBGRST_STS:
+        description: Debugger Reset Status
+        bitOffset: 1
+        bitWidth: 1
+
+  DEV_CTL4:
+    _delete:
+      - SHD_SPI_SLLK
+    _add:
+      F_SPI_SLLK:
+        description: SPI Flash Interface-Select Lock
+        bitOffset: 2
+        bitWidth: 1
+
   DEVALT0:
     _delete:
       - PVT_SPI_CS1
@@ -25,11 +72,204 @@ SYS CONFIG:
         bitOffset: 3
         bitWidth: 1
 
-  DEVALTC:
+  DEVALT1:
+    _delete:
+      - RST_OUT_SL
     _add:
+      PWROFF_SL:
+        description: PWROFF Select
+        bitOffset: 5
+        bitWidth: 1
+  
+  DEVALT3:
+    _delete:
+      - PS2_3_SL
+      - TB2_SL1
+    _modify:
+      TA1_TACH1_SL1:
+        name: TA1_SL1
+      TB1_TACH2_SL1:
+        name: TB1_SL1
+  
+  DEVALT4:
+    _modify:
+      PWM2_PWM_OUT_SL:
+        name: PWM2_SL
+      PWM3_LED3_SL:
+        name: PWM3_SL
+      PWM4_LED0_SL:
+        name: PWM4_SL
+      PWM5_LED1_SL:
+        name: PWM5_SL
+      PWM6_LED2_SL:
+        name: PWM6_SL
+
+  DEVALT5:
+    _add:
+      GP_LK:
+        description: Gang Programmer Mode Lock
+        bitOffset: 7
+        bitWidth: 1
+
+  DEVALTC:
+    _delete:
+      - NO_PVT_CS0
+    _modify:
+      TA1_TACH1_SL2:
+        name: TA1_SL2
+      TB1_TACH2_SL2:
+        name: TB1_SL2
+    _add:
+      GPIO97_SL:
+        description: GPIO97 Select
+        bitOffset: 2
+        bitWidth: 1
       SHI_SL:
         description: SHI Interface-Select
         bitOffset: 1
+        bitWidth: 1
+
+  DEVALTH:
+    _delete:
+      - DCY_IN_SL
+      - DCY_ECHO_OD
+      - DCY_ECHO_SL
+
+  PUPD_EN1:
+    _delete:
+      - PVT_SPI_PUD_EN
+      - SHD_SPI_PUD_EN
+    _add:
+      SHI_PUD_EN:
+        description: SHI Interface Pull-Up/Down Enable
+        bitOffset: 4
+        bitWidth: 1
+      SPIP_PD_EN:
+        description: SPI Peripheral Pull-Down Enable
+        bitOffset: 6
+        bitWidth: 1
+      F_SPI_PUD_EN:
+        description: SPI Flash Pull-Up/Down Enable
+        bitOffset: 7
+        bitWidth: 1
+
+  BL_CTL:
+    _delete:
+      - WDG_RST_IND
+      - DBG_RST_IND
+      - BL_SRORD
+  
+  SWRST_CTL1:
+    _delete:
+      - MIWU3_RST
+  
+  SWRST_CTL2:
+    _add:
+      SHI_RST:
+        description: SHI Reset
+        bitOffset: 2
+        bitWidth: 1
+  
+  SWRST_CTL3:
+    _modify:
+      SHAB_RST:
+        name: SHA2b_RST
+      SHAA_RST:
+        name: SHA2a_RST
+    _add:
+      I3C_RD_RST:
+        description: I3CI Modules Reset Detector, Reset
+        bitOffset: 7
+        bitWidth: 1
+      SBY_RST:
+        description: Standby Reset
+        bitOffset: 24
+        bitWidth: 1
+
+  LV_GPIO_CTL1:
+    _delete:
+      - G65_LV
+  
+  LV_GPIO_CTL2:
+    _delete:
+      - G84_LV
+      - G85_LV
+  
+  LV_GPIO_CTL3:
+    _delete:
+      - G71_LV
+  
+  LV_GPIO_CTL4:
+    _delete:
+      - G86_LV
+  
+  LV_GPIO_CTLP:
+    _add:
+      PSL_IN1_LV:
+        description: PSL_IN1 Low-Voltage Select
+        bitOffset: 0
+        bitWidth: 1
+      PSL_IN2_LV:
+        description: PSL_IN2 Low-Voltage Select
+        bitOffset: 1
+        bitWidth: 1
+      PSL_IN3_LV:
+        description: PSL_IN3 Low-Voltage Select
+        bitOffset: 2
+        bitWidth: 1
+      PSL_IN4_LV:
+        description: PSL_IN4 Low-Voltage Select
+        bitOffset: 3
+        bitWidth: 1
+  
+  DEVALT0_LK:
+    _delete:
+      - NO_PVT_SPI_LK
+    _add:
+      GPIO_NO_SPIP_LK:
+        description: GPIO No SPI Peripheral-Select Lock
+        bitOffset: 3
+        bitWidth: 1
+  
+  DEVALT3_LK:
+    _modify:
+      TA1_TACH1_SL1_LK:
+        name: TA1_SL1_LK
+
+  DEVALT4_LK:
+    _modify:
+      PWM2_PWM_OUT_SL_LK:
+        name: PWM2_SL_LK
+      PWM3_LED3_SL_LK:
+        name: PWM3_SL_LK
+  
+  DEVALTH_LK:
+    _delete:
+      - DCY_IN_SL_LK
+      - DCY_ECHO_OD_LK
+      - DCY_ECHO_SL_LK
+  
+  SWRST_CTL1_LK:
+    _delete:
+      - MIWU3_RST_LK
+
+  SWRST_CTL2_LK:
+    _add:
+      SHI_RST_LK:
+        description: SHI Reset Lock
+        bitOffset: 2
+        bitWidth: 1
+  
+  SWRST_CTL3_LK:
+    _modify:
+      SHAB_RST_LK:
+        name: SHA2b_RST_LK
+      SHAA_RST_LK:
+        name: SHA2a_RST_LK
+    _add:
+      SBY_RST_LK:
+        description: Standby Reset Lock
+        bitOffset: 24
         bitWidth: 1
 
   _add:
@@ -158,6 +398,17 @@ SYS CONFIG:
             description: VSBY NO_VCC1_RST Bit Lock
             bitOffset: 5
             bitWidth: 1
+      GP_CTL:
+        description: Gang Programmer Control Register (GP_CTL)
+        addressOffset: 0x122
+        size: 8
+        resetValue: 0x06
+        resetMask: 0xFF
+        fields:
+          GP_EN:
+            description: Gang Programmer Enable
+            bitOffset: 0
+            bitWidth: 4
 
     _interrupts:
       RNG:

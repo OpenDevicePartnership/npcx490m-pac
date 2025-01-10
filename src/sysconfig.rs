@@ -50,7 +50,8 @@ pub struct RegisterBlock {
     _reserved37: [u8; 0x0c],
     jen_ctl1: JenCtl1,
     jen_ctl2: JenCtl2,
-    _reserved39: [u8; 0x2e],
+    gp_ctl: GpCtl,
+    _reserved40: [u8; 0x2d],
     lv_gpio_ctl0: LvGpioCtl0,
     lv_gpio_ctl1: LvGpioCtl1,
     lv_gpio_ctl2: LvGpioCtl2,
@@ -63,29 +64,29 @@ pub struct RegisterBlock {
     lv_gpio_ctl9: LvGpioCtl9,
     lv_gpio_ctla: LvGpioCtla,
     lv_gpio_ctlb: LvGpioCtlb,
-    _reserved51: [u8; 0x04],
+    _reserved52: [u8; 0x04],
     lv_gpio_ctlp: LvGpioCtlp,
-    _reserved52: [u8; 0xaf],
+    _reserved53: [u8; 0xaf],
     devalt0_lk: Devalt0Lk,
-    _reserved53: [u8; 0x01],
+    _reserved54: [u8; 0x01],
     devalt2_lk: Devalt2Lk,
     devalt3_lk: Devalt3Lk,
     devalt4_lk: Devalt4Lk,
     devalt5_lk: Devalt5Lk,
     devalt6_lk: Devalt6Lk,
-    _reserved58: [u8; 0x04],
+    _reserved59: [u8; 0x04],
     devaltb_lk: DevaltbLk,
-    _reserved59: [u8; 0x01],
-    devaltd_lk: DevaltdLk,
     _reserved60: [u8; 0x01],
+    devaltd_lk: DevaltdLk,
+    _reserved61: [u8; 0x01],
     devaltf_lk: DevaltfLk,
     devaltg_lk: DevaltgLk,
     devalth_lk: DevalthLk,
     devaltj_lk: DevaltjLk,
     devaltk_lk: DevaltkLk,
-    _reserved65: [u8; 0x02],
+    _reserved66: [u8; 0x02],
     devaltn_lk: DevaltnLk,
-    _reserved66: [u8; 0xdd],
+    _reserved67: [u8; 0xdd],
     swrst_ctl1_lk: SwrstCtl1Lk,
     swrst_ctl2_lk: SwrstCtl2Lk,
     swrst_ctl3_lk: SwrstCtl3Lk,
@@ -287,6 +288,11 @@ impl RegisterBlock {
     pub const fn jen_ctl2(&self) -> &JenCtl2 {
         &self.jen_ctl2
     }
+    #[doc = "0x122 - Gang Programmer Control Register (GP_CTL)"]
+    #[inline(always)]
+    pub const fn gp_ctl(&self) -> &GpCtl {
+        &self.gp_ctl
+    }
     #[doc = "0x150 - Low-Voltage GPIO Pins Control 0 Register (LV_GPIO_CTL0)"]
     #[inline(always)]
     pub const fn lv_gpio_ctl0(&self) -> &LvGpioCtl0 {
@@ -449,7 +455,7 @@ module"]
 pub type Devcnt = crate::Reg<devcnt::DevcntSpec>;
 #[doc = "Device Control Register (DEVCNT)"]
 pub mod devcnt;
-#[doc = "STRPST (rw) register accessor: Straps Status Register (STRPST)\n\nYou can [`read`](crate::Reg::read) this register and get [`strpst::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`strpst::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@strpst`]
+#[doc = "STRPST (r) register accessor: Straps Status Register (STRPST)\n\nYou can [`read`](crate::Reg::read) this register and get [`strpst::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@strpst`]
 module"]
 #[doc(alias = "STRPST")]
 pub type Strpst = crate::Reg<strpst::StrpstSpec>;
@@ -863,3 +869,9 @@ module"]
 pub type DevaltgLk = crate::Reg<devaltg_lk::DevaltgLkSpec>;
 #[doc = "Device Alternate Function G Lock Register (DEVALTG_LK)"]
 pub mod devaltg_lk;
+#[doc = "GP_CTL (rw) register accessor: Gang Programmer Control Register (GP_CTL)\n\nYou can [`read`](crate::Reg::read) this register and get [`gp_ctl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gp_ctl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gp_ctl`]
+module"]
+#[doc(alias = "GP_CTL")]
+pub type GpCtl = crate::Reg<gp_ctl::GpCtlSpec>;
+#[doc = "Gang Programmer Control Register (GP_CTL)"]
+pub mod gp_ctl;

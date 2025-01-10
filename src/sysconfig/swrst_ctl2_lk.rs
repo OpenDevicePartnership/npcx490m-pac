@@ -6,6 +6,10 @@ pub type W = crate::W<SwrstCtl2LkSpec>;
 pub type PmcRstLkR = crate::BitReader;
 #[doc = "Field `PMC_RST_LK` writer - PMC Reset Lock"]
 pub type PmcRstLkW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SHI_RST_LK` reader - SHI Reset Lock"]
+pub type ShiRstLkR = crate::BitReader;
+#[doc = "Field `SHI_RST_LK` writer - SHI Reset Lock"]
+pub type ShiRstLkW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPIP_RST_LK` reader - SPI Peripheral Reset Lock"]
 pub type SpipRstLkR = crate::BitReader;
 #[doc = "Field `SPIP_RST_LK` writer - SPI Peripheral Reset Lock"]
@@ -127,6 +131,11 @@ impl R {
     #[inline(always)]
     pub fn pmc_rst_lk(&self) -> PmcRstLkR {
         PmcRstLkR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 2 - SHI Reset Lock"]
+    #[inline(always)]
+    pub fn shi_rst_lk(&self) -> ShiRstLkR {
+        ShiRstLkR::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - SPI Peripheral Reset Lock"]
     #[inline(always)]
@@ -308,6 +317,7 @@ impl core::fmt::Debug for R {
             .field("ps2_rst_lk", &self.ps2_rst_lk())
             .field("sdp_rst_lk", &self.sdp_rst_lk())
             .field("kbs_rst_lk", &self.kbs_rst_lk())
+            .field("shi_rst_lk", &self.shi_rst_lk())
             .finish()
     }
 }
@@ -316,6 +326,11 @@ impl W {
     #[inline(always)]
     pub fn pmc_rst_lk(&mut self) -> PmcRstLkW<SwrstCtl2LkSpec> {
         PmcRstLkW::new(self, 0)
+    }
+    #[doc = "Bit 2 - SHI Reset Lock"]
+    #[inline(always)]
+    pub fn shi_rst_lk(&mut self) -> ShiRstLkW<SwrstCtl2LkSpec> {
+        ShiRstLkW::new(self, 2)
     }
     #[doc = "Bit 3 - SPI Peripheral Reset Lock"]
     #[inline(always)]

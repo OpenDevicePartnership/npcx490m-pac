@@ -18,14 +18,18 @@ pub type I2c4_1PueW<'a, REG> = crate::BitWriter<'a, REG>;
 pub type I2c7_1PueR = crate::BitReader;
 #[doc = "Field `I2C7_1_PUE` writer - SMBus/I2C Module 7, Bus 1 Pull-Up Enable"]
 pub type I2c7_1PueW<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `PVT_SPI_PUD_EN` reader - Private SPI Flash Pull-Up/Down Enable"]
-pub type PvtSpiPudEnR = crate::BitReader;
-#[doc = "Field `PVT_SPI_PUD_EN` writer - Private SPI Flash Pull-Up/Down Enable"]
-pub type PvtSpiPudEnW<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `SHD_SPI_PUD_EN` reader - Shared SPI Flash Pull-Up/Down Enable"]
-pub type ShdSpiPudEnR = crate::BitReader;
-#[doc = "Field `SHD_SPI_PUD_EN` writer - Shared SPI Flash Pull-Up/Down Enable"]
-pub type ShdSpiPudEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SHI_PUD_EN` reader - SHI Interface Pull-Up/Down Enable"]
+pub type ShiPudEnR = crate::BitReader;
+#[doc = "Field `SHI_PUD_EN` writer - SHI Interface Pull-Up/Down Enable"]
+pub type ShiPudEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SPIP_PD_EN` reader - SPI Peripheral Pull-Down Enable"]
+pub type SpipPdEnR = crate::BitReader;
+#[doc = "Field `SPIP_PD_EN` writer - SPI Peripheral Pull-Down Enable"]
+pub type SpipPdEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `F_SPI_PUD_EN` reader - SPI Flash Pull-Up/Down Enable"]
+pub type FSpiPudEnR = crate::BitReader;
+#[doc = "Field `F_SPI_PUD_EN` writer - SPI Flash Pull-Up/Down Enable"]
+pub type FSpiPudEnW<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - SMBus/I2C Module 6, Bus 1 Pull-Up Enable"]
     #[inline(always)]
@@ -47,15 +51,20 @@ impl R {
     pub fn i2c7_1_pue(&self) -> I2c7_1PueR {
         I2c7_1PueR::new(((self.bits >> 3) & 1) != 0)
     }
-    #[doc = "Bit 6 - Private SPI Flash Pull-Up/Down Enable"]
+    #[doc = "Bit 4 - SHI Interface Pull-Up/Down Enable"]
     #[inline(always)]
-    pub fn pvt_spi_pud_en(&self) -> PvtSpiPudEnR {
-        PvtSpiPudEnR::new(((self.bits >> 6) & 1) != 0)
+    pub fn shi_pud_en(&self) -> ShiPudEnR {
+        ShiPudEnR::new(((self.bits >> 4) & 1) != 0)
     }
-    #[doc = "Bit 7 - Shared SPI Flash Pull-Up/Down Enable"]
+    #[doc = "Bit 6 - SPI Peripheral Pull-Down Enable"]
     #[inline(always)]
-    pub fn shd_spi_pud_en(&self) -> ShdSpiPudEnR {
-        ShdSpiPudEnR::new(((self.bits >> 7) & 1) != 0)
+    pub fn spip_pd_en(&self) -> SpipPdEnR {
+        SpipPdEnR::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bit 7 - SPI Flash Pull-Up/Down Enable"]
+    #[inline(always)]
+    pub fn f_spi_pud_en(&self) -> FSpiPudEnR {
+        FSpiPudEnR::new(((self.bits >> 7) & 1) != 0)
     }
 }
 #[cfg(feature = "debug")]
@@ -66,8 +75,9 @@ impl core::fmt::Debug for R {
             .field("i2c5_1_pue", &self.i2c5_1_pue())
             .field("i2c4_1_pue", &self.i2c4_1_pue())
             .field("i2c7_1_pue", &self.i2c7_1_pue())
-            .field("pvt_spi_pud_en", &self.pvt_spi_pud_en())
-            .field("shd_spi_pud_en", &self.shd_spi_pud_en())
+            .field("shi_pud_en", &self.shi_pud_en())
+            .field("spip_pd_en", &self.spip_pd_en())
+            .field("f_spi_pud_en", &self.f_spi_pud_en())
             .finish()
     }
 }
@@ -92,15 +102,20 @@ impl W {
     pub fn i2c7_1_pue(&mut self) -> I2c7_1PueW<PupdEn1Spec> {
         I2c7_1PueW::new(self, 3)
     }
-    #[doc = "Bit 6 - Private SPI Flash Pull-Up/Down Enable"]
+    #[doc = "Bit 4 - SHI Interface Pull-Up/Down Enable"]
     #[inline(always)]
-    pub fn pvt_spi_pud_en(&mut self) -> PvtSpiPudEnW<PupdEn1Spec> {
-        PvtSpiPudEnW::new(self, 6)
+    pub fn shi_pud_en(&mut self) -> ShiPudEnW<PupdEn1Spec> {
+        ShiPudEnW::new(self, 4)
     }
-    #[doc = "Bit 7 - Shared SPI Flash Pull-Up/Down Enable"]
+    #[doc = "Bit 6 - SPI Peripheral Pull-Down Enable"]
     #[inline(always)]
-    pub fn shd_spi_pud_en(&mut self) -> ShdSpiPudEnW<PupdEn1Spec> {
-        ShdSpiPudEnW::new(self, 7)
+    pub fn spip_pd_en(&mut self) -> SpipPdEnW<PupdEn1Spec> {
+        SpipPdEnW::new(self, 6)
+    }
+    #[doc = "Bit 7 - SPI Flash Pull-Up/Down Enable"]
+    #[inline(always)]
+    pub fn f_spi_pud_en(&mut self) -> FSpiPudEnW<PupdEn1Spec> {
+        FSpiPudEnW::new(self, 7)
     }
 }
 #[doc = "Pull-Up/Pull-Down Enable 1 Register (PUPD_EN1)\n\nYou can [`read`](crate::Reg::read) this register and get [`pupd_en1::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pupd_en1::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
