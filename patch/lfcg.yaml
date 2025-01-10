@@ -2,7 +2,7 @@ LFCG:
   _modify:
     _registers:
       LFCGCTL:
-        resetValue: 0x01
+        resetValue: 0x81
       HFRDI:
         resetValue: 0x01FB
       HFRDF:
