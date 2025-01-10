@@ -6,18 +6,6 @@ pub type W = crate::W<DevalthSpec>;
 pub type FcsiTypR = crate::BitReader;
 #[doc = "Field `FCSI_TYP` writer - FLM_CSI Type"]
 pub type FcsiTypW<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `DCY_IN_SL` reader - DCY_IN Select"]
-pub type DcyInSlR = crate::BitReader;
-#[doc = "Field `DCY_IN_SL` writer - DCY_IN Select"]
-pub type DcyInSlW<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `DCY_ECHO_OD` reader - DCY_ECHO Open-Drain Select"]
-pub type DcyEchoOdR = crate::BitReader;
-#[doc = "Field `DCY_ECHO_OD` writer - DCY_ECHO Open-Drain Select"]
-pub type DcyEchoOdW<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `DCY_ECHO_SL` reader - DCY_ECHO Select"]
-pub type DcyEchoSlR = crate::BitReader;
-#[doc = "Field `DCY_ECHO_SL` writer - DCY_ECHO Select"]
-pub type DcyEchoSlW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FLM_QUAD` reader - FLM Quad Interface-Select"]
 pub type FlmQuadR = crate::BitReader;
 #[doc = "Field `FLM_QUAD` writer - FLM Quad Interface-Select"]
@@ -35,21 +23,6 @@ impl R {
     #[inline(always)]
     pub fn fcsi_typ(&self) -> FcsiTypR {
         FcsiTypR::new(((self.bits >> 1) & 1) != 0)
-    }
-    #[doc = "Bit 2 - DCY_IN Select"]
-    #[inline(always)]
-    pub fn dcy_in_sl(&self) -> DcyInSlR {
-        DcyInSlR::new(((self.bits >> 2) & 1) != 0)
-    }
-    #[doc = "Bit 3 - DCY_ECHO Open-Drain Select"]
-    #[inline(always)]
-    pub fn dcy_echo_od(&self) -> DcyEchoOdR {
-        DcyEchoOdR::new(((self.bits >> 3) & 1) != 0)
-    }
-    #[doc = "Bit 4 - DCY_ECHO Select"]
-    #[inline(always)]
-    pub fn dcy_echo_sl(&self) -> DcyEchoSlR {
-        DcyEchoSlR::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - FLM Quad Interface-Select"]
     #[inline(always)]
@@ -72,9 +45,6 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DEVALTH")
             .field("fcsi_typ", &self.fcsi_typ())
-            .field("dcy_in_sl", &self.dcy_in_sl())
-            .field("dcy_echo_od", &self.dcy_echo_od())
-            .field("dcy_echo_sl", &self.dcy_echo_sl())
             .field("flm_quad", &self.flm_quad())
             .field("flm_mon_md", &self.flm_mon_md())
             .field("flm_sl", &self.flm_sl())
@@ -86,21 +56,6 @@ impl W {
     #[inline(always)]
     pub fn fcsi_typ(&mut self) -> FcsiTypW<DevalthSpec> {
         FcsiTypW::new(self, 1)
-    }
-    #[doc = "Bit 2 - DCY_IN Select"]
-    #[inline(always)]
-    pub fn dcy_in_sl(&mut self) -> DcyInSlW<DevalthSpec> {
-        DcyInSlW::new(self, 2)
-    }
-    #[doc = "Bit 3 - DCY_ECHO Open-Drain Select"]
-    #[inline(always)]
-    pub fn dcy_echo_od(&mut self) -> DcyEchoOdW<DevalthSpec> {
-        DcyEchoOdW::new(self, 3)
-    }
-    #[doc = "Bit 4 - DCY_ECHO Select"]
-    #[inline(always)]
-    pub fn dcy_echo_sl(&mut self) -> DcyEchoSlW<DevalthSpec> {
-        DcyEchoSlW::new(self, 4)
     }
     #[doc = "Bit 5 - FLM Quad Interface-Select"]
     #[inline(always)]

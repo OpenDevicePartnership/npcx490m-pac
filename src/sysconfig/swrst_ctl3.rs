@@ -22,6 +22,10 @@ pub type I3c2RstW<'a, REG> = crate::BitWriter<'a, REG>;
 pub type I3c3RstR = crate::BitReader;
 #[doc = "Field `I3C3_RST` writer - I3CI3 Reset"]
 pub type I3c3RstW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `I3C_RD_RST` reader - I3CI Modules Reset Detector, Reset"]
+pub type I3cRdRstR = crate::BitReader;
+#[doc = "Field `I3C_RD_RST` writer - I3CI Modules Reset Detector, Reset"]
+pub type I3cRdRstW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `MSWC_RST` reader - MSWC Reset"]
 pub type MswcRstR = crate::BitReader;
 #[doc = "Field `MSWC_RST` writer - MSWC Reset"]
@@ -74,14 +78,18 @@ pub type DevRstW<'a, REG> = crate::BitWriter<'a, REG>;
 pub type SyscfgRstR = crate::BitReader;
 #[doc = "Field `SYSCFG_RST` writer - SYSCFG Reset"]
 pub type SyscfgRstW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SBY_RST` reader - Standby Reset"]
+pub type SbyRstR = crate::BitReader;
+#[doc = "Field `SBY_RST` writer - Standby Reset"]
+pub type SbyRstW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BBRM_RST` reader - BBRM Reset"]
 pub type BbrmRstR = crate::BitReader;
 #[doc = "Field `BBRM_RST` writer - BBRM Reset"]
 pub type BbrmRstW<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `SHAB_RST` reader - SHAb Reset"]
-pub type ShabRstR = crate::BitReader;
-#[doc = "Field `SHAB_RST` writer - SHAb Reset"]
-pub type ShabRstW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SHA2b_RST` reader - SHAb Reset"]
+pub type Sha2bRstR = crate::BitReader;
+#[doc = "Field `SHA2b_RST` writer - SHAb Reset"]
+pub type Sha2bRstW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OTPI_RST` reader - OTPI Reset"]
 pub type OtpiRstR = crate::BitReader;
 #[doc = "Field `OTPI_RST` writer - OTPI Reset"]
@@ -90,10 +98,10 @@ pub type OtpiRstW<'a, REG> = crate::BitWriter<'a, REG>;
 pub type RngRstR = crate::BitReader;
 #[doc = "Field `RNG_RST` writer - RNG Reset"]
 pub type RngRstW<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `SHAA_RST` reader - SHAa Reset"]
-pub type ShaaRstR = crate::BitReader;
-#[doc = "Field `SHAA_RST` writer - SHAa Reset"]
-pub type ShaaRstW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SHA2a_RST` reader - SHAa Reset"]
+pub type Sha2aRstR = crate::BitReader;
+#[doc = "Field `SHA2a_RST` writer - SHAa Reset"]
+pub type Sha2aRstW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PKA_RST` reader - PKA Reset"]
 pub type PkaRstR = crate::BitReader;
 #[doc = "Field `PKA_RST` writer - PKA Reset"]
@@ -127,6 +135,11 @@ impl R {
     #[inline(always)]
     pub fn i3c3_rst(&self) -> I3c3RstR {
         I3c3RstR::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bit 7 - I3CI Modules Reset Detector, Reset"]
+    #[inline(always)]
+    pub fn i3c_rd_rst(&self) -> I3cRdRstR {
+        I3cRdRstR::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bit 8 - MSWC Reset"]
     #[inline(always)]
@@ -193,6 +206,11 @@ impl R {
     pub fn syscfg_rst(&self) -> SyscfgRstR {
         SyscfgRstR::new(((self.bits >> 23) & 1) != 0)
     }
+    #[doc = "Bit 24 - Standby Reset"]
+    #[inline(always)]
+    pub fn sby_rst(&self) -> SbyRstR {
+        SbyRstR::new(((self.bits >> 24) & 1) != 0)
+    }
     #[doc = "Bit 25 - BBRM Reset"]
     #[inline(always)]
     pub fn bbrm_rst(&self) -> BbrmRstR {
@@ -200,8 +218,8 @@ impl R {
     }
     #[doc = "Bit 26 - SHAb Reset"]
     #[inline(always)]
-    pub fn shab_rst(&self) -> ShabRstR {
-        ShabRstR::new(((self.bits >> 26) & 1) != 0)
+    pub fn sha2b_rst(&self) -> Sha2bRstR {
+        Sha2bRstR::new(((self.bits >> 26) & 1) != 0)
     }
     #[doc = "Bit 27 - OTPI Reset"]
     #[inline(always)]
@@ -215,8 +233,8 @@ impl R {
     }
     #[doc = "Bit 29 - SHAa Reset"]
     #[inline(always)]
-    pub fn shaa_rst(&self) -> ShaaRstR {
-        ShaaRstR::new(((self.bits >> 29) & 1) != 0)
+    pub fn sha2a_rst(&self) -> Sha2aRstR {
+        Sha2aRstR::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 30 - PKA Reset"]
     #[inline(always)]
@@ -252,12 +270,14 @@ impl core::fmt::Debug for R {
             .field("dev_rst", &self.dev_rst())
             .field("syscfg_rst", &self.syscfg_rst())
             .field("bbrm_rst", &self.bbrm_rst())
-            .field("shab_rst", &self.shab_rst())
+            .field("sha2b_rst", &self.sha2b_rst())
             .field("otpi_rst", &self.otpi_rst())
             .field("rng_rst", &self.rng_rst())
-            .field("shaa_rst", &self.shaa_rst())
+            .field("sha2a_rst", &self.sha2a_rst())
             .field("pka_rst", &self.pka_rst())
             .field("aes_rst", &self.aes_rst())
+            .field("i3c_rd_rst", &self.i3c_rd_rst())
+            .field("sby_rst", &self.sby_rst())
             .finish()
     }
 }
@@ -286,6 +306,11 @@ impl W {
     #[inline(always)]
     pub fn i3c3_rst(&mut self) -> I3c3RstW<SwrstCtl3Spec> {
         I3c3RstW::new(self, 6)
+    }
+    #[doc = "Bit 7 - I3CI Modules Reset Detector, Reset"]
+    #[inline(always)]
+    pub fn i3c_rd_rst(&mut self) -> I3cRdRstW<SwrstCtl3Spec> {
+        I3cRdRstW::new(self, 7)
     }
     #[doc = "Bit 8 - MSWC Reset"]
     #[inline(always)]
@@ -352,6 +377,11 @@ impl W {
     pub fn syscfg_rst(&mut self) -> SyscfgRstW<SwrstCtl3Spec> {
         SyscfgRstW::new(self, 23)
     }
+    #[doc = "Bit 24 - Standby Reset"]
+    #[inline(always)]
+    pub fn sby_rst(&mut self) -> SbyRstW<SwrstCtl3Spec> {
+        SbyRstW::new(self, 24)
+    }
     #[doc = "Bit 25 - BBRM Reset"]
     #[inline(always)]
     pub fn bbrm_rst(&mut self) -> BbrmRstW<SwrstCtl3Spec> {
@@ -359,8 +389,8 @@ impl W {
     }
     #[doc = "Bit 26 - SHAb Reset"]
     #[inline(always)]
-    pub fn shab_rst(&mut self) -> ShabRstW<SwrstCtl3Spec> {
-        ShabRstW::new(self, 26)
+    pub fn sha2b_rst(&mut self) -> Sha2bRstW<SwrstCtl3Spec> {
+        Sha2bRstW::new(self, 26)
     }
     #[doc = "Bit 27 - OTPI Reset"]
     #[inline(always)]
@@ -374,8 +404,8 @@ impl W {
     }
     #[doc = "Bit 29 - SHAa Reset"]
     #[inline(always)]
-    pub fn shaa_rst(&mut self) -> ShaaRstW<SwrstCtl3Spec> {
-        ShaaRstW::new(self, 29)
+    pub fn sha2a_rst(&mut self) -> Sha2aRstW<SwrstCtl3Spec> {
+        Sha2aRstW::new(self, 29)
     }
     #[doc = "Bit 30 - PKA Reset"]
     #[inline(always)]

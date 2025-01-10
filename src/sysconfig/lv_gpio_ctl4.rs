@@ -2,10 +2,6 @@
 pub type R = crate::R<LvGpioCtl4Spec>;
 #[doc = "Register `LV_GPIO_CTL4` writer"]
 pub type W = crate::W<LvGpioCtl4Spec>;
-#[doc = "Field `G86_LV` reader - GPIO86/CR_SOUT2/I2C4_SDA0 Low-Voltage Select"]
-pub type G86LvR = crate::BitReader;
-#[doc = "Field `G86_LV` writer - GPIO86/CR_SOUT2/I2C4_SDA0 Low-Voltage Select"]
-pub type G86LvW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `GC2_LV` reader - GPIOC2/I2C6_SCL0 Low-Voltage Select"]
 pub type Gc2LvR = crate::BitReader;
 #[doc = "Field `GC2_LV` writer - GPIOC2/I2C6_SCL0 Low-Voltage Select"]
@@ -35,11 +31,6 @@ pub type Ge3LvR = crate::BitReader;
 #[doc = "Field `GE3_LV` writer - GPIOE3/I2C6_SDA1 Low-Voltage Select"]
 pub type Ge3LvW<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
-    #[doc = "Bit 0 - GPIO86/CR_SOUT2/I2C4_SDA0 Low-Voltage Select"]
-    #[inline(always)]
-    pub fn g86_lv(&self) -> G86LvR {
-        G86LvR::new((self.bits & 1) != 0)
-    }
     #[doc = "Bit 1 - GPIOC2/I2C6_SCL0 Low-Voltage Select"]
     #[inline(always)]
     pub fn gc2_lv(&self) -> Gc2LvR {
@@ -80,7 +71,6 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LV_GPIO_CTL4")
-            .field("g86_lv", &self.g86_lv())
             .field("gc2_lv", &self.gc2_lv())
             .field("gf3_lv", &self.gf3_lv())
             .field("gf2_lv", &self.gf2_lv())
@@ -92,11 +82,6 @@ impl core::fmt::Debug for R {
     }
 }
 impl W {
-    #[doc = "Bit 0 - GPIO86/CR_SOUT2/I2C4_SDA0 Low-Voltage Select"]
-    #[inline(always)]
-    pub fn g86_lv(&mut self) -> G86LvW<LvGpioCtl4Spec> {
-        G86LvW::new(self, 0)
-    }
     #[doc = "Bit 1 - GPIOC2/I2C6_SCL0 Low-Voltage Select"]
     #[inline(always)]
     pub fn gc2_lv(&mut self) -> Gc2LvW<LvGpioCtl4Spec> {

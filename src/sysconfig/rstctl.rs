@@ -6,6 +6,10 @@ pub type W = crate::W<RstctlSpec>;
 pub type Vcc1RstStsR = crate::BitReader;
 #[doc = "Field `VCC1_RST_STS` writer - VCC1_RST Status"]
 pub type Vcc1RstStsW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `DBGRST_STS` reader - Debugger Reset Status"]
+pub type DbgrstStsR = crate::BitReader;
+#[doc = "Field `DBGRST_STS` writer - Debugger Reset Status"]
+pub type DbgrstStsW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FORCE_VCC1_PURST` reader - Force VCC1 Power-Up Reset"]
 pub type ForceVcc1PurstR = crate::BitReader;
 #[doc = "Field `FORCE_VCC1_PURST` writer - Force VCC1 Power-Up Reset"]
@@ -27,6 +31,11 @@ impl R {
     #[inline(always)]
     pub fn vcc1_rst_sts(&self) -> Vcc1RstStsR {
         Vcc1RstStsR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - Debugger Reset Status"]
+    #[inline(always)]
+    pub fn dbgrst_sts(&self) -> DbgrstStsR {
+        DbgrstStsR::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Force VCC1 Power-Up Reset"]
     #[inline(always)]
@@ -58,6 +67,7 @@ impl core::fmt::Debug for R {
             .field("scratch", &self.scratch())
             .field("lreset_pltrst_mode", &self.lreset_pltrst_mode())
             .field("hiprst_mode", &self.hiprst_mode())
+            .field("dbgrst_sts", &self.dbgrst_sts())
             .finish()
     }
 }
@@ -66,6 +76,11 @@ impl W {
     #[inline(always)]
     pub fn vcc1_rst_sts(&mut self) -> Vcc1RstStsW<RstctlSpec> {
         Vcc1RstStsW::new(self, 0)
+    }
+    #[doc = "Bit 1 - Debugger Reset Status"]
+    #[inline(always)]
+    pub fn dbgrst_sts(&mut self) -> DbgrstStsW<RstctlSpec> {
+        DbgrstStsW::new(self, 1)
     }
     #[doc = "Bit 2 - Force VCC1 Power-Up Reset"]
     #[inline(always)]

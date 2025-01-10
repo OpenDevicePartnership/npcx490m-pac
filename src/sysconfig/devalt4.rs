@@ -10,26 +10,26 @@ pub type Pwm0SlW<'a, REG> = crate::BitWriter<'a, REG>;
 pub type Pwm1SlR = crate::BitReader;
 #[doc = "Field `PWM1_SL` writer - PWM1 Select"]
 pub type Pwm1SlW<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `PWM2_PWM_OUT_SL` reader - PWM2_TACH2PWM_OUT Select"]
-pub type Pwm2PwmOutSlR = crate::BitReader;
-#[doc = "Field `PWM2_PWM_OUT_SL` writer - PWM2_TACH2PWM_OUT Select"]
-pub type Pwm2PwmOutSlW<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `PWM3_LED3_SL` reader - PWM3_LED3 Select"]
-pub type Pwm3Led3SlR = crate::BitReader;
-#[doc = "Field `PWM3_LED3_SL` writer - PWM3_LED3 Select"]
-pub type Pwm3Led3SlW<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `PWM4_LED0_SL` reader - PWM4_LED0 Select"]
-pub type Pwm4Led0SlR = crate::BitReader;
-#[doc = "Field `PWM4_LED0_SL` writer - PWM4_LED0 Select"]
-pub type Pwm4Led0SlW<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `PWM5_LED1_SL` reader - PWM5_LED1 Select"]
-pub type Pwm5Led1SlR = crate::BitReader;
-#[doc = "Field `PWM5_LED1_SL` writer - PWM5_LED1 Select"]
-pub type Pwm5Led1SlW<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `PWM6_LED2_SL` reader - PWM6_LED2 Select"]
-pub type Pwm6Led2SlR = crate::BitReader;
-#[doc = "Field `PWM6_LED2_SL` writer - PWM6_LED2 Select"]
-pub type Pwm6Led2SlW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `PWM2_SL` reader - PWM2_TACH2PWM_OUT Select"]
+pub type Pwm2SlR = crate::BitReader;
+#[doc = "Field `PWM2_SL` writer - PWM2_TACH2PWM_OUT Select"]
+pub type Pwm2SlW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `PWM3_SL` reader - PWM3_LED3 Select"]
+pub type Pwm3SlR = crate::BitReader;
+#[doc = "Field `PWM3_SL` writer - PWM3_LED3 Select"]
+pub type Pwm3SlW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `PWM4_SL` reader - PWM4_LED0 Select"]
+pub type Pwm4SlR = crate::BitReader;
+#[doc = "Field `PWM4_SL` writer - PWM4_LED0 Select"]
+pub type Pwm4SlW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `PWM5_SL` reader - PWM5_LED1 Select"]
+pub type Pwm5SlR = crate::BitReader;
+#[doc = "Field `PWM5_SL` writer - PWM5_LED1 Select"]
+pub type Pwm5SlW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `PWM6_SL` reader - PWM6_LED2 Select"]
+pub type Pwm6SlR = crate::BitReader;
+#[doc = "Field `PWM6_SL` writer - PWM6_LED2 Select"]
+pub type Pwm6SlW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PWM7_SL` reader - PWM7 Select"]
 pub type Pwm7SlR = crate::BitReader;
 #[doc = "Field `PWM7_SL` writer - PWM7 Select"]
@@ -47,28 +47,28 @@ impl R {
     }
     #[doc = "Bit 2 - PWM2_TACH2PWM_OUT Select"]
     #[inline(always)]
-    pub fn pwm2_pwm_out_sl(&self) -> Pwm2PwmOutSlR {
-        Pwm2PwmOutSlR::new(((self.bits >> 2) & 1) != 0)
+    pub fn pwm2_sl(&self) -> Pwm2SlR {
+        Pwm2SlR::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - PWM3_LED3 Select"]
     #[inline(always)]
-    pub fn pwm3_led3_sl(&self) -> Pwm3Led3SlR {
-        Pwm3Led3SlR::new(((self.bits >> 3) & 1) != 0)
+    pub fn pwm3_sl(&self) -> Pwm3SlR {
+        Pwm3SlR::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - PWM4_LED0 Select"]
     #[inline(always)]
-    pub fn pwm4_led0_sl(&self) -> Pwm4Led0SlR {
-        Pwm4Led0SlR::new(((self.bits >> 4) & 1) != 0)
+    pub fn pwm4_sl(&self) -> Pwm4SlR {
+        Pwm4SlR::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - PWM5_LED1 Select"]
     #[inline(always)]
-    pub fn pwm5_led1_sl(&self) -> Pwm5Led1SlR {
-        Pwm5Led1SlR::new(((self.bits >> 5) & 1) != 0)
+    pub fn pwm5_sl(&self) -> Pwm5SlR {
+        Pwm5SlR::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - PWM6_LED2 Select"]
     #[inline(always)]
-    pub fn pwm6_led2_sl(&self) -> Pwm6Led2SlR {
-        Pwm6Led2SlR::new(((self.bits >> 6) & 1) != 0)
+    pub fn pwm6_sl(&self) -> Pwm6SlR {
+        Pwm6SlR::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - PWM7 Select"]
     #[inline(always)]
@@ -82,11 +82,11 @@ impl core::fmt::Debug for R {
         f.debug_struct("DEVALT4")
             .field("pwm0_sl", &self.pwm0_sl())
             .field("pwm1_sl", &self.pwm1_sl())
-            .field("pwm2_pwm_out_sl", &self.pwm2_pwm_out_sl())
-            .field("pwm3_led3_sl", &self.pwm3_led3_sl())
-            .field("pwm4_led0_sl", &self.pwm4_led0_sl())
-            .field("pwm5_led1_sl", &self.pwm5_led1_sl())
-            .field("pwm6_led2_sl", &self.pwm6_led2_sl())
+            .field("pwm2_sl", &self.pwm2_sl())
+            .field("pwm3_sl", &self.pwm3_sl())
+            .field("pwm4_sl", &self.pwm4_sl())
+            .field("pwm5_sl", &self.pwm5_sl())
+            .field("pwm6_sl", &self.pwm6_sl())
             .field("pwm7_sl", &self.pwm7_sl())
             .finish()
     }
@@ -104,28 +104,28 @@ impl W {
     }
     #[doc = "Bit 2 - PWM2_TACH2PWM_OUT Select"]
     #[inline(always)]
-    pub fn pwm2_pwm_out_sl(&mut self) -> Pwm2PwmOutSlW<Devalt4Spec> {
-        Pwm2PwmOutSlW::new(self, 2)
+    pub fn pwm2_sl(&mut self) -> Pwm2SlW<Devalt4Spec> {
+        Pwm2SlW::new(self, 2)
     }
     #[doc = "Bit 3 - PWM3_LED3 Select"]
     #[inline(always)]
-    pub fn pwm3_led3_sl(&mut self) -> Pwm3Led3SlW<Devalt4Spec> {
-        Pwm3Led3SlW::new(self, 3)
+    pub fn pwm3_sl(&mut self) -> Pwm3SlW<Devalt4Spec> {
+        Pwm3SlW::new(self, 3)
     }
     #[doc = "Bit 4 - PWM4_LED0 Select"]
     #[inline(always)]
-    pub fn pwm4_led0_sl(&mut self) -> Pwm4Led0SlW<Devalt4Spec> {
-        Pwm4Led0SlW::new(self, 4)
+    pub fn pwm4_sl(&mut self) -> Pwm4SlW<Devalt4Spec> {
+        Pwm4SlW::new(self, 4)
     }
     #[doc = "Bit 5 - PWM5_LED1 Select"]
     #[inline(always)]
-    pub fn pwm5_led1_sl(&mut self) -> Pwm5Led1SlW<Devalt4Spec> {
-        Pwm5Led1SlW::new(self, 5)
+    pub fn pwm5_sl(&mut self) -> Pwm5SlW<Devalt4Spec> {
+        Pwm5SlW::new(self, 5)
     }
     #[doc = "Bit 6 - PWM6_LED2 Select"]
     #[inline(always)]
-    pub fn pwm6_led2_sl(&mut self) -> Pwm6Led2SlW<Devalt4Spec> {
-        Pwm6Led2SlW::new(self, 6)
+    pub fn pwm6_sl(&mut self) -> Pwm6SlW<Devalt4Spec> {
+        Pwm6SlW::new(self, 6)
     }
     #[doc = "Bit 7 - PWM7 Select"]
     #[inline(always)]

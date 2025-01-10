@@ -22,6 +22,10 @@ pub type Intrud2SlW<'a, REG> = crate::BitWriter<'a, REG>;
 pub type StraceEnR = crate::BitReader;
 #[doc = "Field `STRACE_EN` writer - Serial Trace Enable"]
 pub type StraceEnW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `GP_LK` reader - Gang Programmer Mode Lock"]
+pub type GpLkR = crate::BitReader;
+#[doc = "Field `GP_LK` writer - Gang Programmer Mode Lock"]
+pub type GpLkW<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Parallel Trace Signals Enable"]
     #[inline(always)]
@@ -48,6 +52,11 @@ impl R {
     pub fn strace_en(&self) -> StraceEnR {
         StraceEnR::new(((self.bits >> 4) & 1) != 0)
     }
+    #[doc = "Bit 7 - Gang Programmer Mode Lock"]
+    #[inline(always)]
+    pub fn gp_lk(&self) -> GpLkR {
+        GpLkR::new(((self.bits >> 7) & 1) != 0)
+    }
 }
 #[cfg(feature = "debug")]
 impl core::fmt::Debug for R {
@@ -58,6 +67,7 @@ impl core::fmt::Debug for R {
             .field("intrud1_sl", &self.intrud1_sl())
             .field("intrud2_sl", &self.intrud2_sl())
             .field("strace_en", &self.strace_en())
+            .field("gp_lk", &self.gp_lk())
             .finish()
     }
 }
@@ -86,6 +96,11 @@ impl W {
     #[inline(always)]
     pub fn strace_en(&mut self) -> StraceEnW<Devalt5Spec> {
         StraceEnW::new(self, 4)
+    }
+    #[doc = "Bit 7 - Gang Programmer Mode Lock"]
+    #[inline(always)]
+    pub fn gp_lk(&mut self) -> GpLkW<Devalt5Spec> {
+        GpLkW::new(self, 7)
     }
 }
 #[doc = "Device Alternate Function 5 Register (DEVALT5)\n\nYou can [`read`](crate::Reg::read) this register and get [`devalt5::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`devalt5::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

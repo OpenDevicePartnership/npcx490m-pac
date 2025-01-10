@@ -6,6 +6,10 @@ pub type W = crate::W<SwrstCtl2Spec>;
 pub type PmcRstR = crate::BitReader;
 #[doc = "Field `PMC_RST` writer - PMC Reset"]
 pub type PmcRstW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SHI_RST` reader - SHI Reset"]
+pub type ShiRstR = crate::BitReader;
+#[doc = "Field `SHI_RST` writer - SHI Reset"]
+pub type ShiRstW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SPIP_RST` reader - SPI Peripheral Reset"]
 pub type SpipRstR = crate::BitReader;
 #[doc = "Field `SPIP_RST` writer - SPI Peripheral Reset"]
@@ -127,6 +131,11 @@ impl R {
     #[inline(always)]
     pub fn pmc_rst(&self) -> PmcRstR {
         PmcRstR::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 2 - SHI Reset"]
+    #[inline(always)]
+    pub fn shi_rst(&self) -> ShiRstR {
+        ShiRstR::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - SPI Peripheral Reset"]
     #[inline(always)]
@@ -308,6 +317,7 @@ impl core::fmt::Debug for R {
             .field("ps2_rst", &self.ps2_rst())
             .field("sdp_rst", &self.sdp_rst())
             .field("kbs_rst", &self.kbs_rst())
+            .field("shi_rst", &self.shi_rst())
             .finish()
     }
 }
@@ -316,6 +326,11 @@ impl W {
     #[inline(always)]
     pub fn pmc_rst(&mut self) -> PmcRstW<SwrstCtl2Spec> {
         PmcRstW::new(self, 0)
+    }
+    #[doc = "Bit 2 - SHI Reset"]
+    #[inline(always)]
+    pub fn shi_rst(&mut self) -> ShiRstW<SwrstCtl2Spec> {
+        ShiRstW::new(self, 2)
     }
     #[doc = "Bit 3 - SPI Peripheral Reset"]
     #[inline(always)]

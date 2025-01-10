@@ -26,10 +26,6 @@ pub type G36LvW<'a, REG> = crate::BitWriter<'a, REG>;
 pub type G64LvR = crate::BitReader;
 #[doc = "Field `G64_LV` writer - GPIO64/CR_SIN1 Low-Voltage Select"]
 pub type G64LvW<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `G65_LV` reader - GPIO65/CR_SOUT1 Low-Voltage Select"]
-pub type G65LvR = crate::BitReader;
-#[doc = "Field `G65_LV` writer - GPIO65/CR_SOUT1 Low-Voltage Select"]
-pub type G65LvW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `G66_LV` reader - GPIO66 Low-Voltage Select"]
 pub type G66LvR = crate::BitReader;
 #[doc = "Field `G66_LV` writer - GPIO66 Low-Voltage Select"]
@@ -65,11 +61,6 @@ impl R {
     pub fn g64_lv(&self) -> G64LvR {
         G64LvR::new(((self.bits >> 5) & 1) != 0)
     }
-    #[doc = "Bit 6 - GPIO65/CR_SOUT1 Low-Voltage Select"]
-    #[inline(always)]
-    pub fn g65_lv(&self) -> G65LvR {
-        G65LvR::new(((self.bits >> 6) & 1) != 0)
-    }
     #[doc = "Bit 7 - GPIO66 Low-Voltage Select"]
     #[inline(always)]
     pub fn g66_lv(&self) -> G66LvR {
@@ -86,7 +77,6 @@ impl core::fmt::Debug for R {
             .field("gd0_lv", &self.gd0_lv())
             .field("g36_lv", &self.g36_lv())
             .field("g64_lv", &self.g64_lv())
-            .field("g65_lv", &self.g65_lv())
             .field("g66_lv", &self.g66_lv())
             .finish()
     }
@@ -121,11 +111,6 @@ impl W {
     #[inline(always)]
     pub fn g64_lv(&mut self) -> G64LvW<LvGpioCtl1Spec> {
         G64LvW::new(self, 5)
-    }
-    #[doc = "Bit 6 - GPIO65/CR_SOUT1 Low-Voltage Select"]
-    #[inline(always)]
-    pub fn g65_lv(&mut self) -> G65LvW<LvGpioCtl1Spec> {
-        G65LvW::new(self, 6)
     }
     #[doc = "Bit 7 - GPIO66 Low-Voltage Select"]
     #[inline(always)]

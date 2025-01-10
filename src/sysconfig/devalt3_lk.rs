@@ -10,10 +10,10 @@ pub type Ps2_1SlLkW<'a, REG> = crate::BitWriter<'a, REG>;
 pub type Ps2_2SlLkR = crate::BitReader;
 #[doc = "Field `PS2_2_SL_LK` writer - PS/2 #2 Select Lock"]
 pub type Ps2_2SlLkW<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TA1_TACH1_SL1_LK` reader - TA1_TACH1 Select-1 Lock"]
-pub type Ta1Tach1Sl1LkR = crate::BitReader;
-#[doc = "Field `TA1_TACH1_SL1_LK` writer - TA1_TACH1 Select-1 Lock"]
-pub type Ta1Tach1Sl1LkW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TA1_SL1_LK` reader - TA1_TACH1 Select-1 Lock"]
+pub type Ta1Sl1LkR = crate::BitReader;
+#[doc = "Field `TA1_SL1_LK` writer - TA1_TACH1 Select-1 Lock"]
+pub type Ta1Sl1LkW<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 1 - PS/2 #1 Select Lock"]
     #[inline(always)]
@@ -27,8 +27,8 @@ impl R {
     }
     #[doc = "Bit 4 - TA1_TACH1 Select-1 Lock"]
     #[inline(always)]
-    pub fn ta1_tach1_sl1_lk(&self) -> Ta1Tach1Sl1LkR {
-        Ta1Tach1Sl1LkR::new(((self.bits >> 4) & 1) != 0)
+    pub fn ta1_sl1_lk(&self) -> Ta1Sl1LkR {
+        Ta1Sl1LkR::new(((self.bits >> 4) & 1) != 0)
     }
 }
 #[cfg(feature = "debug")]
@@ -37,7 +37,7 @@ impl core::fmt::Debug for R {
         f.debug_struct("DEVALT3_LK")
             .field("ps2_1_sl_lk", &self.ps2_1_sl_lk())
             .field("ps2_2_sl_lk", &self.ps2_2_sl_lk())
-            .field("ta1_tach1_sl1_lk", &self.ta1_tach1_sl1_lk())
+            .field("ta1_sl1_lk", &self.ta1_sl1_lk())
             .finish()
     }
 }
@@ -54,8 +54,8 @@ impl W {
     }
     #[doc = "Bit 4 - TA1_TACH1 Select-1 Lock"]
     #[inline(always)]
-    pub fn ta1_tach1_sl1_lk(&mut self) -> Ta1Tach1Sl1LkW<Devalt3LkSpec> {
-        Ta1Tach1Sl1LkW::new(self, 4)
+    pub fn ta1_sl1_lk(&mut self) -> Ta1Sl1LkW<Devalt3LkSpec> {
+        Ta1Sl1LkW::new(self, 4)
     }
 }
 #[doc = "Device Alternate Function 3 Lock Register (DEVALT3_LK)\n\nYou can [`read`](crate::Reg::read) this register and get [`devalt3_lk::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`devalt3_lk::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

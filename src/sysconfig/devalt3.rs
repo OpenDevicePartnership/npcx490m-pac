@@ -18,22 +18,18 @@ pub type Ps2_2SlW<'a, REG> = crate::BitWriter<'a, REG>;
 pub type Ps2_3Sl1R = crate::BitReader;
 #[doc = "Field `PS2_3_SL1` writer - PS/2 #3 Select-1"]
 pub type Ps2_3Sl1W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TA1_TACH1_SL1` reader - TA1_TACH1 Select-1"]
-pub type Ta1Tach1Sl1R = crate::BitReader;
-#[doc = "Field `TA1_TACH1_SL1` writer - TA1_TACH1 Select-1"]
-pub type Ta1Tach1Sl1W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TB1_TACH2_SL1` reader - TB1_TACH2PWM_IN Select-1"]
-pub type Tb1Tach2Sl1R = crate::BitReader;
-#[doc = "Field `TB1_TACH2_SL1` writer - TB1_TACH2PWM_IN Select-1"]
-pub type Tb1Tach2Sl1W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TA1_SL1` reader - TA1_TACH1 Select-1"]
+pub type Ta1Sl1R = crate::BitReader;
+#[doc = "Field `TA1_SL1` writer - TA1_TACH1 Select-1"]
+pub type Ta1Sl1W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `TB1_SL1` reader - TB1_TACH2PWM_IN Select-1"]
+pub type Tb1Sl1R = crate::BitReader;
+#[doc = "Field `TB1_SL1` writer - TB1_TACH2PWM_IN Select-1"]
+pub type Tb1Sl1W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TA2_SL1` reader - TA2 Select-1"]
 pub type Ta2Sl1R = crate::BitReader;
 #[doc = "Field `TA2_SL1` writer - TA2 Select-1"]
 pub type Ta2Sl1W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TB2_SL1` reader - TB2 Select-1"]
-pub type Tb2Sl1R = crate::BitReader;
-#[doc = "Field `TB2_SL1` writer - TB2 Select-1"]
-pub type Tb2Sl1W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - PS/2 #0 Select"]
     #[inline(always)]
@@ -57,23 +53,18 @@ impl R {
     }
     #[doc = "Bit 4 - TA1_TACH1 Select-1"]
     #[inline(always)]
-    pub fn ta1_tach1_sl1(&self) -> Ta1Tach1Sl1R {
-        Ta1Tach1Sl1R::new(((self.bits >> 4) & 1) != 0)
+    pub fn ta1_sl1(&self) -> Ta1Sl1R {
+        Ta1Sl1R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - TB1_TACH2PWM_IN Select-1"]
     #[inline(always)]
-    pub fn tb1_tach2_sl1(&self) -> Tb1Tach2Sl1R {
-        Tb1Tach2Sl1R::new(((self.bits >> 5) & 1) != 0)
+    pub fn tb1_sl1(&self) -> Tb1Sl1R {
+        Tb1Sl1R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - TA2 Select-1"]
     #[inline(always)]
     pub fn ta2_sl1(&self) -> Ta2Sl1R {
         Ta2Sl1R::new(((self.bits >> 6) & 1) != 0)
-    }
-    #[doc = "Bit 7 - TB2 Select-1"]
-    #[inline(always)]
-    pub fn tb2_sl1(&self) -> Tb2Sl1R {
-        Tb2Sl1R::new(((self.bits >> 7) & 1) != 0)
     }
 }
 #[cfg(feature = "debug")]
@@ -84,10 +75,9 @@ impl core::fmt::Debug for R {
             .field("ps2_1_sl", &self.ps2_1_sl())
             .field("ps2_2_sl", &self.ps2_2_sl())
             .field("ps2_3_sl1", &self.ps2_3_sl1())
-            .field("ta1_tach1_sl1", &self.ta1_tach1_sl1())
-            .field("tb1_tach2_sl1", &self.tb1_tach2_sl1())
+            .field("ta1_sl1", &self.ta1_sl1())
+            .field("tb1_sl1", &self.tb1_sl1())
             .field("ta2_sl1", &self.ta2_sl1())
-            .field("tb2_sl1", &self.tb2_sl1())
             .finish()
     }
 }
@@ -114,23 +104,18 @@ impl W {
     }
     #[doc = "Bit 4 - TA1_TACH1 Select-1"]
     #[inline(always)]
-    pub fn ta1_tach1_sl1(&mut self) -> Ta1Tach1Sl1W<Devalt3Spec> {
-        Ta1Tach1Sl1W::new(self, 4)
+    pub fn ta1_sl1(&mut self) -> Ta1Sl1W<Devalt3Spec> {
+        Ta1Sl1W::new(self, 4)
     }
     #[doc = "Bit 5 - TB1_TACH2PWM_IN Select-1"]
     #[inline(always)]
-    pub fn tb1_tach2_sl1(&mut self) -> Tb1Tach2Sl1W<Devalt3Spec> {
-        Tb1Tach2Sl1W::new(self, 5)
+    pub fn tb1_sl1(&mut self) -> Tb1Sl1W<Devalt3Spec> {
+        Tb1Sl1W::new(self, 5)
     }
     #[doc = "Bit 6 - TA2 Select-1"]
     #[inline(always)]
     pub fn ta2_sl1(&mut self) -> Ta2Sl1W<Devalt3Spec> {
         Ta2Sl1W::new(self, 6)
-    }
-    #[doc = "Bit 7 - TB2 Select-1"]
-    #[inline(always)]
-    pub fn tb2_sl1(&mut self) -> Tb2Sl1W<Devalt3Spec> {
-        Tb2Sl1W::new(self, 7)
     }
 }
 #[doc = "Device Alternate Function 3 Register (DEVALT3)\n\nYou can [`read`](crate::Reg::read) this register and get [`devalt3::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`devalt3::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]

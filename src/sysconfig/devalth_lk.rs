@@ -6,18 +6,6 @@ pub type W = crate::W<DevalthLkSpec>;
 pub type FcsiTypLkR = crate::BitReader;
 #[doc = "Field `FCSI_TYP_LK` writer - FLM_CSI Type Lock"]
 pub type FcsiTypLkW<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `DCY_IN_SL_LK` reader - DCY_IN Select Lock"]
-pub type DcyInSlLkR = crate::BitReader;
-#[doc = "Field `DCY_IN_SL_LK` writer - DCY_IN Select Lock"]
-pub type DcyInSlLkW<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `DCY_ECHO_OD_LK` reader - DCY_ECHO Open-Drain Select Lock"]
-pub type DcyEchoOdLkR = crate::BitReader;
-#[doc = "Field `DCY_ECHO_OD_LK` writer - DCY_ECHO Open-Drain Select Lock"]
-pub type DcyEchoOdLkW<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `DCY_ECHO_SL_LK` reader - DCY_ECHO Select Lock"]
-pub type DcyEchoSlLkR = crate::BitReader;
-#[doc = "Field `DCY_ECHO_SL_LK` writer - DCY_ECHO Select Lock"]
-pub type DcyEchoSlLkW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `FLM_QUAD_LK` reader - FLM Quad Interface-Select Lock"]
 pub type FlmQuadLkR = crate::BitReader;
 #[doc = "Field `FLM_QUAD_LK` writer - FLM Quad Interface-Select Lock"]
@@ -35,21 +23,6 @@ impl R {
     #[inline(always)]
     pub fn fcsi_typ_lk(&self) -> FcsiTypLkR {
         FcsiTypLkR::new(((self.bits >> 1) & 1) != 0)
-    }
-    #[doc = "Bit 2 - DCY_IN Select Lock"]
-    #[inline(always)]
-    pub fn dcy_in_sl_lk(&self) -> DcyInSlLkR {
-        DcyInSlLkR::new(((self.bits >> 2) & 1) != 0)
-    }
-    #[doc = "Bit 3 - DCY_ECHO Open-Drain Select Lock"]
-    #[inline(always)]
-    pub fn dcy_echo_od_lk(&self) -> DcyEchoOdLkR {
-        DcyEchoOdLkR::new(((self.bits >> 3) & 1) != 0)
-    }
-    #[doc = "Bit 4 - DCY_ECHO Select Lock"]
-    #[inline(always)]
-    pub fn dcy_echo_sl_lk(&self) -> DcyEchoSlLkR {
-        DcyEchoSlLkR::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 5 - FLM Quad Interface-Select Lock"]
     #[inline(always)]
@@ -72,9 +45,6 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DEVALTH_LK")
             .field("fcsi_typ_lk", &self.fcsi_typ_lk())
-            .field("dcy_in_sl_lk", &self.dcy_in_sl_lk())
-            .field("dcy_echo_od_lk", &self.dcy_echo_od_lk())
-            .field("dcy_echo_sl_lk", &self.dcy_echo_sl_lk())
             .field("flm_quad_lk", &self.flm_quad_lk())
             .field("flm_mon_md_lk", &self.flm_mon_md_lk())
             .field("flm_sl_lk", &self.flm_sl_lk())
@@ -86,21 +56,6 @@ impl W {
     #[inline(always)]
     pub fn fcsi_typ_lk(&mut self) -> FcsiTypLkW<DevalthLkSpec> {
         FcsiTypLkW::new(self, 1)
-    }
-    #[doc = "Bit 2 - DCY_IN Select Lock"]
-    #[inline(always)]
-    pub fn dcy_in_sl_lk(&mut self) -> DcyInSlLkW<DevalthLkSpec> {
-        DcyInSlLkW::new(self, 2)
-    }
-    #[doc = "Bit 3 - DCY_ECHO Open-Drain Select Lock"]
-    #[inline(always)]
-    pub fn dcy_echo_od_lk(&mut self) -> DcyEchoOdLkW<DevalthLkSpec> {
-        DcyEchoOdLkW::new(self, 3)
-    }
-    #[doc = "Bit 4 - DCY_ECHO Select Lock"]
-    #[inline(always)]
-    pub fn dcy_echo_sl_lk(&mut self) -> DcyEchoSlLkW<DevalthLkSpec> {
-        DcyEchoSlLkW::new(self, 4)
     }
     #[doc = "Bit 5 - FLM Quad Interface-Select Lock"]
     #[inline(always)]

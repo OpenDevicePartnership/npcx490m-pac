@@ -6,10 +6,10 @@ pub type W = crate::W<DevCtl4Spec>;
 pub type VcioTypSelR = crate::FieldReader;
 #[doc = "Field `VCIO_TYP_SEL` writer - VCIO Supply Type Select"]
 pub type VcioTypSelW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
-#[doc = "Field `SHD_SPI_SLLK` reader - Shared Flash SPI Interface-Select Lock"]
-pub type ShdSpiSllkR = crate::BitReader;
-#[doc = "Field `SHD_SPI_SLLK` writer - Shared Flash SPI Interface-Select Lock"]
-pub type ShdSpiSllkW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `F_SPI_SLLK` reader - SPI Flash Interface-Select Lock"]
+pub type FSpiSllkR = crate::BitReader;
+#[doc = "Field `F_SPI_SLLK` writer - SPI Flash Interface-Select Lock"]
+pub type FSpiSllkW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `WP_IF` reader - Write-Protect Internal Flash"]
 pub type WpIfR = crate::BitReader;
 #[doc = "Field `WP_IF` writer - Write-Protect Internal Flash"]
@@ -24,10 +24,10 @@ impl R {
     pub fn vcio_typ_sel(&self) -> VcioTypSelR {
         VcioTypSelR::new(self.bits & 3)
     }
-    #[doc = "Bit 2 - Shared Flash SPI Interface-Select Lock"]
+    #[doc = "Bit 2 - SPI Flash Interface-Select Lock"]
     #[inline(always)]
-    pub fn shd_spi_sllk(&self) -> ShdSpiSllkR {
-        ShdSpiSllkR::new(((self.bits >> 2) & 1) != 0)
+    pub fn f_spi_sllk(&self) -> FSpiSllkR {
+        FSpiSllkR::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 5 - Write-Protect Internal Flash"]
     #[inline(always)]
@@ -45,9 +45,9 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("DEV_CTL4")
             .field("vcio_typ_sel", &self.vcio_typ_sel())
-            .field("shd_spi_sllk", &self.shd_spi_sllk())
             .field("wp_if", &self.wp_if())
             .field("vcc1_rst_lk", &self.vcc1_rst_lk())
+            .field("f_spi_sllk", &self.f_spi_sllk())
             .finish()
     }
 }
@@ -57,10 +57,10 @@ impl W {
     pub fn vcio_typ_sel(&mut self) -> VcioTypSelW<DevCtl4Spec> {
         VcioTypSelW::new(self, 0)
     }
-    #[doc = "Bit 2 - Shared Flash SPI Interface-Select Lock"]
+    #[doc = "Bit 2 - SPI Flash Interface-Select Lock"]
     #[inline(always)]
-    pub fn shd_spi_sllk(&mut self) -> ShdSpiSllkW<DevCtl4Spec> {
-        ShdSpiSllkW::new(self, 2)
+    pub fn f_spi_sllk(&mut self) -> FSpiSllkW<DevCtl4Spec> {
+        FSpiSllkW::new(self, 2)
     }
     #[doc = "Bit 5 - Write-Protect Internal Flash"]
     #[inline(always)]

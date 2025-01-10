@@ -6,14 +6,6 @@ pub type W = crate::W<LvGpioCtl2Spec>;
 pub type G74LvR = crate::BitReader;
 #[doc = "Field `G74_LV` writer - GPIO74/DCY_IN Low-Voltage Select"]
 pub type G74LvW<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `G84_LV` reader - GPIO84 Low-Voltage Select"]
-pub type G84LvR = crate::BitReader;
-#[doc = "Field `G84_LV` writer - GPIO84 Low-Voltage Select"]
-pub type G84LvW<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `G85_LV` reader - GPIO85/CR_SIN2/I2C4_SCL0 Low-Voltage Select"]
-pub type G85LvR = crate::BitReader;
-#[doc = "Field `G85_LV` writer - GPIO85/CR_SIN2/I2C4_SCL0 Low-Voltage Select"]
-pub type G85LvW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `G73_LV` reader - GPIO73/TA2 Low-Voltage Select"]
 pub type G73LvR = crate::BitReader;
 #[doc = "Field `G73_LV` writer - GPIO73/TA2 Low-Voltage Select"]
@@ -39,16 +31,6 @@ impl R {
     #[inline(always)]
     pub fn g74_lv(&self) -> G74LvR {
         G74LvR::new((self.bits & 1) != 0)
-    }
-    #[doc = "Bit 1 - GPIO84 Low-Voltage Select"]
-    #[inline(always)]
-    pub fn g84_lv(&self) -> G84LvR {
-        G84LvR::new(((self.bits >> 1) & 1) != 0)
-    }
-    #[doc = "Bit 2 - GPIO85/CR_SIN2/I2C4_SCL0 Low-Voltage Select"]
-    #[inline(always)]
-    pub fn g85_lv(&self) -> G85LvR {
-        G85LvR::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - GPIO73/TA2 Low-Voltage Select"]
     #[inline(always)]
@@ -81,8 +63,6 @@ impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("LV_GPIO_CTL2")
             .field("g74_lv", &self.g74_lv())
-            .field("g84_lv", &self.g84_lv())
-            .field("g85_lv", &self.g85_lv())
             .field("g73_lv", &self.g73_lv())
             .field("gc1_lv", &self.gc1_lv())
             .field("gc7_lv", &self.gc7_lv())
@@ -96,16 +76,6 @@ impl W {
     #[inline(always)]
     pub fn g74_lv(&mut self) -> G74LvW<LvGpioCtl2Spec> {
         G74LvW::new(self, 0)
-    }
-    #[doc = "Bit 1 - GPIO84 Low-Voltage Select"]
-    #[inline(always)]
-    pub fn g84_lv(&mut self) -> G84LvW<LvGpioCtl2Spec> {
-        G84LvW::new(self, 1)
-    }
-    #[doc = "Bit 2 - GPIO85/CR_SIN2/I2C4_SCL0 Low-Voltage Select"]
-    #[inline(always)]
-    pub fn g85_lv(&mut self) -> G85LvW<LvGpioCtl2Spec> {
-        G85LvW::new(self, 2)
     }
     #[doc = "Bit 3 - GPIO73/TA2 Low-Voltage Select"]
     #[inline(always)]
