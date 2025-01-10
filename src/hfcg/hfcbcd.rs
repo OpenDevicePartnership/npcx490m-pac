@@ -71,7 +71,7 @@ impl crate::Writable for HfcbcdSpec {
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
 }
-#[doc = "`reset()` method sets HFCBCD to value 0"]
+#[doc = "`reset()` method sets HFCBCD to value 0x60"]
 impl crate::Resettable for HfcbcdSpec {
-    const RESET_VALUE: u8 = 0;
+    const RESET_VALUE: u8 = 0x60;
 }

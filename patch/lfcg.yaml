@@ -1,0 +1,80 @@
+LFCG:
+  _modify:
+    _registers:
+      LFCGCTL:
+        resetValue: 0x81
+      HFRDI:
+        resetValue: 0x01FB
+      HFRDF:
+        resetValue: 0xA055
+      FRCDIV:
+        resetValue: 0x00E3
+      DIVCOR1:
+        resetValue: 0x009E
+      DIVCOR2:
+        resetValue: 0x0129
+      LFCGCTL2:
+        resetValue: 0x81
+
+  LFCGCTL:
+    _add:
+      XTCLK_VAL:
+        bitRange: "[7:7]"
+        description: |
+          When set to 1, this bit indicates that the XTOSC clock (XTCLK)
+          is valid (i.e., toggling and stable).
+        access: read-only
+
+    XTCLK_VAL:
+      _name: XTOSC_Clock_Valid
+      NotYetStabilized: [0, Not yet stabilized]
+      Stabilized: [1, Stabilized]
+
+  HFRDF:
+    _add:
+      HFRDF:
+        bitRange: "[15:0]"
+        description: |
+          High-Frequency Reference Divisor F.
+          The contents of this field should be changed only when the high-frequency reference clock is not selected.
+
+          HFRDF is locked for writes (RO) when LFLOC bit is set to 1.
+        access: read-write
+    HFRDF:
+      _name: ReferenceClock
+      Mhz19_2: [0xF800, A 19.2 MHz PCI_CLK clock is used as the reference]
+      Mhz24: [0x3600, A 24 MHz PCI_CLK clock is used as the reference]
+      Mhz25: [0x7840, A 25 MHz PCI_CLK clock is used as the reference]
+      Mhz33_333:
+        [0xA055, A 33.333 MHz PCI_CLK clock is used as the reference (default)]
+
+  LFCGCTL2:
+    _add:
+      XT_OSC_SL_EN:
+        bitRange: "[6:6]"
+        description: |
+          Crystal Oscillator Selection Enable for LFCLK clock
+        access: read-write
+      XT_OSC:
+        bitRange: "[0:0]"
+        description: |
+          This bit both indicates that the crystal oscillator option
+          is supported and enables the operation of the crystal oscillator circuit. In addition, it controls the source of
+          the XTCLK signal.
+        access: read-write
+
+    XT_OSC_SL_EN:
+      _name: XT_OSC_SL_EN
+      LFCG: [0, LFCG clock is the source of LFCLK clock (default)]
+      XTOSC: [
+          1,
+          "XTOSC clock (XTCLK either from XTOSC if the crystal circuit is mounted and XT_OSC bit is set to
+          1 or, bypassing XTOSC, from 32KXIN/32KCLKIN pin if the crystal circuit is not mounted and
+          XT_OSC bit is set to 0) is the source of LFCLK clock",
+        ]
+
+    XT_OSC:
+      _name: XT_OSC
+      NotSupportedOrDisabled:
+        [0, The crystal oscillator is not supported or disabled]
+      SupportedAndEnabled: [1, The crystal oscillator is supported and enabled]

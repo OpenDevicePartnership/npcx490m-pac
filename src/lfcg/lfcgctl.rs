@@ -18,6 +18,43 @@ pub type UdcpW<'a, REG> = crate::BitWriter<'a, REG>;
 pub type LflocR = crate::BitReader;
 #[doc = "Field `LFLOC` writer - LFCG Register Write Lock"]
 pub type LflocW<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "When set to 1, this bit indicates that the XTOSC clock (XTCLK) is valid (i.e., toggling and stable).\n\nValue on reset: 1"]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum XtoscClockValid {
+    #[doc = "0: Not yet stabilized"]
+    NotYetStabilized = 0,
+    #[doc = "1: Stabilized"]
+    Stabilized = 1,
+}
+impl From<XtoscClockValid> for bool {
+    #[inline(always)]
+    fn from(variant: XtoscClockValid) -> Self {
+        variant as u8 != 0
+    }
+}
+#[doc = "Field `XTCLK_VAL` reader - When set to 1, this bit indicates that the XTOSC clock (XTCLK) is valid (i.e., toggling and stable)."]
+pub type XtclkValR = crate::BitReader<XtoscClockValid>;
+impl XtclkValR {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub const fn variant(&self) -> XtoscClockValid {
+        match self.bits {
+            false => XtoscClockValid::NotYetStabilized,
+            true => XtoscClockValid::Stabilized,
+        }
+    }
+    #[doc = "Not yet stabilized"]
+    #[inline(always)]
+    pub fn is_not_yet_stabilized(&self) -> bool {
+        *self == XtoscClockValid::NotYetStabilized
+    }
+    #[doc = "Stabilized"]
+    #[inline(always)]
+    pub fn is_stabilized(&self) -> bool {
+        *self == XtoscClockValid::Stabilized
+    }
+}
 impl R {
     #[doc = "Bit 2 - LPC Clock Reference Enable"]
     #[inline(always)]
@@ -39,6 +76,11 @@ impl R {
     pub fn lfloc(&self) -> LflocR {
         LflocR::new(((self.bits >> 5) & 1) != 0)
     }
+    #[doc = "Bit 7 - When set to 1, this bit indicates that the XTOSC clock (XTCLK) is valid (i.e., toggling and stable)."]
+    #[inline(always)]
+    pub fn xtclk_val(&self) -> XtclkValR {
+        XtclkValR::new(((self.bits >> 7) & 1) != 0)
+    }
 }
 #[cfg(feature = "debug")]
 impl core::fmt::Debug for R {
@@ -48,6 +90,7 @@ impl core::fmt::Debug for R {
             .field("lfler", &self.lfler())
             .field("udcp", &self.udcp())
             .field("lfloc", &self.lfloc())
+            .field("xtclk_val", &self.xtclk_val())
             .finish()
     }
 }
@@ -86,7 +129,7 @@ impl crate::Writable for LfcgctlSpec {
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
 }
-#[doc = "`reset()` method sets LFCGCTL to value 0"]
+#[doc = "`reset()` method sets LFCGCTL to value 0x81"]
 impl crate::Resettable for LfcgctlSpec {
-    const RESET_VALUE: u8 = 0;
+    const RESET_VALUE: u8 = 0x81;
 }

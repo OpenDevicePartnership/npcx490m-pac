@@ -1,0 +1,56 @@
+HFCG:
+  _modify:
+    _registers:
+      HFCGML:
+        resetValue: 0xCA
+      HFCGMH:
+        resetValue: 0x0A
+      HFCGN:
+        resetValue: 0x02
+      HFCGP:
+        resetValue: 0x10
+      HFCBCD:
+        resetValue: 0x60
+      HFCBCD1:
+        resetValue: 0x37
+      HFCBCD2:
+        resetValue: 0x31
+      HFCGP_IDL:
+        resetValue: 0x10
+
+  HFCGML:
+    _add:
+      HFCGM7-0:
+        bitRange: "[7:0]"
+        description: |
+          When written, holds the lower eight bits of the M value to be loaded into
+          the frequency multiplier. When read, this field returns the value currently loaded in the frequency multiplier.
+          HFCGM7-0 is updated by the BootLoader based on the data in the Firmware Header after reset.
+        access: read-write
+  HFCGMH:
+    _add:
+      HFCGM15-8:
+        bitRange: "[7:0]"
+        description: |
+          When written, holds the upper eight bits of the M value to be
+          loaded into the frequency multiplier. When read, this field returns the value currently loaded in the
+          frequency multiplier. HFCGM15-8 is updated by the BootLoader based on the data in the Firmware
+          Header after reset.
+        access: read-write
+  HFCBCD3:
+    _delete:
+      - MCLKD1_SL
+      - MCLKD2_SL
+      - MCLKD3_SL
+    _add:
+      MCLKD_SL:
+        bitRange: "[1:0]"
+        description: |
+          Selects the division of MCLK to generate the MCLKD clock for all I3CI modules.
+        access: read-write
+
+    MCLKD_SL:
+      _name: MCLKD_SL
+      Div1: [0, The I3CI modules MCLKD clock is MCLK divided by 1 − i.e. without division (default).]
+      Div2: [1, The I3CI modules MCLKD clock is MCLK divided by 2.]
+      Div3: [2, The I3CI modules MCLKD clock is MCLK divided by 3.]

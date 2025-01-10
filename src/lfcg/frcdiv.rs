@@ -41,7 +41,7 @@ impl crate::Writable for FrcdivSpec {
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
 }
-#[doc = "`reset()` method sets FRCDIV to value 0"]
+#[doc = "`reset()` method sets FRCDIV to value 0xe3"]
 impl crate::Resettable for FrcdivSpec {
-    const RESET_VALUE: u16 = 0;
+    const RESET_VALUE: u16 = 0xe3;
 }

@@ -41,7 +41,7 @@ impl crate::Writable for HfrdiSpec {
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u16 = 0;
 }
-#[doc = "`reset()` method sets HFRDI to value 0"]
+#[doc = "`reset()` method sets HFRDI to value 0x01fb"]
 impl crate::Resettable for HfrdiSpec {
-    const RESET_VALUE: u16 = 0;
+    const RESET_VALUE: u16 = 0x01fb;
 }
