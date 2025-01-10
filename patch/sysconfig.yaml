@@ -1,4 +1,30 @@
 SYS CONFIG:
+  DEVALT0:
+    _delete:
+      - PVT_SPI_CS1
+      - PVT_SPI_QUAD
+      - NO_PVT_SPI
+      - SHD_SPI_CS1
+      - SHD_SPI_QUAD
+      - NO_SHD_SPI
+    _add:
+      NO_F_SPI:
+        description: No SPI Flash-Select
+        bitOffset: 7
+        bitWidth: 1
+      F_SPI_QUAD:
+        description: SPI Flash Quad Interface-Select
+        bitOffset: 6
+        bitWidth: 1
+      F_SPI_CS1:
+        description: SPI Flash Chip-Select 1
+        bitOffset: 4
+        bitWidth: 1
+      GPIO_NO_SPIP:
+        description: GPIO No SPI Peripheral-Select
+        bitOffset: 3
+        bitWidth: 1
+
   DEVALTC:
     _add:
       SHI_SL:
