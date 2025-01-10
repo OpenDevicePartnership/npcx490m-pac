@@ -18,7 +18,7 @@ pub type UdcpW<'a, REG> = crate::BitWriter<'a, REG>;
 pub type LflocR = crate::BitReader;
 #[doc = "Field `LFLOC` writer - LFCG Register Write Lock"]
 pub type LflocW<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "When set to 1, this bit indicates that the XTOSC clock (XTCLK) is valid (i.e., toggling and stable).\n\nValue on reset: 0"]
+#[doc = "When set to 1, this bit indicates that the XTOSC clock (XTCLK) is valid (i.e., toggling and stable).\n\nValue on reset: 1"]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum XtoscClockValid {
@@ -129,7 +129,7 @@ impl crate::Writable for LfcgctlSpec {
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
 }
-#[doc = "`reset()` method sets LFCGCTL to value 0x01"]
+#[doc = "`reset()` method sets LFCGCTL to value 0x81"]
 impl crate::Resettable for LfcgctlSpec {
-    const RESET_VALUE: u8 = 0x01;
+    const RESET_VALUE: u8 = 0x81;
 }

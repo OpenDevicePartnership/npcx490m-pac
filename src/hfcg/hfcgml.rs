@@ -41,7 +41,7 @@ impl crate::Writable for HfcgmlSpec {
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
 }
-#[doc = "`reset()` method sets HFCGML to value 0xda"]
+#[doc = "`reset()` method sets HFCGML to value 0xca"]
 impl crate::Resettable for HfcgmlSpec {
-    const RESET_VALUE: u8 = 0xda;
+    const RESET_VALUE: u8 = 0xca;
 }
