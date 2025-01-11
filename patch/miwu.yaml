@@ -3,6 +3,140 @@ _derive:
   MIWU2: MIWU0
 
 MIWU0:
+  _delete:
+    _registers:
+      - WKEDGn[1-7]
+      - WKAEDGn[1-7]
+      - WKMODn[1-7]
+      - WKPNDn[1-7]
+      - WKPCLn[1-7]
+      - WKENn[1-7]
+      - WKSTn[1-7]
+      - WKINENn[1-7]
+
+  _modify:
+    _registers:
+      WK*n0:
+        dimIncrement: 0x10
+        dim: 8
+        dimIndex: 1-8
+        access: read-write
+      WKEDGn0:
+        name: WKEDGn%s
+        addressOffset: 0x00
+      WKAEDGn0:
+        name: WKAEDGn%s
+        addressOffset: 0x01
+      WKMODn0:
+        name: WKMODn%s
+        addressOffset: 0x02
+      WKPNDn0:
+        name: WKPNDn%s
+        addressOffset: 0x03
+      WKPCLn0:
+        name: WKPCLn%s
+        addressOffset: 0x04
+        access: write-only
+      WKENn0:
+        name: WKENn%s
+        addressOffset: 0x05
+      WKSTn0:
+        name: WKSTn%s
+        addressOffset: 0x06
+        access: read-only
+      WKINENn0:
+        name: WKINENn%s
+        addressOffset: 0x07
+  
+  WK*n%s:
+    _add:
+      INPUT%s:
+        bitOffset: 0
+        bitWidth: 1
+        dim: 8
+        dimIncrement: 1
+        dimIndex: 0-8
+
+  WKEDGn%s:
+    _modify:
+      INPUT%s:
+        description: Selects the detected edge or level for input
+
+    INPUT%s:
+      _name: Edge
+      HIGH_RISING: [0, High level (Edge mode) or Low-to-high transition (Any Edge mode)]
+      LOW_FALLING: [1, Low level (Edge mode) or High-to-low transition (Any Edge mode)]
+
+  WKAEDGn%s:
+    _modify:
+      INPUT%s:
+        description: Selects "any edge" for input
+    
+    INPUT%s:
+      _name: AnyEdge
+      EDGE: [0, Edge detection is defined by the respective bit in WKEDGnx]
+      ANY: [1, Any transition is detected]
+
+  WKMODn%s:
+    _modify:
+      INPUT%s:
+        description: Selects the detection mode for input
+
+    INPUT%s:
+      _name: InputMode
+      EDGE: [0, Edge detection]
+      LEVEL: [1, Level detection]
+
+  WKPNDn%s:
+    _modify:
+      INPUT%s:
+        description: Indicates that a valid trigger event occurred
+
+    INPUT%s:
+      _name: EventPending
+      NOT_PENDING: [0, No wake-up event occurred]
+      PENDING: [1, Wake-up event is pending]
+
+  WKPCLn%s:
+    _modify:
+      INPUT%s:
+        description: Clear a pending flag of an input event
+
+    INPUT%s:
+      _name: ClearEvent
+      IGNORED: [0, Ignored (the flag is not changed)]
+      CLEAR: [1, Clear the associated pending flag]
+
+  WKENn%s:
+    _modify:
+      INPUT%s:
+        description: If enabled, a valid trigger event on the associated input of the input group generates a wake-up signal or interrupt request
+
+    INPUT%s:
+      _name: WakeupEnable
+      DISABLED: [0, Disable wake-up]
+      ENABLED: [1, Enable wake-up and interrupt request]
+
+  WKSTn%s:
+    _modify:
+      INPUT%s:
+        description: Represents the current value of input
+      
+    INPUT%s:
+      _name: Status
+      LOW: [0, Input is 0 (low)]
+      HIGH: [1, Input is 1 (high)]
+
+  WKINENn%s:
+    _modify:
+      INPUT%s:
+        description: The associated input of the input group is enabled for MIWU event detection
+    
+    INPUT%s:
+      _name: WakeupInputEnable
+      DISABLED: [0, Disable wake-up input]
+      ENABLED: [1, Enable wake-up input]
+
   _add:
     _interrupts:
       WKINTA_0:
