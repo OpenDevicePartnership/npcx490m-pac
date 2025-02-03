@@ -4,3 +4,1005 @@ ESPI:
       ESPI_SHI:
         description: eSPI interrupt or SHI interrupt
         value: 18
+
+    FLASHTXBUF17:
+      description: Flash transmit buffer
+      addressOffset: 0x4c4
+      access: write-only
+
+  #
+  # NOTICE: There is a bug in both documentation and SVD where it's claimed that
+  # there are 19 TX registers and 18 RX registers. In reality there are 18
+  # registers for each direction. Deleting the bogus register here.
+  #
+  _delete:
+    - PBMTXBUF0-1818
+
+  _modify:
+    #
+    # Virtual Wire Channel Registers
+    #
+    VWEVSM0-90:
+      name: VWEVSM0
+      addressOffset: 0x100
+
+    VWEVSM0-91:
+      name: VWEVSM1
+      addressOffset: 0x104
+
+    VWEVSM0-92:
+      name: VWEVSM2
+      addressOffset: 0x108
+
+    VWEVSM0-93:
+      name: VWEVSM3
+      addressOffset: 0x10c
+
+    VWEVSM0-94:
+      name: VWEVSM4
+      addressOffset: 0x110
+
+    VWEVSM0-95:
+      name: VWEVSM5
+      addressOffset: 0x114
+
+    VWEVSM0-96:
+      name: VWEVSM6
+      addressOffset: 0x118
+
+    VWEVSM0-97:
+      name: VWEVSM7
+      addressOffset: 0x11c
+
+    VWEVSM0-98:
+      name: VWEVSM8
+      addressOffset: 0x120
+
+    VWEVSM0-99:
+      name: VWEVSM9
+      addressOffset: 0x124
+
+    VWEVMS0-110:
+      name: VWEVMS0
+      addressOffset: 0x140
+
+    VWEVMS0-111:
+      name: VWEVMS1
+      addressOffset: 0x144
+
+    VWEVMS0-112:
+      name: VWEVMS2
+      addressOffset: 0x148
+
+    VWEVMS0-113:
+      name: VWEVMS3
+      addressOffset: 0x14c
+
+    VWEVMS0-114:
+      name: VWEVMS4
+      addressOffset: 0x150
+
+    VWEVMS0-115:
+      name: VWEVMS5
+      addressOffset: 0x154
+
+    VWEVMS0-116:
+      name: VWEVMS6
+      addressOffset: 0x158
+
+    VWEVMS0-117:
+      name: VWEVMS7
+      addressOffset: 0x15c
+
+    VWEVMS0-118:
+      name: VWEVMS8
+      addressOffset: 0x160
+
+    VWEVMS0-119:
+      name: VWEVMS9
+      addressOffset: 0x164
+
+    VWEVMS0-1110:
+      name: VWEVMS10
+      addressOffset: 0x168
+
+    VWEVMS0-1111:
+      name: VWEVMS11
+      addressOffset: 0x16c
+
+    VWGPSM0-150:
+      name: VWGPSM0
+      addressOffset: 0x180
+
+    VWGPSM0-151:
+      name: VWGPSM1
+      addressOffset: 0x184
+
+    VWGPSM0-152:
+      name: VWGPSM2
+      addressOffset: 0x188
+
+    VWGPSM0-153:
+      name: VWGPSM3
+      addressOffset: 0x18c
+
+    VWGPSM0-154:
+      name: VWGPSM4
+      addressOffset: 0x190
+
+    VWGPSM0-155:
+      name: VWGPSM5
+      addressOffset: 0x194
+
+    VWGPSM0-156:
+      name: VWGPSM6
+      addressOffset: 0x198
+
+    VWGPSM0-157:
+      name: VWGPSM7
+      addressOffset: 0x19c
+
+    VWGPSM0-158:
+      name: VWGPSM8
+      addressOffset: 0x1a0
+
+    VWGPSM0-159:
+      name: VWGPSM9
+      addressOffset: 0x1a4
+
+    VWGPSM0-1510:
+      name: VWGPSM10
+      addressOffset: 0x1a8
+
+    VWGPSM0-1511:
+      name: VWGPSM11
+      addressOffset: 0x1ac
+
+    VWGPSM0-1512:
+      name: VWGPSM12
+      addressOffset: 0x1b0
+
+    VWGPSM0-1513:
+      name: VWGPSM13
+      addressOffset: 0x1b4
+
+    VWGPSM0-1514:
+      name: VWGPSM14
+      addressOffset: 0x1b8
+
+    VWGPSM0-1515:
+      name: VWGPSM15
+      addressOffset: 0x1bc
+
+    VWGPMS0-150:
+      name: VWGPMS0
+      addressOffset: 0x1c0
+
+    VWGPMS0-151:
+      name: VWGPMS1
+      addressOffset: 0x1c4
+
+    VWGPMS0-152:
+      name: VWGPMS2
+      addressOffset: 0x1c8
+
+    VWGPMS0-153:
+      name: VWGPMS3
+      addressOffset: 0x1cc
+
+    VWGPMS0-154:
+      name: VWGPMS4
+      addressOffset: 0x1d0
+
+    VWGPMS0-155:
+      name: VWGPMS5
+      addressOffset: 0x1d4
+
+    VWGPMS0-156:
+      name: VWGPMS6
+      addressOffset: 0x1d8
+
+    VWGPMS0-157:
+      name: VWGPMS7
+      addressOffset: 0x1dc
+
+    VWGPMS0-158:
+      name: VWGPMS8
+      addressOffset: 0x1e0
+
+    VWGPMS0-159:
+      name: VWGPMS9
+      addressOffset: 0x1e4
+
+    VWGPMS0-1510:
+      name: VWGPMS10
+      addressOffset: 0x1e8
+
+    VWGPMS0-1511:
+      name: VWGPMS11
+      addressOffset: 0x1ec
+
+    VWGPMS0-1512:
+      name: VWGPMS12
+      addressOffset: 0x1f0
+
+    VWGPMS0-1513:
+      name: VWGPMS13
+      addressOffset: 0x1f4
+
+    VWGPMS0-1514:
+      name: VWGPMS14
+      addressOffset: 0x1f8
+
+    VWGPMS0-1515:
+      name: VWGPMS15
+      addressOffset: 0x1fc
+
+    #
+    # OOB Channel Registers
+    #
+    OOBRXBUF0-190:
+      name: OOBRXBUF0
+      addressOffset: 0x300
+
+    OOBRXBUF0-191:
+      name: OOBRXBUF1
+      addressOffset: 0x304
+
+    OOBRXBUF0-192:
+      name: OOBRXBUF2
+      addressOffset: 0x308
+
+    OOBRXBUF0-193:
+      name: OOBRXBUF3
+      addressOffset: 0x30c
+
+    OOBRXBUF0-194:
+      name: OOBRXBUF4
+      addressOffset: 0x310
+
+    OOBRXBUF0-195:
+      name: OOBRXBUF5
+      addressOffset: 0x314
+
+    OOBRXBUF0-196:
+      name: OOBRXBUF6
+      addressOffset: 0x318
+
+    OOBRXBUF0-197:
+      name: OOBRXBUF7
+      addressOffset: 0x31c
+
+    OOBRXBUF0-198:
+      name: OOBRXBUF8
+      addressOffset: 0x320
+
+    OOBRXBUF0-199:
+      name: OOBRXBUF9
+      addressOffset: 0x324
+
+    OOBRXBUF0-1910:
+      name: OOBRXBUF10
+      addressOffset: 0x328
+
+    OOBRXBUF0-1911:
+      name: OOBRXBUF11
+      addressOffset: 0x32c
+
+    OOBRXBUF0-1912:
+      name: OOBRXBUF12
+      addressOffset: 0x330
+
+    OOBRXBUF0-1913:
+      name: OOBRXBUF13
+      addressOffset: 0x334
+
+    OOBRXBUF0-1914:
+      name: OOBRXBUF14
+      addressOffset: 0x338
+
+    OOBRXBUF0-1915:
+      name: OOBRXBUF15
+      addressOffset: 0x33c
+
+    OOBRXBUF0-1916:
+      name: OOBRXBUF16
+      addressOffset: 0x340
+
+    OOBRXBUF0-1917:
+      name: OOBRXBUF17
+      addressOffset: 0x344
+
+    OOBRXBUF0-1918:
+      name: OOBRXBUF18
+      addressOffset: 0x348
+
+    OOBRXBUF0-1919:
+      name: OOBRXBUF19
+      addressOffset: 0x34c
+
+    OOBTXBUF0-190:
+      name: OOBTXBUF0
+      addressOffset: 0x380
+
+    OOBTXBUF0-191:
+      name: OOBTXBUF1
+      addressOffset: 0x384
+
+    OOBTXBUF0-192:
+      name: OOBTXBUF2
+      addressOffset: 0x388
+
+    OOBTXBUF0-193:
+      name: OOBTXBUF3
+      addressOffset: 0x38c
+
+    OOBTXBUF0-194:
+      name: OOBTXBUF4
+      addressOffset: 0x390
+
+    OOBTXBUF0-195:
+      name: OOBTXBUF5
+      addressOffset: 0x394
+
+    OOBTXBUF0-196:
+      name: OOBTXBUF6
+      addressOffset: 0x398
+
+    OOBTXBUF0-197:
+      name: OOBTXBUF7
+      addressOffset: 0x39c
+
+    OOBTXBUF0-198:
+      name: OOBTXBUF8
+      addressOffset: 0x3a0
+
+    OOBTXBUF0-199:
+      name: OOBTXBUF9
+      addressOffset: 0x3a4
+
+    OOBTXBUF0-1910:
+      name: OOBTXBUF10
+      addressOffset: 0x3a8
+
+    OOBTXBUF0-1911:
+      name: OOBTXBUF11
+      addressOffset: 0x3ac
+
+    OOBTXBUF0-1912:
+      name: OOBTXBUF12
+      addressOffset: 0x3b0
+
+    OOBTXBUF0-1913:
+      name: OOBTXBUF13
+      addressOffset: 0x3b4
+
+    OOBTXBUF0-1914:
+      name: OOBTXBUF14
+      addressOffset: 0x3b8
+
+    OOBTXBUF0-1915:
+      name: OOBTXBUF15
+      addressOffset: 0x3bc
+
+    OOBTXBUF0-1916:
+      name: OOBTXBUF16
+      addressOffset: 0x3c0
+
+    OOBTXBUF0-1917:
+      name: OOBTXBUF17
+      addressOffset: 0x3c4
+
+    OOBTXBUF0-1918:
+      name: OOBTXBUF18
+      addressOffset: 0x3c8
+
+    OOBTXBUF0-1919:
+      name: OOBTXBUF19
+      addressOffset: 0x3cc
+
+    #
+    # Flash Access Channel Registers
+    #
+    FLASHRXBUF0-170:
+      name: FLASHRXBUF0
+      addressOffset: 0x400
+
+    FLASHRXBUF0-171:
+      name: FLASHRXBUF1
+      addressOffset: 0x404
+
+    FLASHRXBUF0-172:
+      name: FLASHRXBUF2
+      addressOffset: 0x408
+
+    FLASHRXBUF0-173:
+      name: FLASHRXBUF3
+      addressOffset: 0x40c
+
+    FLASHRXBUF0-174:
+      name: FLASHRXBUF4
+      addressOffset: 0x410
+
+    FLASHRXBUF0-175:
+      name: FLASHRXBUF5
+      addressOffset: 0x414
+
+    FLASHRXBUF0-176:
+      name: FLASHRXBUF6
+      addressOffset: 0x418
+
+    FLASHRXBUF0-177:
+      name: FLASHRXBUF7
+      addressOffset: 0x41c
+
+    FLASHRXBUF0-178:
+      name: FLASHRXBUF8
+      addressOffset: 0x420
+
+    FLASHRXBUF0-179:
+      name: FLASHRXBUF9
+      addressOffset: 0x424
+
+    FLASHRXBUF0-1710:
+      name: FLASHRXBUF10
+      addressOffset: 0x428
+
+    FLASHRXBUF0-1711:
+      name: FLASHRXBUF11
+      addressOffset: 0x42c
+
+    FLASHRXBUF0-1712:
+      name: FLASHRXBUF12
+      addressOffset: 0x430
+
+    FLASHRXBUF0-1713:
+      name: FLASHRXBUF13
+      addressOffset: 0x434
+
+    FLASHRXBUF0-1714:
+      name: FLASHRXBUF14
+      addressOffset: 0x438
+
+    FLASHRXBUF0-1715:
+      name: FLASHRXBUF15
+      addressOffset: 0x43c
+
+    FLASHRXBUF0-1716:
+      name: FLASHRXBUF16
+      addressOffset: 0x440
+
+    FLASHRXBUF0-1717:
+      name: FLASHRXBUF17
+      addressOffset: 0x444
+
+    FLASHTXBUF0-160:
+      name: FLASHTXBUF0
+      addressOffset: 0x480
+
+    FLASHTXBUF0-161:
+      name: FLASHTXBUF1
+      addressOffset: 0x484
+
+    FLASHTXBUF0-162:
+      name: FLASHTXBUF2
+      addressOffset: 0x488
+
+    FLASHTXBUF0-163:
+      name: FLASHTXBUF3
+      addressOffset: 0x48c
+
+    FLASHTXBUF0-164:
+      name: FLASHTXBUF4
+      addressOffset: 0x490
+
+    FLASHTXBUF0-165:
+      name: FLASHTXBUF5
+      addressOffset: 0x494
+
+    FLASHTXBUF0-166:
+      name: FLASHTXBUF6
+      addressOffset: 0x498
+
+    FLASHTXBUF0-167:
+      name: FLASHTXBUF7
+      addressOffset: 0x49c
+
+    FLASHTXBUF0-168:
+      name: FLASHTXBUF8
+      addressOffset: 0x4a0
+
+    FLASHTXBUF0-169:
+      name: FLASHTXBUF9
+      addressOffset: 0x4a4
+
+    FLASHTXBUF0-1610:
+      name: FLASHTXBUF10
+      addressOffset: 0x4a8
+
+    FLASHTXBUF0-1611:
+      name: FLASHTXBUF11
+      addressOffset: 0x4ac
+
+    FLASHTXBUF0-1612:
+      name: FLASHTXBUF12
+      addressOffset: 0x4b0
+
+    FLASHTXBUF0-1613:
+      name: FLASHTXBUF13
+      addressOffset: 0x4b4
+
+    FLASHTXBUF0-1614:
+      name: FLASHTXBUF14
+      addressOffset: 0x4b8
+
+    FLASHTXBUF0-1615:
+      name: FLASHTXBUF15
+      addressOffset: 0x4bc
+
+    FLASHTXBUF0-1616:
+      name: FLASHTXBUF16
+      addressOffset: 0x4c0
+
+    #
+    # Peripheral Channel, Bus Master Registers
+    #
+    PBMRXBUF0-170:
+      name: PBMRXBUF0
+      addressOffset: 0x500
+
+    PBMRXBUF0-171:
+      name: PBMRXBUF1
+      addressOffset: 0x504
+
+    PBMRXBUF0-172:
+      name: PBMRXBUF2
+      addressOffset: 0x508
+
+    PBMRXBUF0-173:
+      name: PBMRXBUF3
+      addressOffset: 0x50c
+
+    PBMRXBUF0-174:
+      name: PBMRXBUF4
+      addressOffset: 0x510
+
+    PBMRXBUF0-175:
+      name: PBMRXBUF5
+      addressOffset: 0x514
+
+    PBMRXBUF0-176:
+      name: PBMRXBUF6
+      addressOffset: 0x518
+
+    PBMRXBUF0-177:
+      name: PBMRXBUF7
+      addressOffset: 0x51c
+
+    PBMRXBUF0-178:
+      name: PBMRXBUF8
+      addressOffset: 0x520
+
+    PBMRXBUF0-179:
+      name: PBMRXBUF9
+      addressOffset: 0x524
+
+    PBMRXBUF0-1710:
+      name: PBMRXBUF10
+      addressOffset: 0x528
+
+    PBMRXBUF0-1711:
+      name: PBMRXBUF11
+      addressOffset: 0x52c
+
+    PBMRXBUF0-1712:
+      name: PBMRXBUF12
+      addressOffset: 0x530
+
+    PBMRXBUF0-1713:
+      name: PBMRXBUF13
+      addressOffset: 0x534
+
+    PBMRXBUF0-1714:
+      name: PBMRXBUF14
+      addressOffset: 0x538
+
+    PBMRXBUF0-1715:
+      name: PBMRXBUF15
+      addressOffset: 0x53c
+
+    PBMRXBUF0-1716:
+      name: PBMRXBUF16
+      addressOffset: 0x540
+
+    PBMRXBUF0-1717:
+      name: PBMRXBUF17
+      addressOffset: 0x544
+
+    PBMTXBUF0-180:
+      name: PBMTXBUF0
+      addressOffset: 0x580
+
+    PBMTXBUF0-181:
+      name: PBMTXBUF1
+      addressOffset: 0x584
+
+    PBMTXBUF0-182:
+      name: PBMTXBUF2
+      addressOffset: 0x588
+
+    PBMTXBUF0-183:
+      name: PBMTXBUF3
+      addressOffset: 0x58c
+
+    PBMTXBUF0-184:
+      name: PBMTXBUF4
+      addressOffset: 0x590
+
+    PBMTXBUF0-185:
+      name: PBMTXBUF5
+      addressOffset: 0x594
+
+    PBMTXBUF0-186:
+      name: PBMTXBUF6
+      addressOffset: 0x598
+
+    PBMTXBUF0-187:
+      name: PBMTXBUF7
+      addressOffset: 0x59c
+
+    PBMTXBUF0-188:
+      name: PBMTXBUF8
+      addressOffset: 0x5a0
+
+    PBMTXBUF0-189:
+      name: PBMTXBUF9
+      addressOffset: 0x5a4
+
+    PBMTXBUF0-1810:
+      name: PBMTXBUF10
+      addressOffset: 0x5a8
+
+    PBMTXBUF0-1811:
+      name: PBMTXBUF11
+      addressOffset: 0x5ac
+
+    PBMTXBUF0-1812:
+      name: PBMTXBUF12
+      addressOffset: 0x5b0
+
+    PBMTXBUF0-1813:
+      name: PBMTXBUF13
+      addressOffset: 0x5b4
+
+    PBMTXBUF0-1814:
+      name: PBMTXBUF14
+      addressOffset: 0x5b8
+
+    PBMTXBUF0-1815:
+      name: PBMTXBUF15
+      addressOffset: 0x5bc
+
+    PBMTXBUF0-1816:
+      name: PBMTXBUF16
+      addressOffset: 0x5c0
+
+    PBMTXBUF0-1817:
+      name: PBMTXBUF17
+      addressOffset: 0x5c4
+
+    #
+    # Target-attached Flash Access Registers
+    #
+    FLASH_PRTR_BADDR0-150:
+      name: FLASH_PRTR_BADDR0
+      addressOffset: 0x600
+
+    FLASH_PRTR_BADDR0-151:
+      name: FLASH_PRTR_BADDR1
+      addressOffset: 0x604
+
+    FLASH_PRTR_BADDR0-152:
+      name: FLASH_PRTR_BADDR2
+      addressOffset: 0x608
+
+    FLASH_PRTR_BADDR0-153:
+      name: FLASH_PRTR_BADDR3
+      addressOffset: 0x60c
+
+    FLASH_PRTR_BADDR0-154:
+      name: FLASH_PRTR_BADDR4
+      addressOffset: 0x610
+
+    FLASH_PRTR_BADDR0-155:
+      name: FLASH_PRTR_BADDR5
+      addressOffset: 0x614
+
+    FLASH_PRTR_BADDR0-156:
+      name: FLASH_PRTR_BADDR6
+      addressOffset: 0x618
+
+    FLASH_PRTR_BADDR0-157:
+      name: FLASH_PRTR_BADDR7
+      addressOffset: 0x61c
+
+    FLASH_PRTR_BADDR0-158:
+      name: FLASH_PRTR_BADDR8
+      addressOffset: 0x620
+
+    FLASH_PRTR_BADDR0-159:
+      name: FLASH_PRTR_BADDR9
+      addressOffset: 0x624
+
+    FLASH_PRTR_BADDR0-1510:
+      name: FLASH_PRTR_BADDR10
+      addressOffset: 0x628
+
+    FLASH_PRTR_BADDR0-1511:
+      name: FLASH_PRTR_BADDR11
+      addressOffset: 0x62c
+
+    FLASH_PRTR_BADDR0-1512:
+      name: FLASH_PRTR_BADDR12
+      addressOffset: 0x630
+
+    FLASH_PRTR_BADDR0-1513:
+      name: FLASH_PRTR_BADDR13
+      addressOffset: 0x634
+
+    FLASH_PRTR_BADDR0-1514:
+      name: FLASH_PRTR_BADDR14
+      addressOffset: 0x638
+
+    FLASH_PRTR_BADDR0-1515:
+      name: FLASH_PRTR_BADDR15
+      addressOffset: 0x63c
+
+    FLASH_PRTR_TADDR0-150:
+      name: FLASH_PRTR_TADDR0
+      addressOffset: 0x640
+
+    FLASH_PRTR_TADDR0-151:
+      name: FLASH_PRTR_TADDR1
+      addressOffset: 0x644
+
+    FLASH_PRTR_TADDR0-152:
+      name: FLASH_PRTR_TADDR2
+      addressOffset: 0x648
+
+    FLASH_PRTR_TADDR0-153:
+      name: FLASH_PRTR_TADDR3
+      addressOffset: 0x64c
+
+    FLASH_PRTR_TADDR0-154:
+      name: FLASH_PRTR_TADDR4
+      addressOffset: 0x650
+
+    FLASH_PRTR_TADDR0-155:
+      name: FLASH_PRTR_TADDR5
+      addressOffset: 0x654
+
+    FLASH_PRTR_TADDR0-156:
+      name: FLASH_PRTR_TADDR6
+      addressOffset: 0x658
+
+    FLASH_PRTR_TADDR0-157:
+      name: FLASH_PRTR_TADDR7
+      addressOffset: 0x65c
+
+    FLASH_PRTR_TADDR0-158:
+      name: FLASH_PRTR_TADDR8
+      addressOffset: 0x660
+
+    FLASH_PRTR_TADDR0-159:
+      name: FLASH_PRTR_TADDR9
+      addressOffset: 0x664
+
+    FLASH_PRTR_TADDR0-1510:
+      name: FLASH_PRTR_TADDR10
+      addressOffset: 0x668
+
+    FLASH_PRTR_TADDR0-1511:
+      name: FLASH_PRTR_TADDR11
+      addressOffset: 0x66c
+
+    FLASH_PRTR_TADDR0-1512:
+      name: FLASH_PRTR_TADDR12
+      addressOffset: 0x670
+
+    FLASH_PRTR_TADDR0-1513:
+      name: FLASH_PRTR_TADDR13
+      addressOffset: 0x674
+
+    FLASH_PRTR_TADDR0-1514:
+      name: FLASH_PRTR_TADDR14
+      addressOffset: 0x678
+
+    FLASH_PRTR_TADDR0-1515:
+      name: FLASH_PRTR_TADDR15
+      addressOffset: 0x67c
+
+    FLASH_RNG_TAG_OVR0-150:
+      name: FLASH_RNG_TAG_OVR0
+      addressOffset: 0x680
+
+    FLASH_RNG_TAG_OVR0-151:
+      name: FLASH_RNG_TAG_OVR1
+      addressOffset: 0x684
+
+    FLASH_RNG_TAG_OVR0-152:
+      name: FLASH_RNG_TAG_OVR2
+      addressOffset: 0x688
+
+    FLASH_RNG_TAG_OVR0-153:
+      name: FLASH_RNG_TAG_OVR3
+      addressOffset: 0x68c
+
+    FLASH_RNG_TAG_OVR0-154:
+      name: FLASH_RNG_TAG_OVR4
+      addressOffset: 0x690
+
+    FLASH_RNG_TAG_OVR0-155:
+      name: FLASH_RNG_TAG_OVR5
+      addressOffset: 0x694
+
+    FLASH_RNG_TAG_OVR0-156:
+      name: FLASH_RNG_TAG_OVR6
+      addressOffset: 0x698
+
+    FLASH_RNG_TAG_OVR0-157:
+      name: FLASH_RNG_TAG_OVR7
+      addressOffset: 0x69c
+
+    FLASH_RNG_TAG_OVR0-158:
+      name: FLASH_RNG_TAG_OVR8
+      addressOffset: 0x6a0
+
+    FLASH_RNG_TAG_OVR0-159:
+      name: FLASH_RNG_TAG_OVR9
+      addressOffset: 0x6a4
+
+    FLASH_RNG_TAG_OVR0-1510:
+      name: FLASH_RNG_TAG_OVR10
+      addressOffset: 0x6a8
+
+    FLASH_RNG_TAG_OVR0-1511:
+      name: FLASH_RNG_TAG_OVR11
+      addressOffset: 0x6ac
+
+    FLASH_RNG_TAG_OVR0-1512:
+      name: FLASH_RNG_TAG_OVR12
+      addressOffset: 0x6b0
+
+    FLASH_RNG_TAG_OVR0-1513:
+      name: FLASH_RNG_TAG_OVR13
+      addressOffset: 0x6b4
+
+    FLASH_RNG_TAG_OVR0-1514:
+      name: FLASH_RNG_TAG_OVR14
+      addressOffset: 0x6b8
+
+    FLASH_RNG_TAG_OVR0-1515:
+      name: FLASH_RNG_TAG_OVR15
+      addressOffset: 0x6bc
+
+    #
+    # Peripheral Channel, Target Message Registers
+    #
+    PSMRXBUF0-170:
+      name: PSMRXBUF0
+      addressOffset: 0x900
+
+    PSMRXBUF0-171:
+      name: PSMRXBUF1
+      addressOffset: 0x904
+
+    PSMRXBUF0-172:
+      name: PSMRXBUF2
+      addressOffset: 0x908
+
+    PSMRXBUF0-173:
+      name: PSMRXBUF3
+      addressOffset: 0x90c
+
+    PSMRXBUF0-174:
+      name: PSMRXBUF4
+      addressOffset: 0x910
+
+    PSMRXBUF0-175:
+      name: PSMRXBUF5
+      addressOffset: 0x914
+
+    PSMRXBUF0-176:
+      name: PSMRXBUF6
+      addressOffset: 0x918
+
+    PSMRXBUF0-177:
+      name: PSMRXBUF7
+      addressOffset: 0x91c
+
+    PSMRXBUF0-178:
+      name: PSMRXBUF8
+      addressOffset: 0x920
+
+    PSMRXBUF0-179:
+      name: PSMRXBUF9
+      addressOffset: 0x924
+
+    PSMRXBUF0-1710:
+      name: PSMRXBUF10
+      addressOffset: 0x928
+
+    PSMRXBUF0-1711:
+      name: PSMRXBUF11
+      addressOffset: 0x92c
+
+    PSMRXBUF0-1712:
+      name: PSMRXBUF12
+      addressOffset: 0x930
+
+    PSMRXBUF0-1713:
+      name: PSMRXBUF13
+      addressOffset: 0x934
+
+    PSMRXBUF0-1714:
+      name: PSMRXBUF14
+      addressOffset: 0x938
+
+    PSMRXBUF0-1715:
+      name: PSMRXBUF15
+      addressOffset: 0x93c
+
+    PSMRXBUF0-1716:
+      name: PSMRXBUF16
+      addressOffset: 0x940
+
+    PSMRXBUF0-1717:
+      name: PSMRXBUF17
+      addressOffset: 0x944
+
+  _array:
+    VWEVSM*:
+      name: VWEVSM%s
+
+    VWEVMS*:
+      name: VWEVMS%s
+
+    VWGPSM*:
+      name: VWGPSM%s
+
+    VWGPMS*:
+      name: VWGPMS%s
+
+    OOBRXBUF*:
+      name: OOBRXBUF%s
+
+    OOBTXBUF*:
+      name: OOBTXBUF%s
+
+    FLASHRXBUF*:
+      name: FLASHRXBUF%s
+
+    FLASHTXBUF*:
+      name: FLASHTXBUF%s
+      description: Flash transmit buffer
+
+    PBMRXBUF*:
+      name: PBMRXBUF%s
+
+    PBMTXBUF*:
+      name: PBMTXBUF%s
+
+    FLASH_PRTR_BADDR*:
+      name: FLASH_PRTR_BADDR%s
+
+    FLASH_PRTR_TADDR*:
+      name: FLASH_PRTR_TADDR%s
+
+    FLASH_RNG_TAG_OVR*:
+      name: FLASH_RNG_TAG_OVR%s
+
+    PSMRXBUF*:
+      name: PSMRXBUF%s
+
+
