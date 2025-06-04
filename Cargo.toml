@@ -1,15 +1,15 @@
 [package]
 name = "npcx490m-pac"
 version = "0.1.0"
-authors = [ "Felipe Balbi <felipe@balbi.sh>" ]
+authors = [ "Felipe Balbi <febalbi@microsoft.com>" ]
 edition = "2021"
 license = "MIT"
 description = "Peripheral Access Crate for Nuvoton NPCX490M devices"
-repository = "https://github.com/felipebalbi/npcx490m-pac"
+repository = "https://github.com/OpenDevicePartnership/npcx490m-pac"
 readme = "README.md"
 keywords = [ "npcx490m", "nuvoton", "no_std", "embedded" ]
 categories = [ "embedded", "no-std" ]
-rust-version = "1.80.0"
+rust-version = "1.80"
 exclude = [ "svd/*", ]
 
 [dependencies]
