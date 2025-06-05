@@ -5,11 +5,11 @@ pub type W = crate::W<KbsevtSpec>;
 #[doc = "Field `KBSDONE` reader - Keyboard Scan Done Indication"]
 pub type KbsdoneR = crate::BitReader;
 #[doc = "Field `KBSDONE` writer - Keyboard Scan Done Indication"]
-pub type KbsdoneW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type KbsdoneW<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `KBSERR` reader - Keyboard Scan Error"]
 pub type KbserrR = crate::BitReader;
 #[doc = "Field `KBSERR` writer - Keyboard Scan Error"]
-pub type KbserrW<'a, REG> = crate::BitWriter<'a, REG>;
+pub type KbserrW<'a, REG> = crate::BitWriter1C<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Keyboard Scan Done Indication"]
     #[inline(always)]
@@ -54,7 +54,7 @@ impl crate::Readable for KbsevtSpec {}
 impl crate::Writable for KbsevtSpec {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u8 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u8 = 0x03;
 }
 #[doc = "`reset()` method sets KBSEVT to value 0"]
 impl crate::Resettable for KbsevtSpec {

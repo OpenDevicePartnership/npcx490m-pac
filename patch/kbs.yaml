@@ -4,3 +4,21 @@ KBS:
       KBS:
         description: Automatic Keyboard Scan interrupt
         value: 2
+
+  _modify:
+    KBSIN:
+      access: read-only
+
+  KBSCTL:
+    _modify:
+      START:
+        access: write-only
+
+  KBSEVT:
+    _modify:
+      KBSDONE:
+        modifiedWriteValues: oneToClear
+
+      KBSERR:
+        modifiedWriteValues: oneToClear
+
