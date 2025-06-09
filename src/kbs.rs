@@ -129,7 +129,7 @@ module"]
 pub type KbsCnum = crate::Reg<kbs_cnum::KbsCnumSpec>;
 #[doc = "Keyboard Scan Columns Number Register (KBS_CNUM)"]
 pub mod kbs_cnum;
-#[doc = "KBSIN (rw) register accessor: Keyboard Scan In Register (KBSIN)\n\nYou can [`read`](crate::Reg::read) this register and get [`kbsin::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`kbsin::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@kbsin`]
+#[doc = "KBSIN (r) register accessor: Keyboard Scan In Register (KBSIN)\n\nYou can [`read`](crate::Reg::read) this register and get [`kbsin::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@kbsin`]
 module"]
 #[doc(alias = "KBSIN")]
 pub type Kbsin = crate::Reg<kbsin::KbsinSpec>;

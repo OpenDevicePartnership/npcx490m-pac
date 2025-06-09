@@ -2,8 +2,6 @@
 pub type R = crate::R<KbsctlSpec>;
 #[doc = "Register `KBSCTL` writer"]
 pub type W = crate::W<KbsctlSpec>;
-#[doc = "Field `START` reader - Automatic Keyboard Scan Start"]
-pub type StartR = crate::BitReader;
 #[doc = "Field `START` writer - Automatic Keyboard Scan Start"]
 pub type StartW<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `KBSMODE` reader - Keyboard Scan Mode"]
@@ -23,11 +21,6 @@ pub type KbhdrvR = crate::FieldReader;
 #[doc = "Field `KBHDRV` writer - Keyboard Outputs High Drive"]
 pub type KbhdrvW<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 impl R {
-    #[doc = "Bit 0 - Automatic Keyboard Scan Start"]
-    #[inline(always)]
-    pub fn start(&self) -> StartR {
-        StartR::new((self.bits & 1) != 0)
-    }
     #[doc = "Bit 1 - Keyboard Scan Mode"]
     #[inline(always)]
     pub fn kbsmode(&self) -> KbsmodeR {
@@ -53,7 +46,6 @@ impl R {
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         f.debug_struct("KBSCTL")
-            .field("start", &self.start())
             .field("kbsmode", &self.kbsmode())
             .field("kbsien", &self.kbsien())
             .field("kbsinc", &self.kbsinc())
